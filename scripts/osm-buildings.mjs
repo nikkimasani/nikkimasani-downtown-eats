@@ -15,7 +15,10 @@ const M_LAT = 110850, M_LNG = 96680, toM = ([lat, lng]) => [lng * M_LNG, lat * M
 function simplify(pts, tol) {   // Douglas–Peucker on a closed ring (metres)
   if (pts.length < 5) return pts;
   const P = pts.map(toM), keep = new Array(pts.length).fill(false); keep[0] = keep[pts.length - 1] = true;
-  const st = [[0, pts.length - 1]];
+  // a closed ring starts and ends on the same point, so split it at the vertex farthest from the start
+  let far = 1, fd = 0; for (let i = 1; i < P.length - 1; i++) { const d = Math.hypot(P[i][0] - P[0][0], P[i][1] - P[0][1]); if (d > fd) { fd = d; far = i; } }
+  keep[far] = true;
+  const st = [[0, far], [far, pts.length - 1]];
   while (st.length) { const [a, b] = st.pop(); let md = 0, mi = -1; const [ax, ay] = P[a], [bx, by] = P[b], L = Math.hypot(bx - ax, by - ay) || 1;
     for (let i = a + 1; i < b; i++) { const d = Math.abs((bx - ax) * (ay - P[i][1]) - (ax - P[i][0]) * (by - ay)) / L; if (d > md) { md = d; mi = i; } }
     if (md > tol) { keep[mi] = true; st.push([a, mi], [mi, b]); } }
