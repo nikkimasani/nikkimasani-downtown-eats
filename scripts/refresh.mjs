@@ -6,7 +6,7 @@ const BASE = 'https://downtownhouston.org';
 const UA = { 'user-agent': 'Mozilla/5.0 (compatible; downtown-eats personal dining app)' };
 const sleep = (ms) => new Promise((r) => setTimeout(r, ms));
 const strip = (s) => s.replace(/<br\s*\/?>/gi, '\n').replace(/<[^>]+>/g, '').replace(/&amp;/g, '&').replace(/&bull;/g, '•')
-  .replace(/&#39;|&rsquo;/g, "'").replace(/&nbsp;/g, ' ').replace(/&ndash;|&mdash;/g, '–').replace(/[ \t]+/g, ' ')
+  .replace(/&#0?39;|&rsquo;|&#8217;/g, "'").replace(/&quot;/g, '"').replace(/&nbsp;/g, ' ').replace(/&ndash;|&mdash;/g, '–').replace(/[ \t]+/g, ' ')
   .split('\n').map((x) => x.trim()).filter(Boolean).join('\n');
 const norm = (s) => (s || '').toLowerCase().replace(/&/g, 'and').replace(/^the /, '').replace(/[^a-z0-9]/g, '');
 const num = (a) => ((a || '').match(/\b(\d{1,5})\s/) || [])[1];
@@ -63,7 +63,8 @@ const places = curated.map((c) => {
   return { ...c, official: d || null };
 });
 // listings that are new on the site since the curated list was made
-const extra = details.filter((d) => !used.has(d.slug)).map((d, i) => ({
+const dupe = (d) => places.some((p) => norm(p.name) === norm(d.name) && num(p.address) === num(d.street));
+const extra = details.filter((d) => !used.has(d.slug) && !dupe(d)).map((d, i) => ({
   id: curated.length + i, name: d.name, address: `${d.street}, Houston, TX`, tunnel: null, cuisines: d.tags.slice(0, 1),
   meals: [], price: 2, vibes: [], type: d.tags[0] || 'Restaurant', note: 'New on the Downtown Houston directory.', tryit: '', official: d, isNew: true,
 }));
