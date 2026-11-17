@@ -7,7 +7,7 @@ const Q = `[out:json][timeout:120];(way["building"](${BBOX});relation["building"
 const EP = ['https://overpass-api.de/api/interpreter', 'https://overpass.kumi.systems/api/interpreter', 'https://overpass.private.coffee/api/interpreter'];
 let data = null;
 for (const ep of EP) {
-  try { const r = await fetch(ep, { method: 'POST', body: 'data=' + encodeURIComponent(Q), headers: { 'content-type': 'application/x-www-form-urlencoded', 'user-agent': 'downtown-eats (personal dining map)' } }); if (r.ok) { data = await r.json(); console.log('OSM from', ep, data.elements.length, 'elements'); break; } console.error(ep, r.status); } catch (e) { console.error(ep, e.message); }
+  try { const r = await fetch(ep, { method: 'POST', body: 'data=' + encodeURIComponent(Q), headers: { 'content-type': 'application/x-www-form-urlencoded', 'user-agent': 'downtown-eats (personal dining map)' }, signal: AbortSignal.timeout(90000) }); if (r.ok) { data = await r.json(); console.log('OSM from', ep, data.elements.length, 'elements'); break; } console.error(ep, r.status); } catch (e) { console.error(ep, e.message); }
 }
 if (!data) { console.error('Overpass unavailable; keeping the existing buildings.json'); process.exit(0); }
 
