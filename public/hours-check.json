@@ -1,6 +1,6 @@
 {
  "checked": "2026-11-19",
- "sitesWithHours": 20,
+ "sitesWithHours": 16,
  "flags": {
   "Artistry": {
    "site": "Sun closed · Mon closed · Tue 11am–11:59pm · Wed 12am–2:45am, 11am–11:59pm · Thu 12am–2:45am, 11am–11:59pm · Fri 12am–2:45am, 11am–11:59pm · Sat 12am–2:45am",
@@ -22,15 +22,15 @@
    "url": "https://www.thelonestarsaloon.com/",
    "slots": 98
   },
-  "Morton's The Steakhouse": {
-   "site": "Sun 1pm–8pm · Mon 1pm–8pm · Tue 1pm–8pm · Wed 1pm–8pm · Thu 1pm–8pm · Fri 1pm–8pm · Sat 1pm–8pm",
-   "url": "http://mortons.com",
-   "slots": 58
-  },
   "The Nash": {
    "site": "Sun closed · Mon 11am–8pm · Tue 11am–8pm · Wed 11am–8pm · Thu 11am–8pm · Fri 11am–9pm · Sat 5pm–9pm",
    "url": "http://www.thenashhouston.com",
    "slots": 12
+  },
+  "Morton's The Steakhouse": {
+   "site": "Sun 1pm–8pm · Mon 1pm–8pm · Tue 1pm–8pm · Wed 1pm–8pm · Thu 1pm–8pm · Fri 1pm–8pm · Sat 1pm–8pm",
+   "url": "http://mortons.com",
+   "slots": 58
   },
   "Rosalie Italian Soul": {
    "site": "Sun closed · Mon closed · Tue 11am–2pm, 5pm–10pm · Wed 11am–2pm, 5pm–10pm · Thu 11am–2pm, 5pm–10pm · Fri 5pm–10pm · Sat 11am–2pm, 5pm–10pm",
@@ -47,25 +47,10 @@
    "url": "http://www.angelsharehtx.com",
    "slots": 36
   },
-  "Z on 23": {
-   "site": "Sun 7am–11pm · Mon 6am–11pm · Tue 6am–11pm · Wed 6am–11pm · Thu 6am–11pm · Fri 6am–11pm · Sat 7am–11pm",
-   "url": "http://www.zon23rooftop.com",
-   "slots": 164
-  },
   "SOHO Garden HTX": {
    "site": "Sun 2pm–11pm · Mon 4pm–10pm · Tue 4pm–10pm · Wed 4pm–10pm · Thu 4pm–10pm · Fri 4pm–2am · Sat 3pm–2am",
    "url": "https://sohogardenhtx.com/",
    "slots": 84
-  },
-  "Sonderbar Internationale": {
-   "site": "Sun 2pm–10pm · Mon 9am–5pm · Tue 7pm–2am · Wed 7pm–12am · Thu 7pm–2am · Fri 7pm–2am · Sat 7pm–2am",
-   "url": "https://sonderbar.us/",
-   "slots": 61
-  },
-  "Synth Diskoteka": {
-   "site": "Sun 2pm–10pm · Mon 9am–5pm · Tue 7pm–2am · Wed 7pm–12am · Thu 7pm–2am · Fri 7pm–2am · Sat 7pm–2am",
-   "url": "https://sonderbar.us",
-   "slots": 88
   }
  }
 }
