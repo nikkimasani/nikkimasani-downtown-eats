@@ -34,6 +34,8 @@ const describe = (rules) => NAMES.map((n, d) => { const rs = rules.filter((r) =>
 
 const flags = {}; let checked = 0;
 const todo = places.map((p) => ({ name: p.name, hours: over[p.name]?.hours || p.official?.hours, url: over[p.name]?.website || p.official?.website })).filter((p) => p.hours && /^https?:/.test(p.url || ''));
+const host = (u) => { try { const x = new URL(u); return x.host + x.pathname.replace(/\/$/, ''); } catch { return u; } }, uses = {}; for (const p of todo) uses[host(p.url)] = (uses[host(p.url)] || 0) + 1;
+const todo1 = todo.filter((p) => uses[host(p.url)] === 1);   // a site shared by several venues can't speak for one of them
 async function one(p) {
   try {
     const ctl = new AbortController(), to = setTimeout(() => ctl.abort(), 9000);
@@ -45,6 +47,6 @@ async function one(p) {
     if (diff >= 6) flags[p.name] = { site: describe(site), url: p.url, slots: diff };
   } catch { /* site down or blocked: skip */ }
 }
-for (let i = 0; i < todo.length; i += 8) await Promise.all(todo.slice(i, i + 8).map(one));
+for (let i = 0; i < todo1.length; i += 8) await Promise.all(todo1.slice(i, i + 8).map(one));
 fs.writeFileSync('public/hours-check.json', JSON.stringify({ checked: new Date().toISOString().slice(0, 10), sitesWithHours: checked, flags }, null, 1));
 console.log(`hours check: ${todo.length} sites, ${checked} publish hours, ${Object.keys(flags).length} disagree`);
