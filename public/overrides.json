@@ -564,52 +564,60 @@
     },
     "The Original Ninfa's on Navigation": {
       "street": "2704 Navigation Blvd",
-      "geocode": true,
       "checked": "2026-11-23",
-      "notInDirectory": true
+      "notInDirectory": true,
+      "lat": 29.757228,
+      "lng": -95.342567
     },
     "El Tiempo Cantina Navigation": {
       "street": "2814 Navigation Blvd",
-      "geocode": true,
       "checked": "2026-11-23",
-      "notInDirectory": true
+      "notInDirectory": true,
+      "lat": 29.75675,
+      "lng": -95.341793
     },
     "Jonathan's The Rub East End": {
       "street": "2929 Navigation Blvd",
-      "geocode": true,
       "checked": "2026-11-23",
-      "notInDirectory": true
+      "notInDirectory": true,
+      "lat": 29.756274,
+      "lng": -95.340731
     },
     "Villa Arcos": {
       "street": "3009 Navigation Blvd",
-      "geocode": true,
       "checked": "2026-11-23",
-      "notInDirectory": true
+      "notInDirectory": true,
+      "lat": 29.755844,
+      "lng": -95.340016
     },
     "Boo's Burgers": {
       "street": "2510 Navigation Blvd",
-      "geocode": true,
       "checked": "2026-11-23",
-      "notInDirectory": true
+      "notInDirectory": true,
+      "lat": 29.758164,
+      "lng": -95.344147
     },
     "Merida": {
       "street": "2509 Navigation Blvd",
-      "geocode": true,
       "checked": "2026-11-23",
-      "notInDirectory": true
+      "notInDirectory": true,
+      "lat": 29.758267,
+      "lng": -95.344085
     },
     "How to Survive on Land and Sea": {
       "street": "3401 Harrisburg Blvd",
-      "geocode": true,
       "checked": "2026-11-23",
       "notInDirectory": true,
-      "hours": "Daily 4pm–2am"
+      "hours": "Daily 4pm–2am",
+      "lat": 29.748342,
+      "lng": -95.341269
     },
     "Champ Burger": {
       "street": "304 Sampson St",
-      "geocode": true,
       "checked": "2026-11-23",
-      "notInDirectory": true
+      "notInDirectory": true,
+      "lat": 29.749786,
+      "lng": -95.340274
     }
   }
 }
