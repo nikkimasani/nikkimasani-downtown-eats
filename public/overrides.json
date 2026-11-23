@@ -437,8 +437,9 @@
       "street": "2119 Leeland St",
       "checked": "2026-11-23",
       "notInDirectory": true,
-      "lat": 29.746695,
-      "lng": -95.358803
+      "lat": 29.746455,
+      "lng": -95.358302,
+      "note2": "Corner of Leeland & Hutchins, next door to Around the Corner (user-confirmed)"
     },
     "Brass Tacks": {
       "street": "612 Live Oak St",
@@ -495,8 +496,9 @@
       "street": "1510 Hutchins St",
       "checked": "2026-11-23",
       "notInDirectory": true,
-      "lat": 29.746912,
-      "lng": -95.357715
+      "lat": 29.746476,
+      "lng": -95.35815,
+      "note2": "Corner of Hutchins & Leeland, next door to Leeland House (user-confirmed)"
     },
     "King's Court Bar & Kitchen": {
       "street": "903 Hutchins St",
