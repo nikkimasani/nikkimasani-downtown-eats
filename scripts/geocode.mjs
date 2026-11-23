@@ -5,7 +5,7 @@ const O = JSON.parse(fs.readFileSync('public/overrides.json', 'utf8'));
 let n = 0;
 for (const [name, s] of Object.entries(O.spots || {})) {
   if (!s.geocode || (s.lat && s.lng) || !s.street) continue;
-  const u = 'https://geocoding.geo.census.gov/geocoder/locations/onelineaddress?benchmark=Public_AR_Current&format=json&address=' + encodeURIComponent(`${s.street}, Houston, TX`);
+  const u = 'https://geocoding.geo.census.gov/geocoder/locations/onelineaddress?benchmark=Public_AR_Current&format=json&address=' + encodeURIComponent(`${s.geoStreet || s.street}, Houston, TX`);
   try {
     const j = await (await fetch(u, { signal: AbortSignal.timeout(20000) })).json();
     const c = j?.result?.addressMatches?.[0]?.coordinates;

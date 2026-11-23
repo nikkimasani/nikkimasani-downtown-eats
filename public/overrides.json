@@ -320,13 +320,12 @@
       "hours": "Tue–Fri 4pm–12am, Sat 2pm–12am, Sun 2pm–10pm"
     },
     "Roots Wine Bar": {
-      "lat": 29.74795,
-      "lng": -95.3448,
       "street": "3107 Leeland St",
       "hours": "Wed–Fri 4pm–12am, Sat 11am–12am, Sun 11am–10pm",
       "source": "https://lgbtq.visithoustontexas.com/listings/roots/31190/",
       "checked": "2026-11-23",
-      "notInDirectory": true
+      "notInDirectory": true,
+      "geocode": true
     },
     "Last Concert Cafe": {
       "lat": 29.76835,
@@ -394,7 +393,8 @@
       "street": "1604 Emancipation Ave",
       "geocode": true,
       "checked": "2026-11-23",
-      "notInDirectory": true
+      "notInDirectory": true,
+      "geoStreet": "1604 Dowling St"
     },
     "Rodeo Goat": {
       "street": "2105 Dallas St",
