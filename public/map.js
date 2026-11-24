@@ -2253,13 +2253,16 @@ export class CityMap {
   setScene(sc) { this.scene = sc; this.themeNight = sc === 'night'; this.pinCache?.clear?.(); }
   visibleSpots(under) { return this.spots.filter((s) => s.tunnel === under && s.places.some((p) => this.sceneOk(p)) && (!this.highlight || s.places.some((p) => this.highlight.has(p.id)))); }
   clusters(under) {
-    const m = new Map(), k = this.clusterSpan();
-    for (const s of this.visibleSpots(under)) {
+    const k = this.clusterSpan(), vis = this.visibleSpots(under), key0 = `${under}|${k}|${vis.length}|${this.mode}|${(performance.now() / 2000) | 0}`;   // open counts re-check every couple of seconds, not every frame
+    const ck = (this._clC || (this._clC = {}))[under ? 1 : 0]; if (ck && ck.key === key0 && ck.vis === vis.length) return ck.out;
+    const m = new Map();
+    for (const s of vis) {
       const [i, j] = this.cellIdx(s.x, s.y), key = Math.floor(i / k) + ':' + Math.floor(j / k);
       const c = m.get(key) || { n: 0, x: 0, y: 0, open: 0 };
       c.n += s.places.length; c.x += s.x * s.places.length; c.y += s.y * s.places.length; c.open += s.places.filter((p) => this.openC(p)).length; m.set(key, c);
     }
-    return [...m.values()].map((c) => ({ ...c, x: c.x / c.n, y: c.y / c.n, z: under && this.mode !== 'street' ? this.tunnelZ() : 0 }));
+    const out = [...m.values()].map((c) => ({ ...c, x: c.x / c.n, y: c.y / c.n, z: under && this.mode !== 'street' ? this.tunnelZ() : 0 }));
+    this._clC[under ? 1 : 0] = { key: key0, vis: vis.length, out }; return out;
   }
   layers() { return this.mode === 'tunnel' ? [true] : this.mode === 'both' ? [true, false] : [false]; }
   hit(sx, sy) {
@@ -2415,7 +2418,7 @@ export class CityMap {
       ctx.beginPath(); for (const o of nbB) { o.pts.forEach((q, i) => (i ? ctx.lineTo(...v.p(q[0], q[1], 0)) : ctx.moveTo(...v.p(q[0], q[1], 0)))); ctx.closePath(); } ctx.fillStyle = N2 ? '#1f232d' : '#a7a49c'; ctx.fill();
       ctx.beginPath(); for (const o of nbB) { const z = o.z0 + o.h; o.pts.forEach((q, i) => (i ? ctx.lineTo(...v.p(q[0], q[1], z)) : ctx.moveTo(...v.p(q[0], q[1], z)))); ctx.closePath(); } ctx.fillStyle = N2 ? '#3a3f4b' : '#d3cfc6'; ctx.fill(); }
     for (const a of this.areas) if (['ballpark', 'arena', 'grb'].includes(a.kind)) items.push({ k: v.boxDepth(a.r.x0, a.r.y0, a.r.x1 - a.r.x0, a.r.y1 - a.r.y0), a });
-    if (!this.hide.people) { for (const n of this.npcs) if (!n.under && n.inside <= 0 && !n.gone) items.push({ k: v.depth(n.x, n.y) + 0.5, n }); for (const r of this.rides || []) { const [rx, ry] = this.ridePos(r); items.push({ k: v.depth(rx, ry) + 0.4, rd: r }); } }
+    if (!this.hide.people && v.s >= 0.3) { for (const n of this.npcs) if (!n.under && n.inside <= 0 && !n.gone) items.push({ k: v.depth(n.x, n.y) + 0.5, n }); for (const r of this.rides || []) { const [rx, ry] = this.ridePos(r); items.push({ k: v.depth(rx, ry) + 0.4, rd: r }); } }
     if (!this._stTrees) { const T = [], sw = this.streetW, A = this.avenues, C = this.cross, mapped = this.geo?.trees || [];
       const MG = new Map(); for (const q of mapped) { const k = Math.floor(q[0] / 2) * 100003 + Math.floor(q[1] / 2); (MG.get(k) || MG.set(k, []).get(k)).push(q); }
       const near = (x, y) => { const i0 = Math.floor(x / 2), j0 = Math.floor(y / 2); for (let i = i0 - 1; i <= i0 + 1; i++) for (let j = j0 - 1; j <= j0 + 1; j++) for (const [a, b] of MG.get(i * 100003 + j) || []) if (Math.abs(a - x) < 1.2 && Math.abs(b - y) < 1.2) return true; return false; };
