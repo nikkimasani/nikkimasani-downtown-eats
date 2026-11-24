@@ -1008,6 +1008,15 @@
       "source": "https://houston.culturemap.com/news/restaurants-bars/tumble-22-hot-chicken-restaurant-downtown-open",
       "checked": "2026-11-23",
       "notInDirectory": true
+    },
+    "Reset": {
+      "street": "606 Dennis St",
+      "lat": 29.74614,
+      "lng": -95.37822,
+      "hours": "Wed–Sat 4pm–2am, Sun 3pm–12am",
+      "source": "https://aroundus.com/p/175319626-reset",
+      "checked": "2026-11-24",
+      "notInDirectory": true
     }
   }
 }

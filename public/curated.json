@@ -6951,5 +6951,28 @@
   "type": "Chicken",
   "note": "Texas hot chicken joint near Houston Ave & Washington: pick your heat level, plus homemade pies and stiff drinks.",
   "tryit": "Hot chicken sandwich and a slice of pie"
+ },
+ {
+  "id": 356,
+  "name": "Reset",
+  "address": "606 Dennis St, Ste 200, Houston, TX",
+  "tunnel": null,
+  "cuisines": [
+   "Cocktails"
+  ],
+  "meals": [
+   "Happy Hour",
+   "Late Night",
+   "Patio"
+  ],
+  "price": 3,
+  "vibes": [
+   "nightlife",
+   "music",
+   "drinks"
+  ],
+  "type": "Rooftop Bar",
+  "note": "Midtown rooftop lounge and dance club with a skyline-view terrace, house-music DJs, hookah and Sunday salsa.",
+  "tryit": "Sunset on the rooftop terrace"
  }
 ]

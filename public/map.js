@@ -826,6 +826,43 @@ export class CityMap {
     }
   }
   // ---------- live METRO (from /api/metro): real positions, or positions estimated from predicted stop times ----------
+  // ---------- the neighbourhoods around the districts (public/homes.json), built a tile at a time when they come into view ----------
+  setHomes(j) {
+    if (!j?.tiles) return; const T = j.tile || 0.004;
+    this.homeTiles = Object.entries(j.tiles).map(([k, rows]) => { const [i, jj] = k.split(',').map(Number), [x, y] = this.proj((i + 0.5) * T, (jj + 0.5) * T); return { x, y, rows, objs: null }; });
+    this.homeR = T * 110850 / 10 * 0.75;   // tile half-diagonal in world units
+  }
+  homeObjs(t) {
+    if (t.objs) return t.objs;
+    const hash = (n) => { n = (n ^ 61) ^ (n >>> 16); n = (n + (n << 3)) | 0; n ^= n >>> 4; n = Math.imul(n, 0x27d4eb2d); n ^= n >>> 15; return (n >>> 0) / 4294967296; };
+    const HOUSE = ['#f2eee4', '#e9e2cf', '#d8e2e6', '#dfe6d4', '#efe3c4', '#e7d6c8', '#cfd8dc', '#f4efe6', '#c9d3bd', '#e8dcc0', '#b8c7d3', '#f0d9c4'];
+    const TOWN = ['#f1f0ec', '#3f4650', '#d9d6cf', '#5b6570', '#e8e3d8', '#8a9aa6', '#c8ccc6', '#2f3a45', '#ece7dc', '#a9b7a3'];
+    const SHINGLE = ['#5d5f63', '#6e6458', '#4f5358', '#7a6a58', '#585c66', '#8a7d6c', '#6b4f45'];
+    const APT = ['#d9cbb4', '#c9b7a0', '#e3dccf', '#b9a58c', '#cfd3d6', '#a8796a'];
+    const WARE = ['#a8604a', '#b98b6a', '#c9c2b4', '#9aa5ad', '#b5ab98', '#d6cfbf'];
+    t.objs = [];
+    for (const r of t.rows) {
+      const [kind, hM, la0, ln0] = r, pts = [this.proj(la0 / 1e5, ln0 / 1e5)];
+      for (let i = 4; i + 1 < r.length; i += 2) pts.push(this.proj((la0 + r[i]) / 1e5, (ln0 + r[i + 1]) / 1e5));
+      if (pts.length < 3) continue;
+      const xs = pts.map((q) => q[0]), ys = pts.map((q) => q[1]), bb = { x0: Math.min(...xs), x1: Math.max(...xs), y0: Math.min(...ys), y1: Math.max(...ys) };
+      const cx = xs.reduce((a, b) => a + b, 0) / xs.length, cy = ys.reduce((a, b) => a + b, 0) / ys.length, k = hash((la0 * 7 + ln0) | 0), pick = (A) => A[Math.floor(k * A.length)];
+      let a2 = 0; for (let i = 0; i < pts.length; i++) { const a = pts[i], b = pts[(i + 1) % pts.length]; a2 += a[0] * b[1] - b[0] * a[1]; } const m2 = Math.abs(a2 / 2) * 100;
+      const o = { pts, bb, cx, cy, z0: 0, glass: false, name: '', type: 'home', nb: true, topM: 0, home: true };
+      if (kind === 'g') { o.h = 0.3; o.c = '#c9c6bf'; o.roofC = '#9fa3a8'; }
+      else if (kind === 'c') { o.h = hM ? hM / 10 : 0.9; o.c = '#d3c4a3'; o.roof = 'gabled'; o.roofC = '#6d7378'; }
+      else if (kind === 'w') { o.h = hM ? hM / 10 : 0.5 + k * 0.4; o.c = pick(WARE); o.fac = m2 > 900 ? 'ware' : 'shop'; o.roofC = '#b9bcbf'; }
+      else if (kind === 'a') { o.h = hM ? hM / 10 : 1.1 + k * 0.9; o.c = pick(APT); o.fac = 'house'; o.roofC = '#a9adb2'; }
+      else if (m2 < 95 || hM > 8) { o.h = hM ? hM / 10 : 0.85 + k * 0.35; o.c = pick(TOWN); o.fac = 'house'; o.roofC = '#9a9ea4'; if (k > 0.6) { o._rs = 'gabled'; o.roofC = pick(SHINGLE); o.h -= 0.15; } }   // townhomes
+      else { o.h = hM ? hM / 10 : 0.42 + k * 0.16; o.c = pick(HOUSE); o.fac = 'house'; o._rs = k > 0.45 ? 'gabled' : 'hipped'; o.roofC = pick(SHINGLE); }   // bungalows and cottages
+      if (o._rs || o.roof) { const rs = o._rs || o.roof, span = Math.min(bb.x1 - bb.x0, bb.y1 - bb.y0); o.roof = rs; o.rh = Math.min(o.h * 0.5, span * 0.32);
+        const sp = pts.filter((q, i) => { const a = pts[(i + pts.length - 1) % pts.length], b = pts[(i + 1) % pts.length]; const cr = (q[0] - a[0]) * (b[1] - q[1]) - (q[1] - a[1]) * (b[0] - q[0]); return Math.abs(cr) > 0.02 * Math.hypot(q[0] - a[0], q[1] - a[1]) * Math.hypot(b[0] - q[0], b[1] - q[1]); });
+        o.rp = sp.length >= 3 ? sp : pts; if (o.roof === 'gabled' && o.rp.length !== 4) o.roof = 'hipped'; }
+      if (kind === 'h' && k < 0.55) o.yard = [cx + (k - 0.27) * 3.2, cy + (0.27 - k) * 2.6 + 1.1, 0.55 + k * 0.5];   // a shade tree in most yards (oaks line the Heights and Montrose)
+      t.objs.push(o);
+    }
+    return t.objs;
+  }
   offGridXY(x, y) { const A = this.avenues, C = this.cross, m = this.blockW * 0.6; return x < Math.min(...A.map((a) => a.x)) - m || x > Math.max(...A.map((a) => a.x)) + m || y < Math.min(...C.map((c) => c.y)) - m || y > Math.max(...C.map((c) => c.y)) + m; }
   nearestRoad(x, y) {   // closest point on a mapped street (within ~60 m), with the street's direction
     const segs = this._roadSegs ?? (this._roadSegs = [...(this.geo?.minor || []).filter((g) => !/residential|unclassified|living/.test(g.k)), ...(this.geo?.roads || [])].flatMap((g) => g.pts.slice(1).map((b, i) => [g.pts[i], b])));
@@ -2414,6 +2451,11 @@ export class CityMap {
     for (const l of this.landmarks) items.push({ k: v.boxDepth(l.x, l.y, l.w, l.d), l });
     const nbFlat = v.s < 0.42 && !this.osmOutline, nbB = [];   // city scale: the thousands of small neighbourhood buildings go in one batched draw
     for (const o of this.osm || []) { const [sx, sy] = v.p(o.cx, o.cy), r = ((o.bb.x1 - o.bb.x0) + (o.bb.y1 - o.bb.y0)) * TW * 0.5 * v.s + 20, up = (o.z0 + o.h) * ZU * v.s; if (sx < -r || sx > this.W + r || sy + r < 0 || sy - up - r > this.H) continue; if (nbFlat && o.nb) { nbB.push(o); continue; } items.push({ k: this.osmDepth(o), o }); }
+    if (this.homeTiles && v.s >= 0.16) for (const t of this.homeTiles) {   // the neighbourhood tiles in view: flat with the rest at city scale, full houses closer in
+      const [tx, ty] = v.p(t.x, t.y), r = this.homeR * TW * v.s * 1.2 + 30; if (tx < -r || tx > this.W + r || ty < -r || ty > this.H + r) continue;
+      for (const o of this.homeObjs(t)) { const [sx, sy] = v.p(o.cx, o.cy), rr = ((o.bb.x1 - o.bb.x0) + (o.bb.y1 - o.bb.y0)) * TW * 0.5 * v.s + 20; if (sx < -rr || sx > this.W + rr || sy + rr < 0 || sy - (o.h * ZU * v.s) - rr > this.H) continue;
+        if (nbFlat) nbB.push(o); else { items.push({ k: this.osmDepth(o), o }); if (o.yard && v.s > 0.45) items.push({ k: v.depth(o.yard[0], o.yard[1]), yard: o.yard }); } }
+    }
     if (nbB.length) { const N2 = N;   // a dark footprint for the walls, then the roof lifted to its height: two fills for all of them
       ctx.beginPath(); for (const o of nbB) { o.pts.forEach((q, i) => (i ? ctx.lineTo(...v.p(q[0], q[1], 0)) : ctx.moveTo(...v.p(q[0], q[1], 0)))); ctx.closePath(); } ctx.fillStyle = N2 ? '#1f232d' : '#a7a49c'; ctx.fill();
       ctx.beginPath(); for (const o of nbB) { const z = o.z0 + o.h; o.pts.forEach((q, i) => (i ? ctx.lineTo(...v.p(q[0], q[1], z)) : ctx.moveTo(...v.p(q[0], q[1], z)))); ctx.closePath(); } ctx.fillStyle = N2 ? '#3a3f4b' : '#d3cfc6'; ctx.fill(); }
@@ -2454,6 +2496,7 @@ export class CityMap {
       else if (it.l) this.drawLandmark(it.l, N, ghost);
       else if (it.a) this.drawArea(it.a, N, '3d', ghost);
       else if (it.o) this.drawOsm(it.o, N, xray(it.o) ? Math.min(ghost, 0.32) : ghost);
+      else if (it.yard) this.drawStreetTree(it.yard[0], it.yard[1], N, ghost);
       else if (it.t) this.drawTrain(it.t, N, ghost);
       else if (it.c) this.drawCar(it.c, N, ghost, now);
       else if (it.tr) this.drawStreetTree(it.tr[0], it.tr[1], N, ghost);

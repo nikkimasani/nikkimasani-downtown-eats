@@ -681,6 +681,7 @@ function initMap() {
   });
   if (EVENTS.length) city.setEvents(EVENTS);
   setInterval(renderGameChip, 60000); renderGameChip();
+  setTimeout(() => fetch('homes.json').then((r) => (r.ok ? r.json() : null)).then((j) => j && city?.setHomes(j)).catch(() => {}), 1200);   // the surrounding neighbourhoods, after the map is up
   if (WX) { city.preferTunnel = wxBad(); city.weather = WX; }
   $('#needle').style.transform = `rotate(${city.compass()}rad)`; window._city = city;
   if (USER) city.setUser(USER);
