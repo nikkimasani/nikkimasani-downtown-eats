@@ -40,7 +40,7 @@ const hours = (oh) => {
 const cap = (s) => s.replace(/_/g, ' ').replace(/\b\w/g, (c) => c.toUpperCase());
 let added = 0;
 for (const p of pois) {
-  const t = p.t || {}, name = t.name; if (!name || !p.lat) continue;
+  const t = p.t || {}, name = t.name; if (!name || !p.lat || /^(vacant|closed|empty|for lease)\b/i.test(name) || t['disused:amenity'] || t.disused) continue;   // empty storefronts mapped with a placeholder name
   if (/^(no|closed)$/i.test(t.opening_hours || '') || t['disused:amenity'] || /^(yes)$/.test(t.disused || '')) continue;
   const n = norm(name), num = t['addr:housenumber'];
   if (!n || have.some((h) => h.n && (h.n === n || (n.length > 5 && (h.n.includes(n) || n.includes(h.n))) || (num && h.num === num && h.n.slice(0, 4) === n.slice(0, 4)) || (close(h, p) && h.n.slice(0, 4) === n.slice(0, 4))))) continue;

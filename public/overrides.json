@@ -780,6 +780,26 @@
       "source": "https://secrethouston.com/tejas-rooftop-brewery-houston/",
       "checked": "2026-11-23",
       "notInDirectory": true
+    },
+    "Platypus Brewing": {
+      "status": "closed",
+      "source": "https://www.houstoniamag.com/eat-and-drink/houston-restaurant-bar-brewery-closings-june-2026/",
+      "checked": "2026-11-23"
+    },
+    "Loft 18": {
+      "status": "closed",
+      "source": "https://communityimpact.com/heights-river-oaks-montrose/dining/interactive-sports-bar-shuts-down-due-to-increased-crime-rising-market-costs/",
+      "checked": "2026-11-23"
+    },
+    "Maven": {
+      "status": "closed",
+      "source": "https://houston.culturemap.com/news/restaurants-bars/maven-coffee-sawyer-yards-slowpokes/",
+      "checked": "2026-11-23"
+    },
+    "vacant": {
+      "status": "closed",
+      "source": "OSM placeholder for an empty storefront",
+      "checked": "2026-11-23"
     }
   }
 }
