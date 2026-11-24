@@ -2065,7 +2065,7 @@ export class CityMap {
 
   // ---------- view / input ----------
   resize() {
-    const r = this.cv.getBoundingClientRect(), dpr = Math.min(this.maxDpr || 2, window.devicePixelRatio || 1);
+    const r = this.cv.getBoundingClientRect(), dpr = Math.min(this.maxDpr || 2, window.devicePixelRatio || 1) * (this.farRes ? 0.6 : 1);   // zoomed far out: fewer pixels, the city is tiny anyway
     this.W = r.width; this.H = r.height; this.cv.width = r.width * dpr; this.cv.height = r.height * dpr; this.ctx.setTransform(dpr, 0, 0, dpr, 0, 0);
   }
   centerOn(x, y, z = 0, fy = 0.55) { const [px, py] = this.v.p(x, y, z); this.v.ox += this.W / 2 - px; this.v.oy += this.H * fy - py; }
@@ -2295,6 +2295,7 @@ export class CityMap {
       this.ema = (this.ema ?? 0.016) * 0.95 + raw * 0.05; this.slowFor = this.ema > 0.034 ? (this.slowFor || 0) + raw : 0;
       if (this.slowFor > 1.5 && (this.maxDpr || 2) > 1) { this.maxDpr = Math.max(1, (this.maxDpr || 2) - 0.5); this.slowFor = 0; this.resize(); }
     }
+    { const far = this.farRes ? this.v.s < 0.5 : this.v.s < 0.42; if (far !== !!this.farRes) { this.farRes = far; this.resize(); } }
     if (this.zoomAnim) { const z = this.zoomAnim, step = Math.min(z.k - z.done, z.k * dt * 5) || 0; if (Math.abs(z.k - z.done) < 1e-3 || !step) this.zoomAnim = null; else { this.zoomAt(z.sx, z.sy, Math.exp(step)); z.done += step; } }
     if (this.fling) { const f = this.fling, k = Math.min(3, dt * 60); this.v.ox += f.vx * k; this.v.oy += f.vy * k; f.vx *= Math.pow(0.92, k); f.vy *= Math.pow(0.92, k); if (Math.hypot(f.vx, f.vy) < 0.3) this.fling = null; }
     if (!this.pointers?.size && !this.anim) this.keepInBounds();
@@ -2484,7 +2485,7 @@ export class CityMap {
       if (x1 < -20 || x0 > W + 20 || y1 < -20 || y0 > H + 20) continue; vis.push(L); ctx.moveTo(...sp[0]); for (const q of sp.slice(1)) ctx.lineTo(...q); ctx.closePath();
     }
     ctx.fillStyle = N ? '#262b36' : '#9ea4ab'; ctx.fill(); if (!N) { ctx.strokeStyle = 'rgba(255,255,255,.35)'; ctx.lineWidth = 1; ctx.stroke(); }
-    if (v.s < 0.22) return;
+    if (v.s < 0.3) return;   // zoomed out: just the asphalt
     if (v.s >= 0.4) { ctx.strokeStyle = N ? 'rgba(255,255,255,.18)' : 'rgba(255,255,255,.8)'; ctx.lineWidth = 1; ctx.beginPath(); for (const L of vis) for (const [a, b] of L.rows) { ctx.moveTo(...v.p(a[0], a[1], 0.02)); ctx.lineTo(...v.p(b[0], b[1], 0.02)); } ctx.stroke(); }
     if (v.s < 0.55) {   // zoomed out: parked cars as coloured dots, one path per colour
       const r = Math.max(1.2, v.s * 3.2), by = {}; for (const L of vis) for (const c of L.cars) { if (c.k > lim) continue; const [sx, sy] = v.p(c.x, c.y); if (sx < -5 || sx > W + 5 || sy < -5 || sy > H + 5) continue; (by[c.c] || (by[c.c] = [])).push(sx, sy); }
@@ -2815,7 +2816,7 @@ export class CityMap {
     const pathZ = (pts, z) => { ctx.beginPath(); pts.forEach((p, i) => (i ? ctx.lineTo(...v.p(p[0], p[1], z)) : ctx.moveTo(...v.p(p[0], p[1], z)))); };
     { const small = (g) => g.k === 'residential' || g.k === 'unclassified';   // off-grid streets, batched: one stroke per width
       for (const [sw, rw, pick] of [[1.15, 0.8, true], [1.5, 1.1, false]]) {
-        ctx.beginPath(); for (const g of G.minor || []) if (small(g) === pick) sub(g.pts); ctx.strokeStyle = N ? '#3a3f4c' : '#d8d2c6'; ctx.lineWidth = strokeW(sw) + 3; ctx.stroke();   // sidewalks
+        if (v.s > 0.4) { ctx.beginPath(); for (const g of G.minor || []) if (small(g) === pick) sub(g.pts); ctx.strokeStyle = N ? '#3a3f4c' : '#d8d2c6'; ctx.lineWidth = strokeW(sw) + 3; ctx.stroke(); }   // sidewalks
         ctx.beginPath(); for (const g of G.minor || []) if (small(g) === pick) sub(g.pts); ctx.strokeStyle = road; ctx.lineWidth = strokeW(rw); ctx.stroke(); } }
     if (v.s > 0.55) { ctx.font = `700 ${Math.round(9 + v.s * 2)}px system-ui, sans-serif`; ctx.textAlign = 'center'; ctx.textBaseline = 'middle'; const seen = new Set();
       for (const g of G.minor || []) { if (!g.n || seen.has(g.n) || g.pts.length < 2) continue; const a = v.p(...g.pts[0]), b = v.p(...g.pts[g.pts.length - 1]); if (Math.hypot(b[0] - a[0], b[1] - a[1]) < 70) continue; seen.add(g.n); const mx = (a[0] + b[0]) / 2, my = (a[1] + b[1]) / 2; let ang = Math.atan2(b[1] - a[1], b[0] - a[0]); if (ang > Math.PI / 2) ang -= Math.PI; if (ang < -Math.PI / 2) ang += Math.PI;
@@ -2920,10 +2921,15 @@ export class CityMap {
         const tries = [[0, yy], [0, y - lift + rr + 12], [w / 2 + rr + 4, y - lift], [-(w / 2 + rr + 4), y - lift]];
         for (const [dx, ty] of tries) if (fits(x + dx - w / 2 - 2, ty - 10, x + dx + w / 2 + 2, ty + 10)) { lbl.set(s, [dx, ty - yy]); break; } }
     }
+    {   // every pin's stem and ground shadow in two batched draws (hundreds of pins once the whole map is in view)
+      const r0 = lod === 'label' ? 12 : 10; ctx.beginPath();
+      for (const s of list) { const [x, y] = v.p(s.x, s.y, z); ctx.moveTo(x, y); ctx.lineTo(x, y - lift + r0); }
+      ctx.strokeStyle = 'rgba(0,0,0,.25)'; ctx.lineWidth = 1.2; ctx.stroke(); ctx.beginPath();
+      for (const s of list) { const [x, y] = v.p(s.x, s.y, z); ctx.moveTo(x + 3, y); ctx.ellipse(x, y, 3, 1.5, 0, 0, Math.PI * 2); }
+      ctx.fillStyle = 'rgba(0,0,0,.25)'; ctx.fill();
+    }
     for (const s of list) {
       const [x, y] = v.p(s.x, s.y, z), open = s.places.some((p) => this.openC(p)), r = lod === 'label' ? 12 : 10;
-      ctx.strokeStyle = 'rgba(0,0,0,.25)'; ctx.lineWidth = 1.2; ctx.beginPath(); ctx.moveTo(x, y); ctx.lineTo(x, y - lift + r); ctx.stroke();
-      ellipse(ctx, x, y, 3, 1.5, 'rgba(0,0,0,.25)');
       if (this.highlight && s.places.some((p) => this.highlight.has(p.id))) { const pulse = 0.55 + 0.45 * Math.sin(performance.now() / 320 + s.x), g = ctx.createRadialGradient(x, y - lift, r * 0.6, x, y - lift, r * 2.4); g.addColorStop(0, hexA(s.style.color, 0.55 * pulse)); g.addColorStop(1, hexA(s.style.color, 0)); ctx.fillStyle = g; ctx.beginPath(); ctx.arc(x, y - lift, r * 2.4, 0, 7); ctx.fill(); }
       const spr = pinSprite(open ? s.style.color : '#adb5bd', s.style.emoji, r, under ? '#c3fae8' : '#fff'); ctx.drawImage(spr, x - spr.css / 2, y - lift - spr.css / 2, spr.css, spr.css);
       if (s.places.length > 1) { circle(ctx, x + r * 0.85, y - lift - r * 0.8, 7, '#212529'); ctx.fillStyle = '#fff'; ctx.font = '700 9px system-ui, sans-serif'; ctx.fillText(String(s.places.length), x + r * 0.85, y - lift - r * 0.8 + 0.5); }
