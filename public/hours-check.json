@@ -1,6 +1,6 @@
 {
  "checked": "2026-11-24",
- "sitesWithHours": 18,
+ "sitesWithHours": 19,
  "flags": {
   "Artistry": {
    "site": "Sun closed · Mon closed · Tue 11am–11:59pm · Wed 12am–2:45am, 11am–11:59pm · Thu 12am–2:45am, 11am–11:59pm · Fri 12am–2:45am, 11am–11:59pm · Sat 12am–2:45am",
@@ -56,6 +56,11 @@
    "site": "Sun 2pm–11pm · Mon 4pm–10pm · Tue 4pm–10pm · Wed 4pm–10pm · Thu 4pm–10pm · Fri 4pm–2am · Sat 3pm–2am",
    "url": "https://sohogardenhtx.com/",
    "slots": 84
+  },
+  "Brennan's": {
+   "site": "Sun 10am–8pm · Mon 11am–8pm · Tue 11am–9pm · Wed 11am–9pm · Thu 11am–9pm · Fri 11am–10pm · Sat 11am–10pm",
+   "url": "https://www.brennanshouston.com/",
+   "slots": 70
   },
   "Henderson & Kane": {
    "site": "Sun 8am–7:30pm · Mon 8am–8:30pm · Tue 8am–8:30pm · Wed 8am–8:30pm · Thu 8am–8:30pm · Fri 8am–8:30pm · Sat 8am–8:30pm",
