@@ -6281,5 +6281,132 @@
   "type": "Burgers",
   "note": "Walk-up burger window open since 1963.",
   "tryit": "Champ cheeseburger with jalapeños"
+ },
+ {
+  "id": 328,
+  "name": "City Cellars HTX",
+  "address": "2850 Riverby Rd, Houston, TX",
+  "tunnel": null,
+  "cuisines": [
+   "Wine Bar",
+   "American"
+  ],
+  "meals": [
+   "Brunch",
+   "Lunch",
+   "Dinner",
+   "Happy Hour",
+   "Patio"
+  ],
+  "price": 3,
+  "vibes": [
+   "date",
+   "drinks",
+   "patio"
+  ],
+  "type": "Wine Bar",
+  "note": "East River wine bar and bistro with a big bayou-and-skyline patio and live music most nights. 21+.",
+  "tryit": "A glass on the patio at sunset"
+ },
+ {
+  "id": 329,
+  "name": "Cocktails Unknown",
+  "address": "2850 Riverby Rd, Ste 110, Houston, TX",
+  "tunnel": null,
+  "cuisines": [
+   "Cocktails"
+  ],
+  "meals": [
+   "Happy Hour",
+   "Late Night"
+  ],
+  "price": 3,
+  "vibes": [
+   "date",
+   "nightlife",
+   "drinks"
+  ],
+  "type": "Cocktail Bar",
+  "note": "Hidden speakeasy tucked inside City Cellars at East River; happy hour Thu–Sat 6–8pm.",
+  "tryit": "Ask the bartender for something off-menu"
+ },
+ {
+  "id": 330,
+  "name": "La Calle East River",
+  "address": "2920 Riverby Rd, Houston, TX",
+  "tunnel": null,
+  "cuisines": [
+   "Mexican & Latin",
+   "Tacos"
+  ],
+  "meals": [
+   "Lunch",
+   "Dinner",
+   "Happy Hour",
+   "Patio"
+  ],
+  "price": 1,
+  "vibes": [
+   "spicy",
+   "group",
+   "patio",
+   "drinks"
+  ],
+  "type": "Mexican",
+  "note": "The biggest La Calle: Mexico City-style street tacos plus a cantina and a bayou-view patio.",
+  "tryit": "Tacos al pastor on the patio"
+ },
+ {
+  "id": 331,
+  "name": "Birdies Icehouse",
+  "address": "65 Hirsch Rd, Houston, TX",
+  "tunnel": null,
+  "cuisines": [
+   "Bar Bites",
+   "American"
+  ],
+  "meals": [
+   "Lunch",
+   "Dinner",
+   "Happy Hour",
+   "Patio",
+   "Pet Friendly"
+  ],
+  "price": 2,
+  "vibes": [
+   "group",
+   "sports",
+   "patio",
+   "drinks"
+  ],
+  "type": "Bar",
+  "note": "Icehouse at the East River 9 golf course: cold beer, big screens, pickleball and a lit par-3 course with skyline sunsets.",
+  "tryit": "Caddy snacks and a bucket of balls"
+ },
+ {
+  "id": 332,
+  "name": "Tejas Brewery",
+  "address": "2101 Summer St, Houston, TX",
+  "tunnel": null,
+  "cuisines": [
+   "Beer",
+   "Tex-Mex"
+  ],
+  "meals": [
+   "Lunch",
+   "Dinner",
+   "Happy Hour",
+   "Brunch",
+   "Patio"
+  ],
+  "price": 2,
+  "vibes": [
+   "group",
+   "drinks",
+   "sports"
+  ],
+  "type": "Brewery",
+  "note": "Three-story Sawyer Yards brewery (the old Buffalo Bayou Brewing building) with a rooftop skyline view; happy hour weekdays 3–6pm.",
+  "tryit": "A Tejas Negra on the roof"
  }
 ]

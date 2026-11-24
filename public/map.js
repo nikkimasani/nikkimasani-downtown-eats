@@ -405,7 +405,7 @@ export class CityMap {
     const groups = new Map();
     const XA = this.avenues, XC = this.cross, offMap = ([x, y]) => x < XA[0].x - this.blockW * 2.4 || x > XA[XA.length - 1].x + this.blockW * 1.8 || y < XC[0].y - this.blockD * 3 || y > XC[XC.length - 1].y + this.blockD * 1.4;
     this.offMap = new Set();
-    const EXTRA = [[29.7650, -95.3615, 29.7712, -95.3478], [29.7398, -95.3600, 29.7625, -95.3335], [29.7385, -95.3340, 29.7600, -95.3115]];   // + EaDo east of US-59 (Roots, Nancy's Hustle), + the East End / Second Ward along Navigation & Harrisburg (By The Wayside)   // the Warehouse District north of the bayou (Nance & Providence: Theodore Rex, Buried Seeds, Last Concert Cafe)
+    const EXTRA = [[29.7650, -95.3615, 29.7712, -95.3478], [29.7398, -95.3600, 29.7625, -95.3335], [29.7385, -95.3340, 29.7600, -95.3115], [29.7580, -95.3480, 29.7740, -95.3200], [29.7640, -95.3860, 29.7735, -95.3760]];   // + East River across the bayou (City Cellars, Birdies), + Sawyer Yards (Tejas Brewery)   // + EaDo east of US-59 (Roots, Nancy's Hustle), + the East End / Second Ward along Navigation & Harrisburg (By The Wayside)   // the Warehouse District north of the bayou (Nance & Providence: Theodore Rex, Buried Seeds, Last Concert Cafe)
     const inExtra = (p) => EXTRA.some(([s0, w0, n0, e0]) => p.lat >= s0 && p.lat <= n0 && p.lng >= w0 && p.lng <= e0);
     for (const p of pts) {
       if (offMap(proj(p.lat, p.lng)) && !inExtra(p)) { this.offMap.add(p.id); continue; }   // beyond the edge of the map: no pin (the app sends you to Maps instead)

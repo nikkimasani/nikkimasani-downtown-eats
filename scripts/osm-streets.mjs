@@ -3,8 +3,9 @@
 // with the real streets and to draw parks, the bayou and trees where they actually are.
 // Run: node scripts/osm-streets.mjs   (Node 20+, no dependencies). Map data © OpenStreetMap contributors, ODbL.
 import fs from 'fs';
-const BBOX = [29.7380, -95.3790, 29.7715, -95.3100];
-const Q = `[out:json][timeout:120];(
+// the same areas as scripts/osm-buildings.mjs: downtown + EaDo/East End, East River (Fifth Ward), Sawyer Yards
+const BOXES = [[29.7380, -95.3790, 29.7715, -95.3100], [29.7580, -95.3480, 29.7740, -95.3200], [29.7640, -95.3860, 29.7735, -95.3760]];
+const Q = `[out:json][timeout:150];(${BOXES.map((BBOX) => `
   way["highway"~"^(primary|secondary|tertiary|residential|unclassified|living_street|pedestrian|trunk|motorway|motorway_link|trunk_link)$"](${BBOX});
   way["railway"~"^(light_rail|tram)$"](${BBOX});
   way["highway"~"^(footway|cycleway|path|steps|corridor)$"](${BBOX});
@@ -13,6 +14,7 @@ const Q = `[out:json][timeout:120];(
   way["place"="square"](${BBOX}); way["highway"="pedestrian"]["area"="yes"](${BBOX});
   way["natural"="water"](${BBOX}); way["waterway"~"^(river|stream)$"](${BBOX});
   node["natural"="tree"](${BBOX});
+`).join('')}
 );out body geom;`;
 const EP = ['https://overpass-api.de/api/interpreter', 'https://overpass.kumi.systems/api/interpreter', 'https://overpass.private.coffee/api/interpreter'];
 let data = null;

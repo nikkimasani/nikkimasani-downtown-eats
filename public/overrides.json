@@ -735,6 +735,55 @@
       "hours": "Mon–Fri 10am–6:30pm",
       "source": "https://www.ubereats.com/store/bubble-boba-houston/p8iA0qU5VkG6rvA0IP5oMA",
       "checked": "2026-11-23"
+    },
+    "City Cellars HTX": {
+      "street": "2850 Riverby Rd",
+      "lat": 29.762992,
+      "lng": -95.341193,
+      "hours": "Mon–Thu 11am–9pm, Fri 11am–10pm, Sat 10am–10pm, Sun 10am–5pm",
+      "source": "https://www.opentable.com/r/city-cellars-houston-2",
+      "checked": "2026-11-23",
+      "notInDirectory": true
+    },
+    "Cocktails Unknown": {
+      "street": "2850 Riverby Rd",
+      "lat": 29.76309,
+      "lng": -95.34106,
+      "source": "https://www.opentable.com/r/cocktails-unknown-houston",
+      "checked": "2026-11-23",
+      "notInDirectory": true
+    },
+    "La Calle East River": {
+      "street": "2920 Riverby Rd",
+      "lat": 29.7636,
+      "lng": -95.3399,
+      "approx": true,
+      "geocode": true,
+      "source": "https://houston.culturemap.com/news/restaurants-bars/la-calle-tacos-east-river/",
+      "checked": "2026-11-23",
+      "notInDirectory": true
+    },
+    "Birdies Icehouse": {
+      "street": "65 Hirsch Rd",
+      "lat": 29.7628,
+      "lng": -95.33,
+      "approx": true,
+      "geocode": true,
+      "hours": "Mon–Thu 11am–10pm, Fri 10am–11pm, Sat 9am–11pm, Sun 9am–10pm",
+      "source": "https://secrethouston.com/birdies-icehouse-houston/",
+      "checked": "2026-11-23",
+      "notInDirectory": true
+    },
+    "Tejas Brewery": {
+      "street": "2101 Summer St",
+      "lat": 29.7676,
+      "lng": -95.3803,
+      "approx": true,
+      "geocode": true,
+      "hours": "Mon–Thu 11am–10pm, Fri–Sat 11am–12am, Sun 11am–10pm",
+      "source": "https://secrethouston.com/tejas-rooftop-brewery-houston/",
+      "checked": "2026-11-23",
+      "notInDirectory": true
     }
   }
 }
