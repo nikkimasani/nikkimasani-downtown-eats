@@ -6828,5 +6828,103 @@
   "type": "Cocktail Bar",
   "note": "Speakeasy-style cocktail lounge in Regent Square with a travel-themed, seasonal menu. Look for the dark gray door across from Mexican Sugar.",
   "tryit": "A destination-inspired signature cocktail"
+ },
+ {
+  "id": 351,
+  "tunnel": null,
+  "name": "LOV3 Houston",
+  "address": "2900 Travis St, Houston, TX",
+  "cuisines": [
+   "Cocktails",
+   "American"
+  ],
+  "meals": [
+   "Brunch",
+   "Dinner",
+   "Happy Hour",
+   "Late Night",
+   "Patio"
+  ],
+  "price": 3,
+  "vibes": [
+   "nightlife",
+   "date",
+   "music"
+  ],
+  "type": "Lounge",
+  "note": "Upscale Midtown lounge across from Midtown Park: cocktails, hookah, DJs nightly, Sunday brunch and Wednesday live music. 21+.",
+  "tryit": "Shrimp and grits at Sunday brunch"
+ },
+ {
+  "id": 352,
+  "tunnel": null,
+  "name": "Provecho",
+  "address": "3030 Travis St, Ste B, Houston, TX",
+  "cuisines": [
+   "Bar Bites",
+   "Cocktails"
+  ],
+  "meals": [
+   "Happy Hour",
+   "Late Night",
+   "Patio"
+  ],
+  "price": 2,
+  "vibes": [
+   "nightlife",
+   "sports",
+   "patio",
+   "group"
+  ],
+  "type": "Sports Bar",
+  "note": "Midtown patio bar and lounge with 30+ TVs, a live DJ spinning Latin, hip-hop and house, and rotating food vendors.",
+  "tryit": "Game on the patio"
+ },
+ {
+  "id": 353,
+  "tunnel": null,
+  "name": "Medellin HTX",
+  "address": "2303 Smith St, Ste 100, Houston, TX",
+  "cuisines": [
+   "Cocktails",
+   "Mexican & Latin"
+  ],
+  "meals": [
+   "Late Night",
+   "Happy Hour"
+  ],
+  "price": 3,
+  "vibes": [
+   "nightlife",
+   "music",
+   "group"
+  ],
+  "type": "Nightclub",
+  "note": "Upscale Latin lounge and club in Midtown: dance floor, live stage, hookah lounge and bottle service.",
+  "tryit": "Empanadas and a night of dancing"
+ },
+ {
+  "id": 354,
+  "tunnel": null,
+  "name": "Vida Garden HTX",
+  "address": "2300 Louisiana St, Houston, TX",
+  "cuisines": [
+   "Cocktails"
+  ],
+  "meals": [
+   "Happy Hour",
+   "Late Night",
+   "Patio"
+  ],
+  "price": 2,
+  "vibes": [
+   "nightlife",
+   "patio",
+   "group",
+   "music"
+  ],
+  "type": "Bar",
+  "note": "Big Midtown cocktail patio and party garden — four bars in one, lively on game days and weekends.",
+  "tryit": "Cocktails on the patio"
  }
 ]

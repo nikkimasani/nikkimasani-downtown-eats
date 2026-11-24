@@ -41,7 +41,9 @@ const AREAS = [
   { k: 'allen', l: 'Allen Pkwy & Regent Square', e: '🌳', b: [29.7530, -95.4140, 29.7650, -95.3745] },
   { k: 'midtown', l: 'Midtown', e: '🍸', b: [29.7300, -95.3900, 29.7480, -95.3560] },
 ];
-const areaOf = (r) => { if (r.lat == null) return null; for (const a of AREAS) { const [s0, w0, n0, e0] = a.b; if (r.lat >= s0 && r.lat <= n0 && r.lng >= w0 && r.lng <= e0) return a.k; } return null; };
+const inGrid = (r) => { let c = null; try { c = city; } catch (e) { return null; } if (!c?.avenues) return null; const [x, y] = city.proj(r.lat, r.lng), A = city.avenues.map((a) => a.x), C = city.cross.map((c) => c.y); return x >= Math.min(...A) && x <= Math.max(...A) && y >= Math.min(...C) && y <= Math.max(...C); };
+const areaOf = (r) => { if (r.lat == null) return null; if (r._area !== undefined && r._areaK === r.lat + r.lng) return r._area; const g = inGrid(r); const v = g ? 'downtown' : areaBox(r, g === null); if (g !== null) { r._area = v; r._areaK = r.lat + r.lng; } return v; };
+const areaBox = (r, useDowntownBox) => { for (const a of AREAS) { if (a.k === 'downtown' && !useDowntownBox) continue; const [s0, w0, n0, e0] = a.b; if (r.lat >= s0 && r.lat <= n0 && r.lng >= w0 && r.lng <= e0) return a.k; } return null; };
 const AREA_OPTS = [{ k: 'any', l: '📍 Anywhere' }, ...AREAS.map((a) => ({ k: a.k, l: `${a.e} ${a.l}` }))];
 const DAYS = ['Mon', 'Tue', 'Wed', 'Thu', 'Fri'];
 const st = { moods: new Set(store.get('moods', [])), meal: store.get('meal', 'Any'), budget: store.get('budget', 0), extras: new Set(store.get('extras', [])), area: store.get('area', 'any') };
@@ -789,11 +791,11 @@ function applyChip(quiet) {
   if (chip === 'all' || chip === 'park') { city.setHighlight(null); if (chip === 'park' && !quiet) toast('🅿️ Garages in dark blue, surface lots in light blue'); return; }
   const ids = DATA.filter((r) => (c.f ? c.f(r) : c.re.test(chipText(r))) && city.sceneOk(r)).map((r) => r.id);
   city.setHighlight(new Set(ids));
-  if (c.area && !quiet) { const [s0, w0, n0, e0] = c.area.b, [x, y] = city.proj((s0 + n0) / 2, (w0 + e0) / 2); city.zoomTo(x, y, c.area.k === 'downtown' ? 0.42 : 0.55); }
+  if (c.area && !quiet) fitArea(c.area);
   if (!quiet) toast(ids.length ? `${c.l}: ${ids.length} spot${ids.length === 1 ? '' : 's'}` : `No ${c.l.replace(/^\S+ /, '').toLowerCase()} spots on this map`);
   mapOpen = false; $('#mapOpen')?.classList.remove('on');
 }
-$('#mapChips').onclick = (e) => { const b = e.target.closest('[data-c]'); if (!b) return; chip = chip === b.dataset.c || b.dataset.c === 'all' ? 'all' : b.dataset.c; renderChips(); applyChip(); };
+$('#mapChips').onclick = (e) => { const b = e.target.closest('[data-c]'); if (!b) return; chip = chip === b.dataset.c || b.dataset.c === 'all' ? 'all' : b.dataset.c; mapArea = chip.startsWith('area:') ? chip.slice(5) : null; renderChips(); applyChip(); if (typeof renderAreaMenu === 'function') renderAreaMenu(); };
 renderChips();
 $('#findMe').onclick = () => findMe();
 function renderFind() {
@@ -1178,3 +1180,25 @@ function renderGameChip() {
   b.textContent = live ? `🔴 ${e.emoji} ${e.team} vs ${opp} · on now` : `${e.emoji} ${e.team} vs ${opp} · ${t.toLocaleTimeString('en-US', { hour: 'numeric', minute: t.getMinutes() ? '2-digit' : undefined, timeZone: 'America/Chicago' }).toLowerCase().replace(' ', '')}`;
   b.onclick = () => { const a = city?.areas?.find((x) => x.n === e.venue); if (a) city.zoomTo((a.r.x0 + a.r.x1) / 2, (a.r.y0 + a.r.y1) / 2, 0.8); toast(`${e.emoji} ${e.team} vs ${e.vs || ''} at ${e.venue}${live ? ' — game on now, expect crowds' : ''}`); };
 }
+
+// ---------- area picker on the map: fly to a neighbourhood and light up its spots ----------
+function fitArea(a) {
+  if (!city) return; const [s0, w0, n0, e0] = a.b, v = city.v;
+  const pts = [[s0, w0], [s0, e0], [n0, w0], [n0, e0]].map(([la, ln]) => v.p(...city.proj(la, ln), 0));
+  const xs = pts.map((q) => q[0]), ys = pts.map((q) => q[1]), bw = Math.max(...xs) - Math.min(...xs), bh = Math.max(...ys) - Math.min(...ys);
+  const k = Math.min((city.W * 0.92) / bw, (city.H * 0.62) / bh), [cx, cy] = city.proj((s0 + n0) / 2, (w0 + e0) / 2);
+  city.zoomTo(cx, cy, Math.max(0.22, Math.min(1.1, v.s * k)));
+}
+let mapArea = null;
+function renderAreaMenu() {
+  $('#areaList').innerHTML = [`<button class="pill ${!mapArea ? 'on' : ''}" data-ar="">🗺️ Whole map</button>`, ...AREAS.map((a) => `<button class="pill ${mapArea === a.k ? 'on' : ''}" data-ar="${a.k}">${a.e} ${esc(a.l)}</button>`)].join('');
+  $('#areaBtn').innerHTML = mapArea ? `${AREAS.find((a) => a.k === mapArea).e}<span class="lbl"> ${esc(AREAS.find((a) => a.k === mapArea).l)}</span>` : '📍<span class="lbl"> Area</span>';
+  $('#areaBtn').classList.toggle('on', !!mapArea);
+}
+$('#areaBtn').onclick = () => { const m = $('#areaMenu'), open = m.hidden; m.hidden = !open; $('#hudMore').hidden = true; $('#areaBtn').setAttribute('aria-expanded', open); renderAreaMenu(); };
+$('#areaList').onclick = (e) => {
+  const b = e.target.closest('[data-ar]'); if (!b || !city) return; mapArea = b.dataset.ar || null; $('#areaMenu').hidden = true; renderAreaMenu();
+  if (!mapArea) { chip = 'all'; renderChips(); city.setHighlight(null); city.zoomTo(...(() => { const B = city.bounds; return [(B.x0 + B.x1) / 2, (B.y0 + B.y1) / 2]; })(), 0.26); return; }
+  chip = 'area:' + mapArea; renderChips(); applyChip();
+};
+renderAreaMenu();

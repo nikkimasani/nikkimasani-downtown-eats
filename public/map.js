@@ -826,6 +826,14 @@ export class CityMap {
     }
   }
   // ---------- live METRO (from /api/metro): real positions, or positions estimated from predicted stop times ----------
+  offGridXY(x, y) { const A = this.avenues, C = this.cross, m = this.blockW * 0.6; return x < Math.min(...A.map((a) => a.x)) - m || x > Math.max(...A.map((a) => a.x)) + m || y < Math.min(...C.map((c) => c.y)) - m || y > Math.max(...C.map((c) => c.y)) + m; }
+  nearestRoad(x, y) {   // closest point on a mapped street (within ~60 m), with the street's direction
+    const segs = this._roadSegs ?? (this._roadSegs = [...(this.geo?.minor || []).filter((g) => !/residential|unclassified|living/.test(g.k)), ...(this.geo?.roads || [])].flatMap((g) => g.pts.slice(1).map((b, i) => [g.pts[i], b])));
+    let best = null, bd = 36;
+    for (const [a, b] of segs) { const ex = b[0] - a[0], ey = b[1] - a[1], L2 = ex * ex + ey * ey || 1e-9; let t = ((x - a[0]) * ex + (y - a[1]) * ey) / L2; t = t < 0 ? 0 : t > 1 ? 1 : t;
+      const px = a[0] + ex * t, py = a[1] + ey * t, d = (px - x) ** 2 + (py - y) ** 2; if (d < bd) { const L = Math.sqrt(L2); bd = d; best = [px, py, ex / L, ey / L]; } }
+    return best;
+  }
   setLive(data, stat) { this.liveData = data; this.liveStat = stat || this.liveStat; if (!data) this.liveCars = []; }
   computeLive() {
     const L = this.liveData; if (!L) { this.liveCars = []; return; }
@@ -859,6 +867,9 @@ export class CityMap {
       const nm = (ri[0] + ' ' + ri[3]).toLowerCase(), onMain = /red/.test(nm) || (!/green|purple/.test(nm) && R2 && Math.abs(x - R2.x) < Math.min(Math.abs(y - R2.capY), Math.abs(y - R2.ruskY)));
       if (kind === 'train' && R2 && onMain && Math.abs(x - R2.x) < 8) { dy = hy >= 0 ? 1 : -1; x = R2.x + (dy > 0 ? 0.32 : -0.32); }
       else if (kind === 'train' && R2 && !onMain && Math.min(Math.abs(y - R2.capY), Math.abs(y - R2.ruskY)) < 8) { dx = hx >= 0 ? 1 : -1; y = dx > 0 ? R2.capY : R2.ruskY; }
+      else if (kind === 'bus' && this.offGridXY(x, y)) {   // outside the downtown grid: onto the nearest mapped street, not the grid line extended across a park
+        const q = this.nearestRoad(x, y); if (q) { x = q[0]; y = q[1]; dx = q[2]; dy = q[3]; if (dx * hx + dy * hy < 0) { dx = -dx; dy = -dy; } }
+      }
       else {
         const na = A.reduce((b, a) => (Math.abs(a.x - x) < Math.abs(b.x - x) ? a : b)), nc = C.reduce((b, c) => (Math.abs(c.y - y) < Math.abs(b.y - y) ? c : b));
         const lane = this.streetW * 0.5;
@@ -1395,7 +1406,7 @@ export class CityMap {
       }
       if (type === 'church' || type === 'cathedral') { o.c = o.c === c ? (MAT[mat]?.[0] || '#d3c4a3') : o.c; if (!o.roof) { o.roof = 'gabled'; o.rh = Math.min(bb.x1 - bb.x0, bb.y1 - bb.y0) * 0.3; o.roofC = o.roofC || '#6d7378'; } }
       const fx = fixes.find((f) => hM >= (f.minH || 0) && (inPoly(f.p[0], f.p[1], pts) || Math.hypot(f.p[0] - cx, f.p[1] - cy) < 0.6)); if (fx) { o.c = fx.c; o.grid = fx.grid; o.glass = false; if (o.h > 6) o.name = fx.name; if (fx.pool && o.h < 7 && o.h > 1.5) o.pool = true; }
-      if (type === 'stadium' && !name) { const sp = this.proj(29.7522, -95.3523); if (Math.hypot(sp[0] - cx, sp[1] - cy) < 6) { o.name = 'Shell Energy Stadium'; o.c = '#d2cbbe'; o.roofC = '#4e8d47'; o.glass = false; o.h = Math.max(o.h, 2.6); o.pri = true; } }   // Dynamo & Dash soccer stadium in EaDo: concrete bowl around a green pitch
+      if (type === 'stadium' && !name) { const sp = this.proj(29.7522, -95.3523); if (Math.hypot(sp[0] - cx, sp[1] - cy) < 6) { o.name = 'Shell Energy Stadium'; o.c = '#d2cbbe'; o.glass = false; o.h = Math.max(o.h, 2.6); o.pri = true; o.bowl = true; } }   // Dynamo & Dash soccer stadium in EaDo: concrete bowl around a green pitch
       const ls = LOOK[o.name]; if (ls) { if (ls.c) o.c = ls.c; if (ls.glass != null) o.glass = ls.glass; if (ls.ant) o.ant = ls.ant; if (ls.roofC) o.roofC = ls.roofC; if (ls.fac) o.fac = ls.fac; if (ls.pri) o.pri = true; }
       this.osm.push(o);
       const cr = CROWNS[o.name]; if (cr) { let top = o.z0 + o.h; o.h -= cr.reduce((a, [, f]) => a + f * h, 0); top = o.z0 + o.h;
@@ -1464,8 +1475,33 @@ export class CityMap {
     return true;
   }
   osmDepth(o) { if (o.base) return this.osmDepth(o.base) + o.z0 * 1e-4;   // tops draw right after the tower they sit on, never behind it
-    let m = -Infinity; for (const p of o.pts) { const d = this.v.depth(p[0], p[1]); if (d > m) m = d; } return m; }
+    const v = this.v, A = v.c + v.sn, B = v.c - v.sn;   // depth is linear in x,y: cache the farthest corner per rotation, then just shift by the view centre
+    if (o._dA !== A || o._dB !== B) { let m = -Infinity; for (const p of o.pts) { const d = p[0] * A + p[1] * B; if (d > m) m = d; } o._dA = A; o._dB = B; o._dm = m; }
+    return o._dm - (v.cx * A + v.cy * B); }
+  drawBowl(o, N, alpha) {   // an open-air stadium: the pitch on the ground, stands rising around it, no roof
+    const ctx = this.ctx, v = this.v, P = o.pts.slice(0, -1).length > 2 ? o.pts : o.pts, cx = o.cx, cy = o.cy, h = o.h;
+    const ring = (k, z) => P.map((q) => v.p(cx + (q[0] - cx) * k, cy + (q[1] - cy) * k, z));
+    const fillPts = (pts, c) => { ctx.beginPath(); pts.forEach((q, i) => (i ? ctx.lineTo(q[0], q[1]) : ctx.moveTo(q[0], q[1]))); ctx.closePath(); ctx.fillStyle = c; ctx.fill(); };
+    ctx.globalAlpha = alpha;
+    // outer wall: the side faces toward the viewer
+    const out0 = ring(1, 0), out1 = ring(1, h);
+    for (let i = 0; i < P.length - 1; i++) { const a0 = out0[i], b0 = out0[i + 1], a1 = out1[i], b1 = out1[i + 1]; if ((b0[0] - a0[0]) * (a1[1] - a0[1]) - (b0[1] - a0[1]) * (a1[0] - a0[0]) > 0) continue;
+      fillPts([a0, b0, b1, a1], N ? '#2a2e38' : (i % 2 ? '#bdb6a8' : '#c9c2b5')); }
+    // the seating bowl sloping down from the rim to the pitch, then the pitch itself
+    const inner = ring(0.72, 0.15);
+    ctx.beginPath(); out1.forEach((q, i) => (i ? ctx.lineTo(q[0], q[1]) : ctx.moveTo(q[0], q[1]))); ctx.closePath(); inner.slice().reverse().forEach((q, i) => (i ? ctx.lineTo(q[0], q[1]) : ctx.moveTo(q[0], q[1]))); ctx.closePath();
+    ctx.fillStyle = N ? '#3b2a2a' : '#c1532f'; ctx.fill('evenodd');   // Dynamo orange seats
+    const pitch = ring(0.62, 0.16); fillPts(pitch, N ? '#24452a' : '#4f9a48');
+    if (v.s > 0.35) {   // mowing stripes and the touchlines / halfway line
+      const pa = ring(0.62, 0.17), mid = (a, b, t) => [a[0] + (b[0] - a[0]) * t, a[1] + (b[1] - a[1]) * t];
+      ctx.strokeStyle = N ? 'rgba(255,255,255,.35)' : 'rgba(255,255,255,.85)'; ctx.lineWidth = Math.max(1, v.s * 1.6);
+      ctx.beginPath(); pa.forEach((q, i) => (i ? ctx.lineTo(q[0], q[1]) : ctx.moveTo(q[0], q[1]))); ctx.closePath(); ctx.stroke();
+      const [c0, c1] = [v.p(cx, cy, 0.17), v.p(cx, cy, 0.17)]; ctx.beginPath(); ctx.ellipse(c0[0], c0[1], 0.9 * TW * v.s, 0.45 * TW * v.s, 0, 0, Math.PI * 2); ctx.stroke();
+    }
+    ctx.globalAlpha = 1;
+  }
   drawOsm(o, N, alpha) {
+    if (o.bowl) return this.drawBowl(o, N, alpha);
     const ctx = this.ctx, v = this.v, P = o.pts, n = P.length, z0 = o.z0, z1 = o.z0 + o.h;
     const nbLow = o.nb && (v.s < 0.55 || this.busy || this.lowQ);   // neighbourhood houses/warehouses: cheap boxes when zoomed out or moving
     if (o.nb && v.s < 0.5 && ((o.bb.x1 - o.bb.x0) + (o.bb.y1 - o.bb.y0)) * TW * v.s < 5) return;   // too small to see
@@ -2373,16 +2409,23 @@ export class CityMap {
     const items = [];
     for (const f of this.fill) if (!f.lot) items.push({ k: v.boxDepth(f.x, f.y, f.w, f.d), f });
     for (const l of this.landmarks) items.push({ k: v.boxDepth(l.x, l.y, l.w, l.d), l });
-    for (const o of this.osm || []) { const [sx, sy] = v.p(o.cx, o.cy), r = ((o.bb.x1 - o.bb.x0) + (o.bb.y1 - o.bb.y0)) * TW * 0.5 * v.s + 20, up = (o.z0 + o.h) * ZU * v.s; if (sx < -r || sx > this.W + r || sy + r < 0 || sy - up - r > this.H) continue; items.push({ k: this.osmDepth(o), o }); }
+    const nbFlat = v.s < 0.42 && !this.osmOutline, nbB = [];   // city scale: the thousands of small neighbourhood buildings go in one batched draw
+    for (const o of this.osm || []) { const [sx, sy] = v.p(o.cx, o.cy), r = ((o.bb.x1 - o.bb.x0) + (o.bb.y1 - o.bb.y0)) * TW * 0.5 * v.s + 20, up = (o.z0 + o.h) * ZU * v.s; if (sx < -r || sx > this.W + r || sy + r < 0 || sy - up - r > this.H) continue; if (nbFlat && o.nb) { nbB.push(o); continue; } items.push({ k: this.osmDepth(o), o }); }
+    if (nbB.length) { const N2 = N;   // a dark footprint for the walls, then the roof lifted to its height: two fills for all of them
+      ctx.beginPath(); for (const o of nbB) { o.pts.forEach((q, i) => (i ? ctx.lineTo(...v.p(q[0], q[1], 0)) : ctx.moveTo(...v.p(q[0], q[1], 0)))); ctx.closePath(); } ctx.fillStyle = N2 ? '#1f232d' : '#a7a49c'; ctx.fill();
+      ctx.beginPath(); for (const o of nbB) { const z = o.z0 + o.h; o.pts.forEach((q, i) => (i ? ctx.lineTo(...v.p(q[0], q[1], z)) : ctx.moveTo(...v.p(q[0], q[1], z)))); ctx.closePath(); } ctx.fillStyle = N2 ? '#3a3f4b' : '#d3cfc6'; ctx.fill(); }
     for (const a of this.areas) if (['ballpark', 'arena', 'grb'].includes(a.kind)) items.push({ k: v.boxDepth(a.r.x0, a.r.y0, a.r.x1 - a.r.x0, a.r.y1 - a.r.y0), a });
     if (!this.hide.people) { for (const n of this.npcs) if (!n.under && n.inside <= 0 && !n.gone) items.push({ k: v.depth(n.x, n.y) + 0.5, n }); for (const r of this.rides || []) { const [rx, ry] = this.ridePos(r); items.push({ k: v.depth(rx, ry) + 0.4, rd: r }); } }
     if (!this._stTrees) { const T = [], sw = this.streetW, A = this.avenues, C = this.cross, mapped = this.geo?.trees || [];
-      const near = (x, y) => mapped.some(([a, b]) => Math.abs(a - x) < 1.2 && Math.abs(b - y) < 1.2);
+      const MG = new Map(); for (const q of mapped) { const k = Math.floor(q[0] / 2) * 100003 + Math.floor(q[1] / 2); (MG.get(k) || MG.set(k, []).get(k)).push(q); }
+      const near = (x, y) => { const i0 = Math.floor(x / 2), j0 = Math.floor(y / 2); for (let i = i0 - 1; i <= i0 + 1; i++) for (let j = j0 - 1; j <= j0 + 1; j++) for (const [a, b] of MG.get(i * 100003 + j) || []) if (Math.abs(a - x) < 1.2 && Math.abs(b - y) < 1.2) return true; return false; };
       for (const a of A) for (const sd of [-1, 1]) for (let j = 0; j < C.length - 1; j++) for (let y = C[j].y + sw + 1; y < C[j + 1].y - sw - 0.6; y += 2.4) { const x = a.x + sd * (sw + 0.16); if (hash(x + '|' + y) < (a.n === 'Main' ? 0.95 : 0.6) && !near(x, y)) T.push([x, y]); }
       for (const c of C) for (const sd of [-1, 1]) for (let i = 0; i < A.length - 1; i++) for (let x = A[i].x + sw + 1; x < A[i + 1].x - sw - 0.6; x += 2.4) { const y = c.y + sd * (sw + 0.16); if (hash(x + '~' + y) < 0.6 && !near(x, y)) T.push([x, y]); }
       for (const pk of this.geo?.parks || []) { if (pk.k === 'plaza' || pk.k === 'dog_park') continue; const xs = pk.pts.map((q) => q[0]), ys = pk.pts.map((q) => q[1]), x0 = Math.min(...xs), x1 = Math.max(...xs), y0 = Math.min(...ys), y1 = Math.max(...ys); if ((x1 - x0) * (y1 - y0) > 900) continue;
         for (let x = x0 + 0.5; x < x1; x += 1.25) for (let y = y0 + 0.5; y < y1; y += 1.25) { const jx = x + (hash(x + 'px' + y) - 0.5) * 0.9, jy = y + (hash(y + 'py' + x) - 0.5) * 0.9; if (hash(jx + 'pk' + jy) < 0.55 && ptIn(jx, jy, pk.pts) && !(this.geo.water || []).some((w) => ptIn(jx, jy, w)) && !near(jx, jy)) T.push([jx, jy]); } }   // parks get real canopy
-      this._stTrees = T.filter(([x, y]) => !(this.osm || []).some((o) => x > o.bb.x0 && x < o.bb.x1 && y > o.bb.y0 && y < o.bb.y1 && ptIn(x, y, o.pts))); }
+      const G = new Map(), cs = 4, key = (i, j) => i * 100003 + j;   // bucket buildings by 40 m cells so each tree only checks its neighbours
+      for (const o of this.osm || []) for (let i = Math.floor(o.bb.x0 / cs); i <= Math.floor(o.bb.x1 / cs); i++) for (let j = Math.floor(o.bb.y0 / cs); j <= Math.floor(o.bb.y1 / cs); j++) { const k = key(i, j); (G.get(k) || G.set(k, []).get(k)).push(o); }
+      this._stTrees = T.filter(([x, y]) => !(G.get(key(Math.floor(x / cs), Math.floor(y / cs))) || []).some((o) => x > o.bb.x0 && x < o.bb.x1 && y > o.bb.y0 && y < o.bb.y1 && ptIn(x, y, o.pts))); }
     if (v.s > 0.5) for (const [x, y] of this._stTrees) { const [sx, sy] = v.p(x, y); if (sx < -30 || sx > this.W + 30 || sy < -10 || sy > this.H + 60) continue; items.push({ k: v.depth(x, y) + 0.4, tr: [x, y] }); }
     if (this.geo?.trees && v.s > 0.4) for (const [x, y] of this.geo.trees) { const [sx, sy] = v.p(x, y); if (sx < -30 || sx > this.W + 30 || sy < -10 || sy > this.H + 60) continue; items.push({ k: v.depth(x, y) + 0.4, tr: [x, y] }); }
     const live = !!this.liveData, liveRail = live && (this.liveCars || []).some((c) => c.kind === 'train') || this.liveRailSeen;
