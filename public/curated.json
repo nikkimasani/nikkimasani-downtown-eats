@@ -6640,5 +6640,193 @@
   "type": "Beer Garden",
   "note": "Four-building beer garden on Washington Ave near Yale: 70+ craft beers, cocktails, coffee from 8am and a big dog-friendly patio.",
   "tryit": "Smoked wings and a draft on the patio"
+ },
+ {
+  "id": 343,
+  "tunnel": null,
+  "name": "Slowpokes EaDo",
+  "address": "3401 Canal St, Houston, TX",
+  "cuisines": [
+   "Coffee & Tea"
+  ],
+  "meals": [
+   "Breakfast",
+   "Lunch",
+   "Patio"
+  ],
+  "price": 1,
+  "vibes": [
+   "caffeine",
+   "casual"
+  ],
+  "type": "Coffee Shop",
+  "note": "Slowpokes in a converted corner gas station at Canal & N Sampson, with a covered patio in the old service bay. Local beer and wine too.",
+  "tryit": "Coffee on the patio"
+ },
+ {
+  "id": 344,
+  "tunnel": null,
+  "name": "Sol7",
+  "address": "1717 Allen Pkwy, Fl 7, Houston, TX",
+  "cuisines": [
+   "American"
+  ],
+  "meals": [
+   "Breakfast",
+   "Lunch",
+   "Dinner",
+   "Happy Hour",
+   "Patio"
+  ],
+  "price": 3,
+  "vibes": [
+   "date",
+   "client",
+   "upscale"
+  ],
+  "type": "American",
+  "note": "Seventh-floor restaurant and bar in the Thompson Houston with a terrace over Buffalo Bayou Park and the skyline.",
+  "tryit": "Drinks on the terrace at sunset"
+ },
+ {
+  "id": 345,
+  "tunnel": null,
+  "name": "Maven Coffee + Cocktails (Thompson)",
+  "address": "1717 Allen Pkwy, Fl 1, Houston, TX",
+  "cuisines": [
+   "Coffee & Tea",
+   "Cocktails"
+  ],
+  "meals": [
+   "Breakfast",
+   "Lunch",
+   "Happy Hour"
+  ],
+  "price": 2,
+  "vibes": [
+   "caffeine",
+   "drinks",
+   "client"
+  ],
+  "type": "Coffee Shop",
+  "note": "Lobby café-bar at the Thompson Houston: specialty coffee and pastries by day, espresso martinis later.",
+  "tryit": "An espresso martini"
+ },
+ {
+  "id": 346,
+  "tunnel": null,
+  "name": "Chardon",
+  "address": "1711 Allen Pkwy, Ste 101, Houston, TX",
+  "cuisines": [
+   "French"
+  ],
+  "meals": [
+   "Lunch",
+   "Dinner"
+  ],
+  "price": 3,
+  "vibes": [
+   "date",
+   "client",
+   "upscale"
+  ],
+  "type": "French",
+  "note": "French bistro at street level of the Thompson tower on Allen Parkway.",
+  "tryit": "A bistro classic and a glass of wine"
+ },
+ {
+  "id": 347,
+  "tunnel": null,
+  "name": "Toca Madera",
+  "address": "1755 Allen Pkwy, Ste 101, Houston, TX",
+  "cuisines": [
+   "Mexican & Latin",
+   "Steakhouse"
+  ],
+  "meals": [
+   "Dinner",
+   "Happy Hour",
+   "Late Night"
+  ],
+  "price": 4,
+  "vibes": [
+   "date",
+   "upscale",
+   "nightlife"
+  ],
+  "type": "Steakhouse",
+  "note": "Theatrical modern Mexican steakhouse at The Allen, with premium Australian and Japanese beef.",
+  "tryit": "A wagyu cut and the tableside show"
+ },
+ {
+  "id": 348,
+  "tunnel": null,
+  "name": "Flora",
+  "address": "3422 Allen Pkwy, Houston, TX",
+  "cuisines": [
+   "Mexican & Latin",
+   "Seafood"
+  ],
+  "meals": [
+   "Lunch",
+   "Dinner",
+   "Brunch",
+   "Patio"
+  ],
+  "price": 3,
+  "vibes": [
+   "date",
+   "patio"
+  ],
+  "type": "Mexican",
+  "note": "Mexican-Texan restaurant at Lost Lake in Buffalo Bayou Park: aguachile, crispy tostadas, chandelier-lit rooms.",
+  "tryit": "Aguachile with a lake view"
+ },
+ {
+  "id": 349,
+  "tunnel": null,
+  "name": "Mexican Sugar",
+  "address": "3505 W Dallas St, Houston, TX",
+  "cuisines": [
+   "Mexican & Latin"
+  ],
+  "meals": [
+   "Brunch",
+   "Lunch",
+   "Dinner",
+   "Happy Hour",
+   "Patio"
+  ],
+  "price": 2,
+  "vibes": [
+   "group",
+   "drinks",
+   "date"
+  ],
+  "type": "Mexican",
+  "note": "Modern Mexican at Regent Square with an upstairs outdoor bar; weekend brunch and weekday happy hour 2–6pm.",
+  "tryit": "Tacos and a tequila flight"
+ },
+ {
+  "id": 350,
+  "tunnel": null,
+  "name": "De Fortune",
+  "address": "3515 W Dallas St, Ste 300, Houston, TX",
+  "cuisines": [
+   "Cocktails"
+  ],
+  "meals": [
+   "Happy Hour",
+   "Late Night"
+  ],
+  "price": 3,
+  "vibes": [
+   "date",
+   "nightlife",
+   "drinks"
+  ],
+  "type": "Cocktail Bar",
+  "note": "Speakeasy-style cocktail lounge in Regent Square with a travel-themed, seasonal menu. Look for the dark gray door across from Mexican Sugar.",
+  "tryit": "A destination-inspired signature cocktail"
  }
 ]

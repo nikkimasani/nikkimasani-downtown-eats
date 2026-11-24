@@ -30,8 +30,20 @@ const MOODS = [
 const MEALS = ['Any', 'Breakfast', 'Brunch', 'Lunch', 'Dinner', 'Happy Hour', 'Late Night'];
 const BUDGET = [{ k: 0, l: 'Any' }, { k: 1, l: 'Under $15' }, { k: 2, l: 'Under $30' }, { k: 3, l: 'Under $60' }];
 const EXTRAS = [{ k: 'open', l: '🟢 Open now' }, { k: 'tunnel', l: '🚇 In the tunnels' }, { k: 'street', l: '🏙️ Street level' }, { k: 'Patio', l: '☀️ Patio' }, { k: 'Pet Friendly', l: '🐶 Pet friendly' }, { k: 'Food Hall', l: '🏛️ Food hall' }, { k: 'Full Service', l: '🍽️ Sit-down' }, { k: 'notfav', l: '🆕 Somewhere new' }];
+// neighbourhoods, as lat/lng boxes [south, west, north, east]; the first box a spot falls in wins
+const AREAS = [
+  { k: 'downtown', l: 'Central downtown', e: '🏙️', b: [29.7480, -95.3745, 29.7672, -95.3540] },
+  { k: 'warehouse', l: 'Warehouse District', e: '🏭', b: [29.7640, -95.3640, 29.7745, -95.3478] },
+  { k: 'eado', l: 'EaDo', e: '⚽', b: [29.7380, -95.3540, 29.7610, -95.3420] },
+  { k: 'eastend', l: 'East End', e: '🌮', b: [29.7370, -95.3420, 29.7605, -95.3080] },
+  { k: 'eastriver', l: 'East River', e: '⛳', b: [29.7605, -95.3478, 29.7745, -95.3180] },
+  { k: 'washington', l: 'Washington Ave & Sawyer Yards', e: '🎨', b: [29.7650, -95.4020, 29.7745, -95.3745] },
+  { k: 'allen', l: 'Allen Pkwy & Regent Square', e: '🌳', b: [29.7530, -95.4140, 29.7650, -95.3745] },
+];
+const areaOf = (r) => { if (r.lat == null) return null; for (const a of AREAS) { const [s0, w0, n0, e0] = a.b; if (r.lat >= s0 && r.lat <= n0 && r.lng >= w0 && r.lng <= e0) return a.k; } return null; };
+const AREA_OPTS = [{ k: 'any', l: '📍 Anywhere' }, ...AREAS.map((a) => ({ k: a.k, l: `${a.e} ${a.l}` }))];
 const DAYS = ['Mon', 'Tue', 'Wed', 'Thu', 'Fri'];
-const st = { moods: new Set(store.get('moods', [])), meal: store.get('meal', 'Any'), budget: store.get('budget', 0), extras: new Set(store.get('extras', [])) };
+const st = { moods: new Set(store.get('moods', [])), meal: store.get('meal', 'Any'), budget: store.get('budget', 0), extras: new Set(store.get('extras', [])), area: store.get('area', 'any') };
 let favs = new Set(store.get('favs', [])), visits = store.get('visits', {});
 let week = store.get('week', { slot: 'Lunch', days: {} });
 let SYNC = store.get('syncKey', null), _syncT = null;
@@ -49,7 +61,7 @@ async function syncPull() {
 const SB = 'https://bazjlrualnmbanmhiuau.supabase.co', SBK = 'sb_publishable_ez3TVctnbFIUHqr_dMOUeQ_5WpsYEHs', VAPID = 'BCJegSVrwj6kYQkAfHScuzrJlWI6srf_3uKYobxu7nZ_u1ozmTSWNpX3zHckkxYVYD61hXbUsm-OxU-Gq0FpX-M';
 async function sb(path, opt = {}) { const r = await fetch(SB + '/rest/v1/' + path, { ...opt, headers: { apikey: SBK, 'content-type': 'application/json', ...(opt.headers || {}) } }); if (!r.ok) throw new Error(await r.text()); const t = await r.text(); return t ? JSON.parse(t) : null; }
 const rpc = (fn, args) => sb('rpc/' + fn, { method: 'POST', body: JSON.stringify(args) });
-const save = () => { store.set('moods', [...st.moods]); store.set('meal', st.meal); store.set('budget', st.budget); store.set('extras', [...st.extras]); store.set('favs', [...favs]); store.set('visits', visits); store.set('week', week); syncSoon(); };
+const save = () => { store.set('moods', [...st.moods]); store.set('meal', st.meal); store.set('budget', st.budget); store.set('extras', [...st.extras]); store.set('area', st.area); store.set('favs', [...favs]); store.set('visits', visits); store.set('week', week); syncSoon(); };
 
 const hhFor = (r) => HH.spots[r.name] || null;
 // is happy hour on right now? (the "when" text uses the same day/time grammar as opening hours)
@@ -91,6 +103,7 @@ function matches(r, opt = {}) {
     else if (!r.meals.length && ['Breakfast', 'Brunch', 'Late Night', 'Happy Hour'].includes(meal)) return false;
   }
   if (st.budget && r.price > st.budget) return false;
+  if (st.area && st.area !== 'any' && areaOf(r) !== st.area) return false;
   for (const x of st.extras) {
     if (x === 'tunnel') { if (!r.tunnel) return false; }
     else if (x === 'street') { if (r.tunnel) return false; }
@@ -116,8 +129,10 @@ let WX = null;   // { temp °F, rain mm, code } for downtown Houston, from Open-
 const wxBad = () => WX && (WX.rain > 0.1 || WX.code >= 51 || WX.temp >= 93 || WX.temp <= 45);
 const wxNice = () => WX && !wxBad() && WX.temp >= 62 && WX.temp <= 86;
 const weatherFit = (r) => !WX ? 0 : wxBad() ? (r.tunnel ? 1 : 0) - (isPatio(r) ? 0.8 : 0) : wxNice() && isPatio(r) ? 0.8 : 0;
+const gameLive = (e, d = new Date()) => { const t = Date.parse(e.start); return d.getTime() >= t && d.getTime() < t + 2.75 * 3600e3; };   // an NBA/MLB game runs about 2.5–3 hours
 function eventLine(d = new Date()) {   // a home game today: warn about crowds around the venue
-  const e = EVENTS.find((x) => { const t = new Date(x.start); return t.toDateString() === d.toDateString() && t.getTime() + 3600e3 > d.getTime(); }); if (!e) return '';
+  const e = EVENTS.find((x) => { const t = new Date(x.start); return t.toDateString() === d.toDateString() && t.getTime() + 3 * 3600e3 > d.getTime(); }); if (!e) return '';
+  if (gameLive(e, d)) return `🔴 ${e.emoji} ${e.team}${e.vs ? ' vs ' + e.vs.replace(/^.* /, '') : ''} on now at ${e.venue} — crowds and traffic until it lets out`;
   const t = new Date(e.start), tm = t.toLocaleTimeString('en-US', { hour: 'numeric', minute: t.getMinutes() ? '2-digit' : undefined, timeZone: 'America/Chicago' }).toLowerCase().replace(' ', '');
   return `${e.emoji} ${e.team}${e.vs ? ' vs ' + e.vs.replace(/^.* /, '') : ''} at ${tm} — busy around ${e.venue}`;
 }
@@ -232,10 +247,11 @@ function renderPick() {
   chipRow($('#meal'), MEALS, (x) => x === st.meal, (x) => (st.meal = x));
   chipRow($('#budget'), BUDGET, (x) => x.k === st.budget, (x) => (st.budget = x.k));
   $('#diet').innerHTML = DIETS.map((d) => `<button class="chip ${DIET.has(d.k) ? 'on' : ''}" data-diet="${d.k}">${d.l}</button>`).join('');
+  chipRow($('#area'), AREA_OPTS, (x) => x.k === st.area, (x) => (st.area = x.k));
   chipRow($('#extras'), EXTRAS, (x) => st.extras.has(x.k), (x) => (st.extras.has(x.k) ? st.extras.delete(x.k) : st.extras.add(x.k)));
   const ex0 = DIET.size ? ` · ${[...DIET].map((k) => DIETS.find((d) => d.k === k).l.split(' ').pop()).join(', ')}` : '';
-  const ex = ex0 + (st.extras.size ? ` · ${st.extras.size} extra${st.extras.size > 1 ? 's' : ''}` : '');
-  $('#pickClear').hidden = !(st.moods.size || st.meal !== 'Any' || st.budget || DIET.size || st.extras.size);
+  const ex = ex0 + (st.area !== 'any' ? ` · ${AREAS.find((a) => a.k === st.area)?.l || ''}` : '') + (st.extras.size ? ` · ${st.extras.size} extra${st.extras.size > 1 ? 's' : ''}` : '');
+  $('#pickClear').hidden = !(st.moods.size || st.meal !== 'Any' || st.budget || DIET.size || st.extras.size || st.area !== 'any');
   const bl = (BUDGET.find((b) => b.k === st.budget) || {}).l; $('#filtSum').textContent = `${st.meal === 'Any' ? 'Any time' : st.meal} · ${!bl || bl === 'Any' ? 'Any budget' : bl}${ex}`;
   const list = ranked();
   $('#matchCount').textContent = list.length ? `${list.length} spots match — best for right now first` : '';
@@ -248,17 +264,18 @@ function renderPick() {
     const tryWith = (label, set, undo) => { set(); const extra = ranked().filter(([r]) => !have.has(r.id)); undo(); if (extra.length) tries.push({ label, extra }); };
     if (st.budget) { const b = st.budget; tryWith('Any budget', () => (st.budget = 0), () => (st.budget = b)); }
     if (st.meal !== 'Any') { const m = st.meal; tryWith('Any time', () => (st.meal = 'Any'), () => (st.meal = m)); }
+    if (st.area !== 'any') { const a = st.area; tryWith('Any area', () => (st.area = 'any'), () => (st.area = a)); }
     if (st.extras.size) { const e = new Set(st.extras); tryWith('No extras', () => st.extras.clear(), () => e.forEach((x) => st.extras.add(x))); }
     if (st.moods.size) { const mo = new Set(st.moods); tryWith('Any mood', () => st.moods.clear(), () => mo.forEach((x) => st.moods.add(x))); }
     if (tries.length) {
       const seen = new Set(), near = []; for (const t of tries.sort((a, b) => a.extra.length - b.extra.length)) for (const [r] of t.extra) if (!seen.has(r.id) && near.length < 6) { seen.add(r.id); near.push(r); }
       $('#matches').insertAdjacentHTML('beforeend', `<div class="nearbox"><h3>Close matches</h3><div class="chips sm">${tries.map((t, i) => `<button class="chip" data-relax="${i}">${t.label} <b>+${t.extra.length}</b></button>`).join('')}</div></div>` + near.map((r) => card(r)).join(''));
-      $('#matches').querySelectorAll('[data-relax]').forEach((b) => (b.onclick = (e) => { e.stopPropagation(); const t = tries[+b.dataset.relax].label; if (t === 'Any budget') st.budget = 0; else if (t === 'Any time') st.meal = 'Any'; else if (t === 'No extras') st.extras.clear(); else st.moods.clear(); save(); renderPick(); }));
+      $('#matches').querySelectorAll('[data-relax]').forEach((b) => (b.onclick = (e) => { e.stopPropagation(); const t = tries[+b.dataset.relax].label; if (t === 'Any budget') st.budget = 0; else if (t === 'Any time') st.meal = 'Any'; else if (t === 'No extras') st.extras.clear(); else if (t === 'Any area') st.area = 'any'; else st.moods.clear(); save(); renderPick(); }));
     }
   }
   if (city) city.setHighlight(mapMatch ? new Set(list.map(([r]) => r.id)) : null);
 }
-$('#pickClear').onclick = (e) => { e.preventDefault(); e.stopPropagation(); st.moods.clear(); st.meal = 'Any'; st.budget = 0; st.extras.clear(); DIET.clear(); store.set('diet', []); save(); renderPick(); };
+$('#pickClear').onclick = (e) => { e.preventDefault(); e.stopPropagation(); st.moods.clear(); st.meal = 'Any'; st.budget = 0; st.extras.clear(); st.area = 'any'; DIET.clear(); store.set('diet', []); save(); renderPick(); };
 $('#diet').onclick = (e) => { const b = e.target.closest('[data-diet]'); if (!b) return; const k = b.dataset.diet; DIET.has(k) ? DIET.delete(k) : DIET.add(k); store.set('diet', [...DIET]); renderPick(); };
 $('#moods').onclick = (e) => { const b = e.target.closest('[data-m]'); if (!b) return; const k = b.dataset.m; st.moods.has(k) ? st.moods.delete(k) : st.moods.add(k); save(); renderPick(); };
 let lastPick = null;
@@ -356,18 +373,18 @@ function didYouMean(q) {
 }
 
 // ---------- Browse ----------
-let bq = '', fav1 = false, tun1 = false, open1 = false, hh1 = false, fc = new Set(), sortBy = 'name';
+let barea = store.get('barea', 'any'), bq = '', fav1 = false, tun1 = false, open1 = false, hh1 = false, fc = new Set(), sortBy = 'name';
 function renderBrowse() {
   const cuis = [...new Set(FOOD.flatMap((r) => r.cuisines))].sort();
   $('#fCuisine').innerHTML = cuis.map((c) => `<button class="chip ${fc.has(c) ? 'on' : ''}" data-c="${esc(c)}">${esc(c)}</button>`).join('');
   const t = bq.trim();
   const sc = new Map();
-  let list = (t ? DATA : FOOD).filter((r) => { if (!((!fav1 || favs.has(r.name)) && (!tun1 || r.tunnel) && (!open1 || isOpen(r)) && (!hh1 || hhFor(r)) && (!fc.size || r.cuisines.some((c) => fc.has(c))))) return false; if (!t) return true; const v = searchScore(r, t); sc.set(r, v); return v > 0; });
+  let list = (t ? DATA : FOOD).filter((r) => { if (!((!fav1 || favs.has(r.name)) && (!tun1 || r.tunnel) && (!open1 || isOpen(r)) && (!hh1 || hhFor(r)) && (!fc.size || r.cuisines.some((c) => fc.has(c))) && (barea === 'any' || areaOf(r) === barea))) return false; if (!t) return true; const v = searchScore(r, t); sc.set(r, v); return v > 0; });
   list.sort(sortBy === 'name' ? (a, b) => (t ? sc.get(b) - sc.get(a) : 0) || a.name.localeCompare(b.name) : sortBy === 'price' ? (a, b) => a.price - b.price : (a, b) => b.price - a.price);
   $('#bCount').textContent = t ? `${list.length} match${list.length === 1 ? '' : 'es'} across all of downtown — food, coffee and bars` : `${list.length} of ${FOOD.length} spots`;
   if (!list.length && t) {
     const sug = didYouMean(t).filter((n) => fold(n) !== fold(t));
-    $('#browse').innerHTML = `<div class="empty">No exact matches for “${esc(t)}”.${sug.length ? `<div style="margin-top:10px">Did you mean ${sug.map((n) => `<button class="chip" data-sug="${esc(n)}">${esc(n)}</button>`).join(' ')}</div>` : ''}${fav1 || tun1 || open1 || hh1 || fc.size ? '<div class="meta" style="margin-top:8px">Some filters are on — try turning them off.</div>' : ''}</div>`;
+    $('#browse').innerHTML = `<div class="empty">No exact matches for “${esc(t)}”.${sug.length ? `<div style="margin-top:10px">Did you mean ${sug.map((n) => `<button class="chip" data-sug="${esc(n)}">${esc(n)}</button>`).join(' ')}</div>` : ''}${fav1 || tun1 || open1 || hh1 || fc.size || barea !== 'any' ? '<div class="meta" style="margin-top:8px">Some filters are on — try turning them off.</div>' : ''}</div>`;
   } else $('#browse').innerHTML = list.map((r) => card(r, false, true)).join('') || '<div class="empty">No results.</div>';
   const nflag = Object.keys(HCHK).length;
   if (nflag && !t) $('#browse').insertAdjacentHTML('afterbegin', `<details class="card review-card"><summary>⚠️ ${nflag} place${nflag > 1 ? 's' : ''} show different hours on their website <span>Review</span></summary><div class="meta">Tap one to compare, then keep ours or switch to theirs.</div><div class="chips sm" style="margin-top:8px">${Object.keys(HCHK).map((n) => { const x = DATA.find((r) => r.name === n); return x ? `<button class="chip" data-review="${x.id}">${esc(n)}</button>` : ''; }).join('')}</div></details>`);
@@ -375,16 +392,18 @@ function renderBrowse() {
   if (stq) $('#browse').insertAdjacentHTML('afterbegin', `<div class="card corner-card"${stq.kind === 'parallel' ? '' : ' data-corner="1"'}><h3>📍 ${esc(stq.label)}</h3><div class="meta">${stq.kind === 'parallel' ? 'Pick one street from each direction, like Main & Texas.' : 'Tap to see it on the map with every spot within a block'}</div></div>`);
   if (stq && !list.length) $('#bCount').textContent = 'Street search';
   for (const [id, on] of [['#favOnly', fav1], ['#tunOnly', tun1], ['#openOnly', open1], ['#hhOnly', hh1]]) $(id).classList.toggle('on', on);
-  $('#bClear').hidden = !(t || fav1 || tun1 || open1 || hh1 || fc.size || sortBy !== 'name');
+  $('#bClear').hidden = !(t || fav1 || tun1 || open1 || hh1 || fc.size || barea !== 'any' || sortBy !== 'name'); $('#bArea').value = barea; $('#bArea').classList.toggle('on', barea !== 'any');
 }
 $('#q').oninput = (e) => { bq = e.target.value; renderBrowse(); };
 $('#browse').addEventListener('click', (e) => {
   const rv = e.target.closest('[data-review]'); if (rv) { openSheet(+rv.dataset.review); return; }
   if (e.target.closest('[data-corner]')) { const q = parseStreetQuery(bq); show('map'); setTimeout(() => runFind({ st: q }), 60); return; }
   const b = e.target.closest('[data-sug]'); if (b) { $('#q').value = bq = b.dataset.sug; renderBrowse(); } });
-$('#bClear').onclick = () => { bq = ''; $('#q').value = ''; fav1 = tun1 = open1 = hh1 = false; fc.clear(); sortBy = 'name'; $('#sort').value = 'name'; renderBrowse(); };
+$('#bClear').onclick = () => { bq = ''; $('#q').value = ''; fav1 = tun1 = open1 = hh1 = false; fc.clear(); barea = 'any'; store.set('barea', barea); sortBy = 'name'; $('#sort').value = 'name'; renderBrowse(); };
 $('#toggleF').onclick = () => $('#filters').classList.toggle('on');
 $('#favOnly').onclick = () => { fav1 = !fav1; renderBrowse(); };
+$('#bArea').innerHTML = AREA_OPTS.map((a) => `<option value="${a.k}">${esc(a.l)}</option>`).join('');
+$('#bArea').onchange = (e) => { barea = e.target.value; store.set('barea', barea); renderBrowse(); };
 $('#tunOnly').onclick = () => { tun1 = !tun1; renderBrowse(); };
 $('#openOnly').onclick = () => { open1 = !open1; renderBrowse(); };
 $('#hhOnly').onclick = () => { hh1 = !hh1; renderBrowse(); };
@@ -654,6 +673,7 @@ function initMap() {
     onMode: (m) => { $('#mapMsg').classList.remove('fade'); clearTimeout(window._mm); window._mm = setTimeout(() => $('#mapMsg').classList.add('fade'), 3500); document.querySelectorAll('#layerSeg button').forEach((b) => b.classList.toggle('on', b.dataset.m === m)); $('#mapMsg').textContent = m === 'tunnel' ? 'Underground: the downtown tunnel food courts' : m === 'both' ? 'Street level on top · tunnels below' : 'Drag to move · pinch or double-tap to zoom'; },
   });
   if (EVENTS.length) city.setEvents(EVENTS);
+  setInterval(renderGameChip, 60000); renderGameChip();
   if (WX) { city.preferTunnel = wxBad(); city.weather = WX; }
   $('#needle').style.transform = `rotate(${city.compass()}rad)`; window._city = city;
   if (USER) city.setUser(USER);
@@ -757,6 +777,7 @@ const CHIPS = [
   { k: 'seafood', l: '🦐 Seafood', re: /seafood|oyster|fish|crab/i },
   { k: 'healthy', l: '🥗 Healthy', re: /salad|healthy|vegan|vegetarian|poke|bowl/i },
   { k: 'park', l: '🅿️ Parking' },
+  ...AREAS.map((a) => ({ k: 'area:' + a.k, l: `${a.e} ${a.l}`, f: (r) => areaOf(r) === a.k, area: a })),
 ];
 let chip = 'all';
 const chipText = (r) => [r.name, r.type, ...(r.cuisines || [])].join(' ');
@@ -766,7 +787,9 @@ function applyChip(quiet) {
   city.showParking = chip === 'park';
   if (chip === 'all' || chip === 'park') { city.setHighlight(null); if (chip === 'park' && !quiet) toast('🅿️ Garages in dark blue, surface lots in light blue'); return; }
   const ids = DATA.filter((r) => (c.f ? c.f(r) : c.re.test(chipText(r))) && city.sceneOk(r)).map((r) => r.id);
-  city.setHighlight(new Set(ids)); if (!quiet) toast(ids.length ? `${c.l}: ${ids.length} spot${ids.length === 1 ? '' : 's'}` : `No ${c.l.replace(/^\S+ /, '').toLowerCase()} spots on this map`);
+  city.setHighlight(new Set(ids));
+  if (c.area && !quiet) { const [s0, w0, n0, e0] = c.area.b, [x, y] = city.proj((s0 + n0) / 2, (w0 + e0) / 2); city.zoomTo(x, y, c.area.k === 'downtown' ? 0.42 : 0.55); }
+  if (!quiet) toast(ids.length ? `${c.l}: ${ids.length} spot${ids.length === 1 ? '' : 's'}` : `No ${c.l.replace(/^\S+ /, '').toLowerCase()} spots on this map`);
   mapOpen = false; $('#mapOpen')?.classList.remove('on');
 }
 $('#mapChips').onclick = (e) => { const b = e.target.closest('[data-c]'); if (!b) return; chip = chip === b.dataset.c || b.dataset.c === 'all' ? 'all' : b.dataset.c; renderChips(); applyChip(); };
@@ -954,7 +977,7 @@ function toggleWalk(force) {
 // ---------- compact controls + show/hide ----------
 $('#moreBtn').onclick = () => { const m = $('#hudMore'), open = m.hidden; m.hidden = !open; $('#moreBtn').setAttribute('aria-expanded', open); $('#moreBtn').innerHTML = open ? '✕<span class="lbl"> Close</span>' : '☰<span class="lbl"> More</span>'; };
 function applyLight() {   // live: sun and dark follow the clock; otherwise Day = daylight, Night = night
-  let live = false; try { live = !!VIEW.liveLight; } catch (e) {}
+  let live = true; try { live = VIEW.liveLight ?? true; } catch (e) {}   // on by default: sunrise, sunset and night as outside
   if (city) city.themeNight = live ? null : SCENE === 'night';
   const i = document.querySelector('#liveLight'); if (i) i.checked = live;
 }
@@ -965,7 +988,7 @@ function applyView() {
   document.querySelectorAll('#hideToggles input').forEach((i) => { i.checked = i.dataset.h ? !VIEW.hide?.[i.dataset.h] : !(i.dataset.ui === 'legend' ? (VIEW.ui?.legend ?? true) : VIEW.ui?.[i.dataset.ui]); });
   try { localStorage.setItem('mapView', JSON.stringify(VIEW)); } catch (e) {}
 }
-$('#liveLight').onchange = (e) => { VIEW.liveLight = e.target.checked; applyLight(); applyView(); toast(VIEW.liveLight ? '🕒 Light now follows the time of day' : SCENE === 'night' ? '🌙 Always night lighting' : '☀️ Always daylight'); };
+$('#liveLight').onchange = (e) => { VIEW.liveLight = e.target.checked; applyLight(); applyView(); toast(VIEW.liveLight ? '🕒 Light follows the time of day' : SCENE === 'night' ? '🌙 Always night lighting' : '☀️ Always daylight'); };
 $('#hideToggles').onchange = (e) => { const i = e.target; if (!i.dataset.h && !i.dataset.ui) return; if (i.dataset.h) (VIEW.hide = VIEW.hide || {})[i.dataset.h] = !i.checked; else (VIEW.ui = VIEW.ui || {})[i.dataset.ui] = !i.checked; applyView(); };
 $('#cleanMap').onclick = () => { const clean = !VIEW.clean; VIEW.clean = clean; VIEW.hide = clean ? { pinNames: true, signs: true, labels: true, people: true, traffic: true, trains: true, sky: true } : {}; VIEW.ui = clean ? { legend: true } : {}; $('#cleanMap').textContent = clean ? '↺ Show everything' : '✨ Clean map'; applyView(); toast(clean ? 'Clean map: just buildings and pins' : 'Showing everything'); };
 // ---------- first-person street view ----------
@@ -1099,7 +1122,7 @@ async function aboutPlace(r) {
     metroStatic = ms;
     META = { refreshed: pj.refreshed }; HH = hj;
     fetch('hours-check.json').then((r) => r.json()).then((j) => { HCHK = j.flags || {}; for (const n of Object.keys(HFIX)) delete HCHK[n]; if ($('#v-browse').classList.contains('on')) renderBrowse(); }).catch(() => {});
-    fetch('events.json').then((r) => r.json()).then((j) => { EVENTS = j.events || []; city?.setEvents(EVENTS); renderPick(); }).catch(() => {});
+    fetch('events.json').then((r) => r.json()).then((j) => { EVENTS = j.events || []; city?.setEvents(EVENTS); renderGameChip(); renderPick(); }).catch(() => {});
     DATA = pj.places.map((p, i) => {
       const o = { ...(p.official || {}) };
       if (o.facebook && /Downtown-Houston|115104521841645|\s/.test(o.facebook)) o.facebook = null;   // directory's own page, not the restaurant's
@@ -1143,3 +1166,14 @@ document.addEventListener('keydown', (e) => {
   if (e.key === 'Escape') { if ($('#sheet').classList.contains('on')) closeSheet(); else if ($('#v-map').classList.contains('on')) city?.back(); }
   if ($('#v-map').classList.contains('on') && city) { if (e.key === '+' || e.key === '=') city.zoom(1.3); if (e.key === '-') city.zoom(1 / 1.3); if (e.key === 'q' || e.key === '[') city.rotateBy(-Math.PI / 12); if (e.key === 'e' || e.key === ']') city.rotateBy(Math.PI / 12); if (e.key === 'n') city.spin(0); }
 });
+
+// a home game on now (or later today): a chip on the map that flies to the venue
+function renderGameChip() {
+  const b = document.getElementById('gameChip'); if (!b) return; const now = new Date();
+  const e = EVENTS.find((x) => { const t = Date.parse(x.start); return new Date(t).toDateString() === now.toDateString() && now.getTime() < t + 2.75 * 3600e3; });
+  if (!e) { b.hidden = true; return; }
+  const live = gameLive(e, now), t = new Date(e.start), opp = e.vs ? e.vs.replace(/^.* /, '') : '';
+  b.hidden = false; b.classList.toggle('on', live);
+  b.textContent = live ? `🔴 ${e.emoji} ${e.team} vs ${opp} · on now` : `${e.emoji} ${e.team} vs ${opp} · ${t.toLocaleTimeString('en-US', { hour: 'numeric', minute: t.getMinutes() ? '2-digit' : undefined, timeZone: 'America/Chicago' }).toLowerCase().replace(' ', '')}`;
+  b.onclick = () => { const a = city?.areas?.find((x) => x.n === e.venue); if (a) city.zoomTo((a.r.x0 + a.r.x1) / 2, (a.r.y0 + a.r.y1) / 2, 0.8); toast(`${e.emoji} ${e.team} vs ${e.vs || ''} at ${e.venue}${live ? ' — game on now, expect crowds' : ''}`); };
+}

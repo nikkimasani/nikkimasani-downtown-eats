@@ -36,6 +36,8 @@
     <div class="chips" id="budget"></div>
     <h3>Diet <small class="meta">— stays on · best guess from listings</small></h3>
     <div class="chips" id="diet"></div>
+    <h3>Area <small class="meta">— e.g. somewhere you can walk to from the office</small></h3>
+    <div class="chips" id="area"></div>
     <h3>Extras</h3>
     <div class="chips" id="extras"></div>
   </details>
@@ -120,6 +122,7 @@
     <button class="chip" id="hhOnly">🍹 Happy hour</button>
     <button class="chip" id="favOnly">♥ Favorites</button>
     <button class="chip" id="tunOnly">🚇 Tunnel</button>
+    <select class="chip" id="bArea" aria-label="Area"></select>
     <select class="chip" id="sort"><option value="name">A–Z</option><option value="price">Price ↑</option><option value="priced">Price ↓</option></select>
   </div>
   <div class="filters" id="filters">
@@ -149,6 +152,7 @@
       <button data-m="both">Both</button>
       <button data-m="tunnel" class="tun">🚇 Tunnels</button>
     </div>
+    <button class="pill gamechip" id="gameChip" hidden></button>
     <button class="pill simstats" id="simStats" hidden aria-expanded="false"></button>
     <button class="pill" id="moreBtn" aria-expanded="false" title="More options">☰<span class="lbl"> More</span></button>
     <div class="hud-more" id="hudMore" hidden>

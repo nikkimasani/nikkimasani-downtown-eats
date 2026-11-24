@@ -405,7 +405,7 @@ export class CityMap {
     const groups = new Map();
     const XA = this.avenues, XC = this.cross, offMap = ([x, y]) => x < XA[0].x - this.blockW * 2.4 || x > XA[XA.length - 1].x + this.blockW * 1.8 || y < XC[0].y - this.blockD * 3 || y > XC[XC.length - 1].y + this.blockD * 1.4;
     this.offMap = new Set();
-    const EXTRA = [[29.7650, -95.3615, 29.7712, -95.3478], [29.7398, -95.3600, 29.7625, -95.3335], [29.7385, -95.3340, 29.7600, -95.3115], [29.7580, -95.3480, 29.7740, -95.3200], [29.7640, -95.3860, 29.7735, -95.3760], [29.7675, -95.4000, 29.7725, -95.3950]];   // + East River across the bayou (City Cellars, Birdies), + Sawyer Yards (Tejas Brewery)   // + EaDo east of US-59 (Roots, Nancy's Hustle), + the East End / Second Ward along Navigation & Harrisburg (By The Wayside)   // the Warehouse District north of the bayou (Nance & Providence: Theodore Rex, Buried Seeds, Last Concert Cafe)
+    const EXTRA = [[29.7650, -95.3615, 29.7712, -95.3478], [29.7398, -95.3600, 29.7625, -95.3335], [29.7385, -95.3340, 29.7600, -95.3115], [29.7580, -95.3480, 29.7740, -95.3200], [29.7640, -95.3860, 29.7735, -95.3760], [29.7675, -95.4000, 29.7725, -95.3950], [29.7540, -95.4130, 29.7650, -95.3770]];   // + East River across the bayou (City Cellars, Birdies), + Sawyer Yards (Tejas Brewery)   // + EaDo east of US-59 (Roots, Nancy's Hustle), + the East End / Second Ward along Navigation & Harrisburg (By The Wayside)   // the Warehouse District north of the bayou (Nance & Providence: Theodore Rex, Buried Seeds, Last Concert Cafe)
     const inExtra = (p) => EXTRA.some(([s0, w0, n0, e0]) => p.lat >= s0 && p.lat <= n0 && p.lng >= w0 && p.lng <= e0);
     for (const p of pts) {
       if (offMap(proj(p.lat, p.lng)) && !inExtra(p)) { this.offMap.add(p.id); continue; }   // beyond the edge of the map: no pin (the app sends you to Maps instead)
@@ -1395,6 +1395,7 @@ export class CityMap {
       }
       if (type === 'church' || type === 'cathedral') { o.c = o.c === c ? (MAT[mat]?.[0] || '#d3c4a3') : o.c; if (!o.roof) { o.roof = 'gabled'; o.rh = Math.min(bb.x1 - bb.x0, bb.y1 - bb.y0) * 0.3; o.roofC = o.roofC || '#6d7378'; } }
       const fx = fixes.find((f) => hM >= (f.minH || 0) && (inPoly(f.p[0], f.p[1], pts) || Math.hypot(f.p[0] - cx, f.p[1] - cy) < 0.6)); if (fx) { o.c = fx.c; o.grid = fx.grid; o.glass = false; if (o.h > 6) o.name = fx.name; if (fx.pool && o.h < 7 && o.h > 1.5) o.pool = true; }
+      if (type === 'stadium' && !name) { const sp = this.proj(29.7522, -95.3523); if (Math.hypot(sp[0] - cx, sp[1] - cy) < 6) { o.name = 'Shell Energy Stadium'; o.c = '#d2cbbe'; o.roofC = '#4e8d47'; o.glass = false; o.h = Math.max(o.h, 2.6); o.pri = true; } }   // Dynamo & Dash soccer stadium in EaDo: concrete bowl around a green pitch
       const ls = LOOK[o.name]; if (ls) { if (ls.c) o.c = ls.c; if (ls.glass != null) o.glass = ls.glass; if (ls.ant) o.ant = ls.ant; if (ls.roofC) o.roofC = ls.roofC; if (ls.fac) o.fac = ls.fac; if (ls.pri) o.pri = true; }
       this.osm.push(o);
       const cr = CROWNS[o.name]; if (cr) { let top = o.z0 + o.h; o.h -= cr.reduce((a, [, f]) => a + f * h, 0); top = o.z0 + o.h;
@@ -1728,10 +1729,10 @@ export class CityMap {
       ctx.strokeStyle = '#666'; ctx.lineWidth = 1; ctx.beginPath(); ctx.moveTo(px, py); ctx.lineTo(tx, ty); ctx.stroke(); ctx.fillStyle = cols[i % cols.length]; ctx.beginPath(); ctx.ellipse(tx, ty, r, r * 0.5, 0, Math.PI, 0); ctx.fill(); }
     if (N || (this._dusk || 0) > 0.3) { ctx.fillStyle = '#ffd27a'; const P = [[x0, y0], [x0 + w, y0], [x0 + w, y0 + d], [x0, y0 + d]]; for (let i = 0; i < 4; i++) { const a = P[i], b = P[(i + 1) % 4]; for (let t = 0; t <= 1; t += 0.12) { const q = lerp2(a, b, t), [px, py] = v.p(q[0], q[1], z + 0.22 - Math.sin(t * Math.PI) * 0.06); ctx.beginPath(); ctx.arc(px, py, Math.max(1, v.s * 1.6), 0, 7); ctx.fill(); } } }
   }
-  // game days: crowds stream toward Toyota Center or Daikin Park from 3 hours before the start until an hour after
+  // game days: crowds stream toward Toyota Center or Daikin Park from 3 hours before the start until the game lets out
   setEvents(list) { this.events = list || []; this.checkEvent(); }
   checkEvent() {
-    const now = Date.now(), e = (this.events || []).find((x) => { const t = Date.parse(x.start); return now > t - 3 * 3600e3 && now < t + 3600e3; }) || null;
+    const now = Date.now(), e = (this.events || []).find((x) => { const t = Date.parse(x.start); return now > t - 3 * 3600e3 && now < t + 3.5 * 3600e3; }) || null;
     if ((e && e.start) === (this.eventNow && this.eventNow.start)) return; this.eventNow = e;
     for (const n of this.npcs || []) if (n.fan) { if (n.atSpot) n.atSpot.inn = Math.max(0, (n.atSpot.inn || 0) - 1); this.leaveQueue(n); if (this.followN === n) this.followN = null; }
     this.npcs = (this.npcs || []).filter((n) => !n.fan);

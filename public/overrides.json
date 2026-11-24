@@ -900,6 +900,83 @@
       "status": "closed",
       "source": "https://whatnow.com/?p=404449",
       "checked": "2026-11-23"
+    },
+    "Slowpokes EaDo": {
+      "street": "3401 Canal St",
+      "lat": 29.75271,
+      "lng": -95.33752,
+      "source": "https://frankiapp.com/business/slowpokes-774232",
+      "checked": "2026-11-23",
+      "notInDirectory": true
+    },
+    "Sol7": {
+      "street": "1717 Allen Pkwy",
+      "hours": "Mon–Thu 6:30am–10pm, Fri–Sat 6:30am–12am, Sun 6:30am–10pm",
+      "source": "https://www.enprimeurclub.com/bars/sol7-restaurant-bar-houston-bar",
+      "lat": 29.7612,
+      "lng": -95.3893,
+      "approx": true,
+      "geocode": true,
+      "checked": "2026-11-23",
+      "notInDirectory": true
+    },
+    "Maven Coffee + Cocktails (Thompson)": {
+      "street": "1717 Allen Pkwy",
+      "source": "https://www.papercitymag.com/restaurants/thompson-houston-hotel-restaurants-sol-7-michael-mina-review",
+      "lat": 29.76115,
+      "lng": -95.38915,
+      "approx": true,
+      "geocode": true,
+      "checked": "2026-11-23",
+      "notInDirectory": true
+    },
+    "Chardon": {
+      "street": "1711 Allen Pkwy",
+      "lat": 29.76105,
+      "lng": -95.389,
+      "approx": true,
+      "geocode": true,
+      "source": "https://www.houstonmagazine.com/allen-parkway/",
+      "checked": "2026-11-23",
+      "notInDirectory": true
+    },
+    "Toca Madera": {
+      "street": "1755 Allen Pkwy",
+      "lat": 29.761,
+      "lng": -95.39,
+      "approx": true,
+      "geocode": true,
+      "source": "https://www.houstonmagazine.com/allen-parkway/",
+      "checked": "2026-11-23",
+      "notInDirectory": true
+    },
+    "Flora": {
+      "street": "3422 Allen Pkwy",
+      "lat": 29.7623,
+      "lng": -95.3985,
+      "approx": true,
+      "geocode": true,
+      "source": "https://www.hyatt.com/thompson-hotels/en-US/iahth-thompson-houston/events-and-attractions",
+      "checked": "2026-11-23",
+      "notInDirectory": true
+    },
+    "Mexican Sugar": {
+      "street": "3505 W Dallas St",
+      "lat": 29.756948,
+      "lng": -95.403367,
+      "hours": "Mon–Thu 11am–10pm, Fri 11am–11pm, Sat 10am–11pm, Sun 10am–10pm",
+      "source": "https://www.restaurantnews.com/?p=211932",
+      "checked": "2026-11-23",
+      "notInDirectory": true
+    },
+    "De Fortune": {
+      "street": "3515 W Dallas St",
+      "lat": 29.75705,
+      "lng": -95.4037,
+      "hours": "Daily 4pm–2am",
+      "source": "https://www.papercitymag.com/restaurants/de-fortune-lounge-bar-houston-regent-square-speakeasy",
+      "checked": "2026-11-23",
+      "notInDirectory": true
     }
   }
 }
