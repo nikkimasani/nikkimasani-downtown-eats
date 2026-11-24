@@ -800,6 +800,27 @@
       "status": "closed",
       "source": "OSM placeholder for an empty storefront",
       "checked": "2026-11-23"
+    },
+    "CASE Chocolates": {
+      "street": "3401 Harrisburg Blvd",
+      "geoStreet": "3401 Harrisburg Blvd",
+      "lat": 29.74525,
+      "lng": -95.34345,
+      "approx": true,
+      "geocode": true,
+      "hours": "Wed–Sat 6pm–11:30pm",
+      "source": "https://www.opentable.com/r/case-chocolates-houston",
+      "checked": "2026-11-23",
+      "notInDirectory": true
+    },
+    "Betelgeuse Betelgeuse": {
+      "hours": "Daily 4pm–2am",
+      "source": "https://www.papercitymag.com/restaurants/betelgeuse-betelgeuse-houston-restaurant-pizza-chris-cusack-washington-avenue/",
+      "checked": "2026-11-23",
+      "notInDirectory": true,
+      "street": "2101 Washington Ave",
+      "lat": 29.767816,
+      "lng": -95.37971
     }
   }
 }

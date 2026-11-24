@@ -6408,5 +6408,53 @@
   "type": "Brewery",
   "note": "Three-story Sawyer Yards brewery (the old Buffalo Bayou Brewing building) with a rooftop skyline view; happy hour weekdays 3–6pm.",
   "tryit": "A Tejas Negra on the roof"
+ },
+ {
+  "id": 333,
+  "name": "CASE Chocolates",
+  "address": "3401 Harrisburg Blvd, Ste E, Houston, TX",
+  "tunnel": null,
+  "cuisines": [
+   "Bakery & Dessert",
+   "Cocktails"
+  ],
+  "meals": [
+   "Dinner",
+   "Late Night"
+  ],
+  "price": 3,
+  "vibes": [
+   "date",
+   "sweet",
+   "drinks"
+  ],
+  "type": "Dessert Bar",
+  "note": "Chocolate-and-cocktail speakeasy: spirit-filled bonbons paired with cocktails in seated tastings. 21+; book ahead, and enter on Sampson St.",
+  "tryit": "The Classic tasting"
+ },
+ {
+  "id": 334,
+  "name": "Betelgeuse Betelgeuse",
+  "address": "2101 Washington Ave, Houston, TX",
+  "tunnel": null,
+  "cuisines": [
+   "Pizza",
+   "Cocktails"
+  ],
+  "meals": [
+   "Dinner",
+   "Happy Hour",
+   "Late Night",
+   "Patio"
+  ],
+  "price": 2,
+  "vibes": [
+   "nightlife",
+   "group",
+   "drinks"
+  ],
+  "type": "Pizza",
+  "note": "Space-themed Old Sixth Ward cocktail bar with ironclad-style pizza, a patio and late hours.",
+  "tryit": "An ironclad pizza and a house cocktail"
  }
 ]
