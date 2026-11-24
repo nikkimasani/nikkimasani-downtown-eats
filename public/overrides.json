@@ -970,44 +970,36 @@
     },
     "LOV3 Houston": {
       "street": "2900 Travis St",
-      "lat": 29.7438,
-      "lng": -95.3745,
+      "lat": 29.743997,
+      "lng": -95.376556,
       "source": "https://jmgmags.com/lov3-houston-opens-in-midtown-on-march-15",
       "checked": "2026-11-23",
-      "notInDirectory": true,
-      "approx": true,
-      "geocode": true
+      "notInDirectory": true
     },
     "Provecho": {
       "street": "3030 Travis St",
-      "lat": 29.7429,
-      "lng": -95.3754,
+      "lat": 29.743172,
+      "lng": -95.377203,
       "source": "https://www.atly.com/location/Provecho",
       "checked": "2026-11-23",
-      "notInDirectory": true,
-      "approx": true,
-      "geocode": true
+      "notInDirectory": true
     },
     "Medellin HTX": {
       "street": "2303 Smith St",
-      "lat": 29.749,
-      "lng": -95.379,
+      "lat": 29.749251,
+      "lng": -95.376042,
       "hours": "Tue 4pm–2am, Thu–Fri 4pm–2am, Sat 11am–2am, Sun 11am–2am",
       "source": "https://maps.apple.com/place?place-id=IA41D6E082A510870",
       "checked": "2026-11-23",
-      "notInDirectory": true,
-      "approx": true,
-      "geocode": true
+      "notInDirectory": true
     },
     "Vida Garden HTX": {
       "street": "2300 Louisiana St",
-      "lat": 29.7487,
-      "lng": -95.3768,
+      "lat": 29.748811,
+      "lng": -95.375279,
       "source": "https://www.houstonbikebar.com/midtown-tour",
       "checked": "2026-11-23",
-      "notInDirectory": true,
-      "approx": true,
-      "geocode": true
+      "notInDirectory": true
     }
   }
 }
