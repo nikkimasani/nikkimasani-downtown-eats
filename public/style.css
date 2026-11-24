@@ -640,3 +640,5 @@ body.navving #v-map .mapchips,body.navving #v-map .backpill,body.navving #v-map 
 .gamechip.on{animation:gpulse 2s ease-in-out infinite}
 @keyframes gpulse{50%{box-shadow:0 0 0 6px rgba(206,17,65,.18)}}
 .gamechip[hidden]{display:none}
+.zone{white-space:nowrap;opacity:.85}
+.zonesel.on{background:#e8590c !important;color:#fff !important}

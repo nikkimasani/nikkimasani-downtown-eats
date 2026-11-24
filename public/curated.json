@@ -6926,5 +6926,30 @@
   "type": "Bar",
   "note": "Big Midtown cocktail patio and party garden — four bars in one, lively on game days and weekends.",
   "tryit": "Cocktails on the patio"
+ },
+ {
+  "id": 355,
+  "name": "Tumble 22",
+  "address": "1017 Houston Ave, Houston, TX",
+  "tunnel": null,
+  "cuisines": [
+   "American",
+   "Chicken"
+  ],
+  "meals": [
+   "Lunch",
+   "Dinner",
+   "Happy Hour",
+   "Patio"
+  ],
+  "price": 2,
+  "vibes": [
+   "comfort",
+   "spicy",
+   "group"
+  ],
+  "type": "Chicken",
+  "note": "Texas hot chicken joint near Houston Ave & Washington: pick your heat level, plus homemade pies and stiff drinks.",
+  "tryit": "Hot chicken sandwich and a slice of pie"
  }
 ]

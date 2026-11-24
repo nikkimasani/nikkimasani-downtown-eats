@@ -1000,6 +1000,16 @@
       "source": "https://www.houstonbikebar.com/midtown-tour",
       "checked": "2026-11-23",
       "notInDirectory": true
+    },
+    "Tumble 22": {
+      "street": "1017 Houston Ave",
+      "lat": 29.7689,
+      "lng": -95.3718,
+      "approx": true,
+      "geocode": true,
+      "source": "https://houston.culturemap.com/news/restaurants-bars/tumble-22-hot-chicken-restaurant-downtown-open",
+      "checked": "2026-11-23",
+      "notInDirectory": true
     }
   }
 }

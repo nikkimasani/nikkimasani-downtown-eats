@@ -87,6 +87,7 @@
   <div id="hhNowRow"></div>
   <div class="chips" id="nightChips" style="margin-top:10px"></div>
   <div class="row" style="margin-top:10px;align-items:center">
+    <select class="chip zonesel" id="nArea" aria-label="Area"></select>
     <select class="chip" id="nightSort"><option value="now">Best right now</option><option value="near">Closest to me</option><option value="az">A–Z</option></select>
     <button class="chip" id="nightMap">🗺️ Bars on the map</button>
     <button class="chip clearf" id="nClear" hidden>✕ Clear</button>
@@ -102,6 +103,7 @@
   <p class="sub" id="coffeeSub"></p>
   <div class="chips" id="coffeeChips"></div>
   <div class="row" style="margin-top:10px;align-items:center">
+    <select class="chip zonesel" id="cArea" aria-label="Area"></select>
     <select class="chip" id="coffeeSort"><option value="now">Open first</option><option value="near">Closest to me</option><option value="az">A–Z</option></select>
     <button class="chip" id="coffeeMap">🗺️ Coffee on the map</button>
     <button class="chip clearf" id="cClear" hidden>✕ Clear</button>
@@ -122,7 +124,7 @@
     <button class="chip" id="hhOnly">🍹 Happy hour</button>
     <button class="chip" id="favOnly">♥ Favorites</button>
     <button class="chip" id="tunOnly">🚇 Tunnel</button>
-    <select class="chip" id="bArea" aria-label="Area"></select>
+    <select class="chip zonesel" id="bArea" aria-label="Area"></select>
     <select class="chip" id="sort"><option value="name">A–Z</option><option value="price">Price ↑</option><option value="priced">Price ↓</option></select>
   </div>
   <div class="filters" id="filters">

@@ -4,7 +4,9 @@
 import fs from 'fs';
 // s, w, n, e — downtown inside I-45, I-10 and US-59 (+ EaDo, the East End and the Warehouse District),
 // + East River across the bayou in Fifth Ward (Jensen to Hirsch), + Sawyer Yards just west of I-45 (Tejas Brewery)
-const BOXES = [[29.7380, -95.3790, 29.7715, -95.3100], [29.7580, -95.3480, 29.7740, -95.3200], [29.7640, -95.3860, 29.7735, -95.3760], [29.7675, -95.4000, 29.7725, -95.3950], [29.7540, -95.4130, 29.7650, -95.3770], [29.7310, -95.3890, 29.7480, -95.3600]];   // + Midtown (Pierce to Elgin, Bagby to Spur 527/US-59)   // + Allen Parkway: Thompson/The Allen, Lost Lake, Regent Square, Autry Park   // + Washington & Yale (Bayou Heights Bier Garten)
+const BOXES = [[29.7380, -95.3790, 29.7715, -95.3100], [29.7580, -95.3480, 29.7740, -95.3200], [29.7640, -95.3860, 29.7735, -95.3760], [29.7675, -95.4000, 29.7725, -95.3950], [29.7540, -95.4130, 29.7650, -95.3770], [29.7310, -95.3890, 29.7480, -95.3600], [29.7745, -95.4200, 29.8100, -95.3850]];   // + the Heights: shops, restaurants and bars only (see HEIGHTS below)   // + Midtown (Pierce to Elgin, Bagby to Spur 527/US-59)   // + Allen Parkway: Thompson/The Allen, Lost Lake, Regent Square, Autry Park   // + Washington & Yale (Bayou Heights Bier Garten)
+const HEIGHTS = [29.7745, -95.4200, 29.8100, -95.3850], inHeights = ([la, ln]) => la > HEIGHTS[0] && la < HEIGHTS[2] && ln > HEIGHTS[1] && ln < HEIGHTS[3] && la > 29.7745;
+const HOMES = /^(house|houses|residential|detached|semidetached_house|terrace|bungalow|garage|garages|shed|carport|roof|hut|apartments|dormitory)$/;
 const Q = `[out:json][timeout:150];(${BOXES.map((B) => `way["building"](${B});relation["building"](${B});way["building:part"](${B});way["amenity"="parking"](${B});`).join('')});out body geom;`;
 const EP = ['https://overpass-api.de/api/interpreter', 'https://overpass.kumi.systems/api/interpreter', 'https://overpass.private.coffee/api/interpreter'];
 let data = null;
@@ -41,6 +43,7 @@ for (const el of data.elements) {
     if (ring.length < 4) continue;
     if (ring[0][0] !== ring[ring.length - 1][0] || ring[0][1] !== ring[ring.length - 1][1]) ring.push(ring[0]);
     const a = area(ring); if (a < 30) continue;
+    if (inHeights(ring[0]) && (HOMES.test(t.building || '') || (a < 150 && !t.name))) continue;   // the Heights is thousands of houses: keep the commercial strips, not every bungalow
     const parking = t.amenity === 'parking' && !t.building;
     const levels = num(t['building:levels']), h = num(t.height) ?? (levels != null ? levels * 3.6 + 2 : null);
     items.push({ part: !!t['building:part'], parking, name: t.name || null, h, minH: num(t.min_height) ?? (num(t['building:min_level']) != null ? num(t['building:min_level']) * 3.6 : 0),

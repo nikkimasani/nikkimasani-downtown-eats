@@ -37,13 +37,15 @@ const AREAS = [
   { k: 'eado', l: 'EaDo', e: '⚽', b: [29.7380, -95.3540, 29.7610, -95.3420] },
   { k: 'eastend', l: 'East End', e: '🌮', b: [29.7370, -95.3420, 29.7605, -95.3080] },
   { k: 'eastriver', l: 'East River', e: '⛳', b: [29.7605, -95.3478, 29.7745, -95.3180] },
-  { k: 'washington', l: 'Washington Ave & Sawyer Yards', e: '🎨', b: [29.7650, -95.4020, 29.7745, -95.3745] },
+  { k: 'washington', l: 'Washington Ave, Sixth Ward & Sawyer Yards', e: '🎨', b: [29.7620, -95.4020, 29.7745, -95.3640] },
   { k: 'allen', l: 'Allen Pkwy & Regent Square', e: '🌳', b: [29.7530, -95.4140, 29.7650, -95.3745] },
   { k: 'midtown', l: 'Midtown', e: '🍸', b: [29.7300, -95.3900, 29.7480, -95.3560] },
+  { k: 'heights', l: 'The Heights', e: '🏡', b: [29.7745, -95.4200, 29.8100, -95.3850] },
 ];
 const inGrid = (r) => { let c = null; try { c = city; } catch (e) { return null; } if (!c?.avenues) return null; const [x, y] = city.proj(r.lat, r.lng), A = city.avenues.map((a) => a.x), C = city.cross.map((c) => c.y); return x >= Math.min(...A) && x <= Math.max(...A) && y >= Math.min(...C) && y <= Math.max(...C); };
 const areaOf = (r) => { if (r.lat == null) return null; if (r._area !== undefined && r._areaK === r.lat + r.lng) return r._area; const g = inGrid(r); const v = g ? 'downtown' : areaBox(r, g === null); if (g !== null) { r._area = v; r._areaK = r.lat + r.lng; } return v; };
 const areaBox = (r, useDowntownBox) => { for (const a of AREAS) { if (a.k === 'downtown' && !useDowntownBox) continue; const [s0, w0, n0, e0] = a.b; if (r.lat >= s0 && r.lat <= n0 && r.lng >= w0 && r.lng <= e0) return a.k; } return null; };
+const areaTag = (r) => { const a = AREAS.find((x) => x.k === areaOf(r)); return a ? `${a.e} ${a.l.split(/,| &/)[0]}` : ''; };
 const AREA_OPTS = [{ k: 'any', l: '📍 Anywhere' }, ...AREAS.map((a) => ({ k: a.k, l: `${a.e} ${a.l}` }))];
 const DAYS = ['Mon', 'Tue', 'Wed', 'Thu', 'Fri'];
 const st = { moods: new Set(store.get('moods', [])), meal: store.get('meal', 'Any'), budget: store.get('budget', 0), extras: new Set(store.get('extras', [])), area: store.get('area', 'any') };
@@ -221,7 +223,7 @@ function card(r, hero, map) {
   return `<div class="card tap ${hero ? 'hero spin' : ''}" data-open="${r.id}">
   <button class="fav" data-fav="${r.id}" title="Favorite" aria-label="${favs.has(r.name) ? 'Remove ' + esc(r.name) + ' from favorites' : 'Save ' + esc(r.name) + ' to favorites'}">${favs.has(r.name) ? '♥' : '♡'}</button>
   <div class="chead">${tile(r)}<div><h3>${esc(r.name)}</h3>
-  <div class="meta"><span class="price" title="${PRICE_TXT[r.price] || ''} per person">${$$(r.price)}</span> · ${esc(r.type)} · ${esc(r.address.replace(', Houston, TX', ''))}</div></div></div>
+  <div class="meta"><span class="price" title="${PRICE_TXT[r.price] || ''} per person">${$$(r.price)}</span> · ${esc(r.type)} · ${esc(r.address.replace(', Houston, TX', ''))}${areaTag(r) ? ` · <span class="zone">${esc(areaTag(r))}</span>` : ''}</div></div></div>
   ${map && miniMap(r) ? `<div class="locrow">${miniMap(r)}<div>${r.note ? `<p class="note">${esc(r.note)}</p>` : ''}<div class="corner">📍 ${esc(cornerTxt(r))}${r.tunnel ? ' · 🚇 tunnel level' : ''}</div></div></div>` : r.note ? `<p class="note">${esc(r.note)}</p>` : ''}
   ${hero && r.tryit ? `<p class="try">Try: ${esc(r.tryit)}</p>` : ''}
   <div class="tags">${statusTags(r)}</div>
@@ -405,8 +407,10 @@ $('#browse').addEventListener('click', (e) => {
 $('#bClear').onclick = () => { bq = ''; $('#q').value = ''; fav1 = tun1 = open1 = hh1 = false; fc.clear(); barea = 'any'; store.set('barea', barea); sortBy = 'name'; $('#sort').value = 'name'; renderBrowse(); };
 $('#toggleF').onclick = () => $('#filters').classList.toggle('on');
 $('#favOnly').onclick = () => { fav1 = !fav1; renderBrowse(); };
-$('#bArea').innerHTML = AREA_OPTS.map((a) => `<option value="${a.k}">${esc(a.l)}</option>`).join('');
+for (const id of ['#bArea', '#nArea', '#cArea']) { $(id).innerHTML = AREA_OPTS.map((a) => `<option value="${a.k}">${esc(a.l)}</option>`).join(''); $(id).value = barea; }
 $('#bArea').onchange = (e) => { barea = e.target.value; store.set('barea', barea); renderBrowse(); };
+$('#nArea').onchange = (e) => { barea = e.target.value; store.set('barea', barea); renderNight(); };
+$('#cArea').onchange = (e) => { barea = e.target.value; store.set('barea', barea); renderCoffee(); };
 $('#tunOnly').onclick = () => { tun1 = !tun1; renderBrowse(); };
 $('#openOnly').onclick = () => { open1 = !open1; renderBrowse(); };
 $('#hhOnly').onclick = () => { hh1 = !hh1; renderBrowse(); };
@@ -861,9 +865,10 @@ let nightF = new Set(), nightSort = 'now';
 function nightScore(r) { return (hhNow(r) ? 4 : 0) + (isOpen(r) === true ? 2 : 0) + (openLate(r) ? 1 : 0) + (r.bar && /bar|lounge|pub|club|saloon|brew/i.test(r.type) ? 0.5 : 0); }
 function renderNight() {
   const bars = DATA.filter((r) => r.night);
-  $('#nClear').hidden = !nightF.size;
+  $('#nClear').hidden = !nightF.size && barea === 'any';
   $('#nightChips').innerHTML = NIGHT_F.map((f) => `<button class="chip ${nightF.has(f.k) ? 'on' : ''}" data-nf="${f.k}">${f.l}</button>`).join('');
-  let list = bars.filter((r) => [...nightF].every((k) => { const f = NIGHT_F.find((x) => x.k === k); return f.f ? f.f(r) : f.re.test(nightText(r)); }));
+  $('#nArea').value = barea; $('#nArea').classList.toggle('on', barea !== 'any');
+  let list = bars.filter((r) => (barea === 'any' || areaOf(r) === barea) && [...nightF].every((k) => { const f = NIGHT_F.find((x) => x.k === k); return f.f ? f.f(r) : f.re.test(nightText(r)); }));
   const by = { now: (a, b) => nightScore(b) - nightScore(a) || a.name.localeCompare(b.name), near: (a, b) => (walkMinsTo(a) ?? 999) - (walkMinsTo(b) ?? 999), az: (a, b) => a.name.localeCompare(b.name) };
   list.sort(by[nightSort] || by.now);
   const onNow = bars.filter((r) => hhNow(r)), openNow = bars.filter((r) => isOpen(r) === true).length;
@@ -883,7 +888,7 @@ function barCard(r) {
       : r.hhListed ? `<div class="hhbox"><b>🍹 Listed for happy hour</b><span>Times and prices aren't published yet — check with the bar.</span></div>` : ''}
   <div class="row bar-actions"><button class="btn ghost sm" data-open="${r.id}">Details</button><button class="btn sm" data-walk="${r.id}">🧭 Walk there</button></div></div>`;
 }
-$('#nClear').onclick = () => { nightF.clear(); renderNight(); };
+$('#nClear').onclick = () => { nightF.clear(); barea = 'any'; store.set('barea', barea); renderNight(); };
 $('#nightChips').onclick = (e) => { const b = e.target.closest('[data-nf]'); if (!b) return; const k = b.dataset.nf; nightF.has(k) ? nightF.delete(k) : nightF.add(k); renderNight(); };
 $('#nightSort').onchange = (e) => { nightSort = e.target.value; if (nightSort === 'near' && !USER) startLocate(); renderNight(); };
 $('#nightMap').onclick = () => { show('map'); setScene('night'); };
@@ -903,9 +908,10 @@ const COFFEE_F = [
 let coffeeF = new Set(), coffeeSort = 'now';
 function renderCoffee() {
   const all = DATA.filter(isCoffee);
-  $('#cClear').hidden = !coffeeF.size;
+  $('#cClear').hidden = !coffeeF.size && barea === 'any';
   $('#coffeeChips').innerHTML = COFFEE_F.map((f) => `<button class="chip ${coffeeF.has(f.k) ? 'on' : ''}" data-cf="${f.k}">${f.l}</button>`).join('');
-  const list = all.filter((r) => [...coffeeF].every((k) => COFFEE_F.find((x) => x.k === k).f(r)));
+  $('#cArea').value = barea; $('#cArea').classList.toggle('on', barea !== 'any');
+  const list = all.filter((r) => (barea === 'any' || areaOf(r) === barea) && [...coffeeF].every((k) => COFFEE_F.find((x) => x.k === k).f(r)));
   const by = { now: (a, b) => (isOpen(b) === true) - (isOpen(a) === true) || (walkMinsTo(a) ?? 99) - (walkMinsTo(b) ?? 99) || a.name.localeCompare(b.name), near: (a, b) => (walkMinsTo(a) ?? 999) - (walkMinsTo(b) ?? 999), az: (a, b) => a.name.localeCompare(b.name) };
   list.sort(by[coffeeSort] || by.now);
   const open = all.filter((r) => isOpen(r) === true).length;
@@ -919,7 +925,7 @@ function renderCoffee() {
     <div class="row bar-actions"><button class="btn ghost sm" data-open="${r.id}">Details</button><button class="btn sm" data-walk="${r.id}">🧭 Walk there</button></div></div>`; }).join('') || '<div class="empty">No coffee spots match all of those. Try removing a filter.</div>';
   $('#coffeeCount').textContent = `${list.length} spot${list.length === 1 ? '' : 's'}`;
 }
-$('#cClear').onclick = () => { coffeeF.clear(); renderCoffee(); };
+$('#cClear').onclick = () => { coffeeF.clear(); barea = 'any'; store.set('barea', barea); renderCoffee(); };
 $('#coffeeChips').onclick = (e) => { const b = e.target.closest('[data-cf]'); if (!b) return; const k = b.dataset.cf; coffeeF.has(k) ? coffeeF.delete(k) : coffeeF.add(k); renderCoffee(); };
 $('#coffeeSort').onchange = (e) => { coffeeSort = e.target.value; if (coffeeSort === 'near' && !USER) startLocate(() => renderCoffee()); renderCoffee(); };
 $('#coffeeMap').onclick = () => {
