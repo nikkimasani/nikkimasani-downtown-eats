@@ -4,7 +4,7 @@
 // Run: node scripts/osm-streets.mjs   (Node 20+, no dependencies). Map data © OpenStreetMap contributors, ODbL.
 import fs from 'fs';
 // the same areas as scripts/osm-buildings.mjs: downtown + EaDo/East End, East River (Fifth Ward), Sawyer Yards
-const BOXES = [[29.7380, -95.3790, 29.7715, -95.3100], [29.7580, -95.3480, 29.7740, -95.3200], [29.7640, -95.3860, 29.7735, -95.3760], [29.7675, -95.4000, 29.7725, -95.3950], [29.7540, -95.4130, 29.7650, -95.3770]];   // + Allen Parkway: Thompson/The Allen, Lost Lake, Regent Square, Autry Park   // + Washington & Yale (Bayou Heights Bier Garten)
+const BOXES = [[29.7380, -95.3790, 29.7715, -95.3100], [29.7580, -95.3480, 29.7740, -95.3200], [29.7640, -95.3860, 29.7735, -95.3760], [29.7675, -95.4000, 29.7725, -95.3950], [29.7540, -95.4130, 29.7650, -95.3770], [29.7310, -95.3890, 29.7480, -95.3600]];   // + Midtown (Pierce to Elgin, Bagby to Spur 527/US-59)   // + Allen Parkway: Thompson/The Allen, Lost Lake, Regent Square, Autry Park   // + Washington & Yale (Bayou Heights Bier Garten)
 const Q = `[out:json][timeout:150];(${BOXES.map((BBOX) => `
   way["highway"~"^(primary|secondary|tertiary|residential|unclassified|living_street|pedestrian|trunk|motorway|motorway_link|trunk_link)$"](${BBOX});
   way["railway"~"^(light_rail|tram)$"](${BBOX});

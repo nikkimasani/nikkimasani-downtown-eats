@@ -39,6 +39,7 @@ const AREAS = [
   { k: 'eastriver', l: 'East River', e: '⛳', b: [29.7605, -95.3478, 29.7745, -95.3180] },
   { k: 'washington', l: 'Washington Ave & Sawyer Yards', e: '🎨', b: [29.7650, -95.4020, 29.7745, -95.3745] },
   { k: 'allen', l: 'Allen Pkwy & Regent Square', e: '🌳', b: [29.7530, -95.4140, 29.7650, -95.3745] },
+  { k: 'midtown', l: 'Midtown', e: '🍸', b: [29.7300, -95.3900, 29.7480, -95.3560] },
 ];
 const areaOf = (r) => { if (r.lat == null) return null; for (const a of AREAS) { const [s0, w0, n0, e0] = a.b; if (r.lat >= s0 && r.lat <= n0 && r.lng >= w0 && r.lng <= e0) return a.k; } return null; };
 const AREA_OPTS = [{ k: 'any', l: '📍 Anywhere' }, ...AREAS.map((a) => ({ k: a.k, l: `${a.e} ${a.l}` }))];

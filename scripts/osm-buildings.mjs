@@ -4,7 +4,7 @@
 import fs from 'fs';
 // s, w, n, e — downtown inside I-45, I-10 and US-59 (+ EaDo, the East End and the Warehouse District),
 // + East River across the bayou in Fifth Ward (Jensen to Hirsch), + Sawyer Yards just west of I-45 (Tejas Brewery)
-const BOXES = [[29.7380, -95.3790, 29.7715, -95.3100], [29.7580, -95.3480, 29.7740, -95.3200], [29.7640, -95.3860, 29.7735, -95.3760], [29.7675, -95.4000, 29.7725, -95.3950], [29.7540, -95.4130, 29.7650, -95.3770]];   // + Allen Parkway: Thompson/The Allen, Lost Lake, Regent Square, Autry Park   // + Washington & Yale (Bayou Heights Bier Garten)
+const BOXES = [[29.7380, -95.3790, 29.7715, -95.3100], [29.7580, -95.3480, 29.7740, -95.3200], [29.7640, -95.3860, 29.7735, -95.3760], [29.7675, -95.4000, 29.7725, -95.3950], [29.7540, -95.4130, 29.7650, -95.3770], [29.7310, -95.3890, 29.7480, -95.3600]];   // + Midtown (Pierce to Elgin, Bagby to Spur 527/US-59)   // + Allen Parkway: Thompson/The Allen, Lost Lake, Regent Square, Autry Park   // + Washington & Yale (Bayou Heights Bier Garten)
 const Q = `[out:json][timeout:150];(${BOXES.map((B) => `way["building"](${B});relation["building"](${B});way["building:part"](${B});way["amenity"="parking"](${B});`).join('')});out body geom;`;
 const EP = ['https://overpass-api.de/api/interpreter', 'https://overpass.kumi.systems/api/interpreter', 'https://overpass.private.coffee/api/interpreter'];
 let data = null;
