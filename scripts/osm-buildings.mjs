@@ -43,7 +43,7 @@ for (const el of data.elements) {
     if (ring.length < 4) continue;
     if (ring[0][0] !== ring[ring.length - 1][0] || ring[0][1] !== ring[ring.length - 1][1]) ring.push(ring[0]);
     const a = area(ring); if (a < 30) continue;
-    if (inHeights(ring[0]) && (HOMES.test(t.building || '') || (a < 150 && !t.name))) continue;   // the Heights is thousands of houses: keep the commercial strips, not every bungalow
+    if (inHeights(ring[0]) && !t.name && !t.amenity && !t.shop && (HOMES.test(t.building || '') || (!/^(commercial|retail|office|industrial|warehouse|church|school|civic|public|hotel|supermarket)$/.test(t.building || '') && a < 450))) continue;   // the Heights is thousands of houses: keep the commercial strips, not every bungalow
     const parking = t.amenity === 'parking' && !t.building;
     const levels = num(t['building:levels']), h = num(t.height) ?? (levels != null ? levels * 3.6 + 2 : null);
     items.push({ part: !!t['building:part'], parking, name: t.name || null, h, minH: num(t.min_height) ?? (num(t['building:min_level']) != null ? num(t['building:min_level']) * 3.6 : 0),
