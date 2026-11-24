@@ -6456,5 +6456,189 @@
   "type": "Pizza",
   "note": "Space-themed Old Sixth Ward cocktail bar with ironclad-style pizza, a patio and late hours.",
   "tryit": "An ironclad pizza and a house cocktail"
+ },
+ {
+  "id": 335,
+  "tunnel": null,
+  "name": "Eastbound Barbecue",
+  "address": "1105 Sampson St, Houston, TX",
+  "cuisines": [
+   "BBQ"
+  ],
+  "meals": [
+   "Lunch",
+   "Dinner",
+   "Patio"
+  ],
+  "price": 2,
+  "vibes": [
+   "comfort",
+   "group"
+  ],
+  "type": "BBQ",
+  "note": "Craft barbecue from four Killen's veterans in the old East End Backyard building, with offbeat rubs like rosemary-salt brisket.",
+  "tryit": "Brisket and the miso-caramel ribs"
+ },
+ {
+  "id": 336,
+  "tunnel": null,
+  "name": "D&W Lounge",
+  "address": "911 Milby St, Houston, TX",
+  "cuisines": [
+   "Bar"
+  ],
+  "meals": [
+   "Happy Hour",
+   "Late Night",
+   "Patio"
+  ],
+  "price": 1,
+  "vibes": [
+   "drinks",
+   "casual",
+   "music"
+  ],
+  "type": "Bar",
+  "note": "Second Ward dive and icehouse since the 1940s: cheap cold beer, jukebox, karaoke and a skyline-view patio.",
+  "tryit": "A cold domestic and the jukebox"
+ },
+ {
+  "id": 337,
+  "tunnel": null,
+  "name": "The Mood Room Garden and Bar",
+  "address": "711 Milby St, Ste 39, Houston, TX",
+  "cuisines": [
+   "Cocktails"
+  ],
+  "meals": [
+   "Happy Hour",
+   "Late Night",
+   "Patio"
+  ],
+  "price": 2,
+  "vibes": [
+   "date",
+   "drinks",
+   "music"
+  ],
+  "type": "Cocktail Bar",
+  "note": "Garden bar inside Ironworks on Milby: cocktails and mocktails matched to your mood, salsa Saturdays, trivia Tuesdays.",
+  "tryit": "Order by mood"
+ },
+ {
+  "id": 338,
+  "tunnel": null,
+  "name": "Cidercade Houston",
+  "address": "2320 Canal St, Ste 100, Houston, TX",
+  "cuisines": [
+   "Beer",
+   "Pizza"
+  ],
+  "meals": [
+   "Lunch",
+   "Dinner",
+   "Late Night"
+  ],
+  "price": 1,
+  "vibes": [
+   "group",
+   "adventurous",
+   "drinks"
+  ],
+  "type": "Arcade Bar",
+  "note": "275+ free-play arcade games with house cider and beer and stone-oven pizza; family-friendly by day, 18+ after 9pm.",
+  "tryit": "A cider flight between games"
+ },
+ {
+  "id": 339,
+  "tunnel": null,
+  "name": "Kept Secret",
+  "address": "1109 Providence St, Houston, TX",
+  "cuisines": [
+   "Coffee & Tea"
+  ],
+  "meals": [
+   "Breakfast",
+   "Lunch"
+  ],
+  "price": 1,
+  "vibes": [
+   "caffeine",
+   "quick"
+  ],
+  "type": "Coffee Shop",
+  "note": "Little coffee-and-flower shop on Providence St, steps from Buried Seeds; house syrups like lavender and ube.",
+  "tryit": "An ube latte"
+ },
+ {
+  "id": 340,
+  "tunnel": null,
+  "name": "Bald Kitty",
+  "address": "1113 Providence St, Houston, TX",
+  "cuisines": [
+   "Cocktails"
+  ],
+  "meals": [
+   "Late Night"
+  ],
+  "price": 2,
+  "vibes": [
+   "nightlife",
+   "drinks"
+  ],
+  "type": "Bar",
+  "note": "Late-night bar on the Providence St strip next to Buried Seeds.",
+  "tryit": "A nightcap after Buried Seeds"
+ },
+ {
+  "id": 341,
+  "tunnel": null,
+  "name": "Slowpokes Sawyer Yards",
+  "address": "1501 Silver St, Bldg B, Houston, TX",
+  "cuisines": [
+   "Coffee & Tea"
+  ],
+  "meals": [
+   "Breakfast",
+   "Lunch",
+   "Patio"
+  ],
+  "price": 1,
+  "vibes": [
+   "caffeine",
+   "casual"
+  ],
+  "type": "Coffee Shop",
+  "note": "Neighborhood coffeehouse in the old Maven space at Sawyer Yards, with local beer and wine too.",
+  "tryit": "Coffee before Second Saturday studios"
+ },
+ {
+  "id": 342,
+  "tunnel": null,
+  "name": "Bayou Heights Bier Garten",
+  "address": "3905 Washington Ave, Houston, TX",
+  "cuisines": [
+   "Beer",
+   "BBQ"
+  ],
+  "meals": [
+   "Breakfast",
+   "Brunch",
+   "Lunch",
+   "Dinner",
+   "Late Night",
+   "Patio",
+   "Pet Friendly"
+  ],
+  "price": 2,
+  "vibes": [
+   "group",
+   "patio",
+   "drinks",
+   "sports"
+  ],
+  "type": "Beer Garden",
+  "note": "Four-building beer garden on Washington Ave near Yale: 70+ craft beers, cocktails, coffee from 8am and a big dog-friendly patio.",
+  "tryit": "Smoked wings and a draft on the patio"
  }
 ]

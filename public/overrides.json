@@ -821,6 +821,88 @@
       "street": "2101 Washington Ave",
       "lat": 29.767816,
       "lng": -95.37971
+    },
+    "Eastbound Barbecue": {
+      "street": "1105 Sampson St",
+      "lat": 29.74333,
+      "lng": -95.34484,
+      "hours": "Wed–Thu 11am–9pm, Fri–Sat 11am–10pm, Sun 11am–8pm",
+      "source": "https://www.texasmonthly.com/bbq/eastbound-barbecue-houston/",
+      "checked": "2026-11-23",
+      "notInDirectory": true
+    },
+    "D&W Lounge": {
+      "street": "911 Milby St",
+      "lat": 29.743691,
+      "lng": -95.340547,
+      "hours": "Daily 7am–2am",
+      "source": "https://www.houstoniamag.com/bars/d-and-w-lounge",
+      "checked": "2026-11-23",
+      "notInDirectory": true
+    },
+    "The Mood Room Garden and Bar": {
+      "street": "711 Milby St",
+      "lat": 29.7455,
+      "lng": -95.3409,
+      "approx": true,
+      "geocode": true,
+      "source": "https://www.atly.com/location/TheMoodRoomGardenAndBar",
+      "checked": "2026-11-23",
+      "notInDirectory": true
+    },
+    "Cidercade Houston": {
+      "street": "2320 Canal St",
+      "lat": 29.7537,
+      "lng": -95.3483,
+      "approx": true,
+      "geocode": true,
+      "hours": "Daily 10am–12am",
+      "source": "https://cidercade.com/houston",
+      "checked": "2026-11-23",
+      "notInDirectory": true
+    },
+    "Kept Secret": {
+      "street": "1109 Providence St",
+      "lat": 29.7686,
+      "lng": -95.35645,
+      "hours": "Mon–Sat 9am–5pm, Sun 11am–5pm",
+      "source": "https://www.sanman.company/",
+      "checked": "2026-11-23",
+      "notInDirectory": true
+    },
+    "Bald Kitty": {
+      "street": "1113 Providence St",
+      "lat": 29.768595,
+      "lng": -95.35635,
+      "hours": "Tue–Sun 10pm–2am",
+      "source": "https://www.sanman.company/",
+      "checked": "2026-11-23",
+      "notInDirectory": true
+    },
+    "Slowpokes Sawyer Yards": {
+      "street": "1501 Silver St",
+      "lat": 29.77206,
+      "lng": -95.37796,
+      "source": "https://houston.culturemap.com/news/restaurants-bars/slowpokes-coffee-sawyer-yards-opening/",
+      "checked": "2026-11-23",
+      "notInDirectory": true
+    },
+    "Bayou Heights Bier Garten": {
+      "street": "3905 Washington Ave",
+      "lat": 29.77,
+      "lng": -95.3976,
+      "approx": true,
+      "geocode": true,
+      "hours": "Daily 8am–2am",
+      "source": "https://www.papercitymag.com/restaurants/bayou-heights-bier-garten-houston-bar-land-opens-washington-avenue-cocktails-craft-beer",
+      "checked": "2026-11-23",
+      "notInDirectory": true
+    },
+    "Eden Plant Co": {
+      "street": "1123 Providence St",
+      "hours": "Daily 8am–7pm",
+      "source": "https://www.instagram.com/edenplant.co/",
+      "checked": "2026-11-23"
     }
   }
 }
