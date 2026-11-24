@@ -1003,10 +1003,8 @@
     },
     "Tumble 22": {
       "street": "1017 Houston Ave",
-      "lat": 29.7689,
-      "lng": -95.3718,
-      "approx": true,
-      "geocode": true,
+      "lat": 29.767428,
+      "lng": -95.372385,
       "source": "https://houston.culturemap.com/news/restaurants-bars/tumble-22-hot-chicken-restaurant-downtown-open",
       "checked": "2026-11-23",
       "notInDirectory": true
