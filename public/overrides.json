@@ -1388,6 +1388,15 @@
       "checked": "2026-11-25",
       "notInDirectory": true
     },
+    "The Podium": {
+      "street": "4007B Greenbriar Dr",
+      "geoStreet": "4007 Greenbriar Dr",
+      "lat": 29.730366,
+      "lng": -95.412787,
+      "source": "https://partyslate.com/venues/the-podium-at-porsche-river-oaks",
+      "checked": "2026-11-25",
+      "notInDirectory": true
+    },
     "40 Love": {
       "street": "3030 Travis St",
       "lat": 29.743172,
@@ -1436,6 +1445,14 @@
       "checked": "2026-11-25",
       "notInDirectory": true
     },
+    "The James": {
+      "street": "Mid Lane",
+      "lat": 29.743993,
+      "lng": -95.449477,
+      "source": "OpenStreetMap Nominatim",
+      "checked": "2026-11-25",
+      "notInDirectory": true
+    },
     "Donna's": {
       "street": "2626 White Oak Dr",
       "lat": 29.781705,
@@ -1457,54 +1474,6 @@
       "lat": 29.804012,
       "lng": -95.385143,
       "source": "US Census geocoder",
-      "checked": "2026-11-25",
-      "notInDirectory": true
-    },
-    "Front Porch Pub": {
-      "street": "217 Gray St",
-      "lat": 29.752796,
-      "lng": -95.378045,
-      "source": "US Census geocoder",
-      "checked": "2026-11-25",
-      "notInDirectory": true
-    },
-    "Christian's Tailgate Midtown": {
-      "street": "2000 Bagby St",
-      "lat": 29.752585,
-      "lng": -95.376076,
-      "source": "US Census geocoder",
-      "checked": "2026-11-25",
-      "notInDirectory": true
-    },
-    "Starduster Lounge": {
-      "street": "3921 N Main St",
-      "lat": 29.792713,
-      "lng": -95.375622,
-      "source": "US Census geocoder",
-      "checked": "2026-11-25",
-      "notInDirectory": true
-    },
-    "Daley Sports Club": {
-      "street": "922 Holman St",
-      "lat": 29.740112,
-      "lng": -95.379221,
-      "source": "US Census geocoder",
-      "checked": "2026-11-25",
-      "notInDirectory": true
-    },
-    "Lankford's Grocery & Market": {
-      "street": "88 Dennis St",
-      "lat": 29.74986,
-      "lng": -95.383361,
-      "source": "US Census geocoder",
-      "checked": "2026-11-25",
-      "notInDirectory": true
-    },
-    "The James": {
-      "street": "Mid Lane",
-      "lat": 29.743993,
-      "lng": -95.449477,
-      "source": "OpenStreetMap Nominatim",
       "checked": "2026-11-25",
       "notInDirectory": true
     },
@@ -1540,6 +1509,38 @@
       "checked": "2026-11-25",
       "notInDirectory": true
     },
+    "Christian's Tailgate Midtown": {
+      "street": "2000 Bagby St",
+      "lat": 29.752585,
+      "lng": -95.376076,
+      "source": "US Census geocoder",
+      "checked": "2026-11-25",
+      "notInDirectory": true
+    },
+    "Starduster Lounge": {
+      "street": "3921 N Main St",
+      "lat": 29.792713,
+      "lng": -95.375622,
+      "source": "US Census geocoder",
+      "checked": "2026-11-25",
+      "notInDirectory": true
+    },
+    "Daley Sports Club": {
+      "street": "922 Holman St",
+      "lat": 29.740112,
+      "lng": -95.379221,
+      "source": "US Census geocoder",
+      "checked": "2026-11-25",
+      "notInDirectory": true
+    },
+    "Lankford's Grocery & Market": {
+      "street": "88 Dennis St",
+      "lat": 29.74986,
+      "lng": -95.383361,
+      "source": "US Census geocoder",
+      "checked": "2026-11-25",
+      "notInDirectory": true
+    },
     "Traveler's Table": {
       "street": "520 Westheimer Rd",
       "lat": 29.744587,
@@ -1561,62 +1562,6 @@
       "lat": 29.74652,
       "lng": -95.38184,
       "source": "US Census geocoder",
-      "checked": "2026-11-25",
-      "notInDirectory": true
-    },
-    "NUA Thai": {
-      "street": "2020 Louisiana St",
-      "lat": 29.750812,
-      "lng": -95.373701,
-      "source": "US Census geocoder",
-      "checked": "2026-11-25",
-      "notInDirectory": true
-    },
-    "Umiya": {
-      "street": "510 Gray St",
-      "lat": 29.751219,
-      "lng": -95.375632,
-      "source": "US Census geocoder",
-      "checked": "2026-11-25",
-      "notInDirectory": true
-    },
-    "Pub Fiction": {
-      "street": "2303 Smith St",
-      "lat": 29.749251,
-      "lng": -95.376042,
-      "source": "US Census geocoder",
-      "checked": "2026-11-25",
-      "notInDirectory": true
-    },
-    "Community Bar": {
-      "street": "2703 Smith St",
-      "lat": 29.746678,
-      "lng": -95.378071,
-      "source": "US Census geocoder",
-      "checked": "2026-11-25",
-      "notInDirectory": true
-    },
-    "Weights + Measures": {
-      "street": "2808 Caroline St",
-      "lat": 29.742809,
-      "lng": -95.372376,
-      "source": "US Census geocoder",
-      "checked": "2026-11-25",
-      "notInDirectory": true
-    },
-    "Night Heron": {
-      "street": "1601 W Main St",
-      "lat": 29.736031,
-      "lng": -95.399334,
-      "source": "US Census geocoder",
-      "checked": "2026-11-25",
-      "notInDirectory": true
-    },
-    "Cafe Ginger": {
-      "street": "1574 West Gray Street",
-      "lat": 29.754295,
-      "lng": -95.402051,
-      "source": "OpenStreetMap Nominatim",
       "checked": "2026-11-25",
       "notInDirectory": true
     }

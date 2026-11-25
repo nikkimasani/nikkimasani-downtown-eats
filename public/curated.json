@@ -7952,12 +7952,33 @@
    "drinks",
    "nightlife"
   ],
+  "type": "Coffee & Cocktail Bar",
+  "note": "Café and cocktail bar at Porsche River Oaks in a restored old lumber barn: local coffee by day, premium cocktails later, plus an event space.",
+  "tryit": "A latte by day, a cocktail after work"
+ },
+ {
+  "id": 409,
+  "name": "40 Love",
+  "address": "3030 Travis St, Houston, TX",
+  "tunnel": null,
+  "cuisines": [
+   "Sports Bar"
+  ],
+  "meals": [
+   "Happy Hour",
+   "Late Night"
+  ],
+  "price": 2,
+  "vibes": [
+   "drinks",
+   "nightlife"
+  ],
   "type": "Sports Bar",
   "note": "Sports Bar.",
   "tryit": ""
  },
  {
-  "id": 409,
+  "id": 410,
   "name": "Dough Zone Dumpling House Midtown",
   "address": "2450 Louisiana St, Houston, TX",
   "tunnel": null,
@@ -7977,7 +7998,7 @@
   "tryit": ""
  },
  {
-  "id": 410,
+  "id": 411,
   "name": "Malai Thai Street Eats",
   "address": "2900 Travis St, Houston, TX",
   "tunnel": null,
@@ -7997,7 +8018,7 @@
   "tryit": ""
  },
  {
-  "id": 411,
+  "id": 412,
   "name": "Bonchon Midtown",
   "address": "2100 Travis St, Houston, TX",
   "tunnel": null,
@@ -8017,7 +8038,7 @@
   "tryit": ""
  },
  {
-  "id": 412,
+  "id": 413,
   "name": "Gotti's",
   "address": "811 St Emanuel St, Houston, TX",
   "tunnel": null,
@@ -8037,7 +8058,7 @@
   "tryit": ""
  },
  {
-  "id": 413,
+  "id": 414,
   "name": "Flight Club Houston",
   "address": "3515 W Dallas St, Houston, TX",
   "tunnel": null,
@@ -8058,174 +8079,7 @@
   "tryit": ""
  },
  {
-  "id": 414,
-  "name": "Donna's",
-  "address": "2626 White Oak Dr, Houston, TX",
-  "tunnel": null,
-  "cuisines": [
-   "Bar"
-  ],
-  "meals": [
-   "Happy Hour",
-   "Late Night"
-  ],
-  "price": 2,
-  "vibes": [
-   "drinks",
-   "nightlife"
-  ],
-  "type": "Bar",
-  "note": "Bar.",
-  "tryit": ""
- },
- {
   "id": 415,
-  "name": "Bar Angie",
-  "address": "1002 W 11th St, Houston, TX",
-  "tunnel": null,
-  "cuisines": [
-   "Cocktails"
-  ],
-  "meals": [
-   "Happy Hour",
-   "Late Night"
-  ],
-  "price": 2,
-  "vibes": [
-   "drinks",
-   "nightlife"
-  ],
-  "type": "Cocktail Bar",
-  "note": "Cocktails.",
-  "tryit": ""
- },
- {
-  "id": 416,
-  "name": "Heights Hideaway",
-  "address": "1040 W Cavalcade St, Houston, TX",
-  "tunnel": null,
-  "cuisines": [
-   "Bar"
-  ],
-  "meals": [
-   "Happy Hour",
-   "Late Night"
-  ],
-  "price": 2,
-  "vibes": [
-   "drinks",
-   "nightlife"
-  ],
-  "type": "Bar",
-  "note": "Bar.",
-  "tryit": ""
- },
- {
-  "id": 417,
-  "name": "Front Porch Pub",
-  "address": "217 Gray St, Houston, TX",
-  "tunnel": null,
-  "cuisines": [
-   "Pub"
-  ],
-  "meals": [
-   "Happy Hour",
-   "Late Night"
-  ],
-  "price": 2,
-  "vibes": [
-   "drinks",
-   "nightlife"
-  ],
-  "type": "Pub",
-  "note": "Pub.",
-  "tryit": ""
- },
- {
-  "id": 418,
-  "name": "Christian's Tailgate Midtown",
-  "address": "2000 Bagby St, Houston, TX",
-  "tunnel": null,
-  "cuisines": [
-   "Sports Bar"
-  ],
-  "meals": [
-   "Happy Hour",
-   "Late Night"
-  ],
-  "price": 2,
-  "vibes": [
-   "drinks",
-   "nightlife"
-  ],
-  "type": "Sports Bar",
-  "note": "Sports Bar.",
-  "tryit": ""
- },
- {
-  "id": 419,
-  "name": "Starduster Lounge",
-  "address": "3921 N Main St, Houston, TX",
-  "tunnel": null,
-  "cuisines": [
-   "Cocktails"
-  ],
-  "meals": [
-   "Happy Hour",
-   "Late Night"
-  ],
-  "price": 2,
-  "vibes": [
-   "drinks",
-   "nightlife"
-  ],
-  "type": "Cocktail Bar",
-  "note": "Cocktails.",
-  "tryit": ""
- },
- {
-  "id": 420,
-  "name": "Daley Sports Club",
-  "address": "922 Holman St, Houston, TX",
-  "tunnel": null,
-  "cuisines": [
-   "Sports Bar"
-  ],
-  "meals": [
-   "Happy Hour",
-   "Late Night"
-  ],
-  "price": 2,
-  "vibes": [
-   "drinks",
-   "nightlife"
-  ],
-  "type": "Sports Bar",
-  "note": "Sports Bar.",
-  "tryit": ""
- },
- {
-  "id": 421,
-  "name": "Lankford's Grocery & Market",
-  "address": "88 Dennis St, Houston, TX",
-  "tunnel": null,
-  "cuisines": [
-   "American"
-  ],
-  "meals": [
-   "Lunch",
-   "Dinner"
-  ],
-  "price": 2,
-  "vibes": [
-   "casual"
-  ],
-  "type": "Restaurant",
-  "note": "American restaurant.",
-  "tryit": ""
- },
- {
-  "id": 422,
   "name": "The James",
   "address": "Mid Lane, Houston, TX",
   "tunnel": null,
@@ -8246,7 +8100,70 @@
   "tryit": ""
  },
  {
-  "id": 423,
+  "id": 416,
+  "name": "Donna's",
+  "address": "2626 White Oak Dr, Houston, TX",
+  "tunnel": null,
+  "cuisines": [
+   "Bar"
+  ],
+  "meals": [
+   "Happy Hour",
+   "Late Night"
+  ],
+  "price": 2,
+  "vibes": [
+   "drinks",
+   "nightlife"
+  ],
+  "type": "Bar",
+  "note": "Bar.",
+  "tryit": ""
+ },
+ {
+  "id": 417,
+  "name": "Bar Angie",
+  "address": "1002 W 11th St, Houston, TX",
+  "tunnel": null,
+  "cuisines": [
+   "Cocktails"
+  ],
+  "meals": [
+   "Happy Hour",
+   "Late Night"
+  ],
+  "price": 2,
+  "vibes": [
+   "drinks",
+   "nightlife"
+  ],
+  "type": "Cocktail Bar",
+  "note": "Cocktails.",
+  "tryit": ""
+ },
+ {
+  "id": 418,
+  "name": "Heights Hideaway",
+  "address": "1040 W Cavalcade St, Houston, TX",
+  "tunnel": null,
+  "cuisines": [
+   "Bar"
+  ],
+  "meals": [
+   "Happy Hour",
+   "Late Night"
+  ],
+  "price": 2,
+  "vibes": [
+   "drinks",
+   "nightlife"
+  ],
+  "type": "Bar",
+  "note": "Bar.",
+  "tryit": ""
+ },
+ {
+  "id": 419,
   "name": "Rainbow Lodge",
   "address": "2011 Ella Blvd, Houston, TX",
   "tunnel": null,
@@ -8266,7 +8183,7 @@
   "tryit": ""
  },
  {
-  "id": 424,
+  "id": 420,
   "name": "Dona Leti's",
   "address": "7340 Washington Avenue, Houston, TX",
   "tunnel": null,
@@ -8287,7 +8204,7 @@
   "tryit": ""
  },
  {
-  "id": 425,
+  "id": 421,
   "name": "Down the Street",
   "address": "5746 Larkin Street, Houston, TX",
   "tunnel": null,
@@ -8308,7 +8225,7 @@
   "tryit": ""
  },
  {
-  "id": 426,
+  "id": 422,
   "name": "Mary'z Mediterranean Cuisine",
   "address": "5828 Richmond Avenue, Houston, TX",
   "tunnel": null,
@@ -8325,6 +8242,89 @@
   ],
   "type": "Restaurant",
   "note": "Mediterranean restaurant.",
+  "tryit": ""
+ },
+ {
+  "id": 423,
+  "name": "Christian's Tailgate Midtown",
+  "address": "2000 Bagby St, Houston, TX",
+  "tunnel": null,
+  "cuisines": [
+   "Sports Bar"
+  ],
+  "meals": [
+   "Happy Hour",
+   "Late Night"
+  ],
+  "price": 2,
+  "vibes": [
+   "drinks",
+   "nightlife"
+  ],
+  "type": "Sports Bar",
+  "note": "Sports Bar.",
+  "tryit": ""
+ },
+ {
+  "id": 424,
+  "name": "Starduster Lounge",
+  "address": "3921 N Main St, Houston, TX",
+  "tunnel": null,
+  "cuisines": [
+   "Cocktails"
+  ],
+  "meals": [
+   "Happy Hour",
+   "Late Night"
+  ],
+  "price": 2,
+  "vibes": [
+   "drinks",
+   "nightlife"
+  ],
+  "type": "Cocktail Bar",
+  "note": "Cocktails.",
+  "tryit": ""
+ },
+ {
+  "id": 425,
+  "name": "Daley Sports Club",
+  "address": "922 Holman St, Houston, TX",
+  "tunnel": null,
+  "cuisines": [
+   "Sports Bar"
+  ],
+  "meals": [
+   "Happy Hour",
+   "Late Night"
+  ],
+  "price": 2,
+  "vibes": [
+   "drinks",
+   "nightlife"
+  ],
+  "type": "Sports Bar",
+  "note": "Sports Bar.",
+  "tryit": ""
+ },
+ {
+  "id": 426,
+  "name": "Lankford's Grocery & Market",
+  "address": "88 Dennis St, Houston, TX",
+  "tunnel": null,
+  "cuisines": [
+   "American"
+  ],
+  "meals": [
+   "Lunch",
+   "Dinner"
+  ],
+  "price": 2,
+  "vibes": [
+   "casual"
+  ],
+  "type": "Restaurant",
+  "note": "American restaurant.",
   "tryit": ""
  },
  {
@@ -8386,149 +8386,6 @@
   ],
   "type": "Cocktail Bar",
   "note": "Cocktails.",
-  "tryit": ""
- },
- {
-  "id": 430,
-  "name": "NUA Thai",
-  "address": "2020 Louisiana St, Houston, TX",
-  "tunnel": null,
-  "cuisines": [
-   "Thai"
-  ],
-  "meals": [
-   "Lunch",
-   "Dinner"
-  ],
-  "price": 2,
-  "vibes": [
-   "casual"
-  ],
-  "type": "Restaurant",
-  "note": "Thai restaurant.",
-  "tryit": ""
- },
- {
-  "id": 431,
-  "name": "Umiya",
-  "address": "510 Gray St, Houston, TX",
-  "tunnel": null,
-  "cuisines": [
-   "Japanese"
-  ],
-  "meals": [
-   "Lunch",
-   "Dinner"
-  ],
-  "price": 2,
-  "vibes": [
-   "casual"
-  ],
-  "type": "Restaurant",
-  "note": "Japanese restaurant.",
-  "tryit": ""
- },
- {
-  "id": 432,
-  "name": "Pub Fiction",
-  "address": "2303 Smith St, Houston, TX",
-  "tunnel": null,
-  "cuisines": [
-   "Sports Bar"
-  ],
-  "meals": [
-   "Happy Hour",
-   "Late Night"
-  ],
-  "price": 2,
-  "vibes": [
-   "drinks",
-   "nightlife"
-  ],
-  "type": "Sports Bar",
-  "note": "Sports Bar.",
-  "tryit": ""
- },
- {
-  "id": 433,
-  "name": "Community Bar",
-  "address": "2703 Smith St, Houston, TX",
-  "tunnel": null,
-  "cuisines": [
-   "Bar"
-  ],
-  "meals": [
-   "Happy Hour",
-   "Late Night"
-  ],
-  "price": 2,
-  "vibes": [
-   "drinks",
-   "nightlife"
-  ],
-  "type": "Bar",
-  "note": "Bar.",
-  "tryit": ""
- },
- {
-  "id": 434,
-  "name": "Weights + Measures",
-  "address": "2808 Caroline St, Houston, TX",
-  "tunnel": null,
-  "cuisines": [
-   "American"
-  ],
-  "meals": [
-   "Lunch",
-   "Dinner"
-  ],
-  "price": 2,
-  "vibes": [
-   "casual"
-  ],
-  "type": "Restaurant",
-  "note": "American restaurant.",
-  "tryit": ""
- },
- {
-  "id": 435,
-  "name": "Night Heron",
-  "address": "1601 W Main St, Houston, TX",
-  "tunnel": null,
-  "cuisines": [
-   "Cocktails"
-  ],
-  "meals": [
-   "Happy Hour",
-   "Late Night"
-  ],
-  "price": 2,
-  "vibes": [
-   "drinks",
-   "nightlife"
-  ],
-  "type": "Cocktail Bar",
-  "note": "Cocktails.",
-  "tryit": ""
- },
- {
-  "id": 436,
-  "name": "Cafe Ginger",
-  "address": "1574 West Gray Street, Houston, TX",
-  "tunnel": null,
-  "cuisines": [
-   "Chinese"
-  ],
-  "meals": [
-   "Lunch",
-   "Dinner"
-  ],
-  "price": 2,
-  "vibes": [
-   "casual"
-  ],
-  "type": "Restaurant",
-  "note": "Chinese restaurant.",
   "tryit": ""
  }
 ]
