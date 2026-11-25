@@ -605,6 +605,24 @@
 "k": "bar",
 "c": "Southern",
 "a": "420 Main St"
+},
+{
+"n": "Traveler's Table",
+"k": "rest",
+"c": "Global",
+"a": "520 Westheimer Rd"
+},
+{
+"n": "House of Louie",
+"k": "rest",
+"c": "Italian",
+"a": "1931 Fairview St"
+},
+{
+"n": "Bar Madonna",
+"k": "bar",
+"c": "Cocktails",
+"a": "109 Stratford St"
 }
 ]
 }

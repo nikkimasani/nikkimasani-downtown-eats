@@ -7934,5 +7934,29 @@
   "type": "Cocktail Bar",
   "note": "\"Hollywood chic\" art-deco cocktail lounge in West Heights / Shady Acres with tapas-style bites, DJs, weekend brunch and a Tuesday steak night.",
   "tryit": "Espresso martini; Tuesday steak night"
+ },
+ {
+  "id": 408,
+  "name": "The Podium",
+  "address": "4007B Greenbriar Dr, Houston, TX",
+  "tunnel": null,
+  "cuisines": [
+   "Coffee",
+   "Cocktails"
+  ],
+  "meals": [
+   "Breakfast",
+   "Lunch",
+   "Happy Hour"
+  ],
+  "price": 2,
+  "vibes": [
+   "coffee",
+   "drinks",
+   "work"
+  ],
+  "type": "Coffee & Cocktail Bar",
+  "note": "Caf\u00e9 and cocktail bar at Porsche River Oaks in a restored old lumber barn: local coffee by day, premium cocktails later, plus an event space.",
+  "tryit": "A latte by day, a cocktail after work"
  }
 ]

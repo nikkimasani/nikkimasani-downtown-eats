@@ -1389,6 +1389,17 @@
       "notInDirectory": true,
       "geocode": true,
       "approx": true
+    },
+    "The Podium": {
+      "street": "4007B Greenbriar Dr",
+      "geoStreet": "4007 Greenbriar Dr",
+      "lat": 29.730126,
+      "lng": -95.41086,
+      "source": "https://partyslate.com/venues/the-podium-at-porsche-river-oaks",
+      "checked": "2026-11-25",
+      "notInDirectory": true,
+      "geocode": true,
+      "approx": true
     }
   }
 }

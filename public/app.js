@@ -38,9 +38,15 @@ const AREAS = [
   { k: 'eastend', l: 'East End', e: '🌮', b: [29.7370, -95.3420, 29.7605, -95.3080] },
   { k: 'eastriver', l: 'East River', e: '⛳', b: [29.7605, -95.3478, 29.7745, -95.3180] },
   { k: 'washington', l: 'Washington Ave, Sixth Ward & Sawyer Yards', e: '🎨', b: [29.7620, -95.4250, 29.7745, -95.3640] },
+  { k: 'fourthward', l: 'Fourth Ward', e: '🕊️', b: [29.7525, -95.3890, 29.7605, -95.3745] },
   { k: 'allen', l: 'Allen Pkwy & Regent Square', e: '🌳', b: [29.7530, -95.4140, 29.7650, -95.3745] },
   { k: 'midtown', l: 'Midtown', e: '🍸', b: [29.7300, -95.3900, 29.7525, -95.3610] },
   { k: 'heights', l: 'The Heights', e: '🏡', b: [29.7745, -95.4200, 29.8100, -95.3700] },
+  { k: 'montrose', l: 'Montrose', e: '🎭', b: [29.7330, -95.4100, 29.7530, -95.3890] },
+  { k: 'museum', l: 'Museum District & Hermann Park', e: '🏛️', b: [29.7080, -95.4050, 29.7330, -95.3800] },
+  { k: 'thirdward', l: 'Third Ward & Almeda', e: '🎓', b: [29.7050, -95.3800, 29.7400, -95.3350] },
+  { k: 'upperkirby', l: 'Upper Kirby & River Oaks', e: '🌿', b: [29.7200, -95.4450, 29.7620, -95.4100] },
+  { k: 'uptown', l: 'Uptown, Galleria & Post Oak', e: '🛍️', b: [29.7250, -95.4800, 29.7700, -95.4450] },
 ];
 const inGrid = (r) => { let c = null; try { c = city; } catch (e) { return null; } if (!c?.avenues) return null; const [x, y] = city.proj(r.lat, r.lng), A = city.avenues.map((a) => a.x), C = city.cross.map((c) => c.y); return x >= Math.min(...A) && x <= Math.max(...A) && y >= Math.min(...C) && y <= Math.max(...C); };
 const areaOf = (r) => { if (r.lat == null) return null; if (r._area !== undefined && r._areaK === r.lat + r.lng) return r._area; const g = inGrid(r); const v = g ? 'downtown' : areaBox(r, g === null); if (g !== null) { r._area = v; r._areaK = r.lat + r.lng; } return v; };
@@ -460,7 +466,7 @@ function downloadIcs(file, items) {
   const z = (d) => d.toISOString().replace(/[-:]/g, '').replace(/\.\d{3}/, ''), esc2 = (s) => String(s).replace(/([,;\\])/g, '\\$1').replace(/\n/g, '\\n');
   const ev = items.map(({ r, start, mins }) => { const w = walkMinsTo(r), s = new Date(start.getTime() - (w || 0) * 60e3), e = new Date(start.getTime() + mins * 60e3);
     return ['BEGIN:VEVENT', 'UID:' + start.getTime() + '-' + r.id + '@downtown-eats', 'DTSTAMP:' + z(new Date()), 'DTSTART:' + z(s), 'DTEND:' + z(e), 'SUMMARY:' + esc2((w ? '🚶 ' : '') + r.name), 'LOCATION:' + esc2(r.address), 'DESCRIPTION:' + esc2((w ? `${w} min walk included. ` : '') + (hhFor(r) ? 'Happy hour: ' + hhFor(r).when + '. ' : '') + appUrl() + '#p=' + encodeURIComponent(r.name)), 'BEGIN:VALARM', 'TRIGGER:-PT10M', 'ACTION:DISPLAY', 'DESCRIPTION:' + esc2('Head to ' + r.name), 'END:VALARM', 'END:VEVENT'].join('\r\n'); });
-  const blob = new Blob(['BEGIN:VCALENDAR\r\nVERSION:2.0\r\nPRODID:-//Downtown Eats//EN\r\n' + ev.join('\r\n') + '\r\nEND:VCALENDAR\r\n'], { type: 'text/calendar' });
+  const blob = new Blob(['BEGIN:VCALENDAR\r\nVERSION:2.0\r\nPRODID:-//Inner Loop Eats//EN\r\n' + ev.join('\r\n') + '\r\nEND:VCALENDAR\r\n'], { type: 'text/calendar' });
   const u = URL.createObjectURL(blob), aEl = document.createElement('a'); aEl.href = u; aEl.download = file; document.body.appendChild(aEl); aEl.click(); aEl.remove(); setTimeout(() => URL.revokeObjectURL(u), 4000); toast('📅 Calendar file ready — open it to add');
 }
 $('#calWeek').onclick = () => { const items = DAYS.map((d, i) => { const e = week.days[d], r = e && DATA.find((x) => x.name === e.name); return r ? { r, start: dayDate(i, week.slot), mins: 60 } : null; }).filter(Boolean); if (!items.length) { toast('Plan your week first'); return; } downloadIcs('downtown-week.ics', items); };
@@ -474,7 +480,7 @@ function askSpend(r) {
 function officeLine() { return `<div class="officerow">🏢 ${OFFICE ? `Walk times start from <b>${esc(OFFICE.name)}</b> when location is off · <button class="linkbtn" id="clearOffice">change</button>` : 'Set your office from any place’s details (“🏢 I work near here”) to get walk times without GPS.'}</div>`; }
 document.addEventListener('click', (e) => {
   if (e.target.id === 'syncOn') { const k = Array.from(crypto.getRandomValues(new Uint8Array(18)), (b) => b.toString(36).padStart(2, '0')).join(''); SYNC = k; store.set('syncKey', k); rpc('de_sync_put', { p_key: k, p_data: syncData() }).then(() => toast('🔄 Sync is on')).catch(() => toast('Couldn’t reach the sync server')); renderWeek(); }
-  if (e.target.id === 'syncLink') shareText('Downtown Eats sync', 'Open this on your other device to sync (keep it private — anyone with it sees your list):', appUrl() + '#sync=' + SYNC);
+  if (e.target.id === 'syncLink') shareText('Inner Loop Eats sync', 'Open this on your other device to sync (keep it private — anyone with it sees your list):', appUrl() + '#sync=' + SYNC);
   if (e.target.id === 'syncOff') { SYNC = null; store.set('syncKey', null); renderWeek(); toast('Sync off on this device'); }
 });
 document.addEventListener('click', (e) => { if (e.target.id === 'clearOffice') { OFFICE = null; store.set('office', null); renderWeek(); toast('Office cleared'); } });
@@ -592,7 +598,7 @@ async function remindHH(r) {
   const n = nextHH(r); if (!n) return; const when = n.at.getTime() - 15 * 60e3, wait = Math.max(5e3, when - Date.now());
   const sub = await pushSub(); if (sub) { try { await rpc('de_remind', { p_sub: sub, p_title: '🍹 Happy hour soon', p_body: `${r.name} starts happy hour at ${fmt(n.m)} — ${hhFor(r).deals.slice(0, 90)}`, p_url: appUrl() + '#p=' + encodeURIComponent(r.name), p_at: new Date(when).toISOString() }); toast(`🔔 Reminder set for ${fmt(n.m - 15)} — it'll arrive even if the app is closed`); return; } catch (e) {} }
   try { if ('Notification' in window && Notification.permission === 'default') await Notification.requestPermission(); } catch (e) {}
-  clearTimeout(REMIND.get(r.name)); REMIND.set(r.name, setTimeout(() => { const msg = `🍹 Happy hour at ${r.name} starts in 15 min`; toast(msg); buzz([10, 60, 10]); try { if (Notification.permission === 'granted') new Notification('Downtown Eats', { body: msg, icon: 'icon-192.png' }); } catch (e) {} }, wait));
+  clearTimeout(REMIND.get(r.name)); REMIND.set(r.name, setTimeout(() => { const msg = `🍹 Happy hour at ${r.name} starts in 15 min`; toast(msg); buzz([10, 60, 10]); try { if (Notification.permission === 'granted') new Notification('Inner Loop Eats', { body: msg, icon: 'icon-192.png' }); } catch (e) {} }, wait));
   toast(`🔔 I'll remind you at ${fmt(n.m - 15)} — keep the app open`);
 }
 function fixHours(r, useSite) {
@@ -964,7 +970,7 @@ async function renderSteak() {
   let n = 0;
   $('#steakList').innerHTML = days.map((d) => { const list = rows.filter((x) => x.days.includes(d)).sort((a, b) => !!a.verify - !!b.verify || (a.r && walkMinsTo(a.r) || 99) - (b.r && walkMinsTo(b.r) || 99)); n += list.length;
     return `${days.length > 1 || steakDay !== 'today' ? `<h3 style="margin:14px 0 6px">${SDAY_L[d]}${d === today ? ' · tonight' : ''}</h3>` : ''}<div class="grid">${list.map(cardOf).join('') || `<div class="empty">No steak nights on ${SDAY_L[d]}${barea !== 'any' ? ' in this area' : ''}. Try another day.</div>`}</div>`; }).join('');
-  $('#steakSub').textContent = `${STEAK.nights.length} weekly steak nights downtown, Midtown, EaDo, East End, Washington and the Heights`;
+  $('#steakSub').textContent = `${STEAK.nights.length} weekly steak nights across the inner loop`;
   $('#steakCount').textContent = `${n} deal${n === 1 ? '' : 's'}`;
   $('#steakNote').textContent = `Checked ${STEAK.checked || ''} from CultureMap, DiningOut, venue pages and Instagram/Facebook posts. Deals change and some sell out early — "Call ahead" means the source is older or undated.`;
 }
