@@ -1381,25 +1381,124 @@
     },
     "Plume": {
       "street": "1100 W 23rd St",
-      "lat": 29.8063,
-      "lng": -95.41858,
+      "lat": 29.806675,
+      "lng": -95.418175,
       "hours": "Tue–Wed 4pm–12am, Thu–Sat 4pm–2am, Sun 4pm–12am",
       "source": "https://whatnow.com/?p=156027",
       "checked": "2026-11-25",
-      "notInDirectory": true,
-      "geocode": true,
-      "approx": true
+      "notInDirectory": true
     },
-    "The Podium": {
-      "street": "4007B Greenbriar Dr",
-      "geoStreet": "4007 Greenbriar Dr",
-      "lat": 29.730126,
-      "lng": -95.41086,
-      "source": "https://partyslate.com/venues/the-podium-at-porsche-river-oaks",
+    "40 Love": {
+      "street": "3030 Travis St",
+      "lat": 29.743172,
+      "lng": -95.377203,
+      "source": "US Census geocoder",
       "checked": "2026-11-25",
-      "notInDirectory": true,
-      "geocode": true,
-      "approx": true
+      "notInDirectory": true
+    },
+    "Dough Zone Dumpling House Midtown": {
+      "street": "2450 Louisiana St",
+      "lat": 29.747853,
+      "lng": -95.376039,
+      "source": "US Census geocoder",
+      "checked": "2026-11-25",
+      "notInDirectory": true
+    },
+    "Malai Thai Street Eats": {
+      "street": "2900 Travis St",
+      "lat": 29.743997,
+      "lng": -95.376556,
+      "source": "US Census geocoder",
+      "checked": "2026-11-25",
+      "notInDirectory": true
+    },
+    "Bonchon Midtown": {
+      "street": "2100 Travis St",
+      "lat": 29.749245,
+      "lng": -95.372398,
+      "source": "US Census geocoder",
+      "checked": "2026-11-25",
+      "notInDirectory": true
+    },
+    "Gotti's": {
+      "street": "811 St Emanuel St",
+      "lat": 29.75261,
+      "lng": -95.354328,
+      "source": "US Census geocoder",
+      "checked": "2026-11-25",
+      "notInDirectory": true
+    },
+    "Flight Club Houston": {
+      "street": "3515 W Dallas St",
+      "lat": 29.757147,
+      "lng": -95.403855,
+      "source": "US Census geocoder",
+      "checked": "2026-11-25",
+      "notInDirectory": true
+    },
+    "Donna's": {
+      "street": "2626 White Oak Dr",
+      "lat": 29.781705,
+      "lng": -95.38643,
+      "source": "US Census geocoder",
+      "checked": "2026-11-25",
+      "notInDirectory": true
+    },
+    "Bar Angie": {
+      "street": "1002 W 11th St",
+      "lat": 29.790496,
+      "lng": -95.407093,
+      "source": "US Census geocoder",
+      "checked": "2026-11-25",
+      "notInDirectory": true
+    },
+    "Heights Hideaway": {
+      "street": "1040 W Cavalcade St",
+      "lat": 29.804012,
+      "lng": -95.385143,
+      "source": "US Census geocoder",
+      "checked": "2026-11-25",
+      "notInDirectory": true
+    },
+    "Front Porch Pub": {
+      "street": "217 Gray St",
+      "lat": 29.752796,
+      "lng": -95.378045,
+      "source": "US Census geocoder",
+      "checked": "2026-11-25",
+      "notInDirectory": true
+    },
+    "Christian's Tailgate Midtown": {
+      "street": "2000 Bagby St",
+      "lat": 29.752585,
+      "lng": -95.376076,
+      "source": "US Census geocoder",
+      "checked": "2026-11-25",
+      "notInDirectory": true
+    },
+    "Starduster Lounge": {
+      "street": "3921 N Main St",
+      "lat": 29.792713,
+      "lng": -95.375622,
+      "source": "US Census geocoder",
+      "checked": "2026-11-25",
+      "notInDirectory": true
+    },
+    "Daley Sports Club": {
+      "street": "922 Holman St",
+      "lat": 29.740112,
+      "lng": -95.379221,
+      "source": "US Census geocoder",
+      "checked": "2026-11-25",
+      "notInDirectory": true
+    },
+    "Lankford's Grocery & Market": {
+      "street": "88 Dennis St",
+      "lat": 29.74986,
+      "lng": -95.383361,
+      "source": "US Census geocoder",
+      "checked": "2026-11-25",
+      "notInDirectory": true
     }
   }
 }
