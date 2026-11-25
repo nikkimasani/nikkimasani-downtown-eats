@@ -1026,6 +1026,206 @@
       "source": "https://opentable.com.au/r/incanto-houston",
       "checked": "2026-11-24",
       "notInDirectory": true
+    },
+    "Little Woodrow's Midtown": {
+      "street": "2306 Brazos St",
+      "lat": 29.749806,
+      "lng": -95.377015,
+      "source": "US Census geocoder",
+      "checked": "2026-11-25",
+      "notInDirectory": true
+    },
+    "Little Woodrow's Heights": {
+      "street": "2631 White Oak Dr",
+      "lat": 29.781589,
+      "lng": -95.386494,
+      "source": "US Census geocoder",
+      "checked": "2026-11-25",
+      "notInDirectory": true
+    },
+    "Little Woodrow's Shepherd": {
+      "street": "720 Shepherd Dr",
+      "lat": 29.768445,
+      "lng": -95.409362,
+      "source": "US Census geocoder",
+      "checked": "2026-11-25",
+      "notInDirectory": true
+    },
+    "Sneaks Coffee + Lounge": {
+      "street": "3030 Travis St",
+      "lat": 29.743172,
+      "lng": -95.377203,
+      "source": "US Census geocoder",
+      "checked": "2026-11-25",
+      "notInDirectory": true
+    },
+    "STYX + STONE": {
+      "street": "2400 Brazos St",
+      "lat": 29.749138,
+      "lng": -95.377546,
+      "source": "US Census geocoder",
+      "checked": "2026-11-25",
+      "notInDirectory": true
+    },
+    "Street To Kitchen": {
+      "street": "3401 Harrisburg Blvd",
+      "lat": 29.748342,
+      "lng": -95.341269,
+      "source": "US Census geocoder",
+      "checked": "2026-11-25",
+      "notInDirectory": true
+    },
+    "Truth BBQ": {
+      "street": "110 S Heights Blvd",
+      "lat": 29.770845,
+      "lng": -95.397254,
+      "source": "US Census geocoder",
+      "checked": "2026-11-25",
+      "notInDirectory": true
+    },
+    "Refuge": {
+      "street": "1424 Westheimer Road",
+      "lat": 29.743084,
+      "lng": -95.396868,
+      "source": "OpenStreetMap Nominatim",
+      "checked": "2026-11-25",
+      "notInDirectory": true
+    },
+    "Sante": {
+      "street": "2309 Richmond Avenue",
+      "lat": 29.733922,
+      "lng": -95.415509,
+      "source": "OpenStreetMap Nominatim",
+      "checked": "2026-11-25",
+      "notInDirectory": true
+    },
+    "On the Kirb": {
+      "street": "2521 Bagby Street",
+      "lat": 29.748686,
+      "lng": -95.378826,
+      "source": "OpenStreetMap Nominatim",
+      "checked": "2026-11-25",
+      "notInDirectory": true
+    },
+    "Southern Yankee Crafthouse": {
+      "street": "1312 West Alabama Street",
+      "lat": 29.738962,
+      "lng": -95.395257,
+      "source": "OpenStreetMap Nominatim",
+      "checked": "2026-11-25",
+      "notInDirectory": true
+    },
+    "The Toasted Coconut": {
+      "street": "1617 Richmond Avenue",
+      "lat": 29.734102,
+      "lng": -95.400276,
+      "source": "OpenStreetMap Nominatim",
+      "checked": "2026-11-25",
+      "notInDirectory": true
+    },
+    "El Big Bad": {
+      "street": "419 Travis Street",
+      "lat": 29.761305,
+      "lng": -95.36259,
+      "source": "OpenStreetMap Nominatim",
+      "checked": "2026-11-25",
+      "notInDirectory": true
+    },
+    "Lost & Found": {
+      "street": "160 West Gray Street",
+      "lat": 29.753467,
+      "lng": -95.381082,
+      "source": "OpenStreetMap Nominatim",
+      "checked": "2026-11-25",
+      "notInDirectory": true
+    },
+    "Cecil's Pub": {
+      "street": "600 West Gray Street",
+      "lat": 29.753602,
+      "lng": -95.388351,
+      "source": "OpenStreetMap Nominatim",
+      "checked": "2026-11-25",
+      "notInDirectory": true
+    },
+    "The Foundry": {
+      "street": "West 19th Street",
+      "lat": 29.803376,
+      "lng": -95.407256,
+      "source": "OpenStreetMap Nominatim",
+      "checked": "2026-11-25",
+      "notInDirectory": true
+    },
+    "The Pastry War": {
+      "street": "310 Main Street",
+      "lat": 29.761954,
+      "lng": -95.36121,
+      "source": "OpenStreetMap Nominatim",
+      "checked": "2026-11-25",
+      "notInDirectory": true
+    },
+    "The Rabbit Hole": {
+      "street": "740 West 25th Street",
+      "lat": 29.80861,
+      "lng": -95.411947,
+      "source": "OpenStreetMap Nominatim",
+      "checked": "2026-11-25",
+      "notInDirectory": true
+    },
+    "Atlas Heights": {
+      "street": "505 Fairview Street",
+      "lat": 29.748047,
+      "lng": -95.387574,
+      "source": "OpenStreetMap Nominatim",
+      "checked": "2026-11-25",
+      "notInDirectory": true
+    },
+    "The Ginger Mule": {
+      "street": "449 West 19th Street",
+      "lat": 29.803276,
+      "lng": -95.405533,
+      "source": "OpenStreetMap Nominatim",
+      "checked": "2026-11-25",
+      "notInDirectory": true
+    },
+    "Pinkerton's Barbecue": {
+      "street": "1504 Airline Drive",
+      "lat": 29.798672,
+      "lng": -95.381501,
+      "source": "OpenStreetMap Nominatim",
+      "checked": "2026-11-25",
+      "notInDirectory": true
+    },
+    "Mellow Mushroom": {
+      "street": "1919 North Shepherd Drive",
+      "lat": 29.803432,
+      "lng": -95.410787,
+      "source": "OpenStreetMap Nominatim",
+      "checked": "2026-11-25",
+      "notInDirectory": true
+    },
+    "Ivy House": {
+      "street": "2811 Washington Avenue",
+      "lat": 29.768389,
+      "lng": -95.387939,
+      "source": "OpenStreetMap Nominatim",
+      "checked": "2026-11-25",
+      "notInDirectory": true
+    },
+    "4500 Washington": {
+      "street": "4500 Memorial Drive",
+      "lat": 29.763578,
+      "lng": -95.407574,
+      "source": "OpenStreetMap Nominatim",
+      "checked": "2026-11-25",
+      "notInDirectory": true
+    },
+    "Cochinita & Co": {
+      "street": "5420 Lawndale Street",
+      "lat": 29.727267,
+      "lng": -95.320905,
+      "source": "OpenStreetMap Nominatim",
+      "checked": "2026-11-25",
+      "notInDirectory": true
     }
   }
 }

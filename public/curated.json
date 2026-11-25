@@ -7000,5 +7000,523 @@
   "type": "Cocktail Bar",
   "note": "Stylish Heights cocktail bar on Yale between 14th and 15th: inventive cocktails, oysters and pizza, weekend brunch. Gets loud later at night.",
   "tryit": "A signature cocktail with oysters"
+ },
+ {
+  "id": 358,
+  "name": "Little Woodrow's Midtown",
+  "address": "2306 Brazos St, Houston, TX",
+  "tunnel": null,
+  "cuisines": [
+   "Sports Bar"
+  ],
+  "meals": [
+   "Happy Hour",
+   "Late Night"
+  ],
+  "price": 2,
+  "vibes": [
+   "drinks",
+   "nightlife"
+  ],
+  "type": "Sports Bar",
+  "note": "Sports Bar.",
+  "tryit": ""
+ },
+ {
+  "id": 359,
+  "name": "Little Woodrow's Heights",
+  "address": "2631 White Oak Dr, Houston, TX",
+  "tunnel": null,
+  "cuisines": [
+   "Sports Bar"
+  ],
+  "meals": [
+   "Happy Hour",
+   "Late Night"
+  ],
+  "price": 2,
+  "vibes": [
+   "drinks",
+   "nightlife"
+  ],
+  "type": "Sports Bar",
+  "note": "Sports Bar.",
+  "tryit": ""
+ },
+ {
+  "id": 360,
+  "name": "Little Woodrow's Shepherd",
+  "address": "720 Shepherd Dr, Houston, TX",
+  "tunnel": null,
+  "cuisines": [
+   "Sports Bar"
+  ],
+  "meals": [
+   "Happy Hour",
+   "Late Night"
+  ],
+  "price": 2,
+  "vibes": [
+   "drinks",
+   "nightlife"
+  ],
+  "type": "Sports Bar",
+  "note": "Sports Bar.",
+  "tryit": ""
+ },
+ {
+  "id": 361,
+  "name": "Sneaks Coffee + Lounge",
+  "address": "3030 Travis St, Houston, TX",
+  "tunnel": null,
+  "cuisines": [
+   "Coffee & Cocktails"
+  ],
+  "meals": [
+   "Breakfast",
+   "Lunch"
+  ],
+  "price": 2,
+  "vibes": [
+   "coffee",
+   "work"
+  ],
+  "type": "Coffee Shop",
+  "note": "Coffee & Cocktails.",
+  "tryit": ""
+ },
+ {
+  "id": 362,
+  "name": "STYX + STONE",
+  "address": "2400 Brazos St, Houston, TX",
+  "tunnel": null,
+  "cuisines": [
+   "Cocktails"
+  ],
+  "meals": [
+   "Happy Hour",
+   "Late Night"
+  ],
+  "price": 2,
+  "vibes": [
+   "drinks",
+   "nightlife"
+  ],
+  "type": "Cocktail Bar",
+  "note": "Cocktails.",
+  "tryit": ""
+ },
+ {
+  "id": 363,
+  "name": "Street To Kitchen",
+  "address": "3401 Harrisburg Blvd, Houston, TX",
+  "tunnel": null,
+  "cuisines": [
+   "Thai"
+  ],
+  "meals": [
+   "Lunch",
+   "Dinner"
+  ],
+  "price": 2,
+  "vibes": [
+   "casual"
+  ],
+  "type": "Restaurant",
+  "note": "Thai restaurant.",
+  "tryit": ""
+ },
+ {
+  "id": 364,
+  "name": "Truth BBQ",
+  "address": "110 S Heights Blvd, Houston, TX",
+  "tunnel": null,
+  "cuisines": [
+   "BBQ"
+  ],
+  "meals": [
+   "Lunch",
+   "Dinner"
+  ],
+  "price": 2,
+  "vibes": [
+   "casual"
+  ],
+  "type": "Restaurant",
+  "note": "BBQ restaurant.",
+  "tryit": ""
+ },
+ {
+  "id": 365,
+  "name": "Refuge",
+  "address": "1424 Westheimer Road, Houston, TX",
+  "tunnel": null,
+  "cuisines": [
+   "Cocktails"
+  ],
+  "meals": [
+   "Happy Hour",
+   "Late Night"
+  ],
+  "price": 2,
+  "vibes": [
+   "drinks",
+   "nightlife"
+  ],
+  "type": "Cocktail Bar",
+  "note": "Cocktails.",
+  "tryit": ""
+ },
+ {
+  "id": 366,
+  "name": "Sante",
+  "address": "2309 Richmond Avenue, Houston, TX",
+  "tunnel": null,
+  "cuisines": [
+   "Wine Bar"
+  ],
+  "meals": [
+   "Happy Hour",
+   "Late Night"
+  ],
+  "price": 2,
+  "vibes": [
+   "drinks",
+   "nightlife"
+  ],
+  "type": "Wine Bar",
+  "note": "Wine Bar.",
+  "tryit": ""
+ },
+ {
+  "id": 367,
+  "name": "On the Kirb",
+  "address": "2521 Bagby Street, Houston, TX",
+  "tunnel": null,
+  "cuisines": [
+   "Sports Bar"
+  ],
+  "meals": [
+   "Happy Hour",
+   "Late Night"
+  ],
+  "price": 2,
+  "vibes": [
+   "drinks",
+   "nightlife"
+  ],
+  "type": "Sports Bar",
+  "note": "Sports Bar.",
+  "tryit": ""
+ },
+ {
+  "id": 368,
+  "name": "Southern Yankee Crafthouse",
+  "address": "1312 West Alabama Street, Houston, TX",
+  "tunnel": null,
+  "cuisines": [
+   "American"
+  ],
+  "meals": [
+   "Lunch",
+   "Dinner"
+  ],
+  "price": 2,
+  "vibes": [
+   "casual"
+  ],
+  "type": "Restaurant",
+  "note": "American restaurant.",
+  "tryit": ""
+ },
+ {
+  "id": 369,
+  "name": "The Toasted Coconut",
+  "address": "1617 Richmond Avenue, Houston, TX",
+  "tunnel": null,
+  "cuisines": [
+   "Caribbean"
+  ],
+  "meals": [
+   "Happy Hour",
+   "Late Night"
+  ],
+  "price": 2,
+  "vibes": [
+   "drinks",
+   "nightlife"
+  ],
+  "type": "Bar",
+  "note": "Caribbean.",
+  "tryit": ""
+ },
+ {
+  "id": 370,
+  "name": "El Big Bad",
+  "address": "419 Travis Street, Houston, TX",
+  "tunnel": null,
+  "cuisines": [
+   "Mexican"
+  ],
+  "meals": [
+   "Happy Hour",
+   "Late Night"
+  ],
+  "price": 2,
+  "vibes": [
+   "drinks",
+   "nightlife"
+  ],
+  "type": "Bar",
+  "note": "Mexican.",
+  "tryit": ""
+ },
+ {
+  "id": 371,
+  "name": "Lost & Found",
+  "address": "160 West Gray Street, Houston, TX",
+  "tunnel": null,
+  "cuisines": [
+   "Bar"
+  ],
+  "meals": [
+   "Happy Hour",
+   "Late Night"
+  ],
+  "price": 2,
+  "vibes": [
+   "drinks",
+   "nightlife"
+  ],
+  "type": "Bar",
+  "note": "Bar.",
+  "tryit": ""
+ },
+ {
+  "id": 372,
+  "name": "Cecil's Pub",
+  "address": "600 West Gray Street, Houston, TX",
+  "tunnel": null,
+  "cuisines": [
+   "Pub"
+  ],
+  "meals": [
+   "Happy Hour",
+   "Late Night"
+  ],
+  "price": 2,
+  "vibes": [
+   "drinks",
+   "nightlife"
+  ],
+  "type": "Pub",
+  "note": "Pub.",
+  "tryit": ""
+ },
+ {
+  "id": 373,
+  "name": "The Foundry",
+  "address": "West 19th Street, Houston, TX",
+  "tunnel": null,
+  "cuisines": [
+   "Bar"
+  ],
+  "meals": [
+   "Happy Hour",
+   "Late Night"
+  ],
+  "price": 2,
+  "vibes": [
+   "drinks",
+   "nightlife"
+  ],
+  "type": "Bar",
+  "note": "Bar.",
+  "tryit": ""
+ },
+ {
+  "id": 374,
+  "name": "The Pastry War",
+  "address": "310 Main Street, Houston, TX",
+  "tunnel": null,
+  "cuisines": [
+   "Mezcal"
+  ],
+  "meals": [
+   "Happy Hour",
+   "Late Night"
+  ],
+  "price": 2,
+  "vibes": [
+   "drinks",
+   "nightlife"
+  ],
+  "type": "Bar",
+  "note": "Mezcal.",
+  "tryit": ""
+ },
+ {
+  "id": 375,
+  "name": "The Rabbit Hole",
+  "address": "740 West 25th Street, Houston, TX",
+  "tunnel": null,
+  "cuisines": [
+   "Cocktails"
+  ],
+  "meals": [
+   "Happy Hour",
+   "Late Night"
+  ],
+  "price": 2,
+  "vibes": [
+   "drinks",
+   "nightlife"
+  ],
+  "type": "Cocktail Bar",
+  "note": "Cocktails.",
+  "tryit": ""
+ },
+ {
+  "id": 376,
+  "name": "Atlas Heights",
+  "address": "505 Fairview Street, Houston, TX",
+  "tunnel": null,
+  "cuisines": [
+   "Bar"
+  ],
+  "meals": [
+   "Happy Hour",
+   "Late Night"
+  ],
+  "price": 2,
+  "vibes": [
+   "drinks",
+   "nightlife"
+  ],
+  "type": "Bar",
+  "note": "Bar.",
+  "tryit": ""
+ },
+ {
+  "id": 377,
+  "name": "The Ginger Mule",
+  "address": "449 West 19th Street, Houston, TX",
+  "tunnel": null,
+  "cuisines": [
+   "Asian"
+  ],
+  "meals": [
+   "Lunch",
+   "Dinner"
+  ],
+  "price": 2,
+  "vibes": [
+   "casual"
+  ],
+  "type": "Restaurant",
+  "note": "Asian restaurant.",
+  "tryit": ""
+ },
+ {
+  "id": 378,
+  "name": "Pinkerton's Barbecue",
+  "address": "1504 Airline Drive, Houston, TX",
+  "tunnel": null,
+  "cuisines": [
+   "BBQ"
+  ],
+  "meals": [
+   "Lunch",
+   "Dinner"
+  ],
+  "price": 2,
+  "vibes": [
+   "casual"
+  ],
+  "type": "Restaurant",
+  "note": "BBQ restaurant.",
+  "tryit": ""
+ },
+ {
+  "id": 379,
+  "name": "Mellow Mushroom",
+  "address": "1919 North Shepherd Drive, Houston, TX",
+  "tunnel": null,
+  "cuisines": [
+   "Pizza"
+  ],
+  "meals": [
+   "Lunch",
+   "Dinner"
+  ],
+  "price": 2,
+  "vibes": [
+   "casual"
+  ],
+  "type": "Restaurant",
+  "note": "Pizza restaurant.",
+  "tryit": ""
+ },
+ {
+  "id": 380,
+  "name": "Ivy House",
+  "address": "2811 Washington Avenue, Houston, TX",
+  "tunnel": null,
+  "cuisines": [
+   "Bar"
+  ],
+  "meals": [
+   "Happy Hour",
+   "Late Night"
+  ],
+  "price": 2,
+  "vibes": [
+   "drinks",
+   "nightlife"
+  ],
+  "type": "Bar",
+  "note": "Bar.",
+  "tryit": ""
+ },
+ {
+  "id": 381,
+  "name": "4500 Washington",
+  "address": "4500 Memorial Drive, Houston, TX",
+  "tunnel": null,
+  "cuisines": [
+   "Lounge"
+  ],
+  "meals": [
+   "Happy Hour",
+   "Late Night"
+  ],
+  "price": 2,
+  "vibes": [
+   "drinks",
+   "nightlife"
+  ],
+  "type": "Lounge",
+  "note": "Lounge.",
+  "tryit": ""
+ },
+ {
+  "id": 382,
+  "name": "Cochinita & Co",
+  "address": "5420 Lawndale Street, Houston, TX",
+  "tunnel": null,
+  "cuisines": [
+   "Mexican"
+  ],
+  "meals": [
+   "Lunch",
+   "Dinner"
+  ],
+  "price": 2,
+  "vibes": [
+   "casual"
+  ],
+  "type": "Restaurant",
+  "note": "Mexican restaurant.",
+  "tryit": ""
  }
 ]
