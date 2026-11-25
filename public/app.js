@@ -39,8 +39,8 @@ const AREAS = [
   { k: 'eastriver', l: 'East River', e: '⛳', b: [29.7605, -95.3478, 29.7745, -95.3180] },
   { k: 'washington', l: 'Washington Ave, Sixth Ward & Sawyer Yards', e: '🎨', b: [29.7620, -95.4250, 29.7745, -95.3640] },
   { k: 'allen', l: 'Allen Pkwy & Regent Square', e: '🌳', b: [29.7530, -95.4140, 29.7650, -95.3745] },
-  { k: 'midtown', l: 'Midtown', e: '🍸', b: [29.7300, -95.3900, 29.7480, -95.3610] },
-  { k: 'heights', l: 'The Heights', e: '🏡', b: [29.7745, -95.4200, 29.8100, -95.3850] },
+  { k: 'midtown', l: 'Midtown', e: '🍸', b: [29.7300, -95.3900, 29.7525, -95.3610] },
+  { k: 'heights', l: 'The Heights', e: '🏡', b: [29.7745, -95.4200, 29.8100, -95.3700] },
 ];
 const inGrid = (r) => { let c = null; try { c = city; } catch (e) { return null; } if (!c?.avenues) return null; const [x, y] = city.proj(r.lat, r.lng), A = city.avenues.map((a) => a.x), C = city.cross.map((c) => c.y); return x >= Math.min(...A) && x <= Math.max(...A) && y >= Math.min(...C) && y <= Math.max(...C); };
 const areaOf = (r) => { if (r.lat == null) return null; if (r._area !== undefined && r._areaK === r.lat + r.lng) return r._area; const g = inGrid(r); const v = g ? 'downtown' : areaBox(r, g === null); if (g !== null) { r._area = v; r._areaK = r.lat + r.lng; } return v; };
@@ -409,9 +409,10 @@ $('#browse').addEventListener('click', (e) => {
 $('#bClear').onclick = () => { bq = ''; $('#q').value = ''; fav1 = tun1 = open1 = hh1 = false; fc.clear(); barea = 'any'; store.set('barea', barea); sortBy = 'name'; $('#sort').value = 'name'; renderBrowse(); };
 $('#toggleF').onclick = () => $('#filters').classList.toggle('on');
 $('#favOnly').onclick = () => { fav1 = !fav1; renderBrowse(); };
-for (const id of ['#bArea', '#nArea', '#cArea']) { $(id).innerHTML = AREA_OPTS.map((a) => `<option value="${a.k}">${esc(a.l)}</option>`).join(''); $(id).value = barea; }
+for (const id of ['#bArea', '#nArea', '#cArea', '#sArea']) { $(id).innerHTML = AREA_OPTS.map((a) => `<option value="${a.k}">${esc(a.l)}</option>`).join(''); $(id).value = barea; }
 $('#bArea').onchange = (e) => { barea = e.target.value; store.set('barea', barea); renderBrowse(); };
 $('#nArea').onchange = (e) => { barea = e.target.value; store.set('barea', barea); renderNight(); };
+$('#sArea').onchange = (e) => { barea = e.target.value; store.set('barea', barea); renderSteak(); };
 $('#cArea').onchange = (e) => { barea = e.target.value; store.set('barea', barea); renderCoffee(); };
 $('#tunOnly').onclick = () => { tun1 = !tun1; renderBrowse(); };
 $('#openOnly').onclick = () => { open1 = !open1; renderBrowse(); };
@@ -886,7 +887,7 @@ function barCard(r) {
   <button class="fav" data-fav="${r.id}" title="Favorite" aria-label="${favs.has(r.name) ? 'Remove ' + esc(r.name) + ' from favorites' : 'Save ' + esc(r.name) + ' to favorites'}">${favs.has(r.name) ? '♥' : '♡'}</button>
   <div class="chead">${tile(r)}<div><h3>${esc(r.name)}</h3>
   <div class="meta">${esc(r.type)} · ${esc((r.address || '').replace(', Houston, TX', ''))}${r.tunnel ? ' · 🚇 tunnel' : ''}</div></div></div>
-  <div class="tags">${o.known ? `<span class="tag ${o.open ? 'open' : 'closed'}">${esc(o.label)}</span>` : ''}${openLate(r) ? '<span class="tag">🌃 Late</span>' : ''}${w != null ? `<span class="tag">🚶 ${w} min</span>` : ''}</div>
+  <div class="tags">${o.known ? `<span class="tag ${o.open ? 'open' : 'closed'}">${esc(o.label)}</span>` : ''}${openLate(r) ? '<span class="tag">🌃 Late</span>' : ''}${steakTonight(r) ? `<span class="tag open">🥩 Steak night ${esc(steakTonight(r).price || '')}</span>` : ''}${w != null ? `<span class="tag">🚶 ${w} min</span>` : ''}</div>
   ${h ? `<div class="hhbox ${hn ? 'on' : ''}"><b>🍹 ${hn ? 'Happy hour now' + (hn.closesAt ? ' · till ' + esc(hn.closesAt) : '') : esc(h.when)}</b><span>${esc(h.deals)}</span>${h.confidence === 'verify' ? '<em>Double-check before you go</em>' : ''}</div>`
       : r.hhListed ? `<div class="hhbox"><b>🍹 Listed for happy hour</b><span>Times and prices aren't published yet — check with the bar.</span></div>` : ''}
   <div class="row bar-actions"><button class="btn ghost sm" data-open="${r.id}">Details</button><button class="btn sm" data-walk="${r.id}">🧭 Walk there</button></div></div>`;
@@ -937,6 +938,45 @@ $('#coffeeMap').onclick = () => {
   bar.classList.add('on'); $('#fX').onclick = () => { bar.classList.remove('on'); city.setHighlight(mapOpen ? new Set(DATA.filter((r) => isOpen(r)).map((r) => r.id)) : null); };
 };
 document.addEventListener('click', (e) => { const o = e.target.closest('#coffeeList .bar-actions [data-open]'); if (o) openSheet(+o.dataset.open); });
+
+// ---------- steak nights (public/steak-nights.json, checked by hand) ----------
+const SDAYS = ['Sun', 'Mon', 'Tue', 'Wed', 'Thu', 'Fri', 'Sat'], SDAY_L = { Sun: 'Sunday', Mon: 'Monday', Tue: 'Tuesday', Wed: 'Wednesday', Thu: 'Thursday', Fri: 'Friday', Sat: 'Saturday' };
+let STEAK = null, steakDay = 'today';
+const snorm = (s) => String(s || '').toLowerCase().replace(/[’']/g, '').replace(/&/g, 'and').replace(/[^a-z0-9]/g, '');
+const steakSpot = (n) => { const k = snorm(n); return DATA.find((r) => snorm(r.name) === k) || null; };
+const steakToday = () => SDAYS[new Date().getDay()];
+function steakTonight(r) { if (!STEAK) return null; const d = steakToday(), k = snorm(r.name); return STEAK.nights.find((x) => snorm(x.n) === k && x.days.includes(d)) || null; }
+async function loadSteak() { if (STEAK) return STEAK; try { STEAK = await (await fetch('steak-nights.json')).json(); } catch { STEAK = { nights: [] }; } return STEAK; }
+async function renderSteak() {
+  await loadSteak();
+  const today = steakToday(), day = steakDay === 'today' ? today : steakDay;
+  $('#steakDays').innerHTML = [['today', `Tonight (${today})`], ...['Mon', 'Tue', 'Wed', 'Thu', 'Fri'].map((d) => [d, d]), ['all', 'All week']].map(([k, l]) => `<button class="chip ${steakDay === k ? 'on' : ''}" data-sd="${k}">${l}</button>`).join('');
+  $('#sArea').value = barea; $('#sArea').classList.toggle('on', barea !== 'any');
+  const rows = STEAK.nights.map((x) => ({ ...x, r: steakSpot(x.n) })).filter((x) => barea === 'any' || (x.r && areaOf(x.r) === barea));
+  const order = ['Mon', 'Tue', 'Wed', 'Thu', 'Fri', 'Sat', 'Sun'], days = steakDay === 'all' ? order : [day];
+  const cardOf = (x) => { const r = x.r, w = r ? walkMinsTo(r) : null, at = r ? areaTag(r) : '';
+    return `<div class="card bar">${r ? `<div class="chead">${tile(r)}<div>` : '<div class="chead"><span class="ctile" style="--tc:#a33">🥩</span><div>'}<h3>${esc(r ? r.name : x.n)}</h3>
+    <div class="meta">${esc(x.time || '')}${x.price ? ' · <b>' + esc(x.price) + '</b>' : ''} · ${esc(r ? (r.address || '').replace(', Houston, TX', '') : x.addr || '')}</div></div></div>
+    <div class="meta" style="margin-top:6px">${esc(x.deal)}</div>
+    <div class="tags">${at ? `<span class="tag">${esc(at)}</span>` : ''}${w != null ? `<span class="tag">🚶 ${w} min</span>` : ''}${x.days.length > 1 ? `<span class="tag">${x.days.join(' · ')}</span>` : ''}${x.verify ? '<span class="tag closed">Call ahead</span>' : ''}</div>
+    <div class="meta" style="margin-top:6px">Source: <a href="${esc(x.url)}" target="_blank" rel="noopener">${esc(x.src)}</a>${x.as ? ' · ' + esc(x.as) : ' · older or undated'}</div>
+    ${r ? `<div class="row bar-actions"><button class="btn ghost sm" data-open="${r.id}">Details</button><button class="btn sm" data-walk="${r.id}">🧭 Walk there</button></div>` : '<div class="meta" style="margin-top:6px">Pin coming with the next map refresh.</div>'}</div>`; };
+  let n = 0;
+  $('#steakList').innerHTML = days.map((d) => { const list = rows.filter((x) => x.days.includes(d)).sort((a, b) => !!a.verify - !!b.verify || (a.r && walkMinsTo(a.r) || 99) - (b.r && walkMinsTo(b.r) || 99)); n += list.length;
+    return `${days.length > 1 || steakDay !== 'today' ? `<h3 style="margin:14px 0 6px">${SDAY_L[d]}${d === today ? ' · tonight' : ''}</h3>` : ''}<div class="grid">${list.map(cardOf).join('') || `<div class="empty">No steak nights on ${SDAY_L[d]}${barea !== 'any' ? ' in this area' : ''}. Try another day.</div>`}</div>`; }).join('');
+  $('#steakSub').textContent = `${STEAK.nights.length} weekly steak nights downtown, Midtown, EaDo, East End, Washington and the Heights`;
+  $('#steakCount').textContent = `${n} deal${n === 1 ? '' : 's'}`;
+  $('#steakNote').textContent = `Checked ${STEAK.checked || ''} from CultureMap, DiningOut, venue pages and Instagram/Facebook posts. Deals change and some sell out early — "Call ahead" means the source is older or undated.`;
+}
+$('#steakDays').onclick = (e) => { const b = e.target.closest('[data-sd]'); if (!b) return; steakDay = b.dataset.sd; renderSteak(); };
+document.addEventListener('click', (e) => { const o = e.target.closest('#steakList .bar-actions [data-open]'); if (o) openSheet(+o.dataset.open); });
+$('#steakMap').onclick = async () => {
+  await loadSteak(); const d = steakDay === 'today' ? steakToday() : steakDay;
+  const ids = STEAK.nights.filter((x) => steakDay === 'all' || x.days.includes(d)).map((x) => steakSpot(x.n)).filter(Boolean);
+  show('map'); city?.setHighlight(new Set(ids.map((r) => r.id)));
+  const bar = $('#mapFound'); bar.innerHTML = `<div><b>🥩 Steak nights${steakDay === 'all' ? '' : ' · ' + SDAY_L[d]}</b><div class="meta">${ids.length} spots lit up</div></div><button class="btn ghost" id="fX">Show all</button>`;
+  bar.classList.add('on'); $('#fX').onclick = () => { bar.classList.remove('on'); city.setHighlight(null); };
+};
 
 // ---------- you are here + walking navigation ----------
 let watchId = null, compass = null;
@@ -1074,12 +1114,12 @@ document.addEventListener('click', (e) => { const b = e.target.closest('.subtabs
 // ---------- tabs ----------
 document.querySelectorAll('.tabs button').forEach((b) => (b.onclick = () => show(b.dataset.v)));
 function show(v) {
-  const grp = ['browse', 'coffee', 'night'].includes(v) ? 'explore' : null;
+  const grp = ['browse', 'coffee', 'night', 'steak'].includes(v) ? 'explore' : null;
   document.querySelectorAll('.tabs button').forEach((x) => x.classList.toggle('on', x.dataset.v === v || (grp && x.dataset.group === grp)));
   document.querySelectorAll('.subtabs button').forEach((x) => x.classList.toggle('on', x.dataset.v === v));
   document.querySelectorAll('.view').forEach((x) => x.classList.toggle('on', x.id === 'v-' + v));
   $('#top').style.display = v === 'map' ? 'none' : '';
-  if (v === 'browse') renderBrowse(); if (v === 'week') renderWeek(); if (v === 'night') renderNight(); if (v === 'coffee') renderCoffee();
+  if (v === 'browse') renderBrowse(); if (v === 'week') renderWeek(); if (v === 'night') renderNight(); if (v === 'coffee') renderCoffee(); if (v === 'steak') renderSteak();
   if (v === 'map' && !GEO_READY && !city) { GEO_P.then(() => { if ($('#v-map').classList.contains('on')) show('map'); }); return; }
   if (v === 'map') { initMap(); city.resize(); if (city._bgBuilt) { city._bgBuilt = false; city.anim = null; city.fit(); } }
   if (city) city.paused = v !== 'map';
@@ -1144,6 +1184,7 @@ async function aboutPlace(r) {
       return { ...p, id: i, status: o.status || null, movedTo: o.movedTo || null, bar: !!cats.bar || /\b(bar|pub|lounge|saloon|tavern|brew|nightclub|wine bar)\b/i.test(p.type || ''), hhListed: !!cats.hh, lateListed: !!cats.late, cuisines: p.cuisines || [], meals: p.meals || [], vibes: p.vibes || [], lat: o.lat, lng: o.lng, hours: o.hours, phone: o.phone, website: o.website, instagram: o.instagram, facebook: o.facebook, url: o.url, venue: o.venue && !/^(suite|unit|#|\()/i.test(String(o.venue).trim()) ? String(o.venue).replace(/ Houston$/, '').trim() : null, corrected: o.corrected, aliases: o.aliases || [], extraSource: o.extraSource };
     });
     DATA = DATA.filter((r) => r.status !== 'closed').map((r, i) => ({ ...r, id: i }));
+    loadSteak().then(() => { if ($('#v-night').classList.contains('on')) renderNight(); });
     for (const r of DATA) if (HFIX[r.name]) { r.hours = HFIX[r.name]; r.corrected = 'your fix'; }   // fixes you chose in the hours review   // closed for good: drop, then renumber
     DATA.forEach((r) => {
       const barish = /\b(bar|lounge|pub|nightclub|club|saloon|tavern|nightlife|speakeasy)\b/i.test(r.type || '');
@@ -1157,7 +1198,7 @@ async function aboutPlace(r) {
   const openNow = DATA.filter((r) => isOpen(r)).length;
   $('#hdr').textContent = `${FOOD.length} places to eat · ${DATA.filter((r) => r.night).length} bars · ${openNow} open now · ${DATA.filter((r) => r.tunnel).length} in tunnels`;
   renderPick();
-  const h = location.hash.slice(1); if (['ask', 'week', 'browse', 'map', 'night', 'coffee'].includes(h)) show(h);
+  const h = location.hash.slice(1); if (['ask', 'week', 'browse', 'map', 'night', 'coffee', 'steak'].includes(h)) show(h);
   if (h.startsWith('vote=')) openVote(h.slice(5));
   if (h.startsWith('sync=')) { SYNC = h.slice(5); store.set('syncKey', SYNC); syncPull(); toast('🔄 This device is now synced'); show('week'); }
   if (h.startsWith('poll=')) { const opts = decodeURIComponent(h.slice(5)).split('|').map((n) => DATA.find((x) => x.name === n)).filter(Boolean); if (opts.length) { show('pick'); $('#pickOut').innerHTML = `<div class="card poll"><h3>🗳️ Where should we eat?</h3><div class="meta">Tap your vote — it opens your messages so you can send it back.</div>${opts.map((x) => `<button class="pollopt" data-vote="${x.id}">${tile(x)}<span><b>${esc(x.name)}</b><em>${$$(x.price)} · ${esc(x.type)} · ${esc(openLabel(x).label || '')}</em></span></button>`).join('')}</div>`; $('#pickOut').onclick = (e) => { const v = e.target.closest('[data-vote]'); if (v) { const x = DATA[+v.dataset.vote]; shareText('My vote', `I vote ${x.name} 👍`, appUrl() + '#p=' + encodeURIComponent(x.name)); } }; } }

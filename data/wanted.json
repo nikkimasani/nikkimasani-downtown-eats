@@ -174,7 +174,8 @@
 {
 "n": "40 Love",
 "k": "bar",
-"c": "Sports Bar"
+"c": "Sports Bar",
+"a": "3030 Travis St"
 },
 {
 "n": "Ducky's Pizza & Tavern",
@@ -193,11 +194,6 @@
 "a": "2616 Louisiana St"
 },
 {
-"n": "Traveler's Table",
-"k": "rest",
-"c": "Global"
-},
-{
 "n": "Josephine's Gulf Coast Tradition",
 "k": "rest",
 "c": "Gulf Coast",
@@ -211,28 +207,20 @@
 {
 "n": "Dough Zone Dumpling House Midtown",
 "k": "rest",
-"c": "Chinese"
+"c": "Chinese",
+"a": "2450 Louisiana St"
 },
 {
 "n": "Malai Thai Street Eats",
 "k": "rest",
-"c": "Thai"
+"c": "Thai",
+"a": "2900 Travis St"
 },
 {
 "n": "Oporto Fooding House & Wine",
 "k": "rest",
 "c": "Portuguese",
 "a": "125 W Gray St"
-},
-{
-"n": "Chama Gaucha",
-"k": "rest",
-"c": "Brazilian Steakhouse"
-},
-{
-"n": "Romano's Pizza",
-"k": "rest",
-"c": "Pizza"
 },
 {
 "n": "Mai's Restaurant",
@@ -248,7 +236,8 @@
 {
 "n": "Bonchon Midtown",
 "k": "rest",
-"c": "Korean"
+"c": "Korean",
+"a": "2100 Travis St"
 },
 {
 "n": "Yard House",
@@ -305,17 +294,13 @@
 {
 "n": "Gotti's",
 "k": "rest",
-"c": "Italian"
+"c": "Italian",
+"a": "811 St Emanuel St"
 },
 {
 "n": "Cobos",
 "k": "rest",
 "c": "Mexican"
-},
-{
-"n": "Kasra Persian Grill",
-"k": "rest",
-"c": "Persian"
 },
 {
 "n": "Guard and Grace",
@@ -326,16 +311,6 @@
 "n": "Brisket & Rice",
 "k": "rest",
 "c": "BBQ"
-},
-{
-"n": "House of Louie",
-"k": "rest",
-"c": "Chinese"
-},
-{
-"n": "Sixty Vines",
-"k": "rest",
-"c": "Wine Bar"
 },
 {
 "n": "OKRA Charity Saloon",
@@ -351,7 +326,8 @@
 {
 "n": "Flight Club Houston",
 "k": "bar",
-"c": "Bar"
+"c": "Bar",
+"a": "3515 W Dallas St"
 },
 {
 "n": "Say Less",
@@ -381,7 +357,8 @@
 {
 "n": "Donna's",
 "k": "bar",
-"c": "Bar"
+"c": "Bar",
+"a": "2626 White Oak Dr"
 },
 {
 "n": "Beez Kneez",
@@ -391,12 +368,14 @@
 {
 "n": "Bar Angie",
 "k": "bar",
-"c": "Cocktails"
+"c": "Cocktails",
+"a": "1002 W 11th St"
 },
 {
 "n": "Heights Hideaway",
 "k": "bar",
-"c": "Bar"
+"c": "Bar",
+"a": "1040 W Cavalcade St"
 },
 {
 "n": "Best Regards",
@@ -418,11 +397,6 @@
 "n": "Botanic Beer Garden",
 "k": "bar",
 "c": "Beer Garden"
-},
-{
-"n": "Plume",
-"k": "bar",
-"c": "Cocktails"
 },
 {
 "n": "Moon Rabbit",
@@ -595,6 +569,36 @@
 "n": "Second Slice Sandwich Shop",
 "k": "rest",
 "c": "Sandwiches"
+},
+{
+"n": "Front Porch Pub",
+"k": "bar",
+"c": "Pub",
+"a": "217 Gray St"
+},
+{
+"n": "Christian's Tailgate Midtown",
+"k": "bar",
+"c": "Sports Bar",
+"a": "2000 Bagby St"
+},
+{
+"n": "Starduster Lounge",
+"k": "bar",
+"c": "Cocktails",
+"a": "3921 N Main St"
+},
+{
+"n": "Daley Sports Club",
+"k": "bar",
+"c": "Sports Bar",
+"a": "922 Holman St"
+},
+{
+"n": "Lankford's Grocery & Market",
+"k": "rest",
+"c": "American",
+"a": "88 Dennis St"
 }
 ]
 }

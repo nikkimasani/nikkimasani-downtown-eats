@@ -1378,6 +1378,17 @@
       "source": "US Census geocoder",
       "checked": "2026-11-25",
       "notInDirectory": true
+    },
+    "Plume": {
+      "street": "1100 W 23rd St",
+      "lat": 29.8063,
+      "lng": -95.41858,
+      "hours": "Tue–Wed 4pm–12am, Thu–Sat 4pm–2am, Sun 4pm–12am",
+      "source": "https://whatnow.com/?p=156027",
+      "checked": "2026-11-25",
+      "notInDirectory": true,
+      "geocode": true,
+      "approx": true
     }
   }
 }

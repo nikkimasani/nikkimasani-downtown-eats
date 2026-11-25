@@ -81,7 +81,7 @@
 </section>
 
 <section class="view" id="v-night">
-  <div class="subtabs"><button data-v="browse" class="">🍽️ Food</button><button data-v="coffee" class="">☕ Coffee</button><button data-v="night" class="on">🌙 Bars</button></div>
+  <div class="subtabs"><button data-v="browse" class="">🍽️ Food</button><button data-v="coffee" class="">☕ Coffee</button><button data-v="night" class="on">🌙 Bars</button><button data-v="steak" class="">🥩 Steak</button></div>
   <h2>Tonight downtown 🌙</h2>
   <p class="sub" id="nightSub"></p>
   <div id="hhNowRow"></div>
@@ -98,7 +98,7 @@
 </section>
 
 <section class="view" id="v-coffee">
-  <div class="subtabs"><button data-v="browse" class="">🍽️ Food</button><button data-v="coffee" class="on">☕ Coffee</button><button data-v="night" class="">🌙 Bars</button></div>
+  <div class="subtabs"><button data-v="browse" class="">🍽️ Food</button><button data-v="coffee" class="on">☕ Coffee</button><button data-v="night" class="">🌙 Bars</button><button data-v="steak" class="">🥩 Steak</button></div>
   <h2>Coffee downtown ☕</h2>
   <p class="sub" id="coffeeSub"></p>
   <div class="chips" id="coffeeChips"></div>
@@ -113,8 +113,22 @@
   <p class="disclaim">From the Downtown Houston directory, refreshed daily. Tunnel cafés usually keep weekday office hours.</p>
 </section>
 
+<section class="view" id="v-steak">
+  <div class="subtabs"><button data-v="browse" class="">🍽️ Food</button><button data-v="coffee" class="">☕ Coffee</button><button data-v="night" class="">🌙 Bars</button><button data-v="steak" class="on">🥩 Steak</button></div>
+  <h2>Steak nights 🥩</h2>
+  <p class="sub" id="steakSub"></p>
+  <div class="chips" id="steakDays"></div>
+  <div class="row" style="margin-top:10px;align-items:center">
+    <select class="chip zonesel" id="sArea" aria-label="Area"></select>
+    <button class="chip" id="steakMap">🗺️ On the map</button>
+    <span class="count" id="steakCount" style="margin:0 0 0 auto"></span>
+  </div>
+  <div id="steakList" style="margin-top:10px"></div>
+  <p class="disclaim" id="steakNote"></p>
+</section>
+
 <section class="view" id="v-browse">
-  <div class="subtabs"><button data-v="browse" class="on">🍽️ Food</button><button data-v="coffee" class="">☕ Coffee</button><button data-v="night" class="">🌙 Bars</button></div>
+  <div class="subtabs"><button data-v="browse" class="on">🍽️ Food</button><button data-v="coffee" class="">☕ Coffee</button><button data-v="night" class="">🌙 Bars</button><button data-v="steak" class="">🥩 Steak</button></div>
   <h2>All downtown spots</h2>
   <input class="search" id="q" placeholder="Search name, cuisine, dish, street, tunnel…">
   <div class="row" style="margin-top:10px">
