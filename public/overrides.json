@@ -1017,6 +1017,17 @@
       "source": "https://aroundus.com/p/175319626-reset",
       "checked": "2026-11-24",
       "notInDirectory": true
+    },
+    "Incanto": {
+      "street": "1426 Yale St",
+      "lat": 29.7935,
+      "lng": -95.399,
+      "approx": true,
+      "geocode": true,
+      "hours": "Tue–Thu 4pm–12am, Fri–Sat 4pm–2am, Sun 12pm–11pm",
+      "source": "https://opentable.com.au/r/incanto-houston",
+      "checked": "2026-11-24",
+      "notInDirectory": true
     }
   }
 }
