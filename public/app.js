@@ -38,7 +38,7 @@ const AREAS = [
   { k: 'eastend', l: 'East End', e: '🌮', b: [29.7370, -95.3420, 29.7605, -95.3080] },
   { k: 'eastriver', l: 'East River', e: '⛳', b: [29.7605, -95.3478, 29.7745, -95.3180] },
   { k: 'washington', l: 'Washington Ave, Sixth Ward & Sawyer Yards', e: '🎨', b: [29.7620, -95.4250, 29.7745, -95.3640] },
-  { k: 'fourthward', l: 'Fourth Ward', e: '🕊️', b: [29.7525, -95.3890, 29.7605, -95.3745] },
+  { k: 'fourthward', l: 'Fourth Ward', e: '🕊️', b: [29.7545, -95.3890, 29.7605, -95.3745] },
   { k: 'allen', l: 'Allen Pkwy & Regent Square', e: '🌳', b: [29.7530, -95.4140, 29.7650, -95.3745] },
   { k: 'midtown', l: 'Midtown', e: '🍸', b: [29.7300, -95.3900, 29.7525, -95.3610] },
   { k: 'heights', l: 'The Heights', e: '🏡', b: [29.7745, -95.4200, 29.8100, -95.3700] },
@@ -415,7 +415,7 @@ $('#browse').addEventListener('click', (e) => {
 $('#bClear').onclick = () => { bq = ''; $('#q').value = ''; fav1 = tun1 = open1 = hh1 = false; fc.clear(); barea = 'any'; store.set('barea', barea); sortBy = 'name'; $('#sort').value = 'name'; renderBrowse(); };
 $('#toggleF').onclick = () => $('#filters').classList.toggle('on');
 $('#favOnly').onclick = () => { fav1 = !fav1; renderBrowse(); };
-for (const id of ['#bArea', '#nArea', '#cArea', '#sArea']) { $(id).innerHTML = AREA_OPTS.map((a) => `<option value="${a.k}">${esc(a.l)}</option>`).join(''); $(id).value = barea; }
+for (const id of ['#bArea', '#nArea', '#cArea', '#sArea']) { $(id).innerHTML = AREA_OPTS.map((a) => `<option value="${a.k}">${esc(a.k === 'any' ? '📍 All areas' : a.l.replace(/^(\S+) (.*?)(,| &| \().*$/, '$1 $2'))}</option>`).join(''); $(id).value = barea; }
 $('#bArea').onchange = (e) => { barea = e.target.value; store.set('barea', barea); renderBrowse(); };
 $('#nArea').onchange = (e) => { barea = e.target.value; store.set('barea', barea); renderNight(); };
 $('#sArea').onchange = (e) => { barea = e.target.value; store.set('barea', barea); renderSteak(); };
@@ -964,7 +964,7 @@ async function renderSteak() {
     return `<div class="card bar">${r ? `<div class="chead">${tile(r)}<div>` : '<div class="chead"><span class="ctile" style="--tc:#a33">🥩</span><div>'}<h3>${esc(r ? r.name : x.n)}</h3>
     <div class="meta">${esc(x.time || '')}${x.price ? ' · <b>' + esc(x.price) + '</b>' : ''} · ${esc(r ? (r.address || '').replace(', Houston, TX', '') : x.addr || '')}</div></div></div>
     <div class="meta" style="margin-top:6px">${esc(x.deal)}</div>
-    <div class="tags">${at ? `<span class="tag">${esc(at)}</span>` : ''}${w != null ? `<span class="tag">🚶 ${w} min</span>` : ''}${x.days.length > 1 ? `<span class="tag">${x.days.join(' · ')}</span>` : ''}${x.verify ? '<span class="tag closed">Call ahead</span>' : ''}</div>
+    <div class="tags">${at ? `<span class="tag">${esc(at)}</span>` : ''}${w != null ? `<span class="tag">🚶 ${w} min</span>` : ''}${x.days.length > 1 ? `<span class="tag">${x.days.join(' · ')}</span>` : ''}${x.hiatus ? '<span class="tag closed">On hiatus</span>' : x.verify ? '<span class="tag closed">Call ahead</span>' : ''}</div>
     <div class="meta" style="margin-top:6px">Source: <a href="${esc(x.url)}" target="_blank" rel="noopener">${esc(x.src)}</a>${x.as ? ' · ' + esc(x.as) : ' · older or undated'}</div>
     ${r ? `<div class="row bar-actions"><button class="btn ghost sm" data-open="${r.id}">Details</button><button class="btn sm" data-walk="${r.id}">🧭 Walk there</button></div>` : '<div class="meta" style="margin-top:6px">Pin coming with the next map refresh.</div>'}</div>`; };
   let n = 0;

@@ -623,6 +623,72 @@
 "k": "bar",
 "c": "Cocktails",
 "a": "109 Stratford St"
+},
+{
+"n": "NUA Thai",
+"k": "rest",
+"c": "Thai",
+"a": "2020 Louisiana St"
+},
+{
+"n": "Umiya",
+"k": "rest",
+"c": "Japanese",
+"a": "510 Gray St"
+},
+{
+"n": "Pub Fiction",
+"k": "bar",
+"c": "Sports Bar",
+"a": "2303 Smith St"
+},
+{
+"n": "Community Bar",
+"k": "bar",
+"c": "Bar",
+"a": "2703 Smith St"
+},
+{
+"n": "Weights + Measures",
+"k": "rest",
+"c": "American",
+"a": "2808 Caroline St"
+},
+{
+"n": "Night Heron",
+"k": "bar",
+"c": "Cocktails",
+"a": "1601 W Main St"
+},
+{
+"n": "Mapo Mama",
+"k": "rest",
+"c": "Chinese"
+},
+{
+"n": "Cafe Ginger",
+"k": "rest",
+"c": "Chinese"
+},
+{
+"n": "Taste of Mulan",
+"k": "rest",
+"c": "Dim Sum"
+},
+{
+"n": "The Gypsy Poet",
+"k": "rest",
+"c": "Pizza"
+},
+{
+"n": "Les Givral's",
+"k": "rest",
+"c": "Vietnamese"
+},
+{
+"n": "Pho Saigon Midtown",
+"k": "rest",
+"c": "Vietnamese"
 }
 ]
 }

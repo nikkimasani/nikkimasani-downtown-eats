@@ -642,3 +642,5 @@ body.navving #v-map .mapchips,body.navving #v-map .backpill,body.navving #v-map 
 .gamechip[hidden]{display:none}
 .zone{white-space:nowrap;opacity:.85}
 .zonesel.on{background:#e8590c !important;color:#fff !important}
+/* the area picker sits first in each filter row, compact */
+.zonesel{flex:0 0 auto;max-width:128px;font-size:13px !important;padding:6px 22px 6px 10px !important;min-height:0;height:32px;text-overflow:ellipsis;white-space:nowrap;overflow:hidden}
