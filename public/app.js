@@ -32,19 +32,21 @@ const BUDGET = [{ k: 0, l: 'Any' }, { k: 1, l: 'Under $15' }, { k: 2, l: 'Under 
 const EXTRAS = [{ k: 'open', l: '🟢 Open now' }, { k: 'tunnel', l: '🚇 In the tunnels' }, { k: 'street', l: '🏙️ Street level' }, { k: 'Patio', l: '☀️ Patio' }, { k: 'Pet Friendly', l: '🐶 Pet friendly' }, { k: 'Food Hall', l: '🏛️ Food hall' }, { k: 'Full Service', l: '🍽️ Sit-down' }, { k: 'notfav', l: '🆕 Somewhere new' }];
 // neighbourhoods, as lat/lng boxes [south, west, north, east]; the first box a spot falls in wins
 const AREAS = [
-  { k: 'downtown', l: 'Central downtown', e: '🏙️', b: [29.7480, -95.3745, 29.7672, -95.3540] },
+  { k: 'downtown', l: 'Central downtown', e: '🏙️', b: [29.7480, -95.3745, 29.7672, -95.3580] },
   { k: 'warehouse', l: 'Warehouse District', e: '🏭', b: [29.7640, -95.3640, 29.7745, -95.3478] },
-  { k: 'eado', l: 'EaDo', e: '⚽', b: [29.7380, -95.3540, 29.7610, -95.3420] },
+  { k: 'eado', l: 'EaDo', e: '⚽', b: [29.7380, -95.3610, 29.7610, -95.3420] },
   { k: 'eastend', l: 'East End', e: '🌮', b: [29.7370, -95.3420, 29.7605, -95.3080] },
   { k: 'eastriver', l: 'East River', e: '⛳', b: [29.7605, -95.3478, 29.7745, -95.3180] },
-  { k: 'washington', l: 'Washington Ave, Sixth Ward & Sawyer Yards', e: '🎨', b: [29.7620, -95.4020, 29.7745, -95.3640] },
+  { k: 'washington', l: 'Washington Ave, Sixth Ward & Sawyer Yards', e: '🎨', b: [29.7620, -95.4250, 29.7745, -95.3640] },
   { k: 'allen', l: 'Allen Pkwy & Regent Square', e: '🌳', b: [29.7530, -95.4140, 29.7650, -95.3745] },
-  { k: 'midtown', l: 'Midtown', e: '🍸', b: [29.7300, -95.3900, 29.7480, -95.3560] },
+  { k: 'midtown', l: 'Midtown', e: '🍸', b: [29.7300, -95.3900, 29.7480, -95.3610] },
   { k: 'heights', l: 'The Heights', e: '🏡', b: [29.7745, -95.4200, 29.8100, -95.3850] },
 ];
 const inGrid = (r) => { let c = null; try { c = city; } catch (e) { return null; } if (!c?.avenues) return null; const [x, y] = city.proj(r.lat, r.lng), A = city.avenues.map((a) => a.x), C = city.cross.map((c) => c.y); return x >= Math.min(...A) && x <= Math.max(...A) && y >= Math.min(...C) && y <= Math.max(...C); };
 const areaOf = (r) => { if (r.lat == null) return null; if (r._area !== undefined && r._areaK === r.lat + r.lng) return r._area; const g = inGrid(r); const v = g ? 'downtown' : areaBox(r, g === null); if (g !== null) { r._area = v; r._areaK = r.lat + r.lng; } return v; };
-const areaBox = (r, useDowntownBox) => { for (const a of AREAS) { if (a.k === 'downtown' && !useDowntownBox) continue; const [s0, w0, n0, e0] = a.b; if (r.lat >= s0 && r.lat <= n0 && r.lng >= w0 && r.lng <= e0) return a.k; } return null; };
+// US-59 is the line between downtown and EaDo / Midtown; the convention-center blocks (GRB, Avenida, Discovery Green hotels) sit just inside it
+const DT_EDGE = [29.7522, -95.3600, 29.7600, -95.3557];
+const areaBox = (r, useDowntownBox) => { { const [s0, w0, n0, e0] = DT_EDGE; if (r.lat >= s0 && r.lat <= n0 && r.lng >= w0 && r.lng <= e0) return 'downtown'; } for (const a of AREAS) { if (a.k === 'downtown' && !useDowntownBox) continue; const [s0, w0, n0, e0] = a.b; if (r.lat >= s0 && r.lat <= n0 && r.lng >= w0 && r.lng <= e0) return a.k; } return null; };
 const areaTag = (r) => { const a = AREAS.find((x) => x.k === areaOf(r)); return a ? `${a.e} ${a.l.split(/,| &/)[0]}` : ''; };
 const AREA_OPTS = [{ k: 'any', l: '📍 Anywhere' }, ...AREAS.map((a) => ({ k: a.k, l: `${a.e} ${a.l}` }))];
 const DAYS = ['Mon', 'Tue', 'Wed', 'Thu', 'Fri'];
