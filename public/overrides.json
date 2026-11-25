@@ -1499,6 +1499,126 @@
       "source": "US Census geocoder",
       "checked": "2026-11-25",
       "notInDirectory": true
+    },
+    "The James": {
+      "street": "Mid Lane",
+      "lat": 29.743993,
+      "lng": -95.449477,
+      "source": "OpenStreetMap Nominatim",
+      "checked": "2026-11-25",
+      "notInDirectory": true
+    },
+    "Rainbow Lodge": {
+      "street": "2011 Ella Blvd",
+      "lat": 29.804257,
+      "lng": -95.429318,
+      "source": "US Census geocoder",
+      "checked": "2026-11-25",
+      "notInDirectory": true
+    },
+    "Dona Leti's": {
+      "street": "7340 Washington Avenue",
+      "lat": 29.778416,
+      "lng": -95.42985,
+      "source": "OpenStreetMap Nominatim",
+      "checked": "2026-11-25",
+      "notInDirectory": true
+    },
+    "Down the Street": {
+      "street": "5746 Larkin Street",
+      "lat": 29.7793,
+      "lng": -95.426088,
+      "source": "OpenStreetMap Nominatim",
+      "checked": "2026-11-25",
+      "notInDirectory": true
+    },
+    "Mary'z Mediterranean Cuisine": {
+      "street": "5828 Richmond Avenue",
+      "lat": 29.73113,
+      "lng": -95.482135,
+      "source": "OpenStreetMap Nominatim",
+      "checked": "2026-11-25",
+      "notInDirectory": true
+    },
+    "Traveler's Table": {
+      "street": "520 Westheimer Rd",
+      "lat": 29.744587,
+      "lng": -95.3876,
+      "source": "US Census geocoder",
+      "checked": "2026-11-25",
+      "notInDirectory": true
+    },
+    "House of Louie": {
+      "street": "1931 Fairview St",
+      "lat": 29.744668,
+      "lng": -95.40554,
+      "source": "US Census geocoder",
+      "checked": "2026-11-25",
+      "notInDirectory": true
+    },
+    "Bar Madonna": {
+      "street": "109 Stratford St",
+      "lat": 29.74652,
+      "lng": -95.38184,
+      "source": "US Census geocoder",
+      "checked": "2026-11-25",
+      "notInDirectory": true
+    },
+    "NUA Thai": {
+      "street": "2020 Louisiana St",
+      "lat": 29.750812,
+      "lng": -95.373701,
+      "source": "US Census geocoder",
+      "checked": "2026-11-25",
+      "notInDirectory": true
+    },
+    "Umiya": {
+      "street": "510 Gray St",
+      "lat": 29.751219,
+      "lng": -95.375632,
+      "source": "US Census geocoder",
+      "checked": "2026-11-25",
+      "notInDirectory": true
+    },
+    "Pub Fiction": {
+      "street": "2303 Smith St",
+      "lat": 29.749251,
+      "lng": -95.376042,
+      "source": "US Census geocoder",
+      "checked": "2026-11-25",
+      "notInDirectory": true
+    },
+    "Community Bar": {
+      "street": "2703 Smith St",
+      "lat": 29.746678,
+      "lng": -95.378071,
+      "source": "US Census geocoder",
+      "checked": "2026-11-25",
+      "notInDirectory": true
+    },
+    "Weights + Measures": {
+      "street": "2808 Caroline St",
+      "lat": 29.742809,
+      "lng": -95.372376,
+      "source": "US Census geocoder",
+      "checked": "2026-11-25",
+      "notInDirectory": true
+    },
+    "Night Heron": {
+      "street": "1601 W Main St",
+      "lat": 29.736031,
+      "lng": -95.399334,
+      "source": "US Census geocoder",
+      "checked": "2026-11-25",
+      "notInDirectory": true
+    },
+    "Cafe Ginger": {
+      "street": "1574 West Gray Street",
+      "lat": 29.754295,
+      "lng": -95.402051,
+      "source": "OpenStreetMap Nominatim",
+      "checked": "2026-11-25",
+      "notInDirectory": true
     }
   }
 }
