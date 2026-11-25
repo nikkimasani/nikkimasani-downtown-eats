@@ -16,7 +16,7 @@
    "drinks"
   ],
   "type": "American",
-  "note": "Hilton Americas restaurant near the GRB \u2014 reliable hotel American with a bar.",
+  "note": "Hilton Americas restaurant near the GRB — reliable hotel American with a bar.",
   "tryit": "Burgers, salads, breakfast buffet"
  },
  {
@@ -36,7 +36,7 @@
    "date"
   ],
   "type": "Bar",
-  "note": "Subterranean cocktail lounge below Texas Ave \u2014 more drinks than dinner.",
+  "note": "Subterranean cocktail lounge below Texas Ave — more drinks than dinner.",
   "tryit": "Cocktails"
  },
  {
@@ -107,7 +107,7 @@
    "date"
   ],
   "type": "Latin",
-  "note": "Ecuadorian/South American cooking from chef David Guerrero \u2014 ceviches, empanadas, arepas.",
+  "note": "Ecuadorian/South American cooking from chef David Guerrero — ceviches, empanadas, arepas.",
   "tryit": "Ceviche, empanadas, lomo saltado"
  },
  {
@@ -248,7 +248,7 @@
    "date"
   ],
   "type": "Japanese",
-  "note": "Teppanyaki theater \u2014 chefs cook at the table. Good for groups and celebrations.",
+  "note": "Teppanyaki theater — chefs cook at the table. Good for groups and celebrations.",
   "tryit": "Hibachi chicken/steak combos, fried rice"
  },
  {
@@ -291,7 +291,7 @@
    "group"
   ],
   "type": "American",
-  "note": "Marriott Marquis sports bar named for Craig Biggio \u2014 big screens and game-day crowds.",
+  "note": "Marriott Marquis sports bar named for Craig Biggio — big screens and game-day crowds.",
   "tryit": "Wings, burgers, nachos"
  },
  {
@@ -315,7 +315,7 @@
    "drinks"
   ],
   "type": "Italian",
-  "note": "Old-school Italian-American pub near the theaters \u2014 handy pre-show.",
+  "note": "Old-school Italian-American pub near the theaters — handy pre-show.",
   "tryit": "Pizza, pasta, garlic rolls"
  },
  {
@@ -340,8 +340,8 @@
    "quick"
   ],
   "type": "Mexican",
-  "note": "Birria tacos with consomm\u00e9, inside Underground Hall.",
-  "tryit": "Quesabirria + consomm\u00e9"
+  "note": "Birria tacos with consommé, inside Underground Hall.",
+  "tryit": "Quesabirria + consommé"
  },
  {
   "id": 15,
@@ -364,7 +364,7 @@
    "caffeine"
   ],
   "type": "American",
-  "note": "Caf\u00e9 for breakfast and lunch.",
+  "note": "Café for breakfast and lunch.",
   "tryit": "Sandwiches, coffee"
  },
  {
@@ -498,7 +498,7 @@
    "date"
   ],
   "type": "Seafood",
-  "note": "Steak, seafood and cocktails \u2014 relocated in Oct 2026 from 405 Main St to The Rice building at 909 Texas Ave.",
+  "note": "Steak, seafood and cocktails — relocated in Oct 2026 from 405 Main St to The Rice building at 909 Texas Ave.",
   "tryit": "Seafood plates, cocktails"
  },
  {
@@ -523,7 +523,7 @@
    "drinks"
   ],
   "type": "American",
-  "note": "Wine bar and restaurant in the District7/Le M\u00e9ridien area.",
+  "note": "Wine bar and restaurant in the District7/Le Méridien area.",
   "tryit": "Wine flights, small plates"
  },
  {
@@ -545,7 +545,7 @@
    "comfort"
   ],
   "type": "Fast Food",
-  "note": "Chicken sandwiches \u2014 closed Sundays.",
+  "note": "Chicken sandwiches — closed Sundays.",
   "tryit": "Spicy chicken sandwich"
  },
  {
@@ -637,7 +637,7 @@
   ],
   "type": "Italian",
   "note": "Fresh pasta counter at Post HTX.",
-  "tryit": "Cacio e pepe, rag\u00f9"
+  "tryit": "Cacio e pepe, ragù"
  },
  {
   "id": 28,
@@ -712,7 +712,7 @@
    "group"
   ],
   "type": "Chinese",
-  "note": "Sichuan/Hunan cooking \u2014 bring friends and share.",
+  "note": "Sichuan/Hunan cooking — bring friends and share.",
   "tryit": "Dry-pot dishes, mapo tofu, cumin lamb"
  },
  {
@@ -740,8 +740,8 @@
    "quick",
    "veg"
   ],
-  "type": "Bakery Caf\u00e9",
-  "note": "Bakery caf\u00e9 chain for breakfast and soups/sandwiches.",
+  "type": "Bakery Café",
+  "note": "Bakery café chain for breakfast and soups/sandwiches.",
   "tryit": "Breakfast panini, soups"
  },
  {
@@ -782,7 +782,7 @@
    "drinks"
   ],
   "type": "American",
-  "note": "Hotel Alessandra's restaurant \u2014 seasonal, refined American.",
+  "note": "Hotel Alessandra's restaurant — seasonal, refined American.",
   "tryit": "Seasonal plates"
  },
  {
@@ -867,7 +867,7 @@
    "drinks"
   ],
   "type": "American",
-  "note": "Market-style caf\u00e9 and bar on Main.",
+  "note": "Market-style café and bar on Main.",
   "tryit": "Breakfast, sandwiches"
  },
  {
@@ -928,7 +928,7 @@
    "quick"
   ],
   "type": "Asian",
-  "note": "Dumplings and noodle bowls \u2014 popular lunch spot.",
+  "note": "Dumplings and noodle bowls — popular lunch spot.",
   "tryit": "Pork dumplings, beef noodle soup"
  },
  {
@@ -988,7 +988,7 @@
    "sweet"
   ],
   "type": "Dessert",
-  "note": "Fruit arrangements and dipped fruit \u2014 gifts more than a meal.",
+  "note": "Fruit arrangements and dipped fruit — gifts more than a meal.",
   "tryit": "Chocolate-dipped strawberries"
  },
  {
@@ -1029,7 +1029,7 @@
    "quick",
    "caffeine"
   ],
-  "type": "Bakery Caf\u00e9",
+  "type": "Bakery Café",
   "note": "Bagel chain.",
   "tryit": "Bagel sandwiches"
  },
@@ -1071,7 +1071,7 @@
    "drinks"
   ],
   "type": "Tex-Mex",
-  "note": "Houston Tex-Mex family (Laurenzo's) \u2014 fajitas and big margaritas.",
+  "note": "Houston Tex-Mex family (Laurenzo's) — fajitas and big margaritas.",
   "tryit": "Fajitas, margaritas"
  },
  {
@@ -1111,8 +1111,8 @@
   "vibes": [
    "date"
   ],
-  "type": "Caf\u00e9",
-  "note": "Pre-show caf\u00e9 inside Jones Hall.",
+  "type": "Café",
+  "note": "Pre-show café inside Jones Hall.",
   "tryit": "Pre-show bites"
  },
  {
@@ -1136,7 +1136,7 @@
    "group"
   ],
   "type": "Latin",
-  "note": "Latin caf\u00e9/bar on Main with a patio and coffee by day.",
+  "note": "Latin café/bar on Main with a patio and coffee by day.",
   "tryit": "Empanadas, cafecito, cocktails"
  },
  {
@@ -1514,7 +1514,7 @@
    "group"
   ],
   "type": "Southern",
-  "note": "Music venue with a restaurant \u2014 catch a show.",
+  "note": "Music venue with a restaurant — catch a show.",
   "tryit": "Gumbo, burgers"
  },
  {
@@ -1579,7 +1579,7 @@
    "client"
   ],
   "type": "Mexican",
-  "note": "Legendary home-style Mexican spot; no fixed menu \u2014 Irma's family tells you what's cooking.",
+  "note": "Legendary home-style Mexican spot; no fixed menu — Irma's family tells you what's cooking.",
   "tryit": "Daily specials, lemonade"
  },
  {
@@ -1710,7 +1710,7 @@
    "group"
   ],
   "type": "Bar",
-  "note": "Arcade bar \u2014 games and drinks.",
+  "note": "Arcade bar — games and drinks.",
   "tryit": "Arcade games"
  },
  {
@@ -1828,7 +1828,7 @@
    "adventurous"
   ],
   "type": "Seafood",
-  "note": "Mexican coastal seafood from chef Aquiles Ch\u00e1vez.",
+  "note": "Mexican coastal seafood from chef Aquiles Chávez.",
   "tryit": "Ceviche, aguachile"
  },
  {
@@ -2537,7 +2537,7 @@
   ],
   "type": "Cajun",
   "note": "Cajun seafood (Pappas).",
-  "tryit": "Fried catfish, crawfish \u00e9touff\u00e9e"
+  "tryit": "Fried catfish, crawfish étouffée"
  },
  {
   "id": 115,
@@ -2606,7 +2606,7 @@
    "drinks"
   ],
   "type": "Tex-Mex",
-  "note": "Pappas Tex-Mex \u2014 big fajitas and margaritas.",
+  "note": "Pappas Tex-Mex — big fajitas and margaritas.",
   "tryit": "Fajitas"
  },
  {
@@ -2661,7 +2661,7 @@
    "date"
   ],
   "type": "French",
-  "note": "Small French caf\u00e9/bakery.",
+  "note": "Small French café/bakery.",
   "tryit": "Pastries"
  },
  {
@@ -2913,7 +2913,7 @@
    "comfort"
   ],
   "type": "Italian",
-  "note": "Italian at the C. Baldwin hotel \u2014 breakfast daily, weekday lunch, weekend brunch.",
+  "note": "Italian at the C. Baldwin hotel — breakfast daily, weekday lunch, weekend brunch.",
   "tryit": "Lasagna, meatballs"
  },
  {
@@ -3281,7 +3281,7 @@
    "date"
   ],
   "type": "French",
-  "note": "French-inspired caf\u00e9/restaurant.",
+  "note": "French-inspired café/restaurant.",
   "tryit": "French plates"
  },
  {
@@ -3415,7 +3415,7 @@
    "spicy"
   ],
   "type": "Thai",
-  "note": "Thai caf\u00e9 open late.",
+  "note": "Thai café open late.",
   "tryit": "Pad thai"
  },
  {
@@ -3589,8 +3589,8 @@
    "sweet",
    "veg"
   ],
-  "type": "Bakery Caf\u00e9",
-  "note": "Bakery caf\u00e9 near Discovery Green with a dog-friendly vibe.",
+  "type": "Bakery Café",
+  "note": "Bakery café near Discovery Green with a dog-friendly vibe.",
   "tryit": "Macarons, breakfast"
  },
  {
@@ -3786,7 +3786,7 @@
    "client"
   ],
   "type": "Mexican",
-  "note": "Hugo Ortega's Oaxacan restaurant \u2014 moles and masa.",
+  "note": "Hugo Ortega's Oaxacan restaurant — moles and masa.",
   "tryit": "Mole, tlayudas, chocolate desserts"
  },
  {
@@ -4116,7 +4116,7 @@
    "comfort"
   ],
   "type": "Fast Food",
-  "note": "Chicken sandwiches \u2014 closed Sundays.",
+  "note": "Chicken sandwiches — closed Sundays.",
   "tryit": "Spicy chicken sandwich"
  },
  {
@@ -4135,7 +4135,7 @@
    "quick"
   ],
   "type": "Chinese & Hibachi",
-  "note": "Tunnel counter also known as Hibachi Grill / California Live Grill \u2014 Chinese plates plus made-to-order hibachi and stir-fry.",
+  "note": "Tunnel counter also known as Hibachi Grill / California Live Grill — Chinese plates plus made-to-order hibachi and stir-fry.",
   "tryit": "Hibachi chicken or steak, fried rice"
  },
  {
@@ -4279,7 +4279,7 @@
    "quick"
   ],
   "type": "American",
-  "note": "Caf\u00e9 lunch.",
+  "note": "Café lunch.",
   "tryit": "Lunch plate"
  },
  {
@@ -4967,7 +4967,7 @@
    "business"
   ],
   "type": "Tex-Mex",
-  "note": "Tex-Mex at GreenStreet \u2014 a lunch spot for the office crowd and a pre-game stop before Toyota Center events.",
+  "note": "Tex-Mex at GreenStreet — a lunch spot for the office crowd and a pre-game stop before Toyota Center events.",
   "tryit": "Fajitas, enchiladas"
  },
  {
@@ -5036,7 +5036,7 @@
    "casual"
   ],
   "type": "Hotel Bar",
-  "note": "The Moxy Houston Downtown's lobby bar on Bar Row \u2014 check-in doubles as the bar, with driftwood tables and a mechanical bull.",
+  "note": "The Moxy Houston Downtown's lobby bar on Bar Row — check-in doubles as the bar, with driftwood tables and a mechanical bull.",
   "tryit": "Signature cocktail (hotel guests get one at check-in)"
  },
  {
@@ -5166,7 +5166,7 @@
    "group"
   ],
   "type": "Italian",
-  "note": "Pizza al taglio counter at Bravery Chef Hall \u2014 three-day-fermented dough, light and crispy.",
+  "note": "Pizza al taglio counter at Bravery Chef Hall — three-day-fermented dough, light and crispy.",
   "tryit": "Pizza al taglio"
  },
  {
@@ -5236,7 +5236,7 @@
    "spicy"
   ],
   "type": "Cajun",
-  "note": "Casual Cajun counter at Texas & Fannin \u2014 breakfast through late night on weekends. Busy at noon, so order ahead.",
+  "note": "Casual Cajun counter at Texas & Fannin — breakfast through late night on weekends. Busy at noon, so order ahead.",
   "tryit": "Gumbo, shrimp po' boy, boudin balls, beignets"
  },
  {
@@ -5326,7 +5326,7 @@
    "group"
   ],
   "type": "Cocktail Bar",
-  "note": "Upstairs cocktail lounge in the Rice Hotel with a terrace over Texas Ave \u2014 small plates, happy-hour cocktails. Sometimes booked for private events, so call ahead.",
+  "note": "Upstairs cocktail lounge in the Rice Hotel with a terrace over Texas Ave — small plates, happy-hour cocktails. Sometimes booked for private events, so call ahead.",
   "tryit": "Cocktails on the terrace"
  },
  {
@@ -5369,7 +5369,7 @@
    "nightlife"
   ],
   "type": "Cocktail Bar",
-  "note": "Speakeasy behind a secret door off the C. Baldwin's Lobby Bar \u2014 premium cocktails, champagne and caviar bites. Hours vary, so call ahead.",
+  "note": "Speakeasy behind a secret door off the C. Baldwin's Lobby Bar — premium cocktails, champagne and caviar bites. Hours vary, so call ahead.",
   "tryit": "Champagne and truffled grilled cheese"
  },
  {
@@ -5393,7 +5393,7 @@
    "nightlife"
   ],
   "type": "Cuban",
-  "note": "Cuban caf\u00e9 in the Bank of America Tower \u2014 Cubanos, ropa vieja, mojitos and live music some nights.",
+  "note": "Cuban café in the Bank of America Tower — Cubanos, ropa vieja, mojitos and live music some nights.",
   "tryit": "Cubano, ropa vieja, mojito"
  },
  {
@@ -5440,7 +5440,7 @@
    "group"
   ],
   "type": "Wine Bar",
-  "note": "Self-pour wine bar in EaDo \u2014 dozens of wines on tap by the ounce, a retail shop and Gulf Coast plates.",
+  "note": "Self-pour wine bar in EaDo — dozens of wines on tap by the ounce, a retail shop and Gulf Coast plates.",
   "tryit": "Self-serve wine taps, fried oysters"
  },
  {
@@ -5462,7 +5462,7 @@
    "group"
   ],
   "type": "Tex-Mex",
-  "note": "Warehouse District institution behind a red door \u2014 Tex-Mex, a funky patio and live music.",
+  "note": "Warehouse District institution behind a red door — Tex-Mex, a funky patio and live music.",
   "tryit": "Green-chile-and-potato soup"
  },
  {
@@ -5484,7 +5484,7 @@
    "group"
   ],
   "type": "New American",
-  "note": "EaDo bistro with a Michelin Bib Gourmand \u2014 natural wine, cider and bold small plates.",
+  "note": "EaDo bistro with a Michelin Bib Gourmand — natural wine, cider and bold small plates.",
   "tryit": "Nancy Cakes, the burger"
  },
  {
@@ -5850,7 +5850,7 @@
    "group"
   ],
   "type": "Bar",
-  "note": "Big backyard sports bar \u2014 the Astros gameday hangout.",
+  "note": "Big backyard sports bar — the Astros gameday hangout.",
   "tryit": "Tuesday hermit-crab races"
  },
  {
@@ -5914,7 +5914,7 @@
    "date"
   ],
   "type": "Bar",
-  "note": "Restored 1903 bungalow \u2014 coffee by day, wine and brunch, big patio.",
+  "note": "Restored 1903 bungalow — coffee by day, wine and brunch, big patio.",
   "tryit": "Thursday steak night"
  },
  {
@@ -6126,7 +6126,7 @@
    "date"
   ],
   "type": "Tex-Mex",
-  "note": "Where Mama Ninfa popularized fajitas in 1973 \u2014 the East End's Tex-Mex landmark.",
+  "note": "Where Mama Ninfa popularized fajitas in 1973 — the East End's Tex-Mex landmark.",
   "tryit": "Beef fajitas and the Ninfarita"
  },
  {
@@ -6258,7 +6258,7 @@
    "group"
   ],
   "type": "Wine Bar",
-  "note": "Laid-back warehouse wine bar from a 13 Celsius co-founder \u2014 most bottles $50 or less.",
+  "note": "Laid-back warehouse wine bar from a 13 Celsius co-founder — most bottles $50 or less.",
   "tryit": "A bottle off the chalkboard and the pasta"
  },
  {
@@ -6280,7 +6280,7 @@
   ],
   "type": "Burgers",
   "note": "Walk-up burger window open since 1963.",
-  "tryit": "Champ cheeseburger with jalape\u00f1os"
+  "tryit": "Champ cheeseburger with jalapeños"
  },
  {
   "id": 328,
@@ -6327,7 +6327,7 @@
    "drinks"
   ],
   "type": "Cocktail Bar",
-  "note": "Hidden speakeasy tucked inside City Cellars at East River; happy hour Thu\u2013Sat 6\u20138pm.",
+  "note": "Hidden speakeasy tucked inside City Cellars at East River; happy hour Thu–Sat 6–8pm.",
   "tryit": "Ask the bartender for something off-menu"
  },
  {
@@ -6406,7 +6406,7 @@
    "sports"
   ],
   "type": "Brewery",
-  "note": "Three-story Sawyer Yards brewery (the old Buffalo Bayou Brewing building) with a rooftop skyline view; happy hour weekdays 3\u20136pm.",
+  "note": "Three-story Sawyer Yards brewery (the old Buffalo Bayou Brewing building) with a rooftop skyline view; happy hour weekdays 3–6pm.",
   "tryit": "A Tejas Negra on the roof"
  },
  {
@@ -6709,7 +6709,7 @@
    "client"
   ],
   "type": "Coffee Shop",
-  "note": "Lobby caf\u00e9-bar at the Thompson Houston: specialty coffee and pastries by day, espresso martinis later.",
+  "note": "Lobby café-bar at the Thompson Houston: specialty coffee and pastries by day, espresso martinis later.",
   "tryit": "An espresso martini"
  },
  {
@@ -6804,7 +6804,7 @@
    "date"
   ],
   "type": "Mexican",
-  "note": "Modern Mexican at Regent Square with an upstairs outdoor bar; weekend brunch and weekday happy hour 2\u20136pm.",
+  "note": "Modern Mexican at Regent Square with an upstairs outdoor bar; weekend brunch and weekday happy hour 2–6pm.",
   "tryit": "Tacos and a tequila flight"
  },
  {
@@ -6924,7 +6924,7 @@
    "music"
   ],
   "type": "Bar",
-  "note": "Big Midtown cocktail patio and party garden \u2014 four bars in one, lively on game days and weekends.",
+  "note": "Big Midtown cocktail patio and party garden — four bars in one, lively on game days and weekends.",
   "tryit": "Cocktails on the patio"
  },
  {
@@ -7412,6 +7412,503 @@
   ],
   "type": "Restaurant",
   "note": "Mexican restaurant.",
+  "tryit": ""
+ },
+ {
+  "id": 383,
+  "name": "Jethro's Cocktail Lounge",
+  "address": "95 Tuam St, Houston, TX",
+  "tunnel": null,
+  "cuisines": [
+   "Cocktails"
+  ],
+  "meals": [
+   "Happy Hour",
+   "Late Night"
+  ],
+  "price": 2,
+  "vibes": [
+   "drinks",
+   "nightlife"
+  ],
+  "type": "Cocktail Bar",
+  "note": "Cocktails.",
+  "tryit": ""
+ },
+ {
+  "id": 384,
+  "name": "Warehouse Live Midtown",
+  "address": "2600 Travis St, Houston, TX",
+  "tunnel": null,
+  "cuisines": [
+   "Rooftop Bar"
+  ],
+  "meals": [
+   "Happy Hour",
+   "Late Night"
+  ],
+  "price": 2,
+  "vibes": [
+   "drinks",
+   "nightlife"
+  ],
+  "type": "Rooftop Bar",
+  "note": "Rooftop Bar.",
+  "tryit": ""
+ },
+ {
+  "id": 385,
+  "name": "Louchi Lounge & Bistro",
+  "address": "2621 Milam St, Houston, TX",
+  "tunnel": null,
+  "cuisines": [
+   "Lounge"
+  ],
+  "meals": [
+   "Happy Hour",
+   "Late Night"
+  ],
+  "price": 2,
+  "vibes": [
+   "drinks",
+   "nightlife"
+  ],
+  "type": "Lounge",
+  "note": "Lounge.",
+  "tryit": ""
+ },
+ {
+  "id": 386,
+  "name": "Pour Behavior",
+  "address": "2211 Travis St, Houston, TX",
+  "tunnel": null,
+  "cuisines": [
+   "Bar"
+  ],
+  "meals": [
+   "Happy Hour",
+   "Late Night"
+  ],
+  "price": 2,
+  "vibes": [
+   "drinks",
+   "nightlife"
+  ],
+  "type": "Bar",
+  "note": "Bar.",
+  "tryit": ""
+ },
+ {
+  "id": 387,
+  "name": "Two Headed Dog",
+  "address": "3100 Fannin St, Houston, TX",
+  "tunnel": null,
+  "cuisines": [
+   "Pub"
+  ],
+  "meals": [
+   "Happy Hour",
+   "Late Night"
+  ],
+  "price": 2,
+  "vibes": [
+   "drinks",
+   "nightlife"
+  ],
+  "type": "Pub",
+  "note": "Pub.",
+  "tryit": ""
+ },
+ {
+  "id": 388,
+  "name": "Shoeshine Charley's Big Top Lounge",
+  "address": "3714 Main St, Houston, TX",
+  "tunnel": null,
+  "cuisines": [
+   "Dive Bar"
+  ],
+  "meals": [
+   "Happy Hour",
+   "Late Night"
+  ],
+  "price": 2,
+  "vibes": [
+   "drinks",
+   "nightlife"
+  ],
+  "type": "Lounge",
+  "note": "Dive Bar.",
+  "tryit": ""
+ },
+ {
+  "id": 389,
+  "name": "Unicorn Disco",
+  "address": "2416 Brazos St, Houston, TX",
+  "tunnel": null,
+  "cuisines": [
+   "Bar"
+  ],
+  "meals": [
+   "Happy Hour",
+   "Late Night"
+  ],
+  "price": 2,
+  "vibes": [
+   "drinks",
+   "nightlife"
+  ],
+  "type": "Bar",
+  "note": "Bar.",
+  "tryit": ""
+ },
+ {
+  "id": 390,
+  "name": "The Alley Kat Bar & Lounge",
+  "address": "3718 Main St, Houston, TX",
+  "tunnel": null,
+  "cuisines": [
+   "Bar"
+  ],
+  "meals": [
+   "Happy Hour",
+   "Late Night"
+  ],
+  "price": 2,
+  "vibes": [
+   "drinks",
+   "nightlife"
+  ],
+  "type": "Bar",
+  "note": "Bar.",
+  "tryit": ""
+ },
+ {
+  "id": 391,
+  "name": "Wonder Bar",
+  "address": "2416 Brazos St, Houston, TX",
+  "tunnel": null,
+  "cuisines": [
+   "Bar"
+  ],
+  "meals": [
+   "Happy Hour",
+   "Late Night"
+  ],
+  "price": 2,
+  "vibes": [
+   "drinks",
+   "nightlife"
+  ],
+  "type": "Bar",
+  "note": "Bar.",
+  "tryit": ""
+ },
+ {
+  "id": 392,
+  "name": "77 Degrees",
+  "address": "2416 Brazos St, Houston, TX",
+  "tunnel": null,
+  "cuisines": [
+   "Rooftop Bar"
+  ],
+  "meals": [
+   "Happy Hour",
+   "Late Night"
+  ],
+  "price": 2,
+  "vibes": [
+   "drinks",
+   "nightlife"
+  ],
+  "type": "Rooftop Bar",
+  "note": "Rooftop Bar.",
+  "tryit": ""
+ },
+ {
+  "id": 393,
+  "name": "Gloria's Latin Cuisine",
+  "address": "2616 Louisiana St, Houston, TX",
+  "tunnel": null,
+  "cuisines": [
+   "Latin"
+  ],
+  "meals": [
+   "Lunch",
+   "Dinner"
+  ],
+  "price": 2,
+  "vibes": [
+   "casual"
+  ],
+  "type": "Restaurant",
+  "note": "Latin restaurant.",
+  "tryit": ""
+ },
+ {
+  "id": 394,
+  "name": "Josephine's Gulf Coast Tradition",
+  "address": "1209 Caroline St, Houston, TX",
+  "tunnel": null,
+  "cuisines": [
+   "Gulf Coast"
+  ],
+  "meals": [
+   "Lunch",
+   "Dinner"
+  ],
+  "price": 2,
+  "vibes": [
+   "casual"
+  ],
+  "type": "Restaurant",
+  "note": "Gulf Coast restaurant.",
+  "tryit": ""
+ },
+ {
+  "id": 395,
+  "name": "Oporto Fooding House & Wine",
+  "address": "125 W Gray St, Houston, TX",
+  "tunnel": null,
+  "cuisines": [
+   "Portuguese"
+  ],
+  "meals": [
+   "Lunch",
+   "Dinner"
+  ],
+  "price": 2,
+  "vibes": [
+   "casual"
+  ],
+  "type": "Restaurant",
+  "note": "Portuguese restaurant.",
+  "tryit": ""
+ },
+ {
+  "id": 396,
+  "name": "Mai's Restaurant",
+  "address": "3403 Milam St, Houston, TX",
+  "tunnel": null,
+  "cuisines": [
+   "Vietnamese"
+  ],
+  "meals": [
+   "Lunch",
+   "Dinner"
+  ],
+  "price": 2,
+  "vibes": [
+   "casual"
+  ],
+  "type": "Restaurant",
+  "note": "Vietnamese restaurant.",
+  "tryit": ""
+ },
+ {
+  "id": 397,
+  "name": "Koe Wetzel's Riot Room",
+  "address": "2416 Brazos St, Houston, TX",
+  "tunnel": null,
+  "cuisines": [
+   "Bar"
+  ],
+  "meals": [
+   "Happy Hour",
+   "Late Night"
+  ],
+  "price": 2,
+  "vibes": [
+   "drinks",
+   "nightlife"
+  ],
+  "type": "Bar",
+  "note": "Bar.",
+  "tryit": ""
+ },
+ {
+  "id": 398,
+  "name": "Private Client",
+  "address": "2118 Lamar St, Houston, TX",
+  "tunnel": null,
+  "cuisines": [
+   "Cocktails"
+  ],
+  "meals": [
+   "Happy Hour",
+   "Late Night"
+  ],
+  "price": 2,
+  "vibes": [
+   "drinks",
+   "nightlife"
+  ],
+  "type": "Cocktail Bar",
+  "note": "Cocktails.",
+  "tryit": ""
+ },
+ {
+  "id": 399,
+  "name": "OKRA Charity Saloon",
+  "address": "924 Congress St, Houston, TX",
+  "tunnel": null,
+  "cuisines": [
+   "Bar"
+  ],
+  "meals": [
+   "Happy Hour",
+   "Late Night"
+  ],
+  "price": 2,
+  "vibes": [
+   "drinks",
+   "nightlife"
+  ],
+  "type": "Bar",
+  "note": "Bar.",
+  "tryit": ""
+ },
+ {
+  "id": 400,
+  "name": "Best Regards",
+  "address": "222 W 11th St, Houston, TX",
+  "tunnel": null,
+  "cuisines": [
+   "Cocktails"
+  ],
+  "meals": [
+   "Happy Hour",
+   "Late Night"
+  ],
+  "price": 2,
+  "vibes": [
+   "drinks",
+   "nightlife"
+  ],
+  "type": "Cocktail Bar",
+  "note": "Cocktails.",
+  "tryit": ""
+ },
+ {
+  "id": 401,
+  "name": "Moon Rabbit",
+  "address": "605 W 19th St, Houston, TX",
+  "tunnel": null,
+  "cuisines": [
+   "Vietnamese"
+  ],
+  "meals": [
+   "Lunch",
+   "Dinner"
+  ],
+  "price": 2,
+  "vibes": [
+   "casual"
+  ],
+  "type": "Restaurant",
+  "note": "Vietnamese restaurant.",
+  "tryit": ""
+ },
+ {
+  "id": 402,
+  "name": "Superica",
+  "address": "719 W 18th St, Houston, TX",
+  "tunnel": null,
+  "cuisines": [
+   "Tex-Mex"
+  ],
+  "meals": [
+   "Lunch",
+   "Dinner"
+  ],
+  "price": 2,
+  "vibes": [
+   "casual"
+  ],
+  "type": "Restaurant",
+  "note": "Tex-Mex restaurant.",
+  "tryit": ""
+ },
+ {
+  "id": 403,
+  "name": "Field & Tides",
+  "address": "705 E 11th St, Houston, TX",
+  "tunnel": null,
+  "cuisines": [
+   "Southern"
+  ],
+  "meals": [
+   "Lunch",
+   "Dinner"
+  ],
+  "price": 2,
+  "vibes": [
+   "casual"
+  ],
+  "type": "Restaurant",
+  "note": "Southern restaurant.",
+  "tryit": ""
+ },
+ {
+  "id": 404,
+  "name": "Bar 5306",
+  "address": "5306 Washington Ave, Houston, TX",
+  "tunnel": null,
+  "cuisines": [
+   "Bar"
+  ],
+  "meals": [
+   "Happy Hour",
+   "Late Night"
+  ],
+  "price": 2,
+  "vibes": [
+   "drinks",
+   "nightlife"
+  ],
+  "type": "Bar",
+  "note": "Bar.",
+  "tryit": ""
+ },
+ {
+  "id": 405,
+  "name": "Sugar Room",
+  "address": "5120 Washington Ave, Houston, TX",
+  "tunnel": null,
+  "cuisines": [
+   "Bar"
+  ],
+  "meals": [
+   "Happy Hour",
+   "Late Night"
+  ],
+  "price": 2,
+  "vibes": [
+   "drinks",
+   "nightlife"
+  ],
+  "type": "Bar",
+  "note": "Bar.",
+  "tryit": ""
+ },
+ {
+  "id": 406,
+  "name": "Lincoln Bar & Kitchen",
+  "address": "5110 Washington Ave, Houston, TX",
+  "tunnel": null,
+  "cuisines": [
+   "Bar"
+  ],
+  "meals": [
+   "Happy Hour",
+   "Late Night"
+  ],
+  "price": 2,
+  "vibes": [
+   "drinks",
+   "nightlife"
+  ],
+  "type": "Bar",
+  "note": "Bar.",
   "tryit": ""
  }
 ]
