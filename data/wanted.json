@@ -1651,6 +1651,35 @@
 "n": "Dish Society Heights",
 "k": "rest",
 "c": "Farm-to-table American"
+},
+{
+"n": "Eagle Houston",
+"k": "bar",
+"c": "Gay bar & nightclub",
+"a": "611 Hyde Park Blvd"
+},
+{
+"n": "Bar 5015",
+"k": "bar",
+"c": "Bar & patio",
+"a": "5015 Almeda Rd"
+},
+{
+"n": "Axelrad",
+"k": "bar",
+"c": "Beer garden & hammocks",
+"a": "1517 Alabama St"
+},
+{
+"n": "Blacksmith",
+"k": "coffee",
+"c": "Coffee & breakfast",
+"a": "1018 Westheimer Rd"
+},
+{
+"n": "Prospect Park Midtown",
+"k": "bar",
+"c": "Sports bar"
 }
 ]
 }
