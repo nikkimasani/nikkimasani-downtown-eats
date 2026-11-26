@@ -1599,6 +1599,63 @@
 "k": "rest",
 "c": "Burgers",
 "a": "5403 Kirby Dr"
+},
+{
+"n": "Capone's Oven & Bar",
+"k": "bar",
+"c": "Pizza, cocktails & live jazz",
+"a": "2303 Richmond Ave"
+},
+{
+"n": "Stone's Throw",
+"k": "bar",
+"c": "Cocktail bar",
+"a": "1417 Westheimer Rd"
+},
+{
+"n": "Fedora Lounge",
+"k": "bar",
+"c": "Lounge",
+"a": "2726 Bissonnet St"
+},
+{
+"n": "Burger-chan Heights",
+"k": "rest",
+"c": "Burgers",
+"a": "506 Yale St"
+},
+{
+"n": "Greenway Coffee",
+"k": "coffee",
+"c": "Coffee",
+"a": "3 Greenway Plaza"
+},
+{
+"n": "Burger Bodega",
+"k": "rest",
+"c": "Burgers & chopped cheese",
+"a": "4520 Washington Ave"
+},
+{
+"n": "Jodas",
+"k": "rest",
+"c": "Burgers",
+"a": "1000 Main St"
+},
+{
+"n": "Killer Burger Sawyer Heights",
+"k": "rest",
+"c": "Burgers"
+},
+{
+"n": "Simone on Sunset",
+"k": "rest",
+"c": "Global"
+},
+{
+"n": "Johnny's Gold Brick",
+"k": "bar",
+"c": "Cocktail bar"
 }
 ]
 }
