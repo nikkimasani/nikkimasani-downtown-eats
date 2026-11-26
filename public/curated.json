@@ -9521,5 +9521,26 @@
   "type": "Restaurant",
   "note": "Soul Food restaurant.",
   "tryit": ""
+ },
+ {
+  "id": 486,
+  "name": "93' Til",
+  "address": "1601 W Main St, Houston, TX",
+  "tunnel": null,
+  "cuisines": [
+   "Bar"
+  ],
+  "meals": [
+   "Happy Hour",
+   "Late Night"
+  ],
+  "price": 2,
+  "vibes": [
+   "drinks",
+   "nightlife"
+  ],
+  "type": "Bar",
+  "note": "Bar.",
+  "tryit": ""
  }
 ]

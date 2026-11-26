@@ -2012,6 +2012,14 @@
       "source": "US Census geocoder",
       "checked": "2026-11-26",
       "notInDirectory": true
+    },
+    "93' Til": {
+      "street": "1601 W Main St",
+      "lat": 29.736031,
+      "lng": -95.399334,
+      "source": "US Census geocoder",
+      "checked": "2026-11-26",
+      "notInDirectory": true
     }
   }
 }
