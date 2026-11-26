@@ -3039,6 +3039,78 @@
       "checked": "2026-11-26",
       "notInDirectory": true
     },
+    "Aya Sushi": {
+      "street": "5407 Bellaire Blvd, Bellaire",
+      "lat": 29.705569,
+      "lng": -95.474266,
+      "source": "US Census geocoder",
+      "checked": "2026-11-26",
+      "notInDirectory": true
+    },
+    "Betsy's at Evelyn's Park": {
+      "street": "4400 Bellaire Blvd, Bellaire",
+      "lat": 29.705951,
+      "lng": -95.449507,
+      "source": "US Census geocoder",
+      "checked": "2026-11-26",
+      "notInDirectory": true
+    },
+    "Blood Bros BBQ": {
+      "street": "5425 Bellaire Blvd, Bellaire",
+      "lat": 29.705566,
+      "lng": -95.474402,
+      "source": "US Census geocoder",
+      "checked": "2026-11-26",
+      "notInDirectory": true
+    },
+    "Lankford's Bellaire": {
+      "street": "5208 Bissonnet St, Bellaire",
+      "lat": 29.706392,
+      "lng": -95.470509,
+      "source": "US Census geocoder",
+      "checked": "2026-11-26",
+      "notInDirectory": true
+    },
+    "ZOA Moroccan Kitchen Bellaire": {
+      "street": "6700 S Rice Ave, Bellaire",
+      "lat": 29.706936,
+      "lng": -95.468009,
+      "source": "US Census geocoder",
+      "checked": "2026-11-26",
+      "notInDirectory": true
+    },
+    "Enoteca Rossa": {
+      "street": "4566 Bissonnet St, Bellaire",
+      "lat": 29.714481,
+      "lng": -95.454611,
+      "source": "US Census geocoder",
+      "checked": "2026-11-26",
+      "notInDirectory": true
+    },
+    "Rossa Room": {
+      "street": "4566 Bissonnet St, Bellaire",
+      "lat": 29.714481,
+      "lng": -95.454611,
+      "source": "US Census geocoder",
+      "checked": "2026-11-26",
+      "notInDirectory": true
+    },
+    "Costa Brava Bistro": {
+      "street": "5115 Bellaire Blvd, Bellaire",
+      "lat": 29.705668,
+      "lng": -95.468295,
+      "source": "US Census geocoder",
+      "checked": "2026-11-26",
+      "notInDirectory": true
+    },
+    "JOEY Uptown": {
+      "street": "5045 Westheimer Rd",
+      "lat": 29.740688,
+      "lng": -95.461644,
+      "source": "US Census geocoder",
+      "checked": "2026-11-26",
+      "notInDirectory": true
+    },
     "Capone's Oven & Bar": {
       "street": "2303 Richmond Ave",
       "lat": 29.734126,
