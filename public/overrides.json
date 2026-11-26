@@ -3166,6 +3166,30 @@
       "source": "US Census geocoder",
       "checked": "2026-11-26",
       "notInDirectory": true
+    },
+    "Slowpokes Upper Kirby": {
+      "street": "2925 Richmond Ave",
+      "lat": 29.733972,
+      "lng": -95.422491,
+      "source": "US Census geocoder",
+      "checked": "2026-11-26",
+      "notInDirectory": true
+    },
+    "Slowpokes West U": {
+      "street": "6725 Stella Link Rd",
+      "lat": 29.707058,
+      "lng": -95.440161,
+      "source": "US Census geocoder",
+      "checked": "2026-11-26",
+      "notInDirectory": true
+    },
+    "Dish Society Heights": {
+      "street": "11th St Bikeway",
+      "lat": 29.790498,
+      "lng": -95.398727,
+      "source": "OpenStreetMap Nominatim",
+      "checked": "2026-11-26",
+      "notInDirectory": true
     }
   }
 }

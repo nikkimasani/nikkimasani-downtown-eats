@@ -12496,5 +12496,67 @@
   "type": "Restaurant",
   "note": "Burgers restaurant.",
   "tryit": ""
+ },
+ {
+  "id": 629,
+  "name": "Slowpokes Upper Kirby",
+  "address": "2925 Richmond Ave, Houston, TX",
+  "tunnel": null,
+  "cuisines": [
+   "Coffee & café"
+  ],
+  "meals": [
+   "Breakfast",
+   "Lunch"
+  ],
+  "price": 2,
+  "vibes": [
+   "coffee",
+   "work"
+  ],
+  "type": "Coffee Shop",
+  "note": "Coffee & café.",
+  "tryit": ""
+ },
+ {
+  "id": 630,
+  "name": "Slowpokes West U",
+  "address": "6725 Stella Link Rd, Houston, TX",
+  "tunnel": null,
+  "cuisines": [
+   "Coffee & café"
+  ],
+  "meals": [
+   "Breakfast",
+   "Lunch"
+  ],
+  "price": 2,
+  "vibes": [
+   "coffee",
+   "work"
+  ],
+  "type": "Coffee Shop",
+  "note": "Coffee & café.",
+  "tryit": ""
+ },
+ {
+  "id": 631,
+  "name": "Dish Society Heights",
+  "address": "11th St Bikeway, Houston, TX",
+  "tunnel": null,
+  "cuisines": [
+   "Farm-to-table American"
+  ],
+  "meals": [
+   "Lunch",
+   "Dinner"
+  ],
+  "price": 2,
+  "vibes": [
+   "casual"
+  ],
+  "type": "Restaurant",
+  "note": "Farm-to-table American restaurant.",
+  "tryit": ""
  }
 ]
