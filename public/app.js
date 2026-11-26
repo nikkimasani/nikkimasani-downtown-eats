@@ -656,7 +656,9 @@ function showBldg(l) {
     body = nt && nt.arr.length ? `<div class="sc-doing">${nt.arr.map((a) => `<span class="sc-tr"><i style="background:${a.color}"></i>${esc(a.line)} → ${esc(a.toward)} · <b>${a.min <= 0 ? 'now' : a.min + ' min'}</b></span>`).join('')}</div>` : `<div class="sc-doing">Live arrival times show here when METRO's live feed is connected.</div>`;
   } else {
     const facts = [l.h ? `${l.h} m tall` : '', l.year ? `built ${l.year}` : ''].filter(Boolean).join(' · ');
+    const ABOUT = { 'Williams Tower': 'Philip Johnson’s Uptown landmark — its rooftop beacon sweeps the sky every night', 'The Waterwall': '64-ft horseshoe fountain in Gerald D. Hines Waterwall Park, right below Williams Tower' }, ab = Object.keys(ABOUT).find((k) => (l.n || '').startsWith(k));
     body = `<div class="sc-doing">${esc(facts || 'Downtown building')}</div>` + (l.places?.length ? `<div class="sc-acts">${l.places.slice(0, 6).map((p) => `<button data-bp="${p.id}">${esc(p.name)} ›</button>`).join('')}</div>` : `<div class="sc-doing" style="opacity:.7">No restaurants or bars listed inside.</div>`);
+    if (ab) body += `<div class="sc-doing">${esc(ABOUT[ab])}</div>`;
   }
   b.innerHTML = `<div class="sc-top"><span class="sc-av">${l.station ? '🚊' : l.type === 'parking' || l.type === 'garage' ? '🅿️' : l.type === 'hotel' ? '🏨' : l.type === 'church' ? '⛪' : '🏙️'}</span><div class="sc-who"><b>${esc(l.station ? l.sname + ' Station' : l.n)}</b><small>${esc(l.station ? l.n.replace(/^🚊 [^·]+· /, '') : (l.places?.length ? `${l.places.length} place${l.places.length > 1 ? 's' : ''} inside` : 'Tap a pin to see a restaurant'))}</small></div><button class="sc-x" data-sim="x" aria-label="Close">✕</button></div>${body}`;
   b.hidden = false; buzz(6);
@@ -774,7 +776,9 @@ function findSuggestions(q) {
 function runFind(item) {
   $('#findBox').classList.remove('on'); $('#findIn').blur();
   if (item.st) { const res = city.goTo(item.st); if (res) showFound(item.st.label, res.near); else toast("Couldn't place that on the map"); }
-  else if (item.r) { $('#mapFound').classList.remove('on'); if (!city.sceneOk(item.r)) setScene(item.r.day ? 'day' : 'night', true); city.setPick(item.r.id); lastFound = item.r; $('#findIn').value = item.r.name; toast(`📍 ${item.r.name} — tap ROUTE for walking directions`); }
+  else if (item.r) { const r = item.r; $('#mapFound').classList.remove('on'); lastFound = r; $('#findIn').value = r.name;
+    if (city.offMap?.has(r.id) || !city.spots.some((s) => s.places.some((p) => p.id === r.id))) { openSheet(r.id); toast(`${r.name} is past the edge of the drawn map — opening its card`); return; }
+    if (!city.sceneOk(r)) setScene(r.day ? 'day' : 'night', true); city.setPick(r.id); toast(`📍 ${r.name} — tap the bouncing pin, or ROUTE for walking directions`); }
 }
 $('#mapFind').onclick = () => { $('#moreBtn').click(); $('#findIn').focus(); };
 $('#findIn').addEventListener('focus', () => { $('#findBox').classList.add('on'); renderFind(); });
