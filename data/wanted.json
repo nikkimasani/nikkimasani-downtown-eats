@@ -1634,6 +1634,23 @@
 "n": "Johnny's Gold Brick",
 "k": "bar",
 "c": "Cocktail bar"
+},
+{
+"n": "Slowpokes Upper Kirby",
+"k": "coffee",
+"c": "Coffee & café",
+"a": "2925 Richmond Ave"
+},
+{
+"n": "Slowpokes West U",
+"k": "coffee",
+"c": "Coffee & café",
+"a": "6725 Stella Link Rd"
+},
+{
+"n": "Dish Society Heights",
+"k": "rest",
+"c": "Farm-to-table American"
 }
 ]
 }
