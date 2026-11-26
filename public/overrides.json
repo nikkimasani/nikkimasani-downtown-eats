@@ -3550,6 +3550,78 @@
       "source": "US Census geocoder",
       "checked": "2026-11-26",
       "notInDirectory": true
+    },
+    "Marfreless": {
+      "street": "2006 Peden St",
+      "lat": 29.752376,
+      "lng": -95.408478,
+      "source": "US Census geocoder",
+      "checked": "2026-11-26",
+      "notInDirectory": true
+    },
+    "Fluff Bake Bar": {
+      "street": "1701 W 15th St",
+      "lat": 29.797895,
+      "lng": -95.413297,
+      "source": "US Census geocoder",
+      "checked": "2026-11-26",
+      "notInDirectory": true
+    },
+    "Hughie's Tavern & Viet Grill": {
+      "street": "1802 W 18th St",
+      "lat": 29.801571,
+      "lng": -95.431758,
+      "source": "US Census geocoder",
+      "checked": "2026-11-26",
+      "notInDirectory": true
+    },
+    "Hughie's Heights": {
+      "street": "4721 N Main St",
+      "lat": 29.797734,
+      "lng": -95.382412,
+      "source": "US Census geocoder",
+      "checked": "2026-11-26",
+      "notInDirectory": true
+    },
+    "Monkey's Tail": {
+      "street": "5802 Fulton St",
+      "lat": 29.81169,
+      "lng": -95.369647,
+      "source": "US Census geocoder",
+      "checked": "2026-11-26",
+      "notInDirectory": true
+    },
+    "Clarkwood": {
+      "street": "3201 Allen Pkwy",
+      "lat": 29.760983,
+      "lng": -95.400651,
+      "source": "US Census geocoder",
+      "checked": "2026-11-26",
+      "notInDirectory": true
+    },
+    "Mr. Peeples Seafood + Steak": {
+      "street": "1911 Bagby St",
+      "lat": 29.753206,
+      "lng": -95.375428,
+      "source": "US Census geocoder",
+      "checked": "2026-11-26",
+      "notInDirectory": true
+    },
+    "MAM's House of Ice": {
+      "street": "1040 W Cavalcade St",
+      "lat": 29.804012,
+      "lng": -95.385143,
+      "source": "US Census geocoder",
+      "checked": "2026-11-26",
+      "notInDirectory": true
+    },
+    "Dolce Neve": {
+      "street": "4721 N Main St",
+      "lat": 29.797734,
+      "lng": -95.382412,
+      "source": "US Census geocoder",
+      "checked": "2026-11-26",
+      "notInDirectory": true
     }
   }
 }
