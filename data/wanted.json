@@ -1831,6 +1831,71 @@
 "k": "bar",
 "c": "Heights bar & game-day hangout",
 "a": "1119 W 20th St"
+},
+{
+"n": "Baso",
+"k": "rest",
+"c": "Basque live-fire",
+"a": "633 W 19th St"
+},
+{
+"n": "Camaraderie",
+"k": "rest",
+"c": "Refined American",
+"a": "608 W 11th St"
+},
+{
+"n": "Koyo Hand Roll Bar Heights",
+"k": "rest",
+"c": "Hand roll sushi",
+"a": "1835 N Shepherd Dr"
+},
+{
+"n": "Love Croissants Heights",
+"k": "coffee",
+"c": "Croissant bakery & drive-thru",
+"a": "801 W 16th St"
+},
+{
+"n": "Love Croissants Midtown",
+"k": "coffee",
+"c": "Croissant bakery",
+"a": "2808 Caroline St"
+},
+{
+"n": "Mack Allen's",
+"k": "rest",
+"c": "Steaks, sushi & seafood",
+"a": "4400 Post Oak Pkwy"
+},
+{
+"n": "Johnny Ritas Cocina y Cantina",
+"k": "rest",
+"c": "Mesquite-fired Mexican",
+"a": "5602 Fulton St"
+},
+{
+"n": "Hypsi",
+"k": "rest",
+"c": "Italian at Hotel Daphne",
+"a": "347 W 20th St"
+},
+{
+"n": "Oru",
+"k": "rest",
+"c": "Japanese a la carte sushi"
+},
+{
+"n": "Lo-Lo's Chicken & Waffles",
+"k": "rest",
+"c": "Chicken & waffles",
+"a": "3611 Gulf Fwy"
+},
+{
+"n": "The Address",
+"k": "bar",
+"c": "Restaurant, sports bar & pool",
+"a": "3333 Raleigh St"
 }
 ]
 }
