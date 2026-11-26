@@ -13707,5 +13707,214 @@
   "type": "Sports Bar",
   "note": "Chicago-style fried chicken & sports bar.",
   "tryit": ""
+ },
+ {
+  "id": 688,
+  "name": "Eureka Heights Brew Co",
+  "address": "941 W 18th St, Houston, TX",
+  "tunnel": null,
+  "cuisines": [
+   "Brewery taproom"
+  ],
+  "meals": [
+   "Happy Hour",
+   "Late Night"
+  ],
+  "price": 2,
+  "vibes": [
+   "drinks",
+   "nightlife"
+  ],
+  "type": "Bar",
+  "note": "Brewery taproom.",
+  "tryit": ""
+ },
+ {
+  "id": 689,
+  "name": "Platypus Brewing",
+  "address": "1902 Washington Ave, Houston, TX",
+  "tunnel": null,
+  "cuisines": [
+   "Brewery & kitchen"
+  ],
+  "meals": [
+   "Happy Hour",
+   "Late Night"
+  ],
+  "price": 2,
+  "vibes": [
+   "drinks",
+   "nightlife"
+  ],
+  "type": "Bar",
+  "note": "Brewery & kitchen.",
+  "tryit": ""
+ },
+ {
+  "id": 690,
+  "name": "Elder Son Brewing",
+  "address": "946 N Shepherd Dr, Houston, TX",
+  "tunnel": null,
+  "cuisines": [
+   "Brewery taproom"
+  ],
+  "meals": [
+   "Happy Hour",
+   "Late Night"
+  ],
+  "price": 2,
+  "vibes": [
+   "drinks",
+   "nightlife"
+  ],
+  "type": "Bar",
+  "note": "Brewery taproom.",
+  "tryit": ""
+ },
+ {
+  "id": 691,
+  "name": "Lucky's Pub Heights",
+  "address": "2520 Houston Ave, Houston, TX",
+  "tunnel": null,
+  "cuisines": [
+   "Sports pub"
+  ],
+  "meals": [
+   "Happy Hour",
+   "Late Night"
+  ],
+  "price": 2,
+  "vibes": [
+   "drinks",
+   "nightlife"
+  ],
+  "type": "Pub",
+  "note": "Sports pub.",
+  "tryit": ""
+ },
+ {
+  "id": 692,
+  "name": "Down House",
+  "address": "1801 Yale St, Houston, TX",
+  "tunnel": null,
+  "cuisines": [
+   "Heights brunch & bar"
+  ],
+  "meals": [
+   "Lunch",
+   "Dinner"
+  ],
+  "price": 2,
+  "vibes": [
+   "casual"
+  ],
+  "type": "Restaurant",
+  "note": "Heights brunch & bar restaurant.",
+  "tryit": ""
+ },
+ {
+  "id": 693,
+  "name": "Postino Heights",
+  "address": "642 Yale St, Houston, TX",
+  "tunnel": null,
+  "cuisines": [
+   "Wine cafe"
+  ],
+  "meals": [
+   "Happy Hour",
+   "Late Night"
+  ],
+  "price": 2,
+  "vibes": [
+   "drinks",
+   "nightlife"
+  ],
+  "type": "Wine Bar",
+  "note": "Wine cafe.",
+  "tryit": ""
+ },
+ {
+  "id": 694,
+  "name": "Baileson Brewing",
+  "address": "2322 Bissonnet St, Houston, TX",
+  "tunnel": null,
+  "cuisines": [
+   "Brewery taproom"
+  ],
+  "meals": [
+   "Happy Hour",
+   "Late Night"
+  ],
+  "price": 2,
+  "vibes": [
+   "drinks",
+   "nightlife"
+  ],
+  "type": "Bar",
+  "note": "Brewery taproom.",
+  "tryit": ""
+ },
+ {
+  "id": 695,
+  "name": "Bad Astronaut Brewing",
+  "address": "1519 Fulton St, Houston, TX",
+  "tunnel": null,
+  "cuisines": [
+   "Brewery taproom"
+  ],
+  "meals": [
+   "Happy Hour",
+   "Late Night"
+  ],
+  "price": 2,
+  "vibes": [
+   "drinks",
+   "nightlife"
+  ],
+  "type": "Bar",
+  "note": "Brewery taproom.",
+  "tryit": ""
+ },
+ {
+  "id": 696,
+  "name": "Black Page Brewing",
+  "address": "210 Glen Park St, Houston, TX",
+  "tunnel": null,
+  "cuisines": [
+   "Brewery taproom"
+  ],
+  "meals": [
+   "Happy Hour",
+   "Late Night"
+  ],
+  "price": 2,
+  "vibes": [
+   "drinks",
+   "nightlife"
+  ],
+  "type": "Bar",
+  "note": "Brewery taproom.",
+  "tryit": ""
+ },
+ {
+  "id": 697,
+  "name": "New Magnolia Brewing",
+  "address": "1616 Bevis St, Houston, TX",
+  "tunnel": null,
+  "cuisines": [
+   "Brewery taproom"
+  ],
+  "meals": [
+   "Happy Hour",
+   "Late Night"
+  ],
+  "price": 2,
+  "vibes": [
+   "drinks",
+   "nightlife"
+  ],
+  "type": "Bar",
+  "note": "Brewery taproom.",
+  "tryit": ""
  }
 ]
