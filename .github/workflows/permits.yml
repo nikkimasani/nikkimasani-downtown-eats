@@ -1,0 +1,30 @@
+name: Import permit-holding restaurants and bars
+# Adds restaurants and bars from the Texas mixed-beverage permit list that the map doesn't have yet.
+# Run by hand; dry=1 only writes data/permits-report.json so the list can be checked first.
+on:
+  workflow_dispatch:
+    inputs:
+      dry:
+        description: '1 = report only, 0 = add to the map'
+        default: '1'
+  push:
+    paths: ['scripts/permits-import.mjs']
+permissions:
+  contents: write
+concurrency: { group: wanted-spots, cancel-in-progress: false }
+jobs:
+  import:
+    runs-on: ubuntu-latest
+    steps:
+      - uses: actions/checkout@v4
+      - uses: actions/setup-node@v4
+        with: { node-version: 20 }
+      - run: node scripts/permits-import.mjs
+        env:
+          DRY: ${{ github.event.inputs.dry || '1' }}
+      - name: Commit if changed
+        run: |
+          git config user.name "downtown-eats-bot"
+          git config user.email "actions@users.noreply.github.com"
+          git add public/places.json public/curated.json public/overrides.json data/permits-report.json 2>/dev/null || true
+          git diff --cached --quiet || (git commit -m "Permit import ${{ github.event.inputs.dry == '0' && '(added)' || '(dry run)' }}" && (git push || (git pull --rebase -X theirs && git push)))
