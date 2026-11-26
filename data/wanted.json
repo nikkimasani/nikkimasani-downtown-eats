@@ -116,7 +116,8 @@
 {
 "n": "Bar No. 3",
 "k": "bar",
-"c": "Cocktails"
+"c": "Cocktails",
+"a": "3410 Montrose Blvd"
 },
 {
 "n": "On the Kirb",
@@ -132,7 +133,8 @@
 {
 "n": "Xolo",
 "k": "bar",
-"c": "Mexican"
+"c": "Mexican",
+"a": "223 Westheimer Rd"
 },
 {
 "n": "93' Til",
@@ -158,7 +160,8 @@
 {
 "n": "The Lymbar",
 "k": "bar",
-"c": "Bar"
+"c": "Bar",
+"a": "4201 Main St"
 },
 {
 "n": "Wonder Bar",
@@ -181,12 +184,14 @@
 {
 "n": "Ducky's Pizza & Tavern",
 "k": "rest",
-"c": "Pizza"
+"c": "Pizza",
+"a": "1927 Fairview St"
 },
 {
 "n": "R24 Rooftop Lounge",
 "k": "bar",
-"c": "Rooftop Bar"
+"c": "Rooftop Bar",
+"a": "1600 Lamar St"
 },
 {
 "n": "Gloria's Latin Cuisine",
@@ -203,7 +208,8 @@
 {
 "n": "Xiaolong Dumpling",
 "k": "rest",
-"c": "Chinese"
+"c": "Chinese",
+"a": "1901 Taft St"
 },
 {
 "n": "Dough Zone Dumpling House Midtown",
@@ -285,12 +291,14 @@
 {
 "n": "The Tipsy Sloth",
 "k": "bar",
-"c": "Bar"
+"c": "Bar",
+"a": "3517 Navigation Blvd"
 },
 {
 "n": "Lustre Pearl",
 "k": "bar",
-"c": "Bar"
+"c": "Bar",
+"a": "2016 Dallas St"
 },
 {
 "n": "Gotti's",
@@ -301,17 +309,13 @@
 {
 "n": "Cobos",
 "k": "rest",
-"c": "Mexican"
+"c": "Mexican",
+"a": "2012 Rusk St"
 },
 {
 "n": "Guard and Grace",
 "k": "rest",
 "c": "Steakhouse"
-},
-{
-"n": "Brisket & Rice",
-"k": "rest",
-"c": "BBQ"
 },
 {
 "n": "OKRA Charity Saloon",
@@ -387,17 +391,14 @@
 {
 "n": "Bar Daphne",
 "k": "bar",
-"c": "Cocktails"
-},
-{
-"n": "Wooster's Garden",
-"k": "bar",
-"c": "Bar"
+"c": "Cocktails",
+"a": "347 W 20th St"
 },
 {
 "n": "Botanic Beer Garden",
 "k": "bar",
-"c": "Beer Garden"
+"c": "Beer Garden",
+"a": "1920 Houston Ave"
 },
 {
 "n": "Moon Rabbit",
@@ -413,28 +414,20 @@
 {
 "n": "Jane & The Lion Bakehouse",
 "k": "coffee",
-"c": "Bakery"
+"c": "Bakery",
+"a": "4721 N Main St"
 },
 {
 "n": "Elliot's Table",
 "k": "rest",
-"c": "American"
+"c": "American",
+"a": "465 T C Jester Blvd"
 },
 {
 "n": "Star Rover",
 "k": "rest",
-"c": "American"
-},
-{
-"n": "Superica",
-"k": "rest",
-"c": "Tex-Mex",
-"a": "719 W 18th St"
-},
-{
-"n": "Calle Onze",
-"k": "rest",
-"c": "Mexican"
+"c": "American",
+"a": "1801 N Shepherd Dr"
 },
 {
 "n": "Rainbow Lodge",
@@ -494,7 +487,8 @@
 {
 "n": "NettBar",
 "k": "bar",
-"c": "Bar"
+"c": "Bar",
+"a": "4504 Nett St"
 },
 {
 "n": "Down the Street",
@@ -514,7 +508,8 @@
 {
 "n": "Urban Social",
 "k": "bar",
-"c": "Bar"
+"c": "Bar",
+"a": "3917 Richmond Ave"
 },
 {
 "n": "The Riot Cafe & Bar",
@@ -534,7 +529,8 @@
 {
 "n": "El Segundo Swim Club",
 "k": "bar",
-"c": "Bar"
+"c": "Bar",
+"a": "5180 Avenue L"
 },
 {
 "n": "The Kickback Bar",
@@ -554,7 +550,8 @@
 {
 "n": "Tacos La Sultana",
 "k": "rest",
-"c": "Tacos"
+"c": "Tacos",
+"a": "7011 Capitol St"
 },
 {
 "n": "Cochinita & Co",
@@ -564,7 +561,8 @@
 {
 "n": "Xela Coffee Roasters",
 "k": "coffee",
-"c": "Coffee"
+"c": "Coffee",
+"a": "4409 Canal St"
 },
 {
 "n": "Second Slice Sandwich Shop",
@@ -678,12 +676,14 @@
 {
 "n": "Les Givral's",
 "k": "rest",
-"c": "Vietnamese"
+"c": "Vietnamese",
+"a": "2704 Milam St"
 },
 {
 "n": "Pho Saigon Midtown",
 "k": "rest",
-"c": "Vietnamese"
+"c": "Vietnamese",
+"a": "2808 Milam St"
 },
 {
 "n": "Doc's Houston",
@@ -728,7 +728,7 @@
 "a": "1001 California St"
 },
 {
-"n": "Okt\u00f3",
+"n": "Októ",
 "k": "rest",
 "c": "Mediterranean",
 "a": "888 Westheimer Rd"
@@ -818,7 +818,7 @@
 "a": "3001 S Shepherd Dr"
 },
 {
-"n": "chr\u00f4ma",
+"n": "chrôma",
 "k": "coffee",
 "c": "Coffee",
 "a": "1512 Sul Ross St"
@@ -922,27 +922,32 @@
 {
 "n": "Cocody",
 "k": "rest",
-"c": "French-American"
+"c": "French-American",
+"a": "1971 W Gray St"
 },
 {
 "n": "Hudson House River Oaks",
 "k": "rest",
-"c": "American"
+"c": "American",
+"a": "1966 W Gray St"
 },
 {
 "n": "Zanti Cucina Italiana",
 "k": "rest",
-"c": "Italian"
+"c": "Italian",
+"a": "1958 W Gray St"
 },
 {
 "n": "MaKiin",
 "k": "rest",
-"c": "Thai"
+"c": "Thai",
+"a": "2651 Kipling St"
 },
 {
 "n": "Leo's River Oaks",
 "k": "rest",
-"c": "American"
+"c": "American",
+"a": "2009 W Gray St"
 },
 {
 "n": "Kenny & Ziggy's",

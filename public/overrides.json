@@ -1351,9 +1351,10 @@
       "street": "719 W 18th St",
       "lat": 29.801807,
       "lng": -95.410543,
-      "source": "US Census geocoder",
+      "source": "Closed Feb 15, 2026; Star Rover replaced it at 1801 N Shepherd Dr",
       "checked": "2026-11-25",
-      "notInDirectory": true
+      "notInDirectory": true,
+      "status": "closed"
     },
     "Field & Tides": {
       "street": "705 E 11th St",
