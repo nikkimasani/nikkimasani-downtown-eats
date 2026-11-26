@@ -2021,6 +2021,214 @@
       "source": "US Census geocoder",
       "checked": "2026-11-26",
       "notInDirectory": true
+    },
+    "Bar No. 3": {
+      "street": "3410 Montrose Blvd",
+      "lat": 29.742216,
+      "lng": -95.391283,
+      "source": "US Census geocoder",
+      "checked": "2026-11-26",
+      "notInDirectory": true
+    },
+    "Xolo": {
+      "street": "223 Westheimer Rd",
+      "lat": 29.74459,
+      "lng": -95.383219,
+      "source": "US Census geocoder",
+      "checked": "2026-11-26",
+      "notInDirectory": true
+    },
+    "The Lymbar": {
+      "street": "4201 Main St",
+      "lat": 29.735213,
+      "lng": -95.382043,
+      "source": "US Census geocoder",
+      "checked": "2026-11-26",
+      "notInDirectory": true
+    },
+    "Ducky's Pizza & Tavern": {
+      "street": "1927 Fairview St",
+      "lat": 29.744667,
+      "lng": -95.404686,
+      "source": "US Census geocoder",
+      "checked": "2026-11-26",
+      "notInDirectory": true
+    },
+    "R24 Rooftop Lounge": {
+      "street": "1600 Lamar St",
+      "lat": 29.752688,
+      "lng": -95.360686,
+      "source": "US Census geocoder",
+      "checked": "2026-11-26",
+      "notInDirectory": true
+    },
+    "Xiaolong Dumpling": {
+      "street": "1901 Taft St",
+      "lat": 29.751944,
+      "lng": -95.385664,
+      "source": "US Census geocoder",
+      "checked": "2026-11-26",
+      "notInDirectory": true
+    },
+    "The Tipsy Sloth": {
+      "street": "3517 Navigation Blvd",
+      "lat": 29.754919,
+      "lng": -95.334651,
+      "source": "US Census geocoder",
+      "checked": "2026-11-26",
+      "notInDirectory": true
+    },
+    "Lustre Pearl": {
+      "street": "2016 Dallas St",
+      "lat": 29.750133,
+      "lng": -95.357366,
+      "source": "US Census geocoder",
+      "checked": "2026-11-26",
+      "notInDirectory": true
+    },
+    "Cobos": {
+      "street": "2012 Rusk St",
+      "lat": 29.75312,
+      "lng": -95.355028,
+      "source": "US Census geocoder",
+      "checked": "2026-11-26",
+      "notInDirectory": true
+    },
+    "Bar Daphne": {
+      "street": "347 W 20th St",
+      "lat": 29.803973,
+      "lng": -95.40247,
+      "source": "US Census geocoder",
+      "checked": "2026-11-26",
+      "notInDirectory": true
+    },
+    "Botanic Beer Garden": {
+      "street": "1920 Houston Ave",
+      "lat": 29.774657,
+      "lng": -95.372329,
+      "source": "US Census geocoder",
+      "checked": "2026-11-26",
+      "notInDirectory": true
+    },
+    "Jane & The Lion Bakehouse": {
+      "street": "4721 N Main St",
+      "lat": 29.797734,
+      "lng": -95.382412,
+      "source": "US Census geocoder",
+      "checked": "2026-11-26",
+      "notInDirectory": true
+    },
+    "Elliot's Table": {
+      "street": "465 T C Jester Blvd",
+      "lat": 29.779481,
+      "lng": -95.418167,
+      "source": "US Census geocoder",
+      "checked": "2026-11-26",
+      "notInDirectory": true
+    },
+    "Star Rover": {
+      "street": "1801 N Shepherd Dr",
+      "lat": 29.801813,
+      "lng": -95.410179,
+      "source": "US Census geocoder",
+      "checked": "2026-11-26",
+      "notInDirectory": true
+    },
+    "NettBar": {
+      "street": "4504 Nett St",
+      "lat": 29.772034,
+      "lng": -95.406275,
+      "source": "US Census geocoder",
+      "checked": "2026-11-26",
+      "notInDirectory": true
+    },
+    "Urban Social": {
+      "street": "3917 Richmond Ave",
+      "lat": 29.732611,
+      "lng": -95.440235,
+      "source": "US Census geocoder",
+      "checked": "2026-11-26",
+      "notInDirectory": true
+    },
+    "El Segundo Swim Club": {
+      "street": "5180 Avenue L",
+      "lat": 29.750936,
+      "lng": -95.320457,
+      "source": "US Census geocoder",
+      "checked": "2026-11-26",
+      "notInDirectory": true
+    },
+    "Tacos La Sultana": {
+      "street": "7011 Capitol St",
+      "lat": 29.734417,
+      "lng": -95.30244,
+      "source": "US Census geocoder",
+      "checked": "2026-11-26",
+      "notInDirectory": true
+    },
+    "Xela Coffee Roasters": {
+      "street": "4409 Canal St",
+      "lat": 29.749022,
+      "lng": -95.329961,
+      "source": "US Census geocoder",
+      "checked": "2026-11-26",
+      "notInDirectory": true
+    },
+    "Les Givral's": {
+      "street": "2704 Milam St",
+      "lat": 29.745706,
+      "lng": -95.376486,
+      "source": "US Census geocoder",
+      "checked": "2026-11-26",
+      "notInDirectory": true
+    },
+    "Pho Saigon Midtown": {
+      "street": "2808 Milam St",
+      "lat": 29.745112,
+      "lng": -95.376955,
+      "source": "US Census geocoder",
+      "checked": "2026-11-26",
+      "notInDirectory": true
+    },
+    "Cocody": {
+      "street": "1971 W Gray St",
+      "lat": 29.753019,
+      "lng": -95.407234,
+      "source": "US Census geocoder",
+      "checked": "2026-11-26",
+      "notInDirectory": true
+    },
+    "Hudson House River Oaks": {
+      "street": "1966 W Gray St",
+      "lat": 29.753137,
+      "lng": -95.407035,
+      "source": "US Census geocoder",
+      "checked": "2026-11-26",
+      "notInDirectory": true
+    },
+    "Zanti Cucina Italiana": {
+      "street": "1958 W Gray St",
+      "lat": 29.753142,
+      "lng": -95.406722,
+      "source": "US Census geocoder",
+      "checked": "2026-11-26",
+      "notInDirectory": true
+    },
+    "MaKiin": {
+      "street": "2651 Kipling St",
+      "lat": 29.740033,
+      "lng": -95.419372,
+      "source": "US Census geocoder",
+      "checked": "2026-11-26",
+      "notInDirectory": true
+    },
+    "Leo's River Oaks": {
+      "street": "2009 W Gray St",
+      "lat": 29.752985,
+      "lng": -95.408988,
+      "source": "US Census geocoder",
+      "checked": "2026-11-26",
+      "notInDirectory": true
     }
   }
 }
