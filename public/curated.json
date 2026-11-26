@@ -12171,5 +12171,149 @@
   "type": "Restaurant",
   "note": "Burgers restaurant.",
   "tryit": ""
+ },
+ {
+  "id": 613,
+  "name": "Capone's Oven & Bar",
+  "address": "2303 Richmond Ave, Houston, TX",
+  "tunnel": null,
+  "cuisines": [
+   "Pizza, cocktails & live jazz"
+  ],
+  "meals": [
+   "Happy Hour",
+   "Late Night"
+  ],
+  "price": 2,
+  "vibes": [
+   "drinks",
+   "nightlife"
+  ],
+  "type": "Cocktail Bar",
+  "note": "Pizza, cocktails & live jazz.",
+  "tryit": ""
+ },
+ {
+  "id": 614,
+  "name": "Stone's Throw",
+  "address": "1417 Westheimer Rd, Houston, TX",
+  "tunnel": null,
+  "cuisines": [
+   "Cocktail bar"
+  ],
+  "meals": [
+   "Happy Hour",
+   "Late Night"
+  ],
+  "price": 2,
+  "vibes": [
+   "drinks",
+   "nightlife"
+  ],
+  "type": "Cocktail Bar",
+  "note": "Cocktail bar.",
+  "tryit": ""
+ },
+ {
+  "id": 615,
+  "name": "Fedora Lounge",
+  "address": "2726 Bissonnet St, Houston, TX",
+  "tunnel": null,
+  "cuisines": [
+   "Lounge"
+  ],
+  "meals": [
+   "Happy Hour",
+   "Late Night"
+  ],
+  "price": 2,
+  "vibes": [
+   "drinks",
+   "nightlife"
+  ],
+  "type": "Lounge",
+  "note": "Lounge.",
+  "tryit": ""
+ },
+ {
+  "id": 616,
+  "name": "Burger-chan Heights",
+  "address": "506 Yale St, Houston, TX",
+  "tunnel": null,
+  "cuisines": [
+   "Burgers"
+  ],
+  "meals": [
+   "Lunch",
+   "Dinner"
+  ],
+  "price": 2,
+  "vibes": [
+   "casual"
+  ],
+  "type": "Restaurant",
+  "note": "Burgers restaurant.",
+  "tryit": ""
+ },
+ {
+  "id": 617,
+  "name": "Greenway Coffee",
+  "address": "3 Greenway Plaza, Houston, TX",
+  "tunnel": null,
+  "cuisines": [
+   "Coffee"
+  ],
+  "meals": [
+   "Breakfast",
+   "Lunch"
+  ],
+  "price": 2,
+  "vibes": [
+   "coffee",
+   "work"
+  ],
+  "type": "Coffee Shop",
+  "note": "Coffee.",
+  "tryit": ""
+ },
+ {
+  "id": 618,
+  "name": "Burger Bodega",
+  "address": "4520 Washington Ave, Houston, TX",
+  "tunnel": null,
+  "cuisines": [
+   "Burgers & chopped cheese"
+  ],
+  "meals": [
+   "Lunch",
+   "Dinner"
+  ],
+  "price": 2,
+  "vibes": [
+   "casual"
+  ],
+  "type": "Restaurant",
+  "note": "Burgers & chopped cheese restaurant.",
+  "tryit": ""
+ },
+ {
+  "id": 619,
+  "name": "Jodas",
+  "address": "1000 Main St, Houston, TX",
+  "tunnel": null,
+  "cuisines": [
+   "Burgers"
+  ],
+  "meals": [
+   "Lunch",
+   "Dinner"
+  ],
+  "price": 2,
+  "vibes": [
+   "casual"
+  ],
+  "type": "Restaurant",
+  "note": "Burgers restaurant.",
+  "tryit": ""
  }
 ]

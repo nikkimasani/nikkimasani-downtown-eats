@@ -3038,6 +3038,62 @@
       "source": "US Census geocoder",
       "checked": "2026-11-26",
       "notInDirectory": true
+    },
+    "Capone's Oven & Bar": {
+      "street": "2303 Richmond Ave",
+      "lat": 29.734126,
+      "lng": -95.415182,
+      "source": "US Census geocoder",
+      "checked": "2026-11-26",
+      "notInDirectory": true
+    },
+    "Stone's Throw": {
+      "street": "1417 Westheimer Rd",
+      "lat": 29.742965,
+      "lng": -95.396585,
+      "source": "US Census geocoder",
+      "checked": "2026-11-26",
+      "notInDirectory": true
+    },
+    "Fedora Lounge": {
+      "street": "2726 Bissonnet St",
+      "lat": 29.725487,
+      "lng": -95.421047,
+      "source": "US Census geocoder",
+      "checked": "2026-11-26",
+      "notInDirectory": true
+    },
+    "Burger-chan Heights": {
+      "street": "506 Yale St",
+      "lat": 29.77979,
+      "lng": -95.398695,
+      "source": "US Census geocoder",
+      "checked": "2026-11-26",
+      "notInDirectory": true
+    },
+    "Greenway Coffee": {
+      "street": "3 Greenway Plaza",
+      "lat": 29.732457,
+      "lng": -95.4314,
+      "source": "US Census geocoder",
+      "checked": "2026-11-26",
+      "notInDirectory": true
+    },
+    "Burger Bodega": {
+      "street": "4520 Washington Ave",
+      "lat": 29.770555,
+      "lng": -95.406392,
+      "source": "US Census geocoder",
+      "checked": "2026-11-26",
+      "notInDirectory": true
+    },
+    "Jodas": {
+      "street": "1000 Main St",
+      "lat": 29.756945,
+      "lng": -95.365008,
+      "source": "US Census geocoder",
+      "checked": "2026-11-26",
+      "notInDirectory": true
     }
   }
 }
