@@ -12866,5 +12866,88 @@
   "type": "Restaurant",
   "note": "Italian restaurant.",
   "tryit": ""
+ },
+ {
+  "id": 647,
+  "name": "The Spot EaDo",
+  "address": "2003 Emancipation Ave, Houston, TX",
+  "tunnel": null,
+  "cuisines": [
+   "Bar & lounge"
+  ],
+  "meals": [
+   "Happy Hour",
+   "Late Night"
+  ],
+  "price": 2,
+  "vibes": [
+   "drinks",
+   "nightlife"
+  ],
+  "type": "Lounge",
+  "note": "Bar & lounge.",
+  "tryit": ""
+ },
+ {
+  "id": 648,
+  "name": "Quad HTX Sports Lounge",
+  "address": "4608 Almeda Rd, Houston, TX",
+  "tunnel": null,
+  "cuisines": [
+   "Southern food & sports lounge"
+  ],
+  "meals": [
+   "Happy Hour",
+   "Late Night"
+  ],
+  "price": 2,
+  "vibes": [
+   "drinks",
+   "nightlife"
+  ],
+  "type": "Sports Bar",
+  "note": "Southern food & sports lounge.",
+  "tryit": ""
+ },
+ {
+  "id": 649,
+  "name": "Day and Night Almeda",
+  "address": "5101 Almeda Rd, Houston, TX",
+  "tunnel": null,
+  "cuisines": [
+   "24-hour breakfast & brunch, full bar"
+  ],
+  "meals": [
+   "Lunch",
+   "Dinner"
+  ],
+  "price": 2,
+  "vibes": [
+   "casual"
+  ],
+  "type": "Restaurant",
+  "note": "24-hour breakfast & brunch, full bar restaurant.",
+  "tryit": ""
+ },
+ {
+  "id": 650,
+  "name": "The Tipsy Lounge",
+  "address": "4806 Almeda Rd, Houston, TX",
+  "tunnel": null,
+  "cuisines": [
+   "Lounge with DJs"
+  ],
+  "meals": [
+   "Happy Hour",
+   "Late Night"
+  ],
+  "price": 2,
+  "vibes": [
+   "drinks",
+   "nightlife"
+  ],
+  "type": "Lounge",
+  "note": "Lounge with DJs.",
+  "tryit": ""
  }
 ]

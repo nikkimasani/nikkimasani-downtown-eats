@@ -3310,6 +3310,38 @@
       "source": "OpenStreetMap Nominatim",
       "checked": "2026-11-26",
       "notInDirectory": true
+    },
+    "The Spot EaDo": {
+      "street": "2003 Emancipation Ave",
+      "lat": 29.735827,
+      "lng": -95.303528,
+      "source": "US Census geocoder",
+      "checked": "2026-11-26",
+      "notInDirectory": true
+    },
+    "Quad HTX Sports Lounge": {
+      "street": "4608 Almeda Rd",
+      "lat": 29.7285,
+      "lng": -95.376879,
+      "source": "US Census geocoder",
+      "checked": "2026-11-26",
+      "notInDirectory": true
+    },
+    "Day and Night Almeda": {
+      "street": "5101 Almeda Rd",
+      "lat": 29.723569,
+      "lng": -95.378415,
+      "source": "US Census geocoder",
+      "checked": "2026-11-26",
+      "notInDirectory": true
+    },
+    "The Tipsy Lounge": {
+      "street": "4806 Almeda Rd",
+      "lat": 29.726753,
+      "lng": -95.377474,
+      "source": "US Census geocoder",
+      "checked": "2026-11-26",
+      "notInDirectory": true
     }
   }
 }
