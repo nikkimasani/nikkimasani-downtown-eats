@@ -13916,5 +13916,47 @@
   "type": "Bar",
   "note": "Brewery taproom.",
   "tryit": ""
+ },
+ {
+  "id": 698,
+  "name": "Leemoo Health Bar",
+  "address": "908 Westheimer Rd, Houston, TX",
+  "tunnel": null,
+  "cuisines": [
+   "Smoothies, acai & healthy bites"
+  ],
+  "meals": [
+   "Breakfast",
+   "Lunch"
+  ],
+  "price": 2,
+  "vibes": [
+   "coffee",
+   "work"
+  ],
+  "type": "Coffee Shop",
+  "note": "Smoothies, acai & healthy bites.",
+  "tryit": ""
+ },
+ {
+  "id": 699,
+  "name": "La La Land Kind Cafe MKT",
+  "address": "600 N Shepherd Dr, Houston, TX",
+  "tunnel": null,
+  "cuisines": [
+   "Coffee & feel-good cafe"
+  ],
+  "meals": [
+   "Breakfast",
+   "Lunch"
+  ],
+  "price": 2,
+  "vibes": [
+   "coffee",
+   "work"
+  ],
+  "type": "Coffee Shop",
+  "note": "Coffee & feel-good cafe.",
+  "tryit": ""
  }
 ]

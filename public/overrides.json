@@ -3713,6 +3713,22 @@
       "source": "US Census geocoder",
       "checked": "2026-11-26",
       "notInDirectory": true
+    },
+    "Leemoo Health Bar": {
+      "street": "908 Westheimer Rd",
+      "lat": 29.744731,
+      "lng": -95.390787,
+      "source": "US Census geocoder",
+      "checked": "2026-11-26",
+      "notInDirectory": true
+    },
+    "La La Land Kind Cafe MKT": {
+      "street": "600 N Shepherd Dr",
+      "lat": 29.78157,
+      "lng": -95.40913,
+      "source": "US Census geocoder",
+      "checked": "2026-11-26",
+      "notInDirectory": true
     }
   }
 }
