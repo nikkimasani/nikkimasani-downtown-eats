@@ -12849,26 +12849,6 @@
  },
  {
   "id": 646,
-  "name": "Jollibee",
-  "address": "8001 S Main St, Houston, TX",
-  "tunnel": null,
-  "cuisines": [
-   "Filipino fried chicken"
-  ],
-  "meals": [
-   "Lunch",
-   "Dinner"
-  ],
-  "price": 2,
-  "vibes": [
-   "casual"
-  ],
-  "type": "Restaurant",
-  "note": "Filipino fried chicken restaurant.",
-  "tryit": ""
- },
- {
-  "id": 647,
   "name": "Olive Garden Kirby",
   "address": "2929 Southwest Freeway, Houston, TX",
   "tunnel": null,
