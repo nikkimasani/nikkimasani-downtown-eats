@@ -29,14 +29,16 @@ for (const r of rows) {
 }
 const money = (x) => +(x || 0);
 const BAD = /\b(country club|golf|church|school|universit|college|hospital|medical|theat(er|re)|arena|stadium|convention|catering|caterer|events?\b|ballroom|venue|wedding|airport|airline|cinema|museum|zoo|bingo|ice rink|club corp|private|cabaret|gentlemen|men'?s club|showgirl|treasures|rick'?s|centerfold|bucks? wild|splash|hotel|\binn\b|suites|marriott|hilton|hyatt|westin|sheraton|doubletree|holiday inn|embassy|courtyard|four seasons|omni|kimpton|aloft|hampton|residence|rice university|toyota center|minute maid|daikin|nrg|shell energy|george r brown|grb|hobby|bush|aramark|levy|sodexo|delaware north|compass group|centerplate|lodge|association|society|legion|vfw|elks|moose)\b/i;
-const tc = (s) => String(s || '').toLowerCase().replace(/\b([a-z])/g, (m) => m.toUpperCase()).replace(/\b(Llc|Inc|Ltd|Lp|Llp|Corp|Co)\b\.?/g, '').replace(/\bAnd\b/g, '&').replace(/'S\b/g, "'s").replace(/\bBbq\b/g, 'BBQ').replace(/\bHtx\b/g, 'HTX').replace(/\b(Ii|Iii|Iv)\b/g, (m) => m.toUpperCase()).replace(/\s{2,}/g, ' ').replace(/[\s,.-]+$/, '').trim();
+// companies, private clubs, venues and adult clubs that hold permits but aren't places to pick for dinner
+const JUNK = /\b(beverages?|bevco|hospitality|investments?|services|corporation|corp|rest(aurant)? group|management|holdings|kipcorp|catholic|parish|senior|housing|junior league|life ?time|amc|regal|theaters?|nordstrom|dog park|square|petroleum club|briar club|coronado club|faculty club|centerfolds|onyx|spire|privilege|dreams|remy|nite club|night ?club|card house|wedge|food services|music hall|artechouse|beat the bomb|velocity|sim racing|enterprises|partners|ventures|concessions|properties|apartments|residences|tower)\b/i;
+const tc = (s) => String(s || '').toLowerCase().replace(/\b([a-z])/g, (m) => m.toUpperCase()).replace(/\b(Llc|Inc|Ltd|Lp|Llp|Corp|Co)\b\.?/g, '').replace(/\bAnd\b/g, '&').replace(/\s*#\s*\d+\b/g, '').replace(/\bOf Texas\b/g, '').replace(/\bInc(orporated)?\b/g, '').replace(/'S\b/g, "'s").replace(/\bBbq\b/g, 'BBQ').replace(/\bHtx\b/g, 'HTX').replace(/\b(Ii|Iii|Iv)\b/g, (m) => m.toUpperCase()).replace(/\s{2,}/g, ' ').replace(/[\s,.-]+$/, '').trim();
 const cand = [];
 for (const r of latest.values()) {
   const zip = String(r.location_zip || '').slice(0, 5);
   if (!ZIPS.has(zip)) continue;
   if (money(r.total_receipts) < 3000) continue;   // barely trading, or a closed permit still filing zeros
   const name = tc(r.location_name || r.taxpayer_name);
-  if (!name || BAD.test(name)) continue;
+  if (!name || BAD.test(name) || JUNK.test(name) || /^\d[\d\s-]*$/.test(name) || /^\d+\s+(n\.?\s|s\.?\s|w\.?\s|e\.?\s)?\w+\s+(st|street|rd|road|ave|avenue|dr|drive|blvd|ln)\b/i.test(name)) continue;
   const street = tc(String(r.location_address || '').replace(/\s*\b(STE|SUITE|UNIT|BLDG|SPC|FL|FLOOR|RM|ROOM|APT|#)\b.*$/i, '').replace(/\s*#.*$/, ''));
   if (!/^\d+\s/.test(street)) continue;
   cand.push({ name, street, zip, liquor: money(r.liquor_receipts), total: money(r.total_receipts), permit: r.tabc_permit_number || '' });
@@ -47,8 +49,11 @@ report.candidatesInLoopZips = cand.length;
 const norm = (s) => String(s || '').toLowerCase().normalize('NFD').replace(/[̀-ͯ]/g, '').replace(/[’']/g, '').replace(/&/g, 'and').replace(/\b(the|houston|htx|bar|lounge|restaurant|kitchen|and|grill|cafe|co|company|tx|texas)\b/g, '').replace(/[^a-z0-9]/g, '');
 const fixOf = (p) => O[p.name + '|' + ((p.address || '').match(/^\d+/) || [''])[0]] || O[p.name] || {};
 const existing = P.places.map((p) => { const f = fixOf(p), o = p.official || {}; return { n: norm(p.name), raw: p.name, lat: f.lat ?? o.lat, lng: f.lng ?? o.lng, num: ((f.street || p.address || '').match(/^\d+/) || [''])[0] }; });
+const stKey = (a) => { const m = String(a || '').toLowerCase().match(/^(\d+)\s+(?:[nsew]\.?\s+)?([a-z0-9]+)/); return m ? m[1] + ' ' + m[2] : ''; };
+for (const [e, p] of existing.map((e, i) => [e, P.places[i]])) { const f = fixOf(p); e.st = stKey(f.street || p.address); }
+const addrHit = (c) => { const k = stKey(c.street), n = norm(c.name); return !!k && existing.some((e) => e.st === k && e.n && (e.n.slice(0, 3) === n.slice(0, 3) || e.n.includes(n.slice(0, 4)) || n.includes(e.n.slice(0, 4)))); };
 const nameHit = (n) => n.length >= 4 && existing.some((e) => e.n && (e.n === n || (e.n.length >= 5 && (e.n.includes(n) || n.includes(e.n)))));
-const fresh = cand.filter((c) => !nameHit(norm(c.name)));
+const fresh = cand.filter((c) => !nameHit(norm(c.name)) && !addrHit(c));
 report.alreadyOnMapByName = cand.length - fresh.length;
 // one per name+street
 const seen = new Set(); const todo = fresh.filter((c) => { const k = norm(c.name) + '|' + c.street.match(/^\d+/)[0]; if (seen.has(k)) return false; seen.add(k); return true; });
@@ -74,6 +79,7 @@ report.geocoded = geo.size;
 // ---------- 4. keep the ones inside the map that aren't a pin we already have ----------
 const near = (a, b) => Math.hypot((a.lat - b.lat) * 110850, (a.lng - b.lng) * 96680);
 const FOOD = /grill|kitchen|cafe|café|bistro|taco|pizza|bbq|barbecue|sushi|steak|restaurant|cantina|cocina|burger|seafood|oyster|crawfish|pho|ramen|thai|indian|wing|diner|eatery|trattoria|brasserie|taqueria|grille|ristorante|osteria|tapas|mariscos|chicken|noodle|dumpling|bakery|deli|smokehouse|cuisine|asian|mexican|italian|chinese|korean|japanese|vietnamese|mediterranean|greek|lebanese|persian|cajun|creole|soul|brunch|breakfast/i;
+const BARNAME = /\b(bar|pub|lounge|tavern|saloon|ice ?house|icehouse|social|den|patio|hookah|cigar|billiards?|pool hall|karaoke|putt|sports|club|cantina|brewery|brewing|wine|cocktail|speakeasy|dive)\b/i;
 const add = [], skipped = { outside: 0, sameSpotSameName: 0, noGeo: 0 };
 todo.forEach((c, i) => {
   const g = geo.get(i);
@@ -81,7 +87,7 @@ todo.forEach((c, i) => {
   if (!inBox(g.lat, g.lng)) { skipped.outside++; return; }
   const n = norm(c.name), first = n.slice(0, 5);
   if (existing.some((e) => e.lat && near(e, g) < 45 && e.n && (e.n.startsWith(first) || n.startsWith(e.n.slice(0, 5))))) { skipped.sameSpotSameName++; return; }
-  const bar = !FOOD.test(c.name) && c.liquor / Math.max(1, c.total) > 0.5;
+  const bar = !FOOD.test(c.name) && (BARNAME.test(c.name) || c.liquor / Math.max(1, c.total) > 0.8);
   add.push({ ...c, ...g, bar });
   existing.push({ n, raw: c.name, lat: g.lat, lng: g.lng });
 });
