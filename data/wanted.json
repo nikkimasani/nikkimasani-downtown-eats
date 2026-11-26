@@ -1896,6 +1896,42 @@
 "k": "bar",
 "c": "Restaurant, sports bar & pool",
 "a": "3333 Raleigh St"
+},
+{
+"n": "Ray's Real Pit BBQ Shack",
+"k": "rest",
+"c": "BBQ & soul food",
+"a": "3929 Old Spanish Trl"
+},
+{
+"n": "Kenneally's Irish Pub",
+"k": "bar",
+"c": "Irish pub & thin-crust pizza",
+"a": "2111 S Shepherd Dr"
+},
+{
+"n": "Rumi's Kitchen",
+"k": "rest",
+"c": "Persian",
+"a": "1801 Post Oak Blvd"
+},
+{
+"n": "Holler Brewing",
+"k": "bar",
+"c": "Brewery taproom",
+"a": "2206 Edwards St"
+},
+{
+"n": "Mala Sichuan Montrose",
+"k": "rest",
+"c": "Sichuan",
+"a": "1201 Westheimer Rd"
+},
+{
+"n": "Mala Sichuan Heights",
+"k": "rest",
+"c": "Sichuan",
+"a": "600 N Shepherd Dr"
 }
 ]
 }
