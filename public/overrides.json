@@ -4804,14 +4804,6 @@
       "checked": "2026-11-26",
       "notInDirectory": true
     },
-    "The Den": {
-      "street": "4835 Calhoun Rd",
-      "lat": 29.72002,
-      "lng": -95.338548,
-      "source": "Texas Comptroller mixed-beverage permits + US Census geocoder",
-      "checked": "2026-11-26",
-      "notInDirectory": true
-    },
     "Casa Kenji": {
       "street": "3201 Allen Pkwy",
       "lat": 29.760983,
@@ -5164,14 +5156,6 @@
       "checked": "2026-11-26",
       "notInDirectory": true
     },
-    "Jax Grill": {
-      "street": "1613 Shepherd Dr",
-      "lat": 29.774979,
-      "lng": -95.409612,
-      "source": "Texas Comptroller mixed-beverage permits + US Census geocoder",
-      "checked": "2026-11-26",
-      "notInDirectory": true
-    },
     "Zen Japanese Izakaya": {
       "street": "2015 S Shepherd Dr",
       "lat": 29.747912,
@@ -5332,26 +5316,10 @@
       "checked": "2026-11-26",
       "notInDirectory": true
     },
-    "Gaspachos Mexican Bites": {
-      "street": "3709 Eastside St",
-      "lat": 29.73318,
-      "lng": -95.424393,
-      "source": "Texas Comptroller mixed-beverage permits + US Census geocoder",
-      "checked": "2026-11-26",
-      "notInDirectory": true
-    },
     "Shan Dong": {
       "street": "4464 Montrose Blvd",
       "lat": 29.732855,
       "lng": -95.391164,
-      "source": "Texas Comptroller mixed-beverage permits + US Census geocoder",
-      "checked": "2026-11-26",
-      "notInDirectory": true
-    },
-    "Bb's Cafe": {
-      "street": "3139 Richmond Ave",
-      "lat": 29.733973,
-      "lng": -95.424844,
       "source": "Texas Comptroller mixed-beverage permits + US Census geocoder",
       "checked": "2026-11-26",
       "notInDirectory": true
@@ -5796,14 +5764,6 @@
       "checked": "2026-11-26",
       "notInDirectory": true
     },
-    "Fusion Taco": {
-      "street": "302 Fairview Ave",
-      "lat": 29.748271,
-      "lng": -95.385778,
-      "source": "Texas Comptroller mixed-beverage permits + US Census geocoder",
-      "checked": "2026-11-26",
-      "notInDirectory": true
-    },
     "Stick Talk Hibachi": {
       "street": "502 Elgin St",
       "lat": 29.744141,
@@ -6216,6 +6176,46 @@
       "street": "5506 Bellaire Blvd",
       "lat": 29.705667,
       "lng": -95.477169,
+      "source": "Texas Comptroller mixed-beverage permits + US Census geocoder",
+      "checked": "2026-11-26",
+      "notInDirectory": true
+    },
+    "Jax Grill|1613": {
+      "street": "1613 Shepherd Dr",
+      "lat": 29.774979,
+      "lng": -95.409612,
+      "source": "Texas Comptroller mixed-beverage permits + US Census geocoder",
+      "checked": "2026-11-26",
+      "notInDirectory": true
+    },
+    "The Den|4835": {
+      "street": "4835 Calhoun Rd",
+      "lat": 29.72002,
+      "lng": -95.338548,
+      "source": "Texas Comptroller mixed-beverage permits + US Census geocoder",
+      "checked": "2026-11-26",
+      "notInDirectory": true
+    },
+    "Gaspachos Mexican Bites|3709": {
+      "street": "3709 Eastside St",
+      "lat": 29.73318,
+      "lng": -95.424393,
+      "source": "Texas Comptroller mixed-beverage permits + US Census geocoder",
+      "checked": "2026-11-26",
+      "notInDirectory": true
+    },
+    "Bb's Cafe|3139": {
+      "street": "3139 Richmond Ave",
+      "lat": 29.733973,
+      "lng": -95.424844,
+      "source": "Texas Comptroller mixed-beverage permits + US Census geocoder",
+      "checked": "2026-11-26",
+      "notInDirectory": true
+    },
+    "Fusion Taco|302": {
+      "street": "302 Fairview Ave",
+      "lat": 29.748271,
+      "lng": -95.385778,
       "source": "Texas Comptroller mixed-beverage permits + US Census geocoder",
       "checked": "2026-11-26",
       "notInDirectory": true

@@ -53,7 +53,8 @@ const stKey = (a) => { const m = String(a || '').toLowerCase().match(/^(\d+)\s+(
 for (const [e, p] of existing.map((e, i) => [e, P.places[i]])) { const f = fixOf(p); e.st = stKey(f.street || p.address); }
 const addrHit = (c) => { const k = stKey(c.street), n = norm(c.name); return !!k && existing.some((e) => e.st === k && e.n && (e.n.slice(0, 3) === n.slice(0, 3) || e.n.includes(n.slice(0, 4)) || n.includes(e.n.slice(0, 4)))); };
 const nameHit = (n) => n.length >= 4 && existing.some((e) => e.n && (e.n === n || (e.n.length >= 5 && (e.n.includes(n) || n.includes(e.n)))));
-const fresh = cand.filter((c) => !nameHit(norm(c.name)) && !addrHit(c));
+const sameName = (c) => { const n = norm(c.name), k = stKey(c.street); return existing.filter((e) => e.n && n.length >= 4 && (e.n === n || (e.n.length >= 5 && (e.n.includes(n) || n.includes(e.n))))).some((e) => !e.st || e.st === k || !e.lat); };
+const fresh = cand.filter((c) => !sameName(c) && !addrHit(c));
 report.alreadyOnMapByName = cand.length - fresh.length;
 // one per name+street
 const seen = new Set(); const todo = fresh.filter((c) => { const k = norm(c.name) + '|' + c.street.match(/^\d+/)[0]; if (seen.has(k)) return false; seen.add(k); return true; });
@@ -101,7 +102,7 @@ if (!DRY && add.length) {
     const rec = { id: ++id, name: a.name, address: `${a.street}, Houston, TX`, tunnel: null, cuisines: [a.bar ? 'Bar' : 'Restaurant'], meals: a.bar ? ['Happy Hour', 'Late Night'] : ['Lunch', 'Dinner'], price: 2,
       vibes: a.bar ? ['drinks', 'nightlife'] : ['casual'], type: a.bar ? 'Bar' : 'Restaurant', note: a.bar ? 'Bar with a Texas mixed-beverage permit.' : 'Restaurant with a full bar (Texas mixed-beverage permit).', tryit: '' };
     C.push(rec); P.places.push({ ...rec, official: null });
-    O[a.name] = { street: a.street, lat: a.lat, lng: a.lng, source: 'Texas Comptroller mixed-beverage permits + US Census geocoder', checked: today, notInDirectory: true };
+    O[`${a.name}|${(a.street.match(/^\d+/) || [''])[0]}`] = { street: a.street, lat: a.lat, lng: a.lng, source: 'Texas Comptroller mixed-beverage permits + US Census geocoder', checked: today, notInDirectory: true };
   }
   fs.writeFileSync('public/curated.json', JSON.stringify(C, null, 1) + '\n');
   fs.writeFileSync('public/overrides.json', JSON.stringify(OF, null, 2) + '\n');

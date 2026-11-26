@@ -18025,49 +18025,9 @@
   "tryit": ""
  },
  {
-  "id": 900,
-  "name": "Gaspachos Mexican Bites",
-  "address": "2103 Lyons Ave, Houston, TX",
-  "tunnel": null,
-  "cuisines": [
-   "Restaurant"
-  ],
-  "meals": [
-   "Lunch",
-   "Dinner"
-  ],
-  "price": 2,
-  "vibes": [
-   "casual"
-  ],
-  "type": "Restaurant",
-  "note": "Restaurant with a full bar (Texas mixed-beverage permit).",
-  "tryit": ""
- },
- {
   "id": 901,
   "name": "Shan Dong",
   "address": "4464 Montrose Blvd, Houston, TX",
-  "tunnel": null,
-  "cuisines": [
-   "Restaurant"
-  ],
-  "meals": [
-   "Lunch",
-   "Dinner"
-  ],
-  "price": 2,
-  "vibes": [
-   "casual"
-  ],
-  "type": "Restaurant",
-  "note": "Restaurant with a full bar (Texas mixed-beverage permit).",
-  "tryit": ""
- },
- {
-  "id": 902,
-  "name": "Bb's Cafe",
-  "address": "6154 Westheimer Rd, Houston, TX",
   "tunnel": null,
   "cuisines": [
    "Restaurant"
@@ -19223,26 +19183,6 @@
   "id": 959,
   "name": "Mr. Nice",
   "address": "1216 W Clay St, Houston, TX",
-  "tunnel": null,
-  "cuisines": [
-   "Restaurant"
-  ],
-  "meals": [
-   "Lunch",
-   "Dinner"
-  ],
-  "price": 2,
-  "vibes": [
-   "casual"
-  ],
-  "type": "Restaurant",
-  "note": "Restaurant with a full bar (Texas mixed-beverage permit).",
-  "tryit": ""
- },
- {
-  "id": 960,
-  "name": "Fusion Taco",
-  "address": "4706 N Main St, Houston, TX",
   "tunnel": null,
   "cuisines": [
    "Restaurant"
