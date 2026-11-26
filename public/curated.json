@@ -8901,19 +8901,25 @@
   "address": "3807 Montrose Blvd, Houston, TX",
   "tunnel": null,
   "cuisines": [
-   "Seafood"
+   "Seafood",
+   "Oysters"
   ],
   "meals": [
    "Lunch",
-   "Dinner"
+   "Dinner",
+   "Happy Hour",
+   "Full Service",
+   "Patio"
   ],
-  "price": 2,
+  "price": 3,
   "vibes": [
-   "casual"
+   "date",
+   "drinks",
+   "upscale"
   ],
-  "type": "Restaurant",
-  "note": "Seafood restaurant.",
-  "tryit": ""
+  "type": "Seafood",
+  "note": "Breezy East-Coast-style oyster bar on Montrose Blvd from the Austin team: raw bar, lobster rolls and martinis.",
+  "tryit": "A dozen oysters, the lobster roll and a martini."
  },
  {
   "id": 456,
@@ -10006,15 +10012,19 @@
   ],
   "meals": [
    "Lunch",
-   "Dinner"
+   "Dinner",
+   "Happy Hour",
+   "Full Service"
   ],
   "price": 2,
   "vibes": [
-   "casual"
+   "casual",
+   "date",
+   "drinks"
   ],
-  "type": "Restaurant",
-  "note": "American restaurant.",
-  "tryit": ""
+  "type": "Seafood",
+  "note": "East-Coast-style neighborhood seafood and burger spot on W Gray: lobster rolls, raw bar, strong martinis.",
+  "tryit": "Lobster roll and fries with a martini."
  },
  {
   "id": 510,
@@ -10696,15 +10706,19 @@
   ],
   "meals": [
    "Lunch",
-   "Dinner"
+   "Dinner",
+   "Happy Hour",
+   "Full Service"
   ],
   "price": 2,
   "vibes": [
-   "casual"
+   "casual",
+   "date",
+   "drinks"
   ],
-  "type": "Restaurant",
-  "note": "Seafood & burgers restaurant.",
-  "tryit": ""
+  "type": "Seafood",
+  "note": "Rice Village outpost of the East-Coast-style seafood and burger spot: lobster rolls, raw bar and martinis.",
+  "tryit": "Lobster roll and fries with a martini."
  },
  {
   "id": 543,
@@ -10715,16 +10729,17 @@
    "Italian"
   ],
   "meals": [
-   "Lunch",
-   "Dinner"
+   "Dinner",
+   "Full Service"
   ],
-  "price": 2,
+  "price": 3,
   "vibes": [
-   "casual"
+   "date",
+   "group"
   ],
   "type": "Restaurant",
-  "note": "Italian restaurant.",
-  "tryit": ""
+  "note": "Red-sauce Italian date-night spot in Rice Village: fried gulf shrimp and calamari, bolognese and a chicken parm buried in marinara.",
+  "tryit": "Chicken parm and the bolognese to share."
  },
  {
   "id": 544,
@@ -10803,8 +10818,8 @@
    "casual"
   ],
   "type": "Restaurant",
-  "note": "Sandwiches & salads restaurant.",
-  "tryit": ""
+  "note": "Rice Village original of the farm-to-table sandwich and salad spot, with Lee's Den wine and cocktail bar upstairs.",
+  "tryit": "Crunchy chicken sandwich, then a glass upstairs at Lee's."
  },
  {
   "id": 548,
@@ -10818,14 +10833,15 @@
    "Happy Hour",
    "Late Night"
   ],
-  "price": 2,
+  "price": 3,
   "vibes": [
    "drinks",
+   "date",
    "nightlife"
   ],
   "type": "Cocktail Bar",
-  "note": "Wine & cocktail bar.",
-  "tryit": ""
+  "note": "Speakeasy-style wine and cocktail bar upstairs at Local Foods in Rice Village; 21+, pasta specials Wednesdays and steak night Thursdays. Named one of Bon Appétit's 2025 Best Bars in America.",
+  "tryit": "Thursday steak night or a martini at the bar."
  },
  {
   "id": 549,
@@ -11289,5 +11305,102 @@
   "type": "Spanish",
   "note": "Modern Spanish tapas in River Oaks District from the team behind Michelin-starred BCN, known for its gin & tonics and paella.",
   "tryit": "Seafood paella and a gin & tonic; weekend brunch Fri–Sun."
+ },
+ {
+  "id": 571,
+  "name": "Uchi",
+  "address": "904 Westheimer Rd, Houston, TX",
+  "tunnel": null,
+  "cuisines": [
+   "Japanese",
+   "Sushi"
+  ],
+  "meals": [
+   "Dinner",
+   "Happy Hour",
+   "Full Service"
+  ],
+  "price": 4,
+  "vibes": [
+   "date",
+   "upscale",
+   "adventurous"
+  ],
+  "type": "Sushi",
+  "note": "Tyson Cole's modern Japanese flagship in a converted Montrose house: inventive raw plates, nigiri and tasting menus.",
+  "tryit": "Happy hour 'sake social' early; the hama chili and a chef's tasting."
+ },
+ {
+  "id": 572,
+  "name": "Aiko",
+  "address": "1902 Washington Ave, Houston, TX",
+  "tunnel": null,
+  "cuisines": [
+   "Japanese",
+   "Sushi"
+  ],
+  "meals": [
+   "Lunch",
+   "Dinner",
+   "Happy Hour",
+   "Full Service"
+  ],
+  "price": 3,
+  "vibes": [
+   "date",
+   "upscale"
+  ],
+  "type": "Sushi",
+  "note": "Modern Japanese sushi bar and omakase on Washington Ave from chefs Patrick Pham and Daniel Lee (Kokoro, Handies Douzo).",
+  "tryit": "Hamachi crudo, spicy tuna handroll and saketoro aburi nigiri."
+ },
+ {
+  "id": 573,
+  "name": "Kirby Ice House",
+  "address": "3333 Eastside St, Houston, TX",
+  "tunnel": null,
+  "cuisines": [
+   "Bar"
+  ],
+  "meals": [
+   "Happy Hour",
+   "Late Night",
+   "Patio",
+   "Pet Friendly"
+  ],
+  "price": 2,
+  "vibes": [
+   "drinks",
+   "group",
+   "sports",
+   "casual"
+  ],
+  "type": "Beer Garden",
+  "note": "Big Upper Kirby icehouse with a huge backyard, local beers on tap, TVs for games and food trucks.",
+  "tryit": "A local draft in the backyard on game day."
+ },
+ {
+  "id": 574,
+  "name": "Local Foods",
+  "address": "714 Yale St, Houston, TX",
+  "tunnel": null,
+  "cuisines": [
+   "Sandwiches",
+   "Salads"
+  ],
+  "meals": [
+   "Lunch",
+   "Dinner",
+   "Fast Casual"
+  ],
+  "price": 2,
+  "vibes": [
+   "quick",
+   "healthy",
+   "casual"
+  ],
+  "type": "Restaurant",
+  "note": "Heights location of the farm-to-table sandwich and salad favorite.",
+  "tryit": "The crunchy chicken sandwich and a side of the market salads."
  }
 ]

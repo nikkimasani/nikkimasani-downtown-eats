@@ -1266,6 +1266,339 @@
 "k": "rest",
 "c": "Burgers",
 "a": "6205 Kirby Dr"
+},
+{
+"n": "Haii Keii",
+"k": "rest",
+"c": "Japanese",
+"a": "3300 Kirby Dr"
+},
+{
+"n": "Se7en",
+"k": "bar",
+"c": "Cocktail lounge",
+"a": "3300 Kirby Dr"
+},
+{
+"n": "Verandah",
+"k": "rest",
+"c": "Indian",
+"a": "3300 Kirby Dr"
+},
+{
+"n": "French Country Wines",
+"k": "bar",
+"c": "Wine bar",
+"a": "3300 Kirby Dr"
+},
+{
+"n": "Becks Prime Kirby",
+"k": "rest",
+"c": "Burgers",
+"a": "2902 Kirby Dr"
+},
+{
+"n": "Loro Asian Smokehouse Kirby",
+"k": "rest",
+"c": "Asian BBQ",
+"a": "5333 Kirby Dr"
+},
+{
+"n": "Norigami",
+"k": "rest",
+"c": "Sushi handrolls",
+"a": "2715 Bissonnet St"
+},
+{
+"n": "Silk Road Asian Tapas Bar",
+"k": "rest",
+"c": "Asian tapas",
+"a": "2929 Westpark Dr"
+},
+{
+"n": "Feges BBQ Greenway",
+"k": "rest",
+"c": "BBQ",
+"a": "3 Greenway Plaza"
+},
+{
+"n": "Kata Robata",
+"k": "rest",
+"c": "Sushi",
+"a": "3600 Kirby Dr"
+},
+{
+"n": "Local Foods Upper Kirby",
+"k": "rest",
+"c": "Sandwiches & salads",
+"a": "2555 Kirby Dr"
+},
+{
+"n": "Upper Kirby Bistro",
+"k": "rest",
+"c": "Bistro",
+"a": "2736 Virginia St"
+},
+{
+"n": "Christian's Tailgate Kirby",
+"k": "bar",
+"c": "Sports bar & burgers",
+"a": "5114 Kirby Dr"
+},
+{
+"n": "First Watch Kirby",
+"k": "rest",
+"c": "Breakfast & brunch",
+"a": "3029 Kirby Dr"
+},
+{
+"n": "Little Taco Shop Kirby",
+"k": "rest",
+"c": "Tacos",
+"a": "3027 Kirby Dr"
+},
+{
+"n": "PostScript",
+"k": "bar",
+"c": "Cocktail bar",
+"a": "2800 Kirby Dr"
+},
+{
+"n": "George's Bistro & Bar",
+"k": "rest",
+"c": "Bistro",
+"a": "2715 Bissonnet St"
+},
+{
+"n": "Pinstripes Houston",
+"k": "rest",
+"c": "Italian, bowling & bocce",
+"a": "3300 Kirby Dr"
+},
+{
+"n": "Loch Bar",
+"k": "bar",
+"c": "Seafood & whiskey bar",
+"a": "4444 Westheimer Rd"
+},
+{
+"n": "Ouzo Bay",
+"k": "rest",
+"c": "Greek seafood",
+"a": "4444 Westheimer Rd"
+},
+{
+"n": "Steak 48",
+"k": "rest",
+"c": "Steakhouse",
+"a": "4444 Westheimer Rd"
+},
+{
+"n": "Toulouse",
+"k": "rest",
+"c": "French",
+"a": "4444 Westheimer Rd"
+},
+{
+"n": "Confessions",
+"k": "bar",
+"c": "Cocktail lounge"
+},
+{
+"n": "Uchiko Houston",
+"k": "rest",
+"c": "Japanese",
+"a": "1801 Post Oak Blvd"
+},
+{
+"n": "Grotto",
+"k": "rest",
+"c": "Italian",
+"a": "4715 Westheimer Rd"
+},
+{
+"n": "Exodus Bar & Grill",
+"k": "rest",
+"c": "Steakhouse & grill",
+"a": "80 Braeswood Square"
+},
+{
+"n": "Aya Sushi",
+"k": "rest",
+"c": "Sushi omakase",
+"a": "5407 Bellaire Blvd"
+},
+{
+"n": "Betsy's at Evelyn's Park",
+"k": "rest",
+"c": "Breakfast tacos & American",
+"a": "4400 Bellaire Blvd"
+},
+{
+"n": "Blood Bros BBQ",
+"k": "rest",
+"c": "BBQ",
+"a": "5425 Bellaire Blvd"
+},
+{
+"n": "Cafe Piquet",
+"k": "rest",
+"c": "Cuban",
+"a": "5757 Bissonnet St"
+},
+{
+"n": "Dandelion Cafe Bellaire",
+"k": "coffee",
+"c": "Café, breakfast & lunch",
+"a": "5405 Bellaire Blvd"
+},
+{
+"n": "KP's Kitchen",
+"k": "rest",
+"c": "American bistro",
+"a": "5427 Bissonnet St"
+},
+{
+"n": "James Coney Island Meyerland",
+"k": "rest",
+"c": "Hot dogs",
+"a": "530 Meyerland Plaza"
+},
+{
+"n": "Lankford's Bellaire",
+"k": "rest",
+"c": "Burgers",
+"a": "5208 Bissonnet St"
+},
+{
+"n": "Molina's Cantina Bellaire",
+"k": "rest",
+"c": "Tex-Mex",
+"a": "3801 Bellaire Blvd"
+},
+{
+"n": "ZOA Moroccan Kitchen Bellaire",
+"k": "rest",
+"c": "Moroccan",
+"a": "6700 S Rice Ave"
+},
+{
+"n": "Tapester's Grill",
+"k": "rest",
+"c": "American comfort food",
+"a": "4520 Beechnut St"
+},
+{
+"n": "Watershed",
+"k": "bar",
+"c": "Bar & grill",
+"a": "4820 W Bellfort Ave"
+},
+{
+"n": "Enoteca Rossa",
+"k": "rest",
+"c": "Italian"
+},
+{
+"n": "Rossa Room",
+"k": "bar",
+"c": "Cocktail bar & patio"
+},
+{
+"n": "Three Brothers Bakery",
+"k": "coffee",
+"c": "Bakery",
+"a": "4036 S Braeswood Blvd"
+},
+{
+"n": "Coltivare",
+"k": "rest",
+"c": "Italian & pizza",
+"a": "3320 White Oak Dr"
+},
+{
+"n": "Understory",
+"k": "rest",
+"c": "Food hall",
+"a": "800 Capitol St"
+},
+{
+"n": "Kanomwan",
+"k": "rest",
+"c": "Thai",
+"a": "736 Telephone Rd"
+},
+{
+"n": "Costa Brava Bistro",
+"k": "rest",
+"c": "Spanish"
+},
+{
+"n": "Anvil Bar & Refuge",
+"k": "bar",
+"c": "Cocktail bar",
+"a": "1424 Westheimer Rd"
+},
+{
+"n": "51fifteen",
+"k": "rest",
+"c": "Contemporary American",
+"a": "5175 Westheimer Rd"
+},
+{
+"n": "Del Frisco's Double Eagle Steakhouse",
+"k": "rest",
+"c": "Steakhouse"
+},
+{
+"n": "JOEY Uptown",
+"k": "rest",
+"c": "American"
+},
+{
+"n": "Morton's The Steakhouse Galleria",
+"k": "rest",
+"c": "Steakhouse"
+},
+{
+"n": "Mariposa at Neiman Marcus",
+"k": "rest",
+"c": "Contemporary American",
+"a": "2600 Post Oak Blvd"
+},
+{
+"n": "Peli Peli Galleria",
+"k": "rest",
+"c": "South African",
+"a": "5085 Westheimer Rd"
+},
+{
+"n": "Fig & Olive Houston",
+"k": "rest",
+"c": "Mediterranean"
+},
+{
+"n": "Blanco Cocina + Cantina",
+"k": "rest",
+"c": "Tex-Mex"
+},
+{
+"n": "Ten Sushi + Cocktail Bar",
+"k": "rest",
+"c": "Sushi & pan-Asian",
+"a": "4200 Westheimer Rd"
+},
+{
+"n": "The Burger Joint Heights",
+"k": "rest",
+"c": "Burgers",
+"a": "2002 N Shepherd Dr"
+},
+{
+"n": "The Burger Joint West U",
+"k": "rest",
+"c": "Burgers",
+"a": "5403 Kirby Dr"
 }
 ]
 }

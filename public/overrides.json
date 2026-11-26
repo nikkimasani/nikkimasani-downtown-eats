@@ -2706,6 +2706,34 @@
       "source": "River Oaks District; pinned at the west end of the district",
       "checked": "2026-11-25",
       "notInDirectory": true
+    },
+    "Uchi": {
+      "street": "904 Westheimer Rd",
+      "lat": 29.7449366,
+      "lng": -95.3907278,
+      "source": "OpenStreetMap",
+      "checked": "2026-11-25"
+    },
+    "Aiko": {
+      "street": "1902 Washington Ave",
+      "lat": 29.7679696,
+      "lng": -95.3775437,
+      "source": "OpenStreetMap",
+      "checked": "2026-11-25"
+    },
+    "Kirby Ice House": {
+      "street": "3333 Eastside St",
+      "lat": 29.7358093,
+      "lng": -95.4245071,
+      "source": "OpenStreetMap",
+      "checked": "2026-11-25"
+    },
+    "Local Foods": {
+      "street": "714 Yale St",
+      "lat": 29.7836351,
+      "lng": -95.3986181,
+      "source": "OpenStreetMap",
+      "checked": "2026-11-25"
     }
   }
 }

@@ -9,7 +9,7 @@ const OF = JSON.parse(fs.readFileSync('public/overrides.json', 'utf8')); const O
 const P = JSON.parse(fs.readFileSync('public/places.json', 'utf8'));
 const norm = (s) => String(s || '').toLowerCase().normalize('NFD').replace(/[̀-ͯ]/g, '').replace(/[’']/g, '').replace(/&/g, 'and').replace(/\b(the|houston|htx|bar|lounge|restaurant|kitchen|and)\b/g, '').replace(/[^a-z0-9]/g, '');
 const have = new Set([...C.map((c) => norm(c.name)), ...P.places.map((p) => norm(p.name))]);
-const BOX = { s: 29.700, w: -95.485, n: 29.815, e: -95.300 };   // the inner loop, out to the Galleria
+const BOX = { s: 29.645, w: -95.495, n: 29.815, e: -95.300 };   // the inner loop, out to the Galleria
 const inBox = (la, lo) => la > BOX.s && la < BOX.n && lo > BOX.w && lo < BOX.e;
 const sleep = (ms) => new Promise((r) => setTimeout(r, ms));
 const UA = { 'user-agent': 'downtown-eats personal dining map (github.com/nikkimasani/nikkimasani-downtown-eats)' };
