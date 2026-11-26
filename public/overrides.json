@@ -2671,6 +2671,22 @@
       "source": "OpenTable listing; pin placed beside 1971 W Gray (Cocody) on the same block",
       "checked": "2026-11-25",
       "notInDirectory": true
+    },
+    "Winfield's Chocolate Bar Rice Village": {
+      "street": "2531 University Blvd",
+      "lat": 29.715,
+      "lng": -95.417218,
+      "source": "US Census geocoder",
+      "checked": "2026-11-26",
+      "notInDirectory": true
+    },
+    "Shake Shack Rice Village": {
+      "street": "6205 Kirby Dr",
+      "lat": 29.715766,
+      "lng": -95.41835,
+      "source": "US Census geocoder",
+      "checked": "2026-11-26",
+      "notInDirectory": true
     }
   }
 }

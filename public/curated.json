@@ -11199,5 +11199,46 @@
   "type": "Cocktail Bar",
   "note": "Upscale River Oaks cocktail lounge and dinner spot upstairs on W Gray, from the Off The Record team: live musicians, DJs and a dressy crowd. Wed–Sat nights; formal attire.",
   "tryit": "The \"Oh You Fancy Huh?\" cocktail; book ahead for Wednesday nights."
+ },
+ {
+  "id": 567,
+  "name": "Winfield's Chocolate Bar Rice Village",
+  "address": "2531 University Blvd, Houston, TX",
+  "tunnel": null,
+  "cuisines": [
+   "Dessert café"
+  ],
+  "meals": [
+   "Breakfast",
+   "Lunch"
+  ],
+  "price": 2,
+  "vibes": [
+   "coffee",
+   "work"
+  ],
+  "type": "Coffee Shop",
+  "note": "Dessert café.",
+  "tryit": ""
+ },
+ {
+  "id": 568,
+  "name": "Shake Shack Rice Village",
+  "address": "6205 Kirby Dr, Houston, TX",
+  "tunnel": null,
+  "cuisines": [
+   "Burgers"
+  ],
+  "meals": [
+   "Lunch",
+   "Dinner"
+  ],
+  "price": 2,
+  "vibes": [
+   "casual"
+  ],
+  "type": "Restaurant",
+  "note": "Burgers restaurant.",
+  "tryit": ""
  }
 ]
