@@ -13155,5 +13155,208 @@
   "type": "Bar",
   "note": "Heights bar & game-day hangout.",
   "tryit": ""
+ },
+ {
+  "id": 661,
+  "name": "Baso",
+  "address": "633 W 19th St, Houston, TX",
+  "tunnel": null,
+  "cuisines": [
+   "Basque live-fire"
+  ],
+  "meals": [
+   "Lunch",
+   "Dinner"
+  ],
+  "price": 2,
+  "vibes": [
+   "casual"
+  ],
+  "type": "Restaurant",
+  "note": "Basque live-fire restaurant.",
+  "tryit": ""
+ },
+ {
+  "id": 662,
+  "name": "Camaraderie",
+  "address": "608 W 11th St, Houston, TX",
+  "tunnel": null,
+  "cuisines": [
+   "Refined American"
+  ],
+  "meals": [
+   "Lunch",
+   "Dinner"
+  ],
+  "price": 2,
+  "vibes": [
+   "casual"
+  ],
+  "type": "Restaurant",
+  "note": "Refined American restaurant.",
+  "tryit": ""
+ },
+ {
+  "id": 663,
+  "name": "Koyo Hand Roll Bar Heights",
+  "address": "1835 N Shepherd Dr, Houston, TX",
+  "tunnel": null,
+  "cuisines": [
+   "Hand roll sushi"
+  ],
+  "meals": [
+   "Lunch",
+   "Dinner"
+  ],
+  "price": 2,
+  "vibes": [
+   "casual"
+  ],
+  "type": "Restaurant",
+  "note": "Hand roll sushi restaurant.",
+  "tryit": ""
+ },
+ {
+  "id": 664,
+  "name": "Love Croissants Heights",
+  "address": "801 W 16th St, Houston, TX",
+  "tunnel": null,
+  "cuisines": [
+   "Croissant bakery & drive-thru"
+  ],
+  "meals": [
+   "Breakfast",
+   "Lunch"
+  ],
+  "price": 2,
+  "vibes": [
+   "coffee",
+   "work"
+  ],
+  "type": "Bakery & Café",
+  "note": "Croissant bakery & drive-thru.",
+  "tryit": ""
+ },
+ {
+  "id": 665,
+  "name": "Love Croissants Midtown",
+  "address": "2808 Caroline St, Houston, TX",
+  "tunnel": null,
+  "cuisines": [
+   "Croissant bakery"
+  ],
+  "meals": [
+   "Breakfast",
+   "Lunch"
+  ],
+  "price": 2,
+  "vibes": [
+   "coffee",
+   "work"
+  ],
+  "type": "Bakery & Café",
+  "note": "Croissant bakery.",
+  "tryit": ""
+ },
+ {
+  "id": 666,
+  "name": "Mack Allen's",
+  "address": "4400 Post Oak Pkwy, Houston, TX",
+  "tunnel": null,
+  "cuisines": [
+   "Steaks, sushi & seafood"
+  ],
+  "meals": [
+   "Lunch",
+   "Dinner"
+  ],
+  "price": 2,
+  "vibes": [
+   "casual"
+  ],
+  "type": "Restaurant",
+  "note": "Steaks, sushi & seafood restaurant.",
+  "tryit": ""
+ },
+ {
+  "id": 667,
+  "name": "Johnny Ritas Cocina y Cantina",
+  "address": "5602 Fulton St, Houston, TX",
+  "tunnel": null,
+  "cuisines": [
+   "Mesquite-fired Mexican"
+  ],
+  "meals": [
+   "Lunch",
+   "Dinner"
+  ],
+  "price": 2,
+  "vibes": [
+   "casual"
+  ],
+  "type": "Restaurant",
+  "note": "Mesquite-fired Mexican restaurant.",
+  "tryit": ""
+ },
+ {
+  "id": 668,
+  "name": "Hypsi",
+  "address": "347 W 20th St, Houston, TX",
+  "tunnel": null,
+  "cuisines": [
+   "Italian at Hotel Daphne"
+  ],
+  "meals": [
+   "Lunch",
+   "Dinner"
+  ],
+  "price": 2,
+  "vibes": [
+   "casual"
+  ],
+  "type": "Restaurant",
+  "note": "Italian at Hotel Daphne restaurant.",
+  "tryit": ""
+ },
+ {
+  "id": 669,
+  "name": "Lo-Lo's Chicken & Waffles",
+  "address": "3611 Gulf Fwy, Houston, TX",
+  "tunnel": null,
+  "cuisines": [
+   "Chicken & waffles"
+  ],
+  "meals": [
+   "Lunch",
+   "Dinner"
+  ],
+  "price": 2,
+  "vibes": [
+   "casual"
+  ],
+  "type": "Restaurant",
+  "note": "Chicken & waffles restaurant.",
+  "tryit": ""
+ },
+ {
+  "id": 670,
+  "name": "The Address",
+  "address": "3333 Raleigh St, Houston, TX",
+  "tunnel": null,
+  "cuisines": [
+   "Restaurant, sports bar & pool"
+  ],
+  "meals": [
+   "Happy Hour",
+   "Late Night"
+  ],
+  "price": 2,
+  "vibes": [
+   "drinks",
+   "nightlife"
+  ],
+  "type": "Sports Bar",
+  "note": "Restaurant, sports bar & pool.",
+  "tryit": ""
  }
 ]
