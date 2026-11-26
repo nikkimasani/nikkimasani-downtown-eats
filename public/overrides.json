@@ -2699,7 +2699,9 @@
       "website": "https://madhouston.com",
       "hours": "Mon–Thu 5pm–10pm, Fri–Sun 11am–2pm, Fri–Sat 4:30pm–12am, Sun 5pm–9pm",
       "source": "OpenTable listing",
-      "checked": "2026-11-25"
+      "checked": "2026-11-25",
+      "lat": 29.74225,
+      "lng": -95.45455
     },
     "iPic Houston": {
       "street": "4444 Westheimer Rd Suite G100",
