@@ -1719,6 +1719,28 @@
 "k": "coffee",
 "c": "Drive-thru coffee",
 "a": "2301 University Blvd"
+},
+{
+"n": "Oishii",
+"k": "rest",
+"c": "Japanese & sushi",
+"a": "3764 Richmond Ave"
+},
+{
+"n": "Jollibee",
+"k": "rest",
+"c": "Filipino fried chicken",
+"a": "8001 S Main St"
+},
+{
+"n": "Olive Garden Kirby",
+"k": "rest",
+"c": "Italian"
+},
+{
+"n": "Trellis",
+"k": "rest",
+"c": "Restaurant"
 }
 ]
 }
