@@ -1400,11 +1400,6 @@
 "a": "4444 Westheimer Rd"
 },
 {
-"n": "Confessions",
-"k": "bar",
-"c": "Cocktail lounge"
-},
-{
 "n": "Uchiko Houston",
 "k": "rest",
 "c": "Japanese",
@@ -1426,19 +1421,19 @@
 "n": "Aya Sushi",
 "k": "rest",
 "c": "Sushi omakase",
-"a": "5407 Bellaire Blvd"
+"a": "5407 Bellaire Blvd, Bellaire"
 },
 {
 "n": "Betsy's at Evelyn's Park",
 "k": "rest",
 "c": "Breakfast tacos & American",
-"a": "4400 Bellaire Blvd"
+"a": "4400 Bellaire Blvd, Bellaire"
 },
 {
 "n": "Blood Bros BBQ",
 "k": "rest",
 "c": "BBQ",
-"a": "5425 Bellaire Blvd"
+"a": "5425 Bellaire Blvd, Bellaire"
 },
 {
 "n": "Cafe Piquet",
@@ -1461,14 +1456,13 @@
 {
 "n": "James Coney Island Meyerland",
 "k": "rest",
-"c": "Hot dogs",
-"a": "530 Meyerland Plaza"
+"c": "Hot dogs"
 },
 {
 "n": "Lankford's Bellaire",
 "k": "rest",
 "c": "Burgers",
-"a": "5208 Bissonnet St"
+"a": "5208 Bissonnet St, Bellaire"
 },
 {
 "n": "Molina's Cantina Bellaire",
@@ -1480,7 +1474,7 @@
 "n": "ZOA Moroccan Kitchen Bellaire",
 "k": "rest",
 "c": "Moroccan",
-"a": "6700 S Rice Ave"
+"a": "6700 S Rice Ave, Bellaire"
 },
 {
 "n": "Tapester's Grill",
@@ -1497,12 +1491,14 @@
 {
 "n": "Enoteca Rossa",
 "k": "rest",
-"c": "Italian"
+"c": "Italian",
+"a": "4566 Bissonnet St, Bellaire"
 },
 {
 "n": "Rossa Room",
 "k": "bar",
-"c": "Cocktail bar & patio"
+"c": "Cocktail bar & patio",
+"a": "4566 Bissonnet St, Bellaire"
 },
 {
 "n": "Three Brothers Bakery",
@@ -1531,7 +1527,8 @@
 {
 "n": "Costa Brava Bistro",
 "k": "rest",
-"c": "Spanish"
+"c": "Spanish",
+"a": "5115 Bellaire Blvd, Bellaire"
 },
 {
 "n": "Anvil Bar & Refuge",
@@ -1546,19 +1543,10 @@
 "a": "5175 Westheimer Rd"
 },
 {
-"n": "Del Frisco's Double Eagle Steakhouse",
-"k": "rest",
-"c": "Steakhouse"
-},
-{
 "n": "JOEY Uptown",
 "k": "rest",
-"c": "American"
-},
-{
-"n": "Morton's The Steakhouse Galleria",
-"k": "rest",
-"c": "Steakhouse"
+"c": "American",
+"a": "5045 Westheimer Rd"
 },
 {
 "n": "Mariposa at Neiman Marcus",
@@ -1571,16 +1559,6 @@
 "k": "rest",
 "c": "South African",
 "a": "5085 Westheimer Rd"
-},
-{
-"n": "Fig & Olive Houston",
-"k": "rest",
-"c": "Mediterranean"
-},
-{
-"n": "Blanco Cocina + Cantina",
-"k": "rest",
-"c": "Tex-Mex"
 },
 {
 "n": "Ten Sushi + Cocktail Bar",
