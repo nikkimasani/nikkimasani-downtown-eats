@@ -3502,6 +3502,54 @@
       "source": "US Census geocoder",
       "checked": "2026-11-26",
       "notInDirectory": true
+    },
+    "Ray's Real Pit BBQ Shack": {
+      "street": "3929 Old Spanish Trl",
+      "lat": 29.70256,
+      "lng": -95.357058,
+      "source": "US Census geocoder",
+      "checked": "2026-11-26",
+      "notInDirectory": true
+    },
+    "Kenneally's Irish Pub": {
+      "street": "2111 S Shepherd Dr",
+      "lat": 29.746766,
+      "lng": -95.410592,
+      "source": "US Census geocoder",
+      "checked": "2026-11-26",
+      "notInDirectory": true
+    },
+    "Rumi's Kitchen": {
+      "street": "1801 Post Oak Blvd",
+      "lat": 29.747314,
+      "lng": -95.461116,
+      "source": "US Census geocoder",
+      "checked": "2026-11-26",
+      "notInDirectory": true
+    },
+    "Holler Brewing": {
+      "street": "2206 Edwards St",
+      "lat": 29.770746,
+      "lng": -95.380165,
+      "source": "US Census geocoder",
+      "checked": "2026-11-26",
+      "notInDirectory": true
+    },
+    "Mala Sichuan Montrose": {
+      "street": "1201 Westheimer Rd",
+      "lat": 29.744325,
+      "lng": -95.393849,
+      "source": "US Census geocoder",
+      "checked": "2026-11-26",
+      "notInDirectory": true
+    },
+    "Mala Sichuan Heights": {
+      "street": "600 N Shepherd Dr",
+      "lat": 29.78157,
+      "lng": -95.40913,
+      "source": "US Census geocoder",
+      "checked": "2026-11-26",
+      "notInDirectory": true
     }
   }
 }

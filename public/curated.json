@@ -13358,5 +13358,127 @@
   "type": "Sports Bar",
   "note": "Restaurant, sports bar & pool.",
   "tryit": ""
+ },
+ {
+  "id": 671,
+  "name": "Ray's Real Pit BBQ Shack",
+  "address": "3929 Old Spanish Trl, Houston, TX",
+  "tunnel": null,
+  "cuisines": [
+   "BBQ & soul food"
+  ],
+  "meals": [
+   "Lunch",
+   "Dinner"
+  ],
+  "price": 2,
+  "vibes": [
+   "casual"
+  ],
+  "type": "Restaurant",
+  "note": "BBQ & soul food restaurant.",
+  "tryit": ""
+ },
+ {
+  "id": 672,
+  "name": "Kenneally's Irish Pub",
+  "address": "2111 S Shepherd Dr, Houston, TX",
+  "tunnel": null,
+  "cuisines": [
+   "Irish pub & thin-crust pizza"
+  ],
+  "meals": [
+   "Happy Hour",
+   "Late Night"
+  ],
+  "price": 2,
+  "vibes": [
+   "drinks",
+   "nightlife"
+  ],
+  "type": "Pub",
+  "note": "Irish pub & thin-crust pizza.",
+  "tryit": ""
+ },
+ {
+  "id": 673,
+  "name": "Rumi's Kitchen",
+  "address": "1801 Post Oak Blvd, Houston, TX",
+  "tunnel": null,
+  "cuisines": [
+   "Persian"
+  ],
+  "meals": [
+   "Lunch",
+   "Dinner"
+  ],
+  "price": 2,
+  "vibes": [
+   "casual"
+  ],
+  "type": "Restaurant",
+  "note": "Persian restaurant.",
+  "tryit": ""
+ },
+ {
+  "id": 674,
+  "name": "Holler Brewing",
+  "address": "2206 Edwards St, Houston, TX",
+  "tunnel": null,
+  "cuisines": [
+   "Brewery taproom"
+  ],
+  "meals": [
+   "Happy Hour",
+   "Late Night"
+  ],
+  "price": 2,
+  "vibes": [
+   "drinks",
+   "nightlife"
+  ],
+  "type": "Bar",
+  "note": "Brewery taproom.",
+  "tryit": ""
+ },
+ {
+  "id": 675,
+  "name": "Mala Sichuan Montrose",
+  "address": "1201 Westheimer Rd, Houston, TX",
+  "tunnel": null,
+  "cuisines": [
+   "Sichuan"
+  ],
+  "meals": [
+   "Lunch",
+   "Dinner"
+  ],
+  "price": 2,
+  "vibes": [
+   "casual"
+  ],
+  "type": "Restaurant",
+  "note": "Sichuan restaurant.",
+  "tryit": ""
+ },
+ {
+  "id": 676,
+  "name": "Mala Sichuan Heights",
+  "address": "600 N Shepherd Dr, Houston, TX",
+  "tunnel": null,
+  "cuisines": [
+   "Sichuan"
+  ],
+  "meals": [
+   "Lunch",
+   "Dinner"
+  ],
+  "price": 2,
+  "vibes": [
+   "casual"
+  ],
+  "type": "Restaurant",
+  "note": "Sichuan restaurant.",
+  "tryit": ""
  }
 ]
