@@ -11173,5 +11173,31 @@
   "type": "Restaurant",
   "note": "American cafe restaurant.",
   "tryit": ""
+ },
+ {
+  "id": 566,
+  "name": "Fancy's HTX",
+  "address": "1947 W Gray St Suite 200, Houston, TX",
+  "tunnel": null,
+  "cuisines": [
+   "American",
+   "Sushi"
+  ],
+  "meals": [
+   "Dinner",
+   "Late Night",
+   "Full Service"
+  ],
+  "price": 3,
+  "vibes": [
+   "drinks",
+   "nightlife",
+   "date",
+   "upscale",
+   "music"
+  ],
+  "type": "Cocktail Bar",
+  "note": "Upscale River Oaks cocktail lounge and dinner spot upstairs on W Gray, from the Off The Record team: live musicians, DJs and a dressy crowd. Wed–Sat nights; formal attire.",
+  "tryit": "The \"Oh You Fancy Huh?\" cocktail; book ahead for Wednesday nights."
  }
 ]

@@ -2661,6 +2661,16 @@
       "source": "OpenStreetMap Nominatim",
       "checked": "2026-11-26",
       "notInDirectory": true
+    },
+    "Fancy's HTX": {
+      "street": "1947 W Gray St Suite 200",
+      "geoStreet": "1947 W Gray St",
+      "lat": 29.75302,
+      "lng": -95.40665,
+      "hours": "Wed 5pm–12am; Thu–Fri 5pm–2am; Sat 7pm–2am",
+      "source": "OpenTable listing; pin placed beside 1971 W Gray (Cocody) on the same block",
+      "checked": "2026-11-25",
+      "notInDirectory": true
     }
   }
 }

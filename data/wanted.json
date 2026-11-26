@@ -1256,29 +1256,16 @@
 "c": "American cafe"
 },
 {
-"n": "Prego",
-"k": "rest",
-"c": "Italian"
-},
-{
-"n": "The Chocolate Bar Rice Village",
+"n": "Winfield's Chocolate Bar Rice Village",
 "k": "coffee",
-"c": "Dessert café"
+"c": "Dessert café",
+"a": "2531 University Blvd"
 },
 {
 "n": "Shake Shack Rice Village",
 "k": "rest",
-"c": "Burgers"
-},
-{
-"n": "The Kirby Club",
-"k": "bar",
-"c": "Cocktail bar"
-},
-{
-"n": "Doc Holliday's Rice Village",
-"k": "bar",
-"c": "Cocktail bar & poke"
+"c": "Burgers",
+"a": "6205 Kirby Dr"
 }
 ]
 }
