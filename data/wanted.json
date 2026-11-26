@@ -2053,6 +2053,18 @@
 "k": "bar",
 "c": "Brewery taproom",
 "a": "1616 Bevis St"
+},
+{
+"n": "Leemoo Health Bar",
+"k": "coffee",
+"c": "Smoothies, acai & healthy bites",
+"a": "908 Westheimer Rd"
+},
+{
+"n": "La La Land Kind Cafe MKT",
+"k": "coffee",
+"c": "Coffee & feel-good cafe",
+"a": "600 N Shepherd Dr"
 }
 ]
 }
