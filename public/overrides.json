@@ -7130,7 +7130,8 @@
       "lng": -95.461334,
       "source": "US Census geocoder",
       "checked": "2026-11-26",
-      "notInDirectory": true
+      "notInDirectory": true,
+      "soon": "Opening 2027"
     },
     "Casa Nomad": {
       "street": "600 N Shepherd Dr",
