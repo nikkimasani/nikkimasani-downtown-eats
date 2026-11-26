@@ -12558,5 +12558,110 @@
   "type": "Restaurant",
   "note": "Farm-to-table American restaurant.",
   "tryit": ""
+ },
+ {
+  "id": 632,
+  "name": "Eagle Houston",
+  "address": "611 Hyde Park Blvd, Houston, TX",
+  "tunnel": null,
+  "cuisines": [
+   "Gay bar & nightclub"
+  ],
+  "meals": [
+   "Happy Hour",
+   "Late Night"
+  ],
+  "price": 2,
+  "vibes": [
+   "drinks",
+   "nightlife"
+  ],
+  "type": "Nightclub",
+  "note": "Gay bar & nightclub.",
+  "tryit": ""
+ },
+ {
+  "id": 633,
+  "name": "Bar 5015",
+  "address": "5015 Almeda Rd, Houston, TX",
+  "tunnel": null,
+  "cuisines": [
+   "Bar & patio"
+  ],
+  "meals": [
+   "Happy Hour",
+   "Late Night"
+  ],
+  "price": 2,
+  "vibes": [
+   "drinks",
+   "nightlife"
+  ],
+  "type": "Bar",
+  "note": "Bar & patio.",
+  "tryit": ""
+ },
+ {
+  "id": 634,
+  "name": "Axelrad",
+  "address": "1517 Alabama St, Houston, TX",
+  "tunnel": null,
+  "cuisines": [
+   "Beer garden & hammocks"
+  ],
+  "meals": [
+   "Happy Hour",
+   "Late Night"
+  ],
+  "price": 2,
+  "vibes": [
+   "drinks",
+   "nightlife"
+  ],
+  "type": "Beer Garden",
+  "note": "Beer garden & hammocks.",
+  "tryit": ""
+ },
+ {
+  "id": 635,
+  "name": "Blacksmith",
+  "address": "1018 Westheimer Rd, Houston, TX",
+  "tunnel": null,
+  "cuisines": [
+   "Coffee & breakfast"
+  ],
+  "meals": [
+   "Breakfast",
+   "Lunch"
+  ],
+  "price": 2,
+  "vibes": [
+   "coffee",
+   "work"
+  ],
+  "type": "Coffee Shop",
+  "note": "Coffee & breakfast.",
+  "tryit": ""
+ },
+ {
+  "id": 636,
+  "name": "Prospect Park Midtown",
+  "address": "3100 Fountain View Drive, Houston, TX",
+  "tunnel": null,
+  "cuisines": [
+   "Sports bar"
+  ],
+  "meals": [
+   "Happy Hour",
+   "Late Night"
+  ],
+  "price": 2,
+  "vibes": [
+   "drinks",
+   "nightlife"
+  ],
+  "type": "Sports Bar",
+  "note": "Sports bar.",
+  "tryit": ""
  }
 ]

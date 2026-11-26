@@ -3190,6 +3190,46 @@
       "source": "OpenStreetMap Nominatim",
       "checked": "2026-11-26",
       "notInDirectory": true
+    },
+    "Eagle Houston": {
+      "street": "611 Hyde Park Blvd",
+      "lat": 29.747426,
+      "lng": -95.388198,
+      "source": "US Census geocoder",
+      "checked": "2026-11-26",
+      "notInDirectory": true
+    },
+    "Bar 5015": {
+      "street": "5015 Almeda Rd",
+      "lat": 29.723859,
+      "lng": -95.378319,
+      "source": "US Census geocoder",
+      "checked": "2026-11-26",
+      "notInDirectory": true
+    },
+    "Axelrad": {
+      "street": "1517 Alabama St",
+      "lat": 29.735242,
+      "lng": -95.37545,
+      "source": "US Census geocoder",
+      "checked": "2026-11-26",
+      "notInDirectory": true
+    },
+    "Blacksmith": {
+      "street": "1018 Westheimer Rd",
+      "lat": 29.744721,
+      "lng": -95.392021,
+      "source": "US Census geocoder",
+      "checked": "2026-11-26",
+      "notInDirectory": true
+    },
+    "Prospect Park Midtown": {
+      "street": "3100 Fountain View Drive",
+      "lat": 29.732721,
+      "lng": -95.484639,
+      "source": "OpenStreetMap Nominatim",
+      "checked": "2026-11-26",
+      "notInDirectory": true
     }
   }
 }
