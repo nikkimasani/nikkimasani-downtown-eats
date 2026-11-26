@@ -655,12 +655,6 @@
 "a": "2808 Caroline St"
 },
 {
-"n": "Night Heron",
-"k": "bar",
-"c": "Cocktails",
-"a": "1601 W Main St"
-},
-{
 "n": "Mapo Mama",
 "k": "rest",
 "c": "Chinese"
@@ -689,6 +683,336 @@
 "n": "Pho Saigon Midtown",
 "k": "rest",
 "c": "Vietnamese"
+},
+{
+"n": "Doc's Houston",
+"k": "bar",
+"c": "Jazz Supper Club",
+"a": "1201 Westheimer Rd"
+},
+{
+"n": "1111",
+"k": "bar",
+"c": "Cocktails",
+"a": "1111 Westheimer Rd"
+},
+{
+"n": "Fiora's Bottle Shop",
+"k": "bar",
+"c": "Wine Bar",
+"a": "888 Westheimer Rd"
+},
+{
+"n": "Sophie Cocktail & Terrace Bar",
+"k": "bar",
+"c": "Cocktails",
+"a": "910 Westheimer Rd"
+},
+{
+"n": "Marmo",
+"k": "rest",
+"c": "Italian Steakhouse",
+"a": "888 Westheimer Rd"
+},
+{
+"n": "Oheya",
+"k": "rest",
+"c": "Omakase",
+"a": "904 Westheimer Rd"
+},
+{
+"n": "Graffiti",
+"k": "rest",
+"c": "American",
+"a": "1001 California St"
+},
+{
+"n": "Okt\u00f3",
+"k": "rest",
+"c": "Mediterranean",
+"a": "888 Westheimer Rd"
+},
+{
+"n": "Van Leeuwen Ice Cream Montrose",
+"k": "coffee",
+"c": "Ice Cream",
+"a": "888 Westheimer Rd"
+},
+{
+"n": "The Chelsea",
+"k": "rest",
+"c": "New American",
+"a": "888 Westheimer Rd"
+},
+{
+"n": "Picnik",
+"k": "rest",
+"c": "Healthy",
+"a": "888 Westheimer Rd"
+},
+{
+"n": "Mi Luna",
+"k": "rest",
+"c": "Spanish Tapas",
+"a": "888 Westheimer Rd"
+},
+{
+"n": "Graffiti Raw",
+"k": "rest",
+"c": "Raw Bar",
+"a": "888 Westheimer Rd"
+},
+{
+"n": "Bludorn",
+"k": "rest",
+"c": "New American",
+"a": "807 Taft St"
+},
+{
+"n": "March",
+"k": "rest",
+"c": "Mediterranean",
+"a": "1624 Westheimer Rd"
+},
+{
+"n": "Rosie Cannonball",
+"k": "rest",
+"c": "Italian",
+"a": "1620 Westheimer Rd"
+},
+{
+"n": "Candente",
+"k": "rest",
+"c": "Tex-Mex",
+"a": "4306 Yoakum Blvd"
+},
+{
+"n": "BCN Taste & Tradition",
+"k": "rest",
+"c": "Spanish",
+"a": "4210 Roseland St"
+},
+{
+"n": "Cuchara",
+"k": "rest",
+"c": "Mexican",
+"a": "214 Fairview St"
+},
+{
+"n": "Clark's Oyster Bar",
+"k": "rest",
+"c": "Seafood",
+"a": "3807 Montrose Blvd"
+},
+{
+"n": "Nando's Montrose",
+"k": "rest",
+"c": "Chicken",
+"a": "1201 Westheimer Rd"
+},
+{
+"n": "Little's Oyster Bar",
+"k": "rest",
+"c": "Seafood",
+"a": "3001 S Shepherd Dr"
+},
+{
+"n": "chr\u00f4ma",
+"k": "coffee",
+"c": "Coffee",
+"a": "1512 Sul Ross St"
+},
+{
+"n": "Bori",
+"k": "rest",
+"c": "Korean BBQ",
+"a": "501 Lovett Blvd"
+},
+{
+"n": "Alora",
+"k": "bar",
+"c": "Wine Bar",
+"a": "2502 Dunlavy St"
+},
+{
+"n": "Doris Metropolitan",
+"k": "rest",
+"c": "Steakhouse",
+"a": "2815 S Shepherd Dr"
+},
+{
+"n": "Avant Garden",
+"k": "bar",
+"c": "Bar",
+"a": "411 Westheimer Rd"
+},
+{
+"n": "West Alabama Ice House",
+"k": "bar",
+"c": "Icehouse",
+"a": "1919 W Alabama St"
+},
+{
+"n": "Etro Lounge",
+"k": "bar",
+"c": "Lounge",
+"a": "1424 Westheimer Rd"
+},
+{
+"n": "Rudyard's",
+"k": "bar",
+"c": "Pub",
+"a": "2010 Waugh Dr"
+},
+{
+"n": "Eunice",
+"k": "rest",
+"c": "Cajun-Creole",
+"a": "3737 Buffalo Speedway"
+},
+{
+"n": "Kiran's",
+"k": "rest",
+"c": "Indian",
+"a": "2925 Richmond Ave"
+},
+{
+"n": "State of Grace",
+"k": "rest",
+"c": "Southern",
+"a": "3258 Westheimer Rd"
+},
+{
+"n": "Tony's",
+"k": "rest",
+"c": "Italian",
+"a": "3755 Richmond Ave"
+},
+{
+"n": "Hearsay at Levy Park",
+"k": "rest",
+"c": "American",
+"a": "3801 Eastside St"
+},
+{
+"n": "a'Bouzy",
+"k": "rest",
+"c": "French",
+"a": "2300 Westheimer Rd"
+},
+{
+"n": "Ruggles Black",
+"k": "rest",
+"c": "American",
+"a": "3963 Kirby Dr"
+},
+{
+"n": "Goode Co. Seafood",
+"k": "rest",
+"c": "Seafood",
+"a": "2621 Westpark Dr"
+},
+{
+"n": "Goode Co. Texas BBQ",
+"k": "rest",
+"c": "BBQ",
+"a": "5109 Kirby Dr"
+},
+{
+"n": "Cocody",
+"k": "rest",
+"c": "French-American"
+},
+{
+"n": "Hudson House River Oaks",
+"k": "rest",
+"c": "American"
+},
+{
+"n": "Zanti Cucina Italiana",
+"k": "rest",
+"c": "Italian"
+},
+{
+"n": "MaKiin",
+"k": "rest",
+"c": "Thai"
+},
+{
+"n": "Leo's River Oaks",
+"k": "rest",
+"c": "American"
+},
+{
+"n": "Kenny & Ziggy's",
+"k": "rest",
+"c": "Deli",
+"a": "2327 Post Oak Blvd"
+},
+{
+"n": "North Italia BLVD",
+"k": "rest",
+"c": "Italian",
+"a": "1700 Post Oak Blvd"
+},
+{
+"n": "Nobu Houston",
+"k": "rest",
+"c": "Japanese",
+"a": "5115 Westheimer Rd"
+},
+{
+"n": "Musaafer",
+"k": "rest",
+"c": "Indian",
+"a": "5115 Westheimer Rd"
+},
+{
+"n": "Oceanaire Seafood Room",
+"k": "rest",
+"c": "Seafood",
+"a": "5061 Westheimer Rd"
+},
+{
+"n": "The Annie Cafe & Bar",
+"k": "rest",
+"c": "American",
+"a": "1728 Post Oak Blvd"
+},
+{
+"n": "Bouchee Patisserie",
+"k": "coffee",
+"c": "Bakery"
+},
+{
+"n": "MF Sushi",
+"k": "rest",
+"c": "Sushi",
+"a": "1401 Binz St"
+},
+{
+"n": "Lucille's",
+"k": "rest",
+"c": "Southern",
+"a": "5512 La Branch St"
+},
+{
+"n": "Aperitivo",
+"k": "rest",
+"c": "Italian Bistro",
+"a": "4110 Loretto Dr"
+},
+{
+"n": "Turkey Leg Hut",
+"k": "rest",
+"c": "Soul Food",
+"a": "4830 Almeda Rd"
+},
+{
+"n": "This Is It Soul Food",
+"k": "rest",
+"c": "Soul Food",
+"a": "2712 Blodgett St"
 }
 ]
 }

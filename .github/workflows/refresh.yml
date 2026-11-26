@@ -2,7 +2,7 @@ name: Refresh restaurant details and METRO stops
 on:
   workflow_dispatch:
   push:
-    paths: ['scripts/refresh.mjs', 'scripts/metro-static.mjs', 'scripts/osm-buildings.mjs', 'scripts/osm-streets.mjs', 'scripts/check-hours.mjs', 'scripts/events.mjs', 'scripts/geocode.mjs', 'scripts/osm-pois.mjs', 'scripts/osm-homes.mjs', 'scripts/wanted-spots.mjs', 'data/wanted.json']
+    paths: ['scripts/refresh.mjs', 'scripts/metro-static.mjs', 'scripts/osm-buildings.mjs', 'scripts/osm-streets.mjs', 'scripts/check-hours.mjs', 'scripts/events.mjs', 'scripts/geocode.mjs', 'scripts/osm-pois.mjs', 'scripts/osm-homes.mjs']
   schedule:
     - cron: '17 11 * * *'   # daily, ~5am Houston
 permissions:
