@@ -38,6 +38,7 @@ for (const r of latest.values()) {
   if (!ZIPS.has(zip)) continue;
   if (money(r.total_receipts) < 3000) continue;   // barely trading, or a closed permit still filing zeros
   const name = tc(r.location_name || r.taxpayer_name);
+  if (/\//.test(name)) continue;   // "Hotel/Restaurant/Bar" combo filings
   if (!name || BAD.test(name) || JUNK.test(name) || /^\d[\d\s-]*$/.test(name) || /^\d+\s+(n\.?\s|s\.?\s|w\.?\s|e\.?\s)?\w+\s+(st|street|rd|road|ave|avenue|dr|drive|blvd|ln)\b/i.test(name)) continue;
   const street = tc(String(r.location_address || '').replace(/\s*\b(STE|SUITE|UNIT|BLDG|SPC|FL|FLOOR|RM|ROOM|APT|#)\b.*$/i, '').replace(/\s*#.*$/, ''));
   if (!/^\d+\s/.test(street)) continue;
@@ -87,6 +88,8 @@ todo.forEach((c, i) => {
   if (!g) { skipped.noGeo++; return; }
   if (!inBox(g.lat, g.lng)) { skipped.outside++; return; }
   const n = norm(c.name), first = n.slice(0, 5);
+  const nameLike = (e) => e.n && n.length >= 4 && (e.n === n || (e.n.length >= 5 && (e.n.includes(n) || n.includes(e.n))));
+  if (existing.some((e) => e.lat && nameLike(e) && near(e, g) < 400)) { skipped.sameSpotSameName++; return; }   // same place, different address format
   if (existing.some((e) => e.lat && near(e, g) < 45 && e.n && (e.n.startsWith(first) || n.startsWith(e.n.slice(0, 5))))) { skipped.sameSpotSameName++; return; }
   const bar = !FOOD.test(c.name) && (BARNAME.test(c.name) || c.liquor / Math.max(1, c.total) > 0.8);
   add.push({ ...c, ...g, bar });
