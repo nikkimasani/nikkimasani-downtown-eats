@@ -1,34 +1,35 @@
 {
- "at": "2026-11-27T19:33:00.080Z",
+ "at": "2026-11-27T19:35:21.834Z",
  "notes": [
-  "jrea-zgmq: {\"message\":\"Query coordinator error: query.soql.type-mismatch; Type mismatch for starts_with, is number; position: Map(row -> 1, column -> 480, line -> \\\"SELECT `taxpayer_number`, `taxpayer_name`, `taxpayer_address`, `taxpayer_city`, `taxpayer_state`, `taxpayer_zip_code`, `taxpayer_county_code`, `ta",
-  "jrea-zgmq: {\"message\":\"Query coordinator error: query.soql.type-mismatch; Type mismatch for starts_with, is number; position: Map(row -> 1, column -> 480, line -> \\\"SELECT `taxpayer_number`, `taxpayer_name`, `taxpayer_address`, `taxpayer_city`, `taxpayer_state`, `taxpayer_zip_code`, `taxpayer_county_code`, `ta",
-  "jrea-zgmq: {\"message\":\"Query coordinator error: query.soql.type-mismatch; Type mismatch for starts_with, is number; position: Map(row -> 1, column -> 480, line -> \\\"SELECT `taxpayer_number`, `taxpayer_name`, `taxpayer_address`, `taxpayer_city`, `taxpayer_state`, `taxpayer_zip_code`, `taxpayer_county_code`, `ta",
-  "jrea-zgmq: {\"message\":\"Query coordinator error: query.soql.type-mismatch; Type mismatch for starts_with, is number; position: Map(row -> 1, column -> 480, line -> \\\"SELECT `taxpayer_number`, `taxpayer_name`, `taxpayer_address`, `taxpayer_city`, `taxpayer_state`, `taxpayer_zip_code`, `taxpayer_county_code`, `ta",
-  "jrea-zgmq: {\"message\":\"Query coordinator error: query.soql.type-mismatch; Type mismatch for starts_with, is number; position: Map(row -> 1, column -> 480, line -> \\\"SELECT `taxpayer_number`, `taxpayer_name`, `taxpayer_address`, `taxpayer_city`, `taxpayer_state`, `taxpayer_zip_code`, `taxpayer_county_code`, `ta",
-  "jrea-zgmq: {\"message\":\"Query coordinator error: query.soql.type-mismatch; Type mismatch for starts_with, is number; position: Map(row -> 1, column -> 480, line -> \\\"SELECT `taxpayer_number`, `taxpayer_name`, `taxpayer_address`, `taxpayer_city`, `taxpayer_state`, `taxpayer_zip_code`, `taxpayer_county_code`, `ta",
-  "jrea-zgmq: {\"message\":\"Query coordinator error: query.soql.type-mismatch; Type mismatch for starts_with, is number; position: Map(row -> 1, column -> 480, line -> \\\"SELECT `taxpayer_number`, `taxpayer_name`, `taxpayer_address`, `taxpayer_city`, `taxpayer_state`, `taxpayer_zip_code`, `taxpayer_county_code`, `ta",
-  "jrea-zgmq: {\"message\":\"Query coordinator error: query.soql.type-mismatch; Type mismatch for starts_with, is number; position: Map(row -> 1, column -> 480, line -> \\\"SELECT `taxpayer_number`, `taxpayer_name`, `taxpayer_address`, `taxpayer_city`, `taxpayer_state`, `taxpayer_zip_code`, `taxpayer_county_code`, `ta",
-  "jrea-zgmq: {\"message\":\"Query coordinator error: query.soql.type-mismatch; Type mismatch for starts_with, is number; position: Map(row -> 1, column -> 480, line -> \\\"SELECT `taxpayer_number`, `taxpayer_name`, `taxpayer_address`, `taxpayer_city`, `taxpayer_state`, `taxpayer_zip_code`, `taxpayer_county_code`, `ta",
-  "jrea-zgmq: {\"message\":\"Query coordinator error: query.soql.type-mismatch; Type mismatch for starts_with, is number; position: Map(row -> 1, column -> 480, line -> \\\"SELECT `taxpayer_number`, `taxpayer_name`, `taxpayer_address`, `taxpayer_city`, `taxpayer_state`, `taxpayer_zip_code`, `taxpayer_county_code`, `ta",
-  "jrea-zgmq: {\"message\":\"Query coordinator error: query.soql.type-mismatch; Type mismatch for starts_with, is number; position: Map(row -> 1, column -> 480, line -> \\\"SELECT `taxpayer_number`, `taxpayer_name`, `taxpayer_address`, `taxpayer_city`, `taxpayer_state`, `taxpayer_zip_code`, `taxpayer_county_code`, `ta",
-  "jrea-zgmq: {\"message\":\"Query coordinator error: query.soql.type-mismatch; Type mismatch for starts_with, is number; position: Map(row -> 1, column -> 480, line -> \\\"SELECT `taxpayer_number`, `taxpayer_name`, `taxpayer_address`, `taxpayer_city`, `taxpayer_state`, `taxpayer_zip_code`, `taxpayer_county_code`, `ta",
-  "jrea-zgmq: {\"message\":\"Query coordinator error: query.soql.type-mismatch; Type mismatch for starts_with, is number; position: Map(row -> 1, column -> 480, line -> \\\"SELECT `taxpayer_number`, `taxpayer_name`, `taxpayer_address`, `taxpayer_city`, `taxpayer_state`, `taxpayer_zip_code`, `taxpayer_county_code`, `ta",
-  "jrea-zgmq: {\"message\":\"Query coordinator error: query.soql.type-mismatch; Type mismatch for starts_with, is number; position: Map(row -> 1, column -> 480, line -> \\\"SELECT `taxpayer_number`, `taxpayer_name`, `taxpayer_address`, `taxpayer_city`, `taxpayer_state`, `taxpayer_zip_code`, `taxpayer_county_code`, `ta",
-  "jrea-zgmq: {\"message\":\"Query coordinator error: query.soql.type-mismatch; Type mismatch for starts_with, is number; position: Map(row -> 1, column -> 480, line -> \\\"SELECT `taxpayer_number`, `taxpayer_name`, `taxpayer_address`, `taxpayer_city`, `taxpayer_state`, `taxpayer_zip_code`, `taxpayer_county_code`, `ta",
-  "jrea-zgmq: {\"message\":\"Query coordinator error: query.soql.type-mismatch; Type mismatch for starts_with, is number; position: Map(row -> 1, column -> 480, line -> \\\"SELECT `taxpayer_number`, `taxpayer_name`, `taxpayer_address`, `taxpayer_city`, `taxpayer_state`, `taxpayer_zip_code`, `taxpayer_county_code`, `ta",
-  "jrea-zgmq: {\"message\":\"Query coordinator error: query.soql.type-mismatch; Type mismatch for starts_with, is number; position: Map(row -> 1, column -> 480, line -> \\\"SELECT `taxpayer_number`, `taxpayer_name`, `taxpayer_address`, `taxpayer_city`, `taxpayer_state`, `taxpayer_zip_code`, `taxpayer_county_code`, `ta",
-  "jrea-zgmq: {\"message\":\"Query coordinator error: query.soql.type-mismatch; Type mismatch for starts_with, is number; position: Map(row -> 1, column -> 480, line -> \\\"SELECT `taxpayer_number`, `taxpayer_name`, `taxpayer_address`, `taxpayer_city`, `taxpayer_state`, `taxpayer_zip_code`, `taxpayer_county_code`, `ta",
-  "jrea-zgmq: {\"message\":\"Query coordinator error: query.soql.type-mismatch; Type mismatch for starts_with, is number; position: Map(row -> 1, column -> 480, line -> \\\"SELECT `taxpayer_number`, `taxpayer_name`, `taxpayer_address`, `taxpayer_city`, `taxpayer_state`, `taxpayer_zip_code`, `taxpayer_county_code`, `ta",
-  "jrea-zgmq: {\"message\":\"Query coordinator error: query.soql.type-mismatch; Type mismatch for starts_with, is number; position: Map(row -> 1, column -> 480, line -> \\\"SELECT `taxpayer_number`, `taxpayer_name`, `taxpayer_address`, `taxpayer_city`, `taxpayer_state`, `taxpayer_zip_code`, `taxpayer_county_code`, `ta",
-  "jrea-zgmq: {\"message\":\"Query coordinator error: query.soql.type-mismatch; Type mismatch for starts_with, is number; position: Map(row -> 1, column -> 480, line -> \\\"SELECT `taxpayer_number`, `taxpayer_name`, `taxpayer_address`, `taxpayer_city`, `taxpayer_state`, `taxpayer_zip_code`, `taxpayer_county_code`, `ta",
-  "jrea-zgmq: {\"message\":\"Query coordinator error: query.soql.type-mismatch; Type mismatch for starts_with, is number; position: Map(row -> 1, column -> 480, line -> \\\"SELECT `taxpayer_number`, `taxpayer_name`, `taxpayer_address`, `taxpayer_city`, `taxpayer_state`, `taxpayer_zip_code`, `taxpayer_county_code`, `ta",
-  "jrea-zgmq: {\"message\":\"Query coordinator error: query.soql.type-mismatch; Type mismatch for starts_with, is number; position: Map(row -> 1, column -> 480, line -> \\\"SELECT `taxpayer_number`, `taxpayer_name`, `taxpayer_address`, `taxpayer_city`, `taxpayer_state`, `taxpayer_zip_code`, `taxpayer_county_code`, `ta",
-  "jrea-zgmq: {\"message\":\"Query coordinator error: query.soql.type-mismatch; Type mismatch for starts_with, is number; position: Map(row -> 1, column -> 480, line -> \\\"SELECT `taxpayer_number`, `taxpayer_name`, `taxpayer_address`, `taxpayer_city`, `taxpayer_state`, `taxpayer_zip_code`, `taxpayer_county_code`, `ta",
-  "jrea-zgmq: {\"message\":\"Query coordinator error: query.soql.type-mismatch; Type mismatch for starts_with, is number; position: Map(row -> 1, column -> 480, line -> \\\"SELECT `taxpayer_number`, `taxpayer_name`, `taxpayer_address`, `taxpayer_city`, `taxpayer_state`, `taxpayer_zip_code`, `taxpayer_county_code`, `ta",
-  "jrea-zgmq: {\"message\":\"Query coordinator error: query.soql.type-mismatch; Type mismatch for starts_with, is number; position: Map(row -> 1, column -> 480, line -> \\\"SELECT `taxpayer_number`, `taxpayer_name`, `taxpayer_address`, `taxpayer_city`, `taxpayer_state`, `taxpayer_zip_code`, `taxpayer_county_code`, `ta",
-  "jrea-zgmq: {\"message\":\"Query coordinator error: query.soql.type-mismatch; Type mismatch for starts_with, is number; position: Map(row -> 1, column -> 480, line -> \\\"SELECT `taxpayer_number`, `taxpayer_name`, `taxpayer_address`, `taxpayer_city`, `taxpayer_state`, `taxpayer_zip_code`, `taxpayer_county_code`, `ta",
-  "jrea-zgmq: {\"message\":\"Query coordinator error: query.soql.type-mismatch; Type mismatch for starts_with, is number; position: Map(row -> 1, column -> 480, line -> \\\"SELECT `taxpayer_number`, `taxpayer_name`, `taxpayer_address`, `taxpayer_city`, `taxpayer_state`, `taxpayer_zip_code`, `taxpayer_county_code`, `ta"
+  "jrea-zgmq: {\"message\":\"Query coordinator error: query.soql.type-mismatch; Type mismatch for op$=, is number; position: Map(row -> 1, column -> 445, line -> \\\"SELECT `taxpayer_number`, `taxpayer_name`, `taxpayer_address`, `taxpayer_city`, `taxpayer_state`, `taxpayer_zip_code`, `taxpayer_county_code`, `taxpayer_",
+  "jrea-zgmq: {\"message\":\"Query coordinator error: query.soql.type-mismatch; Type mismatch for op$=, is number; position: Map(row -> 1, column -> 445, line -> \\\"SELECT `taxpayer_number`, `taxpayer_name`, `taxpayer_address`, `taxpayer_city`, `taxpayer_state`, `taxpayer_zip_code`, `taxpayer_county_code`, `taxpayer_",
+  "jrea-zgmq try 0: TypeError: fetch failed",
+  "jrea-zgmq: {\"message\":\"Query coordinator error: query.soql.type-mismatch; Type mismatch for op$=, is number; position: Map(row -> 1, column -> 445, line -> \\\"SELECT `taxpayer_number`, `taxpayer_name`, `taxpayer_address`, `taxpayer_city`, `taxpayer_state`, `taxpayer_zip_code`, `taxpayer_county_code`, `taxpayer_",
+  "jrea-zgmq: {\"message\":\"Query coordinator error: query.soql.type-mismatch; Type mismatch for op$=, is number; position: Map(row -> 1, column -> 445, line -> \\\"SELECT `taxpayer_number`, `taxpayer_name`, `taxpayer_address`, `taxpayer_city`, `taxpayer_state`, `taxpayer_zip_code`, `taxpayer_county_code`, `taxpayer_",
+  "jrea-zgmq: {\"message\":\"Query coordinator error: query.soql.type-mismatch; Type mismatch for op$=, is number; position: Map(row -> 1, column -> 445, line -> \\\"SELECT `taxpayer_number`, `taxpayer_name`, `taxpayer_address`, `taxpayer_city`, `taxpayer_state`, `taxpayer_zip_code`, `taxpayer_county_code`, `taxpayer_",
+  "jrea-zgmq: {\"message\":\"Query coordinator error: query.soql.type-mismatch; Type mismatch for op$=, is number; position: Map(row -> 1, column -> 445, line -> \\\"SELECT `taxpayer_number`, `taxpayer_name`, `taxpayer_address`, `taxpayer_city`, `taxpayer_state`, `taxpayer_zip_code`, `taxpayer_county_code`, `taxpayer_",
+  "jrea-zgmq: {\"message\":\"Query coordinator error: query.soql.type-mismatch; Type mismatch for op$=, is number; position: Map(row -> 1, column -> 445, line -> \\\"SELECT `taxpayer_number`, `taxpayer_name`, `taxpayer_address`, `taxpayer_city`, `taxpayer_state`, `taxpayer_zip_code`, `taxpayer_county_code`, `taxpayer_",
+  "jrea-zgmq: {\"message\":\"Query coordinator error: query.soql.type-mismatch; Type mismatch for op$=, is number; position: Map(row -> 1, column -> 445, line -> \\\"SELECT `taxpayer_number`, `taxpayer_name`, `taxpayer_address`, `taxpayer_city`, `taxpayer_state`, `taxpayer_zip_code`, `taxpayer_county_code`, `taxpayer_",
+  "jrea-zgmq: {\"message\":\"Query coordinator error: query.soql.type-mismatch; Type mismatch for op$=, is number; position: Map(row -> 1, column -> 445, line -> \\\"SELECT `taxpayer_number`, `taxpayer_name`, `taxpayer_address`, `taxpayer_city`, `taxpayer_state`, `taxpayer_zip_code`, `taxpayer_county_code`, `taxpayer_",
+  "jrea-zgmq: {\"message\":\"Query coordinator error: query.soql.type-mismatch; Type mismatch for op$=, is number; position: Map(row -> 1, column -> 445, line -> \\\"SELECT `taxpayer_number`, `taxpayer_name`, `taxpayer_address`, `taxpayer_city`, `taxpayer_state`, `taxpayer_zip_code`, `taxpayer_county_code`, `taxpayer_",
+  "jrea-zgmq: {\"message\":\"Query coordinator error: query.soql.type-mismatch; Type mismatch for op$=, is number; position: Map(row -> 1, column -> 445, line -> \\\"SELECT `taxpayer_number`, `taxpayer_name`, `taxpayer_address`, `taxpayer_city`, `taxpayer_state`, `taxpayer_zip_code`, `taxpayer_county_code`, `taxpayer_",
+  "jrea-zgmq: {\"message\":\"Query coordinator error: query.soql.type-mismatch; Type mismatch for op$=, is number; position: Map(row -> 1, column -> 445, line -> \\\"SELECT `taxpayer_number`, `taxpayer_name`, `taxpayer_address`, `taxpayer_city`, `taxpayer_state`, `taxpayer_zip_code`, `taxpayer_county_code`, `taxpayer_",
+  "jrea-zgmq: {\"message\":\"Query coordinator error: query.soql.type-mismatch; Type mismatch for op$=, is number; position: Map(row -> 1, column -> 445, line -> \\\"SELECT `taxpayer_number`, `taxpayer_name`, `taxpayer_address`, `taxpayer_city`, `taxpayer_state`, `taxpayer_zip_code`, `taxpayer_county_code`, `taxpayer_",
+  "jrea-zgmq: {\"message\":\"Query coordinator error: query.soql.type-mismatch; Type mismatch for op$=, is number; position: Map(row -> 1, column -> 445, line -> \\\"SELECT `taxpayer_number`, `taxpayer_name`, `taxpayer_address`, `taxpayer_city`, `taxpayer_state`, `taxpayer_zip_code`, `taxpayer_county_code`, `taxpayer_",
+  "jrea-zgmq: {\"message\":\"Query coordinator error: query.soql.type-mismatch; Type mismatch for op$=, is number; position: Map(row -> 1, column -> 445, line -> \\\"SELECT `taxpayer_number`, `taxpayer_name`, `taxpayer_address`, `taxpayer_city`, `taxpayer_state`, `taxpayer_zip_code`, `taxpayer_county_code`, `taxpayer_",
+  "jrea-zgmq: {\"message\":\"Query coordinator error: query.soql.type-mismatch; Type mismatch for op$=, is number; position: Map(row -> 1, column -> 445, line -> \\\"SELECT `taxpayer_number`, `taxpayer_name`, `taxpayer_address`, `taxpayer_city`, `taxpayer_state`, `taxpayer_zip_code`, `taxpayer_county_code`, `taxpayer_",
+  "jrea-zgmq: {\"message\":\"Query coordinator error: query.soql.type-mismatch; Type mismatch for op$=, is number; position: Map(row -> 1, column -> 445, line -> \\\"SELECT `taxpayer_number`, `taxpayer_name`, `taxpayer_address`, `taxpayer_city`, `taxpayer_state`, `taxpayer_zip_code`, `taxpayer_county_code`, `taxpayer_",
+  "jrea-zgmq: {\"message\":\"Query coordinator error: query.soql.type-mismatch; Type mismatch for op$=, is number; position: Map(row -> 1, column -> 445, line -> \\\"SELECT `taxpayer_number`, `taxpayer_name`, `taxpayer_address`, `taxpayer_city`, `taxpayer_state`, `taxpayer_zip_code`, `taxpayer_county_code`, `taxpayer_",
+  "jrea-zgmq: {\"message\":\"Query coordinator error: query.soql.type-mismatch; Type mismatch for op$=, is number; position: Map(row -> 1, column -> 445, line -> \\\"SELECT `taxpayer_number`, `taxpayer_name`, `taxpayer_address`, `taxpayer_city`, `taxpayer_state`, `taxpayer_zip_code`, `taxpayer_county_code`, `taxpayer_",
+  "jrea-zgmq: {\"message\":\"Query coordinator error: query.soql.type-mismatch; Type mismatch for op$=, is number; position: Map(row -> 1, column -> 445, line -> \\\"SELECT `taxpayer_number`, `taxpayer_name`, `taxpayer_address`, `taxpayer_city`, `taxpayer_state`, `taxpayer_zip_code`, `taxpayer_county_code`, `taxpayer_",
+  "jrea-zgmq: {\"message\":\"Query coordinator error: query.soql.type-mismatch; Type mismatch for op$=, is number; position: Map(row -> 1, column -> 445, line -> \\\"SELECT `taxpayer_number`, `taxpayer_name`, `taxpayer_address`, `taxpayer_city`, `taxpayer_state`, `taxpayer_zip_code`, `taxpayer_county_code`, `taxpayer_",
+  "jrea-zgmq: {\"message\":\"Query coordinator error: query.soql.type-mismatch; Type mismatch for op$=, is number; position: Map(row -> 1, column -> 445, line -> \\\"SELECT `taxpayer_number`, `taxpayer_name`, `taxpayer_address`, `taxpayer_city`, `taxpayer_state`, `taxpayer_zip_code`, `taxpayer_county_code`, `taxpayer_",
+  "jrea-zgmq: {\"message\":\"Query coordinator error: query.soql.type-mismatch; Type mismatch for op$=, is number; position: Map(row -> 1, column -> 445, line -> \\\"SELECT `taxpayer_number`, `taxpayer_name`, `taxpayer_address`, `taxpayer_city`, `taxpayer_state`, `taxpayer_zip_code`, `taxpayer_county_code`, `taxpayer_",
+  "jrea-zgmq: {\"message\":\"Query coordinator error: query.soql.type-mismatch; Type mismatch for op$=, is number; position: Map(row -> 1, column -> 445, line -> \\\"SELECT `taxpayer_number`, `taxpayer_name`, `taxpayer_address`, `taxpayer_city`, `taxpayer_state`, `taxpayer_zip_code`, `taxpayer_county_code`, `taxpayer_",
+  "jrea-zgmq: {\"message\":\"Query coordinator error: query.soql.type-mismatch; Type mismatch for op$=, is number; position: Map(row -> 1, column -> 445, line -> \\\"SELECT `taxpayer_number`, `taxpayer_name`, `taxpayer_address`, `taxpayer_city`, `taxpayer_state`, `taxpayer_zip_code`, `taxpayer_county_code`, `taxpayer_",
+  "jrea-zgmq: {\"message\":\"Query coordinator error: query.soql.type-mismatch; Type mismatch for op$=, is number; position: Map(row -> 1, column -> 445, line -> \\\"SELECT `taxpayer_number`, `taxpayer_name`, `taxpayer_address`, `taxpayer_city`, `taxpayer_state`, `taxpayer_zip_code`, `taxpayer_county_code`, `taxpayer_",
+  "jrea-zgmq: {\"message\":\"Query coordinator error: query.soql.type-mismatch; Type mismatch for op$=, is number; position: Map(row -> 1, column -> 445, line -> \\\"SELECT `taxpayer_number`, `taxpayer_name`, `taxpayer_address`, `taxpayer_city`, `taxpayer_state`, `taxpayer_zip_code`, `taxpayer_county_code`, `taxpayer_",
+  "jrea-zgmq: {\"message\":\"Query coordinator error: query.soql.type-mismatch; Type mismatch for op$=, is number; position: Map(row -> 1, column -> 445, line -> \\\"SELECT `taxpayer_number`, `taxpayer_name`, `taxpayer_address`, `taxpayer_city`, `taxpayer_state`, `taxpayer_zip_code`, `taxpayer_county_code`, `taxpayer_"
  ],
  "salesTaxFields": [
   "tp_number",
@@ -102,443 +103,9 @@
  "salesTaxAddresses": 4079,
  "liquorRows": 71686,
  "liquorLatestMonth": "2026-11-30T00:00:00.000",
- "places": 1438,
- "closedSalesTax": [
-  {
-   "name": "Boomtown Coffee",
-   "addr": "800 Capitol St, Houston, TX",
-   "outOfBusiness": "2025-12-19",
-   "outlet": "BOOMTOWN COFFEE UNDERSTORY COUNTER",
-   "liquorStopped": false
-  },
-  {
-   "name": "Bungalow",
-   "addr": "407 Main St",
-   "outOfBusiness": "2026-07-31",
-   "outlet": "BUNGALOW",
-   "liquorStopped": true
-  },
-  {
-   "name": "The Clock - Steak & Lounge",
-   "addr": "908 Congress St, Houston, TX",
-   "outOfBusiness": "2026-06-16",
-   "outlet": "THE CLOCK HTX",
-   "liquorStopped": true
-  },
-  {
-   "name": "Loy Loy Dim Sum",
-   "addr": "401 Franklin St, Houston, TX",
-   "outOfBusiness": "2026-04-30",
-   "outlet": "LOY LOY DIM SUM BENTO BOX",
-   "liquorStopped": false
-  },
-  {
-   "name": "Maggie Rita's",
-   "addr": "600 Travis St, Houston, TX",
-   "outOfBusiness": "2026-08-12",
-   "outlet": "MAGGIE RITA'S",
-   "liquorStopped": true
-  },
-  {
-   "name": "Margaux's Oyster Bar",
-   "addr": "409 Travis St",
-   "outOfBusiness": "2024-08-31",
-   "outlet": "MARGAUX'S OYSTER BAR LLC",
-   "liquorStopped": false
-  },
-  {
-   "name": "Mellow Mushroom",
-   "addr": "1919 North Shepherd Drive",
-   "outOfBusiness": "2022-12-31",
-   "outlet": "MELLOW MUSHROOM PIZZA BAKERS",
-   "liquorStopped": false
-  },
-  {
-   "name": "Daley Sports Club",
-   "addr": "922 Holman St",
-   "outOfBusiness": "2024-08-22",
-   "outlet": "DALEY SPORTS CLUB",
-   "liquorStopped": false
-  },
-  {
-   "name": "Pub Fiction",
-   "addr": "2303 Smith St",
-   "outOfBusiness": "2024-06-30",
-   "outlet": "PUB FICTION",
-   "liquorStopped": false
-  },
-  {
-   "name": "Cafe Ginger",
-   "addr": "2200 Post Oak Boulevard",
-   "outOfBusiness": "2023-11-27",
-   "outlet": "CAFE GINGER UPTOWN",
-   "liquorStopped": false
-  },
-  {
-   "name": "The Chelsea",
-   "addr": "888 Westheimer Rd",
-   "outOfBusiness": "2024-07-10",
-   "outlet": "THE CHELSEA",
-   "liquorStopped": false
-  },
-  {
-   "name": "Kenny & Ziggy's",
-   "addr": "2327 Post Oak Blvd",
-   "outOfBusiness": "2024-03-01",
-   "outlet": "KENNY & ZIGGY'S DELICATESSEN RESTAURANT",
-   "liquorStopped": false
-  },
-  {
-   "name": "Turkey Leg Hut",
-   "addr": "4830 Almeda Rd",
-   "outOfBusiness": "2026-03-27",
-   "outlet": "THE TURKEY LEG HUT & COMPANY LLC",
-   "liquorStopped": true
-  },
-  {
-   "name": "Les Givral's",
-   "addr": "2704 Milam St",
-   "outOfBusiness": "2024-09-01",
-   "outlet": "LES GIVRALS SANDWICH & CAFE",
-   "liquorStopped": false
-  },
-  {
-   "name": "PDA",
-   "addr": "3030 Travis St",
-   "outOfBusiness": "2025-07-03",
-   "outlet": "PDA",
-   "liquorStopped": true
-  },
-  {
-   "name": "Istanbul Grill & Deli",
-   "addr": "5613 Morningside Dr",
-   "outOfBusiness": "2026-07-31",
-   "outlet": "ISTANBUL GRILL",
-   "liquorStopped": false
-  },
-  {
-   "name": "The Ginger Man",
-   "addr": "5607 Morningside Dr",
-   "outOfBusiness": "2023-04-30",
-   "outlet": "THE GINGER MAN",
-   "liquorStopped": false
-  },
-  {
-   "name": "FRNDS Restaurant & Lounge",
-   "addr": "2441 University Blvd",
-   "outOfBusiness": "2026-05-31",
-   "outlet": "FRNDS",
-   "liquorStopped": true
-  },
-  {
-   "name": "Helen Greek Food & Wine",
-   "addr": "2429 Rice Blvd",
-   "outOfBusiness": "2025-08-01",
-   "outlet": "HELEN GREEK FOOD AND WINE",
-   "liquorStopped": false
-  },
-  {
-   "name": "Winfield's Chocolate Bar Rice Village",
-   "addr": "2531 University Blvd",
-   "outOfBusiness": "2023-12-31",
-   "outlet": "WINFIELD'S CHOCOLATE BAR",
-   "liquorStopped": false
-  },
-  {
-   "name": "Se7en",
-   "addr": "3300 Kirby Dr",
-   "outOfBusiness": "2023-02-28",
-   "outlet": "SE7EN",
-   "liquorStopped": false
-  },
-  {
-   "name": "Christian's Tailgate Kirby",
-   "addr": "5114 Kirby Dr",
-   "outOfBusiness": "2026-05-18",
-   "outlet": "CHRISTIAN'S TAILGATE BAR & GRILL",
-   "liquorStopped": true
-  },
-  {
-   "name": "Pinstripes Houston",
-   "addr": "3300 Kirby Dr",
-   "outOfBusiness": "2025-09-07",
-   "outlet": "PINSTRIPES",
-   "liquorStopped": true
-  },
-  {
-   "name": "Eagle Houston",
-   "addr": "611 Hyde Park Blvd",
-   "outOfBusiness": "2025-07-29",
-   "outlet": "EAGLE HOUSTON",
-   "liquorStopped": true
-  },
-  {
-   "name": "The Bar at 4212",
-   "addr": "4212 Emancipation Ave",
-   "outOfBusiness": "2026-06-23",
-   "outlet": "THE BAR @ 4212",
-   "liquorStopped": true
-  },
-  {
-   "name": "Elder Son Brewing",
-   "addr": "946 N Shepherd Dr",
-   "outOfBusiness": "2026-07-06",
-   "outlet": "ELDER SON BREWING COMPANY",
-   "liquorStopped": false
-  },
-  {
-   "name": "Dimassi's Mediterranean Buffet Downtown",
-   "addr": "919 Milam St",
-   "outOfBusiness": "2023-03-31",
-   "outlet": "DIMASSI'S MEDITERRANEAN BUFFET",
-   "liquorStopped": false
-  },
-  {
-   "name": "El Conquistador",
-   "addr": "3907 1/2 Canal St",
-   "outOfBusiness": "2026-07-21",
-   "outlet": "EL CONQUISTADOR",
-   "liquorStopped": true
-  },
-  {
-   "name": "Wing Quarter",
-   "addr": "3929 Old Spanish Trl",
-   "outOfBusiness": "2026-11-01",
-   "outlet": "WING QUARTER, INC.",
-   "liquorStopped": true
-  },
-  {
-   "name": "Rain On Washington",
-   "addr": "5701 Washington Ave",
-   "outOfBusiness": "2026-06-23",
-   "outlet": "RAIN HTX",
-   "liquorStopped": true
-  },
-  {
-   "name": "Bravery Wine Bar",
-   "addr": "409 Travis St, Houston, TX",
-   "outOfBusiness": "2024-06-01",
-   "outlet": "BRAVERY CHEF HALL",
-   "liquorStopped": false
-  },
-  {
-   "name": "Interio Bar & Lounge",
-   "addr": "502 Main St, Houston, TX",
-   "outOfBusiness": "2024-09-30",
-   "outlet": "INTERIO BAR MEXICAN KITCHEN",
-   "liquorStopped": false
-  },
-  {
-   "name": "Papi's",
-   "addr": "570 Waugh Drive, Houston, TX",
-   "outOfBusiness": "2025-03-31",
-   "outlet": "PAPI'S NITE CLUB",
-   "liquorStopped": false
-  },
-  {
-   "name": "Jamba",
-   "addr": "2515 Post Oak Boulevard, Houston, TX",
-   "outOfBusiness": "2022-11-30",
-   "outlet": "JAMBA JUICE @ POST OAK",
-   "liquorStopped": false
-  },
-  {
-   "name": "MOD Pizza",
-   "addr": "5777 San Felipe Street, Houston, TX",
-   "outOfBusiness": "2026-03-31",
-   "outlet": "MOD SUPER FAST PIZZA",
-   "liquorStopped": false
-  },
-  {
-   "name": "Cafe 4212",
-   "addr": "4212 Almeda Road, Houston, TX",
-   "outOfBusiness": "2025-10-31",
-   "outlet": "CAFE 4212",
-   "liquorStopped": true
-  },
-  {
-   "name": "The Yellow Cup",
-   "addr": "6001 Washington Avenue, Houston, TX",
-   "outOfBusiness": "2025-05-01",
-   "outlet": "THE YELLOW CUP COFFEE AND TEA",
-   "liquorStopped": false
-  },
-  {
-   "name": "Sushi on Post Oak",
-   "addr": "2027 Post Oak Boulevard, Houston, TX",
-   "outOfBusiness": "2023-10-31",
-   "outlet": "SUSHI ON POST OAK",
-   "liquorStopped": false
-  },
-  {
-   "name": "Bisou",
-   "addr": "4444 Westheimer Road, Houston, TX",
-   "outOfBusiness": "2024-05-01",
-   "outlet": "BISOU",
-   "liquorStopped": false
-  },
-  {
-   "name": "Chang’s",
-   "addr": "5761 San Felipe Street, Houston, TX",
-   "outOfBusiness": "2026-04-30",
-   "outlet": "CHANG'S CHINESE RESTAURANT",
-   "liquorStopped": false
-  },
-  {
-   "name": "La Table",
-   "addr": "1800 Post Oak Boulevard, Houston, TX",
-   "outOfBusiness": "2022-12-31",
-   "outlet": "LA TABLE HOUSTON",
-   "liquorStopped": false
-  },
-  {
-   "name": "Möge Tee",
-   "addr": "1919 North Shepherd Drive, Houston, TX",
-   "outOfBusiness": "2026-01-31",
-   "outlet": "MOGE TEE",
-   "liquorStopped": false
-  },
-  {
-   "name": "Buddy's",
-   "addr": "2409 Grant Street, Houston, TX",
-   "outOfBusiness": "2024-03-19",
-   "outlet": "BUDDY'S",
-   "liquorStopped": false
-  },
-  {
-   "name": "Homestead",
-   "addr": "600 North Shepherd Drive, Houston, TX",
-   "outOfBusiness": "2026-05-31",
-   "outlet": "HOMESTEAD KITCHEN AND BAR",
-   "liquorStopped": true
-  },
-  {
-   "name": "Taco Bell",
-   "addr": "4317 Lockwood Drive, Houston, TX",
-   "outOfBusiness": "2025-12-31",
-   "outlet": "KFC/TACO BELL",
-   "liquorStopped": false
-  },
-  {
-   "name": "One Dim Sum",
-   "addr": "510 Gray Street, Houston, TX",
-   "outOfBusiness": "2024-10-01",
-   "outlet": "ONE DIM SUM",
-   "liquorStopped": false
-  },
-  {
-   "name": "Dogwood",
-   "addr": "2403 Bagby Street, Houston, TX",
-   "outOfBusiness": "2026-08-31",
-   "outlet": "THE DOGWOOD MIDTOWN",
-   "liquorStopped": true
-  },
-  {
-   "name": "Shiva Indian Restaurant",
-   "addr": "5220 Buffalo Speedway, Houston, TX",
-   "outOfBusiness": "2026-09-01",
-   "outlet": "SHIVA INDIAN RESTAURANT",
-   "liquorStopped": false
-  },
-  {
-   "name": "Texas Taphouse",
-   "addr": "3055 Sage Road, Houston, TX",
-   "outOfBusiness": "2026-07-31",
-   "outlet": "TEXAS TAP HOUSE",
-   "liquorStopped": true
-  },
-  {
-   "name": "The Union Kitchen",
-   "addr": "4057 Bellaire Boulevard, Houston, TX",
-   "outOfBusiness": "2024-03-31",
-   "outlet": "THE UNION KITCHEN",
-   "liquorStopped": false
-  },
-  {
-   "name": "Axis & Alibi",
-   "addr": "5701 Washington Avenue, Houston, TX",
-   "outOfBusiness": "2024-10-30",
-   "outlet": "AXIS & ALIBI",
-   "liquorStopped": false
-  },
-  {
-   "name": "Stuff'd Wings",
-   "addr": "401 Richmond Avenue, Houston, TX",
-   "outOfBusiness": "2026-02-28",
-   "outlet": "STUFF'D WINGS",
-   "liquorStopped": false
-  },
-  {
-   "name": "Xin Chao",
-   "addr": "2310 Decatur Street, Houston, TX",
-   "outOfBusiness": "2025-04-25",
-   "outlet": "XIN CHAO",
-   "liquorStopped": true
-  },
-  {
-   "name": "B.B. Lemon",
-   "addr": "1809 Washington Avenue, Houston, TX",
-   "outOfBusiness": "2025-07-31",
-   "outlet": "B B LEMON",
-   "liquorStopped": true
-  },
-  {
-   "name": "Luby's",
-   "addr": "9797 South Post Oak Road, Houston, TX",
-   "outOfBusiness": "2023-09-27",
-   "outlet": "LUBY'S CAFETERIA #100",
-   "liquorStopped": false
-  },
-  {
-   "name": "Bottled Blonde",
-   "addr": "4901 Washington Avenue, Houston, TX",
-   "outOfBusiness": "2025-11-01",
-   "outlet": "BOTTLED BLOND BACK YARD",
-   "liquorStopped": true
-  },
-  {
-   "name": "Kung Fu Saloon",
-   "addr": "5317 Washington Avenue, Houston, TX",
-   "outOfBusiness": "2025-06-01",
-   "outlet": "KUNG FU SALOON",
-   "liquorStopped": false
-  },
-  {
-   "name": "Mapojeong",
-   "addr": "602 Studewood Street, Houston, TX",
-   "outOfBusiness": "2025-04-30",
-   "outlet": "MAPOJEONG GALBIJIB",
-   "liquorStopped": true
-  },
-  {
-   "name": "Riel",
-   "addr": "1927 Fairview Street, Houston, TX",
-   "outOfBusiness": "2025-10-31",
-   "outlet": "RIEL",
-   "liquorStopped": true
-  },
-  {
-   "name": "Kung Fu Tea",
-   "addr": "3224 Yoakum Boulevard, Houston, TX",
-   "outOfBusiness": "2025-09-01",
-   "outlet": "KUNG FU TEA",
-   "liquorStopped": false
-  },
-  {
-   "name": "Front Porch Pub",
-   "addr": "217 Gray St",
-   "outOfBusiness": "2025-03-31",
-   "outlet": "FRONT PORCH PUB",
-   "liquorStopped": true
-  }
- ],
+ "places": 1362,
+ "closedSalesTax": [],
  "liquorStopped": [
-  {
-   "name": "Oceanaire Seafood Room",
-   "addr": "5061 Westheimer Rd",
-   "lastFiling": "2026-01-31",
-   "permit": "THE OCEANAIRE SEAFOOD ROOM"
-  },
   {
    "name": "Saint Arnold",
    "addr": "2000 Lyons St, Houston, TX",
@@ -546,8 +113,8 @@
    "permit": "SAINT ARNOLD BREWING COMPANY"
   }
  ],
- "confirmedOpen": 1065,
- "unknown": 310,
+ "confirmedOpen": 1053,
+ "unknown": 308,
  "activeFields": [
   "taxpayer_number",
   "taxpayer_name",
