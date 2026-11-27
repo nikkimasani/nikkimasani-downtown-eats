@@ -83,7 +83,7 @@ const NEWOK = /^(722511|722513|722410|722515|722514)/;
 const fresh = [];
 if (z3 && a3 && n3 && nc3) {
   for (const z of ZIPS) {
-    const zq = `${z3} = ${z}`, nq = `${nc3} between 722000 and 722999`;; // numeric columns (Socrata JSON shows them as text)
+    const zq = `starts_with(${z3}, '${z}')`, nq = `${nc3} between 722000 and 722999`;; // numeric columns (Socrata JSON shows them as text)
     const rows = await all('jrea-zgmq', `${zq} AND ${nq}`); report[`act_${z}`] = rows.length;
     for (const r of rows) {
       if (!NEWOK.test(String(r[nc3]))) continue; const first = fs3 ? String(r[fs3] || '').slice(0, 10) : ''; if (fs3 && first && first < cutoff) continue;
