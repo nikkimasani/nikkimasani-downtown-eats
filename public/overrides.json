@@ -61,7 +61,9 @@
     "Dean's Downtown": {
       "lat": 29.76196,
       "lng": -95.36134,
-      "street": "316 Main St"
+      "street": "316 Main St",
+      "status": "closed",
+      "closedNote": "Closed (reported in Houston news, 2025–26)"
     },
     "No Vacancy": {
       "lat": 29.76122,
@@ -155,7 +157,9 @@
       "hours": "Daily 11am–9pm, Thu till 10pm, Fri–Sat till 11pm",
       "source": "https://lgbtq.visithoustontexas.com/listings/bravery-chef-hall/31051/",
       "checked": "2026-11-17",
-      "notInDirectory": true
+      "notInDirectory": true,
+      "status": "closed",
+      "closedNote": "Out of business per Texas Comptroller sales-tax records (2024-08-31)"
     },
     "C3": {
       "lat": 29.76168,
@@ -175,7 +179,9 @@
     "Kulture": {
       "hours": "Wed–Sat 11:30am–9pm, Sun 11:30am–3pm",
       "source": "https://avenidahouston.com/dining/kulture/",
-      "checked": "2026-11-18"
+      "checked": "2026-11-18",
+      "status": "closed",
+      "closedNote": "Closed (reported in Houston news, 2025–26)"
     },
     "Little New Orleans": {
       "lat": 29.75986,
@@ -209,11 +215,14 @@
       "keepHours": true
     },
     "Bungalow": {
-      "street": "407 Main St",
+      "street": "909 Texas Ave",
       "venue": null,
       "source": "https://bungalowdining.com/",
       "checked": "2026-11-18",
-      "keepHours": true
+      "keepHours": true,
+      "lat": 29.76045,
+      "lng": -95.36318,
+      "note": "Moved to The Rice building (909 Texas Ave) in Oct 2026"
     },
     "Pappas Bar-B-Q": {
       "lat": 29.748271,
@@ -1180,7 +1189,9 @@
       "lng": -95.410787,
       "source": "OpenStreetMap Nominatim",
       "checked": "2026-11-25",
-      "notInDirectory": true
+      "notInDirectory": true,
+      "status": "closed",
+      "closedNote": "Out of business per Texas Comptroller sales-tax records (2022-12-31)"
     },
     "Ivy House": {
       "street": "2811 Washington Avenue",
@@ -1543,7 +1554,9 @@
       "lng": -95.379221,
       "source": "US Census geocoder",
       "checked": "2026-11-25",
-      "notInDirectory": true
+      "notInDirectory": true,
+      "status": "closed",
+      "closedNote": "Out of business per Texas Comptroller sales-tax records (2024-08-22)"
     },
     "Lankford's Grocery & Market": {
       "street": "88 Dennis St",
@@ -1599,7 +1612,9 @@
       "lng": -95.376042,
       "source": "US Census geocoder",
       "checked": "2026-11-26",
-      "notInDirectory": true
+      "notInDirectory": true,
+      "status": "closed",
+      "closedNote": "Out of business per Texas Comptroller sales-tax records (2024-06-30)"
     },
     "Community Bar": {
       "street": "2703 Smith St",
@@ -1623,7 +1638,9 @@
       "lng": -95.462282,
       "source": "OpenStreetMap Nominatim",
       "checked": "2026-11-26",
-      "notInDirectory": true
+      "notInDirectory": true,
+      "status": "closed",
+      "closedNote": "Out of business per Texas Comptroller sales-tax records (2023-11-27)"
     },
     "Doc's Houston": {
       "street": "1201 Westheimer Rd",
@@ -1671,7 +1688,9 @@
       "lng": -95.390585,
       "source": "US Census geocoder",
       "checked": "2026-11-26",
-      "notInDirectory": true
+      "notInDirectory": true,
+      "status": "closed",
+      "closedNote": "Closed (reported in Houston news, 2025–26)"
     },
     "Októ": {
       "street": "888 Westheimer Rd",
@@ -1695,7 +1714,9 @@
       "lng": -95.39038,
       "source": "US Census geocoder",
       "checked": "2026-11-26",
-      "notInDirectory": true
+      "notInDirectory": true,
+      "status": "closed",
+      "closedNote": "Out of business per Texas Comptroller sales-tax records (2024-07-10)"
     },
     "Picnik": {
       "street": "888 Westheimer Rd",
@@ -1719,7 +1740,9 @@
       "lng": -95.39038,
       "source": "US Census geocoder",
       "checked": "2026-11-26",
-      "notInDirectory": true
+      "notInDirectory": true,
+      "status": "closed",
+      "closedNote": "Closed (reported in Houston news, 2025–26)"
     },
     "Bludorn": {
       "street": "807 Taft St",
@@ -1935,7 +1958,9 @@
       "lng": -95.461009,
       "source": "US Census geocoder",
       "checked": "2026-11-26",
-      "notInDirectory": true
+      "notInDirectory": true,
+      "status": "closed",
+      "closedNote": "Out of business per Texas Comptroller sales-tax records (2024-03-01)"
     },
     "North Italia BLVD": {
       "street": "1700 Post Oak Blvd",
@@ -1967,7 +1992,9 @@
       "lng": -95.461901,
       "source": "US Census geocoder",
       "checked": "2026-11-26",
-      "notInDirectory": true
+      "notInDirectory": true,
+      "status": "closed",
+      "closedNote": "Closed (reported in Houston news, 2025–26)"
     },
     "Bouchee Patisserie": {
       "street": "1600 West Loop South",
@@ -2009,7 +2036,9 @@
       "lng": -95.37768,
       "source": "US Census geocoder",
       "checked": "2026-11-26",
-      "notInDirectory": true
+      "notInDirectory": true,
+      "status": "closed",
+      "closedNote": "Out of business per Texas Comptroller sales-tax records (2026-03-27)"
     },
     "This Is It Soul Food": {
       "street": "2712 Blodgett St",
@@ -2017,7 +2046,9 @@
       "lng": -95.369817,
       "source": "US Census geocoder",
       "checked": "2026-11-26",
-      "notInDirectory": true
+      "notInDirectory": true,
+      "status": "closed",
+      "closedNote": "Closed (reported in Houston news, 2025–26)"
     },
     "93' Til": {
       "street": "1601 W Main St",
@@ -2185,7 +2216,9 @@
       "lng": -95.376486,
       "source": "US Census geocoder",
       "checked": "2026-11-26",
-      "notInDirectory": true
+      "notInDirectory": true,
+      "status": "closed",
+      "closedNote": "Out of business per Texas Comptroller sales-tax records (2024-09-01)"
     },
     "Pho Saigon Midtown": {
       "street": "2808 Milam St",
@@ -2249,7 +2282,9 @@
       "lng": -95.377203,
       "source": "US Census geocoder",
       "checked": "2026-11-26",
-      "notInDirectory": true
+      "notInDirectory": true,
+      "status": "closed",
+      "closedNote": "Out of business per Texas Comptroller sales-tax records (2025-07-03)"
     },
     "Frosty's Christmas Bar": {
       "street": "2106 Dallas St Suite 100",
@@ -2497,7 +2532,9 @@
       "lng": -95.414848,
       "source": "US Census geocoder",
       "checked": "2026-11-26",
-      "notInDirectory": true
+      "notInDirectory": true,
+      "status": "closed",
+      "closedNote": "Out of business per Texas Comptroller sales-tax records (2026-07-31)"
     },
     "Goode Company BBQ Kirby": {
       "street": "5109 Kirby Dr",
@@ -2569,7 +2606,9 @@
       "lng": -95.414848,
       "source": "US Census geocoder",
       "checked": "2026-11-26",
-      "notInDirectory": true
+      "notInDirectory": true,
+      "status": "closed",
+      "closedNote": "Out of business per Texas Comptroller sales-tax records (2023-04-30)"
     },
     "Little Woodrow's Rice Village": {
       "street": "5611 Morningside Dr",
@@ -2609,7 +2648,9 @@
       "lng": -95.415634,
       "source": "US Census geocoder",
       "checked": "2026-11-26",
-      "notInDirectory": true
+      "notInDirectory": true,
+      "status": "closed",
+      "closedNote": "Out of business per Texas Comptroller sales-tax records (2026-05-31)"
     },
     "D'Amico's Italian Market Cafe": {
       "street": "5510 Morningside Dr",
@@ -2633,7 +2674,9 @@
       "lng": -95.415457,
       "source": "US Census geocoder",
       "checked": "2026-11-26",
-      "notInDirectory": true
+      "notInDirectory": true,
+      "status": "closed",
+      "closedNote": "Out of business per Texas Comptroller sales-tax records (2025-08-01)"
     },
     "El Meson": {
       "street": "2425 University Blvd",
@@ -2683,7 +2726,9 @@
       "lng": -95.417218,
       "source": "US Census geocoder",
       "checked": "2026-11-26",
-      "notInDirectory": true
+      "notInDirectory": true,
+      "status": "closed",
+      "closedNote": "Out of business per Texas Comptroller sales-tax records (2023-12-31)"
     },
     "Shake Shack Rice Village": {
       "street": "6205 Kirby Dr",
@@ -2754,7 +2799,9 @@
       "lng": -95.418762,
       "source": "US Census geocoder",
       "checked": "2026-11-26",
-      "notInDirectory": true
+      "notInDirectory": true,
+      "status": "closed",
+      "closedNote": "Out of business per Texas Comptroller sales-tax records (2023-02-28)"
     },
     "Verandah": {
       "street": "3300 Kirby Dr",
@@ -2834,7 +2881,9 @@
       "lng": -95.418668,
       "source": "US Census geocoder",
       "checked": "2026-11-26",
-      "notInDirectory": true
+      "notInDirectory": true,
+      "status": "closed",
+      "closedNote": "Out of business per Texas Comptroller sales-tax records (2026-05-18)"
     },
     "First Watch Kirby": {
       "street": "3029 Kirby Dr",
@@ -2858,7 +2907,9 @@
       "lng": -95.418837,
       "source": "US Census geocoder",
       "checked": "2026-11-26",
-      "notInDirectory": true
+      "notInDirectory": true,
+      "status": "closed",
+      "closedNote": "Closed (reported in Houston news, 2025–26)"
     },
     "George's Bistro & Bar": {
       "street": "2715 Bissonnet St",
@@ -2874,7 +2925,9 @@
       "lng": -95.418762,
       "source": "US Census geocoder",
       "checked": "2026-11-26",
-      "notInDirectory": true
+      "notInDirectory": true,
+      "status": "closed",
+      "closedNote": "Out of business per Texas Comptroller sales-tax records (2025-09-07)"
     },
     "Loch Bar": {
       "street": "4444 Westheimer Rd",
@@ -2930,7 +2983,9 @@
       "lng": -95.475271,
       "source": "US Census geocoder",
       "checked": "2026-11-26",
-      "notInDirectory": true
+      "notInDirectory": true,
+      "status": "closed",
+      "closedNote": "Closed (reported in Houston news, 2025–26)"
     },
     "Molina's Cantina Bellaire": {
       "street": "3801 Bellaire Blvd",
@@ -3202,7 +3257,9 @@
       "lng": -95.388198,
       "source": "US Census geocoder",
       "checked": "2026-11-26",
-      "notInDirectory": true
+      "notInDirectory": true,
+      "status": "closed",
+      "closedNote": "Out of business per Texas Comptroller sales-tax records (2025-07-29)"
     },
     "Bar 5015": {
       "street": "5015 Almeda Rd",
@@ -3402,7 +3459,9 @@
       "lng": -95.370121,
       "source": "US Census geocoder",
       "checked": "2026-11-26",
-      "notInDirectory": true
+      "notInDirectory": true,
+      "status": "closed",
+      "closedNote": "Out of business per Texas Comptroller sales-tax records (2026-06-23)"
     },
     "The Spot 3rd Ward": {
       "street": "4709 Emancipation Ave",
@@ -3514,7 +3573,9 @@
       "lng": -95.373445,
       "source": "US Census geocoder",
       "checked": "2026-11-26",
-      "notInDirectory": true
+      "notInDirectory": true,
+      "status": "closed",
+      "closedNote": "Closed (reported in Houston news, 2025–26)"
     },
     "Ray's Real Pit BBQ Shack": {
       "street": "3929 Old Spanish Trl",
@@ -3658,7 +3719,9 @@
       "lng": -95.409777,
       "source": "US Census geocoder",
       "checked": "2026-11-26",
-      "notInDirectory": true
+      "notInDirectory": true,
+      "status": "closed",
+      "closedNote": "Out of business per Texas Comptroller sales-tax records (2026-07-06)"
     },
     "Lucky's Pub Heights": {
       "street": "2520 Houston Ave",
@@ -3746,7 +3809,9 @@
       "lng": -95.366152,
       "source": "US Census geocoder",
       "checked": "2026-11-26",
-      "notInDirectory": true
+      "notInDirectory": true,
+      "status": "closed",
+      "closedNote": "Out of business per Texas Comptroller sales-tax records (2023-03-31)"
     },
     "Salata Heights": {
       "street": "185 Heights Blvd",
@@ -5980,7 +6045,9 @@
       "lng": -95.410193,
       "source": "Texas Comptroller mixed-beverage permits + US Census geocoder",
       "checked": "2026-11-26",
-      "notInDirectory": true
+      "notInDirectory": true,
+      "status": "closed",
+      "closedNote": "Closed (reported in Houston news, 2025–26)"
     },
     "Los Chilaquiles Restaurante San Miguel Cuyutlan": {
       "street": "702 E 11th St",
@@ -6140,7 +6207,9 @@
       "lng": -95.33423,
       "source": "Texas Comptroller mixed-beverage permits + US Census geocoder",
       "checked": "2026-11-26",
-      "notInDirectory": true
+      "notInDirectory": true,
+      "status": "closed",
+      "closedNote": "Out of business per Texas Comptroller sales-tax records (2026-07-21)"
     },
     "Wing Quarter": {
       "street": "3929 Old Spanish Trl",
@@ -6148,7 +6217,9 @@
       "lng": -95.357058,
       "source": "Texas Comptroller mixed-beverage permits + US Census geocoder",
       "checked": "2026-11-26",
-      "notInDirectory": true
+      "notInDirectory": true,
+      "status": "closed",
+      "closedNote": "Out of business per Texas Comptroller sales-tax records (2026-11-01)"
     },
     "Kinokawa": {
       "street": "3119 White Oak Dr",
@@ -6164,7 +6235,9 @@
       "lng": -95.41939,
       "source": "Texas Comptroller mixed-beverage permits + US Census geocoder",
       "checked": "2026-11-26",
-      "notInDirectory": true
+      "notInDirectory": true,
+      "status": "closed",
+      "closedNote": "Out of business per Texas Comptroller sales-tax records (2026-06-23)"
     },
     "Kamp Houston": {
       "street": "6025 Westheimer Rd",
@@ -6172,7 +6245,9 @@
       "lng": -95.488137,
       "source": "Texas Comptroller mixed-beverage permits + US Census geocoder",
       "checked": "2026-11-26",
-      "notInDirectory": true
+      "notInDirectory": true,
+      "status": "closed",
+      "closedNote": "Closed (reported in Houston news, 2025–26)"
     },
     "Sheger Ethiopian Restaurant": {
       "street": "5506 Bellaire Blvd",
@@ -6660,7 +6735,9 @@
       "lng": -95.439923,
       "source": "Texas Comptroller mixed-beverage permits + US Census geocoder",
       "checked": "2026-11-26",
-      "notInDirectory": true
+      "notInDirectory": true,
+      "status": "closed",
+      "closedNote": "Closed (reported in Houston news, 2025–26)"
     },
     "Torchy's Tacos - West U|5537": {
       "street": "5537 Weslayan St",
@@ -7189,7 +7266,9 @@
       "lng": -95.378045,
       "source": "US Census geocoder",
       "checked": "2026-11-26",
-      "notInDirectory": true
+      "notInDirectory": true,
+      "status": "closed",
+      "closedNote": "Out of business per Texas Comptroller sales-tax records (2025-03-31)"
     },
     "Under the Volcano": {
       "street": "2349 Bissonnet St",
@@ -7214,6 +7293,158 @@
       "source": "US Census geocoder",
       "checked": "2026-11-27",
       "notInDirectory": true
+    },
+    "Boomtown Coffee|800": {
+      "status": "closed",
+      "closedNote": "Out of business per Texas Comptroller sales-tax records (2025-12-19)"
+    },
+    "The Clock - Steak & Lounge|908": {
+      "status": "closed",
+      "closedNote": "Out of business per Texas Comptroller sales-tax records (2026-06-16)"
+    },
+    "Loy Loy Dim Sum|401": {
+      "status": "closed",
+      "closedNote": "Out of business per Texas Comptroller sales-tax records (2026-04-30)"
+    },
+    "Maggie Rita's|600": {
+      "status": "closed",
+      "closedNote": "Out of business per Texas Comptroller sales-tax records (2026-08-12)"
+    },
+    "Bravery Wine Bar|409": {
+      "status": "closed",
+      "closedNote": "Out of business per Texas Comptroller sales-tax records (2024-06-01)"
+    },
+    "Interio Bar & Lounge|502": {
+      "status": "closed",
+      "closedNote": "Out of business per Texas Comptroller sales-tax records (2024-09-30)"
+    },
+    "Papi's|570": {
+      "status": "closed",
+      "closedNote": "Out of business per Texas Comptroller sales-tax records (2025-03-31)"
+    },
+    "Jamba|2515": {
+      "status": "closed",
+      "closedNote": "Out of business per Texas Comptroller sales-tax records (2022-11-30)"
+    },
+    "MOD Pizza|5777": {
+      "status": "closed",
+      "closedNote": "Out of business per Texas Comptroller sales-tax records (2026-03-31)"
+    },
+    "Cafe 4212|4212": {
+      "status": "closed",
+      "closedNote": "Out of business per Texas Comptroller sales-tax records (2025-10-31)"
+    },
+    "The Yellow Cup|6001": {
+      "status": "closed",
+      "closedNote": "Out of business per Texas Comptroller sales-tax records (2025-05-01)"
+    },
+    "Sushi on Post Oak|2027": {
+      "status": "closed",
+      "closedNote": "Out of business per Texas Comptroller sales-tax records (2023-10-31)"
+    },
+    "Bisou|4444": {
+      "status": "closed",
+      "closedNote": "Out of business per Texas Comptroller sales-tax records (2024-05-01)"
+    },
+    "Chang’s|5761": {
+      "status": "closed",
+      "closedNote": "Out of business per Texas Comptroller sales-tax records (2026-04-30)"
+    },
+    "La Table|1800": {
+      "status": "closed",
+      "closedNote": "Out of business per Texas Comptroller sales-tax records (2022-12-31)"
+    },
+    "Möge Tee|1919": {
+      "status": "closed",
+      "closedNote": "Out of business per Texas Comptroller sales-tax records (2026-01-31)"
+    },
+    "Buddy's|2409": {
+      "status": "closed",
+      "closedNote": "Out of business per Texas Comptroller sales-tax records (2024-03-19)"
+    },
+    "Homestead|600": {
+      "status": "closed",
+      "closedNote": "Out of business per Texas Comptroller sales-tax records (2026-05-31)"
+    },
+    "Taco Bell|4317": {
+      "status": "closed",
+      "closedNote": "Out of business per Texas Comptroller sales-tax records (2025-12-31)"
+    },
+    "One Dim Sum|510": {
+      "status": "closed",
+      "closedNote": "Out of business per Texas Comptroller sales-tax records (2024-10-01)"
+    },
+    "Dogwood|2403": {
+      "status": "closed",
+      "closedNote": "Out of business per Texas Comptroller sales-tax records (2026-08-31)"
+    },
+    "Shiva Indian Restaurant|5220": {
+      "status": "closed",
+      "closedNote": "Out of business per Texas Comptroller sales-tax records (2026-09-01)"
+    },
+    "Texas Taphouse|3055": {
+      "status": "closed",
+      "closedNote": "Out of business per Texas Comptroller sales-tax records (2026-07-31)"
+    },
+    "The Union Kitchen|4057": {
+      "status": "closed",
+      "closedNote": "Out of business per Texas Comptroller sales-tax records (2024-03-31)"
+    },
+    "Axis & Alibi|5701": {
+      "status": "closed",
+      "closedNote": "Out of business per Texas Comptroller sales-tax records (2024-10-30)"
+    },
+    "Stuff'd Wings|401": {
+      "status": "closed",
+      "closedNote": "Out of business per Texas Comptroller sales-tax records (2026-02-28)"
+    },
+    "Xin Chao|2310": {
+      "status": "closed",
+      "closedNote": "Out of business per Texas Comptroller sales-tax records (2025-04-25)"
+    },
+    "B.B. Lemon|1809": {
+      "status": "closed",
+      "closedNote": "Out of business per Texas Comptroller sales-tax records (2025-07-31)"
+    },
+    "Luby's|9797": {
+      "status": "closed",
+      "closedNote": "Out of business per Texas Comptroller sales-tax records (2023-09-27)"
+    },
+    "Bottled Blonde|4901": {
+      "status": "closed",
+      "closedNote": "Out of business per Texas Comptroller sales-tax records (2025-11-01)"
+    },
+    "Kung Fu Saloon|5317": {
+      "status": "closed",
+      "closedNote": "Out of business per Texas Comptroller sales-tax records (2025-06-01)"
+    },
+    "Mapojeong|602": {
+      "status": "closed",
+      "closedNote": "Out of business per Texas Comptroller sales-tax records (2025-04-30)"
+    },
+    "Riel|1927": {
+      "status": "closed",
+      "closedNote": "Out of business per Texas Comptroller sales-tax records (2025-10-31)"
+    },
+    "Kung Fu Tea|3224": {
+      "status": "closed",
+      "closedNote": "Out of business per Texas Comptroller sales-tax records (2025-09-01)"
+    },
+    "Mi Cocina|4410": {
+      "status": "closed",
+      "closedNote": "Closed (reported in Houston news, 2025–26)"
+    },
+    "Dak & Bop|1801": {
+      "status": "closed",
+      "closedNote": "Closed (reported in Houston news, 2025–26)"
+    },
+    "Killen's|101": {
+      "status": "closed",
+      "closedNote": "Closed (reported in Houston news, 2025–26)"
+    },
+    "Clutch Bar|5334": {
+      "status": "closed",
+      "closedNote": "Closed (reported in Houston news, 2025–26)"
     }
   }
 }
