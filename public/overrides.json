@@ -6735,9 +6735,7 @@
       "lng": -95.439923,
       "source": "Texas Comptroller mixed-beverage permits + US Census geocoder",
       "checked": "2026-11-26",
-      "notInDirectory": true,
-      "status": "closed",
-      "closedNote": "Closed (reported in Houston news, 2025–26)"
+      "notInDirectory": true
     },
     "Torchy's Tacos - West U|5537": {
       "street": "5537 Weslayan St",
