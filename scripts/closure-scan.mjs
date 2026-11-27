@@ -79,7 +79,7 @@ const NEWOK = /^(722511|722513|722410|722515|722514)/;
 const fresh = [];
 if (z3 && a3 && n3 && nc3) {
   for (const z of ZIPS) {
-    const rows = await all('jrea-zgmq', `starts_with(${z3}, '${z}') AND starts_with(${nc3}, '722')`); report[`act_${z}`] = rows.length;
+    const zq = typeof s3[0][z3] === 'string' ? `starts_with(${z3}, '${z}')` : `${z3} = ${z}`, nq = typeof s3[0][nc3] === 'string' ? `starts_with(${nc3}, '722')` : `${nc3} between 722000 and 722999`; const rows = await all('jrea-zgmq', `${zq} AND ${nq}`); report[`act_${z}`] = rows.length;
     for (const r of rows) {
       if (!NEWOK.test(String(r[nc3]))) continue; const first = fs3 ? String(r[fs3] || '').slice(0, 10) : ''; if (fs3 && first && first < cutoff) continue;
       const nm = r[n3], k = addrKey(r[a3]); if (!k || !words(nm).length) continue;
