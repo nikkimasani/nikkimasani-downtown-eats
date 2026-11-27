@@ -32,15 +32,19 @@ const fixOf = (p) => O[p.name + '|' + ((p.address || '').match(/^\d+/) || [''])[
 const places = P.map((p) => { const f = fixOf(p); return { name: p.name, addr: f.street || p.address || '', key: addrKey(f.street || p.address), closed: f.status === 'closed' }; }).filter((p) => !p.closed);
 
 // ---------- 1. sales-tax locations, open and closed ----------
-const s1 = await soql('3kx8-uryv', { $limit: '1' }); const k1 = Object.keys(s1[0] || {}); report.salesTaxFields = k1;
-const zipF = field(k1, /outlet/, /zip/) || field(k1, /zip/), addrF = field(k1, /outlet/, /address/) || field(k1, /address/), nameF = field(k1, /outlet/, /name/) || field(k1, /name/), oobF = field(k1, /out/, /bus/) || field(k1, /end/, /date/), cityF = field(k1, /outlet/, /city/) || field(k1, /city/), naicsF = field(k1, /naics/), taxF = field(k1, /taxpayer/, /name/);
-report.salesTaxPicked = { zipF, addrF, nameF, oobF, cityF, naicsF, taxF };
+// column list from the metadata API (Socrata leaves empty fields out of row JSON, so the first row can hide the out-of-business column)
+let k1 = []; try { const m = await (await fetch('https://data.texas.gov/api/views/3kx8-uryv.json', { signal: AbortSignal.timeout(60000) })).json(); k1 = (m.columns || []).map((c) => c.fieldName); } catch (e) { report.notes.push('meta ' + e); }
+const s1 = await soql('3kx8-uryv', { $limit: '1' }); if (!k1.length) k1 = Object.keys(s1[0] || {}); report.salesTaxFields = k1;
+const zipF = k1.includes('loc_zip') ? 'loc_zip' : field(k1, /zip/), nameF = k1.includes('loc_name') ? 'loc_name' : field(k1, /name/), oobF = field(k1, /out/, /bus/) || field(k1, /(end|close|inactive)/), naicsF = field(k1, /naics/), taxF = 'tp_name';
+const addrOf = (r) => r.address_number != null ? `${r.address_number} ${r.address_text || ''}` : r.loc_address || '';
+report.salesTaxPicked = { zipF, nameF, oobF, naicsF };
 const byKey = new Map();
-if (zipF && addrF && nameF) {
+if (zipF && nameF) {
   for (const z of ZIPS) {
-    let where = `starts_with(${zipF}, '${z}')`; if (naicsF && typeof s1[0][naicsF] === 'string') where += ` AND starts_with(${naicsF}, '72')`;
-    const rows = await all('3kx8-uryv', where); report[`st_${z}`] = rows.length;
-    for (const r of rows) { const k = addrKey(r[addrF]); if (!k) continue; (byKey.get(k) || byKey.set(k, []).get(k)).push({ n: r[nameF], t: taxF ? r[taxF] : '', oob: oobF ? r[oobF] || '' : '', naics: naicsF ? r[naicsF] : '' }); }
+    const zq = typeof (s1[0] || {})[zipF] === 'number' ? `${zipF} = ${z}` : `starts_with(${zipF}, '${z}')`;
+    const nv = (s1[0] || {})[naicsF]; const nq = naicsF ? (typeof nv === 'number' ? ` AND ${naicsF} between 722000 and 722999` : ` AND starts_with(${naicsF}, '722')`) : '';
+    const rows = await all('3kx8-uryv', zq + nq); report[`st_${z}`] = rows.length;
+    for (const r of rows) { const k = addrKey(addrOf(r)); if (!k) continue; (byKey.get(k) || byKey.set(k, []).get(k)).push({ n: r[nameF], t: r[taxF] || '', oob: oobF ? r[oobF] || '' : '', naics: naicsF ? r[naicsF] : '' }); }
   }
 }
 report.salesTaxAddresses = byKey.size;
