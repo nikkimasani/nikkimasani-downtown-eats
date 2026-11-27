@@ -1,0 +1,442 @@
+{
+ "at": "2026-11-27T19:31:09.126Z",
+ "notes": [
+  "jrea-zgmq: {\"message\":\"Query coordinator error: query.soql.type-mismatch; Type mismatch for starts_with, is number; position: Map(row -> 1, column -> 480, line -> \\\"SELECT `taxpayer_number`, `taxpayer_name`, `taxpayer_address`, `taxpayer_city`, `taxpayer_state`, `taxpayer_zip_code`, `taxpayer_county_code`, `ta",
+  "jrea-zgmq: {\"message\":\"Query coordinator error: query.soql.type-mismatch; Type mismatch for starts_with, is number; position: Map(row -> 1, column -> 480, line -> \\\"SELECT `taxpayer_number`, `taxpayer_name`, `taxpayer_address`, `taxpayer_city`, `taxpayer_state`, `taxpayer_zip_code`, `taxpayer_county_code`, `ta",
+  "jrea-zgmq: {\"message\":\"Query coordinator error: query.soql.type-mismatch; Type mismatch for starts_with, is number; position: Map(row -> 1, column -> 480, line -> \\\"SELECT `taxpayer_number`, `taxpayer_name`, `taxpayer_address`, `taxpayer_city`, `taxpayer_state`, `taxpayer_zip_code`, `taxpayer_county_code`, `ta",
+  "jrea-zgmq: {\"message\":\"Query coordinator error: query.soql.type-mismatch; Type mismatch for starts_with, is number; position: Map(row -> 1, column -> 480, line -> \\\"SELECT `taxpayer_number`, `taxpayer_name`, `taxpayer_address`, `taxpayer_city`, `taxpayer_state`, `taxpayer_zip_code`, `taxpayer_county_code`, `ta",
+  "jrea-zgmq: {\"message\":\"Query coordinator error: query.soql.type-mismatch; Type mismatch for starts_with, is number; position: Map(row -> 1, column -> 480, line -> \\\"SELECT `taxpayer_number`, `taxpayer_name`, `taxpayer_address`, `taxpayer_city`, `taxpayer_state`, `taxpayer_zip_code`, `taxpayer_county_code`, `ta",
+  "jrea-zgmq: {\"message\":\"Query coordinator error: query.soql.type-mismatch; Type mismatch for starts_with, is number; position: Map(row -> 1, column -> 480, line -> \\\"SELECT `taxpayer_number`, `taxpayer_name`, `taxpayer_address`, `taxpayer_city`, `taxpayer_state`, `taxpayer_zip_code`, `taxpayer_county_code`, `ta",
+  "jrea-zgmq: {\"message\":\"Query coordinator error: query.soql.type-mismatch; Type mismatch for starts_with, is number; position: Map(row -> 1, column -> 480, line -> \\\"SELECT `taxpayer_number`, `taxpayer_name`, `taxpayer_address`, `taxpayer_city`, `taxpayer_state`, `taxpayer_zip_code`, `taxpayer_county_code`, `ta",
+  "jrea-zgmq: {\"message\":\"Query coordinator error: query.soql.type-mismatch; Type mismatch for starts_with, is number; position: Map(row -> 1, column -> 480, line -> \\\"SELECT `taxpayer_number`, `taxpayer_name`, `taxpayer_address`, `taxpayer_city`, `taxpayer_state`, `taxpayer_zip_code`, `taxpayer_county_code`, `ta",
+  "jrea-zgmq: {\"message\":\"Query coordinator error: query.soql.type-mismatch; Type mismatch for starts_with, is number; position: Map(row -> 1, column -> 480, line -> \\\"SELECT `taxpayer_number`, `taxpayer_name`, `taxpayer_address`, `taxpayer_city`, `taxpayer_state`, `taxpayer_zip_code`, `taxpayer_county_code`, `ta",
+  "jrea-zgmq: {\"message\":\"Query coordinator error: query.soql.type-mismatch; Type mismatch for starts_with, is number; position: Map(row -> 1, column -> 480, line -> \\\"SELECT `taxpayer_number`, `taxpayer_name`, `taxpayer_address`, `taxpayer_city`, `taxpayer_state`, `taxpayer_zip_code`, `taxpayer_county_code`, `ta",
+  "jrea-zgmq: {\"message\":\"Query coordinator error: query.soql.type-mismatch; Type mismatch for starts_with, is number; position: Map(row -> 1, column -> 480, line -> \\\"SELECT `taxpayer_number`, `taxpayer_name`, `taxpayer_address`, `taxpayer_city`, `taxpayer_state`, `taxpayer_zip_code`, `taxpayer_county_code`, `ta",
+  "jrea-zgmq: {\"message\":\"Query coordinator error: query.soql.type-mismatch; Type mismatch for starts_with, is number; position: Map(row -> 1, column -> 480, line -> \\\"SELECT `taxpayer_number`, `taxpayer_name`, `taxpayer_address`, `taxpayer_city`, `taxpayer_state`, `taxpayer_zip_code`, `taxpayer_county_code`, `ta",
+  "jrea-zgmq: {\"message\":\"Query coordinator error: query.soql.type-mismatch; Type mismatch for starts_with, is number; position: Map(row -> 1, column -> 480, line -> \\\"SELECT `taxpayer_number`, `taxpayer_name`, `taxpayer_address`, `taxpayer_city`, `taxpayer_state`, `taxpayer_zip_code`, `taxpayer_county_code`, `ta",
+  "jrea-zgmq: {\"message\":\"Query coordinator error: query.soql.type-mismatch; Type mismatch for starts_with, is number; position: Map(row -> 1, column -> 480, line -> \\\"SELECT `taxpayer_number`, `taxpayer_name`, `taxpayer_address`, `taxpayer_city`, `taxpayer_state`, `taxpayer_zip_code`, `taxpayer_county_code`, `ta",
+  "jrea-zgmq: {\"message\":\"Query coordinator error: query.soql.type-mismatch; Type mismatch for starts_with, is number; position: Map(row -> 1, column -> 480, line -> \\\"SELECT `taxpayer_number`, `taxpayer_name`, `taxpayer_address`, `taxpayer_city`, `taxpayer_state`, `taxpayer_zip_code`, `taxpayer_county_code`, `ta",
+  "jrea-zgmq: {\"message\":\"Query coordinator error: query.soql.type-mismatch; Type mismatch for starts_with, is number; position: Map(row -> 1, column -> 480, line -> \\\"SELECT `taxpayer_number`, `taxpayer_name`, `taxpayer_address`, `taxpayer_city`, `taxpayer_state`, `taxpayer_zip_code`, `taxpayer_county_code`, `ta",
+  "jrea-zgmq: {\"message\":\"Query coordinator error: query.soql.type-mismatch; Type mismatch for starts_with, is number; position: Map(row -> 1, column -> 480, line -> \\\"SELECT `taxpayer_number`, `taxpayer_name`, `taxpayer_address`, `taxpayer_city`, `taxpayer_state`, `taxpayer_zip_code`, `taxpayer_county_code`, `ta",
+  "jrea-zgmq: {\"message\":\"Query coordinator error: query.soql.type-mismatch; Type mismatch for starts_with, is number; position: Map(row -> 1, column -> 480, line -> \\\"SELECT `taxpayer_number`, `taxpayer_name`, `taxpayer_address`, `taxpayer_city`, `taxpayer_state`, `taxpayer_zip_code`, `taxpayer_county_code`, `ta",
+  "jrea-zgmq: {\"message\":\"Query coordinator error: query.soql.type-mismatch; Type mismatch for starts_with, is number; position: Map(row -> 1, column -> 480, line -> \\\"SELECT `taxpayer_number`, `taxpayer_name`, `taxpayer_address`, `taxpayer_city`, `taxpayer_state`, `taxpayer_zip_code`, `taxpayer_county_code`, `ta",
+  "jrea-zgmq: {\"message\":\"Query coordinator error: query.soql.type-mismatch; Type mismatch for starts_with, is number; position: Map(row -> 1, column -> 480, line -> \\\"SELECT `taxpayer_number`, `taxpayer_name`, `taxpayer_address`, `taxpayer_city`, `taxpayer_state`, `taxpayer_zip_code`, `taxpayer_county_code`, `ta",
+  "jrea-zgmq: {\"message\":\"Query coordinator error: query.soql.type-mismatch; Type mismatch for starts_with, is number; position: Map(row -> 1, column -> 480, line -> \\\"SELECT `taxpayer_number`, `taxpayer_name`, `taxpayer_address`, `taxpayer_city`, `taxpayer_state`, `taxpayer_zip_code`, `taxpayer_county_code`, `ta",
+  "jrea-zgmq: {\"message\":\"Query coordinator error: query.soql.type-mismatch; Type mismatch for starts_with, is number; position: Map(row -> 1, column -> 480, line -> \\\"SELECT `taxpayer_number`, `taxpayer_name`, `taxpayer_address`, `taxpayer_city`, `taxpayer_state`, `taxpayer_zip_code`, `taxpayer_county_code`, `ta",
+  "jrea-zgmq: {\"message\":\"Query coordinator error: query.soql.type-mismatch; Type mismatch for starts_with, is number; position: Map(row -> 1, column -> 480, line -> \\\"SELECT `taxpayer_number`, `taxpayer_name`, `taxpayer_address`, `taxpayer_city`, `taxpayer_state`, `taxpayer_zip_code`, `taxpayer_county_code`, `ta",
+  "jrea-zgmq: {\"message\":\"Query coordinator error: query.soql.type-mismatch; Type mismatch for starts_with, is number; position: Map(row -> 1, column -> 480, line -> \\\"SELECT `taxpayer_number`, `taxpayer_name`, `taxpayer_address`, `taxpayer_city`, `taxpayer_state`, `taxpayer_zip_code`, `taxpayer_county_code`, `ta",
+  "jrea-zgmq: {\"message\":\"Query coordinator error: query.soql.type-mismatch; Type mismatch for starts_with, is number; position: Map(row -> 1, column -> 480, line -> \\\"SELECT `taxpayer_number`, `taxpayer_name`, `taxpayer_address`, `taxpayer_city`, `taxpayer_state`, `taxpayer_zip_code`, `taxpayer_county_code`, `ta",
+  "jrea-zgmq: {\"message\":\"Query coordinator error: query.soql.type-mismatch; Type mismatch for starts_with, is number; position: Map(row -> 1, column -> 480, line -> \\\"SELECT `taxpayer_number`, `taxpayer_name`, `taxpayer_address`, `taxpayer_city`, `taxpayer_state`, `taxpayer_zip_code`, `taxpayer_county_code`, `ta",
+  "jrea-zgmq: {\"message\":\"Query coordinator error: query.soql.type-mismatch; Type mismatch for starts_with, is number; position: Map(row -> 1, column -> 480, line -> \\\"SELECT `taxpayer_number`, `taxpayer_name`, `taxpayer_address`, `taxpayer_city`, `taxpayer_state`, `taxpayer_zip_code`, `taxpayer_county_code`, `ta",
+  "jrea-zgmq: {\"message\":\"Query coordinator error: query.soql.type-mismatch; Type mismatch for starts_with, is number; position: Map(row -> 1, column -> 480, line -> \\\"SELECT `taxpayer_number`, `taxpayer_name`, `taxpayer_address`, `taxpayer_city`, `taxpayer_state`, `taxpayer_zip_code`, `taxpayer_county_code`, `ta"
+ ],
+ "salesTaxFields": [
+  "tp_number",
+  "tp_name",
+  "tp_address",
+  "tp_city",
+  "tp_state",
+  "tp_zip",
+  "tp_zip4",
+  "tp_county",
+  "org_type",
+  "loc_number",
+  "loc_name",
+  "address_number",
+  "address_text",
+  "juris_city",
+  "loc_city",
+  "loc_state",
+  "loc_zip",
+  "loc_zip4",
+  "loc_county",
+  "naics",
+  "loc_juris",
+  "city_taid",
+  "mass_transit_auth1_taid",
+  "mass_transit_auth2_taid",
+  "county_taid",
+  "special_purp_dist1_taid",
+  "special_purp_dist2_taid",
+  "special_purp_dist3_taid",
+  "special_purp_dist4_taid",
+  "unique_taid",
+  "first_sale_date"
+ ],
+ "salesTaxPicked": {
+  "zipF": "tp_zip",
+  "addrF": "tp_address",
+  "nameF": "tp_name",
+  "cityF": "tp_city",
+  "naicsF": "naics"
+ },
+ "st_77002": 365,
+ "st_77003": 113,
+ "st_77004": 221,
+ "st_77005": 143,
+ "st_77006": 297,
+ "st_77007": 482,
+ "st_77008": 366,
+ "st_77009": 216,
+ "st_77010": 13,
+ "st_77011": 59,
+ "st_77012": 58,
+ "st_77019": 155,
+ "st_77020": 110,
+ "st_77021": 86,
+ "st_77023": 115,
+ "st_77025": 101,
+ "st_77026": 91,
+ "st_77027": 440,
+ "st_77030": 64,
+ "st_77046": 25,
+ "st_77054": 103,
+ "st_77056": 366,
+ "st_77057": 498,
+ "st_77081": 199,
+ "st_77087": 149,
+ "st_77096": 109,
+ "st_77098": 275,
+ "st_77401": 130,
+ "salesTaxAddresses": 2562,
+ "liquorRows": 71686,
+ "liquorLatestMonth": "2026-11-30T00:00:00.000",
+ "places": 1438,
+ "closedSalesTax": [],
+ "liquorStopped": [
+  {
+   "name": "Bungalow",
+   "addr": "407 Main St",
+   "lastFiling": "2026-05-31",
+   "permit": "BUNGALOW"
+  },
+  {
+   "name": "The Clock - Steak & Lounge",
+   "addr": "908 Congress St, Houston, TX",
+   "lastFiling": "2026-03-31",
+   "permit": "THE CLOCK HTX"
+  },
+  {
+   "name": "Maggie Rita's",
+   "addr": "600 Travis St, Houston, TX",
+   "lastFiling": "2025-08-31",
+   "permit": "MAGGIE RITA'S"
+  },
+  {
+   "name": "El Big Bad",
+   "addr": "419 Travis Street",
+   "lastFiling": "2024-11-30",
+   "permit": "EL BIG BAD"
+  },
+  {
+   "name": "Cecil's Pub",
+   "addr": "600 West Gray Street",
+   "lastFiling": "2024-11-30",
+   "permit": "CECIL'S"
+  },
+  {
+   "name": "Bar 5306",
+   "addr": "5306 Washington Ave",
+   "lastFiling": "2026-06-30",
+   "permit": "BAR 5306"
+  },
+  {
+   "name": "Lincoln Bar & Kitchen",
+   "addr": "5110 Washington Ave",
+   "lastFiling": "2025-09-30",
+   "permit": "LINCOLN BAR & KITCHEN"
+  },
+  {
+   "name": "Graffiti",
+   "addr": "1001 California St",
+   "lastFiling": "2025-12-31",
+   "permit": "GRAFFITI RAW"
+  },
+  {
+   "name": "Alora",
+   "addr": "2502 Dunlavy St",
+   "lastFiling": "2024-10-31",
+   "permit": "ALORA"
+  },
+  {
+   "name": "Oceanaire Seafood Room",
+   "addr": "5061 Westheimer Rd",
+   "lastFiling": "2026-01-31",
+   "permit": "THE OCEANAIRE SEAFOOD ROOM"
+  },
+  {
+   "name": "The Tipsy Sloth",
+   "addr": "3517 Navigation Blvd",
+   "lastFiling": "2025-08-31",
+   "permit": "THE TIPSY SLOTH"
+  },
+  {
+   "name": "PDA",
+   "addr": "3030 Travis St",
+   "lastFiling": "2024-11-30",
+   "permit": "PDA"
+  },
+  {
+   "name": "FRNDS Restaurant & Lounge",
+   "addr": "2441 University Blvd",
+   "lastFiling": "2026-02-28",
+   "permit": "FRNDS"
+  },
+  {
+   "name": "Christian's Tailgate Kirby",
+   "addr": "5114 Kirby Dr",
+   "lastFiling": "2026-02-28",
+   "permit": "CHRISTIAN'S TAILGATE BAR & GRILL"
+  },
+  {
+   "name": "PostScript",
+   "addr": "2800 Kirby Dr",
+   "lastFiling": "2025-01-31",
+   "permit": "POSTSCRIPT"
+  },
+  {
+   "name": "Pinstripes Houston",
+   "addr": "3300 Kirby Dr",
+   "lastFiling": "2025-08-31",
+   "permit": "PINSTRIPES"
+  },
+  {
+   "name": "Eagle Houston",
+   "addr": "611 Hyde Park Blvd",
+   "lastFiling": "2025-05-31",
+   "permit": "EAGLE HOUSTON"
+  },
+  {
+   "name": "The Bar at 4212",
+   "addr": "4212 Emancipation Ave",
+   "lastFiling": "2026-01-31",
+   "permit": "THE BAR @ 4212"
+  },
+  {
+   "name": "The Spot 3rd Ward",
+   "addr": "4709 Emancipation Ave",
+   "lastFiling": "2025-08-31",
+   "permit": "THE SPOT LOUNGE & BAR"
+  },
+  {
+   "name": "Platypus Brewing",
+   "addr": "1902 Washington Ave",
+   "lastFiling": "2026-05-31",
+   "permit": "PLATYPUS BREWING"
+  },
+  {
+   "name": "Round 1",
+   "addr": "2303 Smith St",
+   "lastFiling": "2026-06-30",
+   "permit": "FAO HTX ROUND 1"
+  },
+  {
+   "name": "Fusion Taco",
+   "addr": "302 Fairview Ave",
+   "lastFiling": "2026-07-31",
+   "permit": "FUSION TACO"
+  },
+  {
+   "name": "El Conquistador",
+   "addr": "3907 1/2 Canal St",
+   "lastFiling": "2026-07-31",
+   "permit": "EL CONQUISTADOR"
+  },
+  {
+   "name": "Wing Quarter",
+   "addr": "3929 Old Spanish Trl",
+   "lastFiling": "2026-07-31",
+   "permit": "WING QUARTER, INC."
+  },
+  {
+   "name": "Kinokawa",
+   "addr": "3119 White Oak Dr",
+   "lastFiling": "2026-06-30",
+   "permit": "KINOKAWA"
+  },
+  {
+   "name": "Rain On Washington",
+   "addr": "5701 Washington Ave",
+   "lastFiling": "2026-06-30",
+   "permit": "RAIN ON WASHINGTON"
+  },
+  {
+   "name": "Saint Arnold",
+   "addr": "2000 Lyons St, Houston, TX",
+   "lastFiling": "2025-02-28",
+   "permit": "SAINT ARNOLD BREWING COMPANY"
+  },
+  {
+   "name": "Citadel BBQ",
+   "addr": "6601 Main Street, Houston, TX",
+   "lastFiling": "2026-05-31",
+   "permit": "CITADEL BBQ"
+  },
+  {
+   "name": "Simply Phở",
+   "addr": "2929 Milam Street, Houston, TX",
+   "lastFiling": "2025-11-30",
+   "permit": "SIMPLY"
+  },
+  {
+   "name": "Cafe 4212",
+   "addr": "4212 Almeda Road, Houston, TX",
+   "lastFiling": "2025-05-31",
+   "permit": "CAFE 4212"
+  },
+  {
+   "name": "Mico's Hot Chicken",
+   "addr": "2400 North Shepherd Drive, Houston, TX",
+   "lastFiling": "2026-07-31",
+   "permit": "MICO'S HOT CHICKEN"
+  },
+  {
+   "name": "Homestead",
+   "addr": "600 North Shepherd Drive, Houston, TX",
+   "lastFiling": "2026-05-31",
+   "permit": "HOMESTEAD KITCHEN AND BAR"
+  },
+  {
+   "name": "The Cookshack",
+   "addr": "4015 Washington Avenue, Houston, TX",
+   "lastFiling": "2025-09-30",
+   "permit": "THE COOKSHACK"
+  },
+  {
+   "name": "Dogwood",
+   "addr": "2403 Bagby Street, Houston, TX",
+   "lastFiling": "2026-07-31",
+   "permit": "THE DOGWOOD MIDTOWN"
+  },
+  {
+   "name": "El Gato Coffee House",
+   "addr": "508 Pecore Street, Houston, TX",
+   "lastFiling": "2025-11-30",
+   "permit": "EL GATO CHARITIES"
+  },
+  {
+   "name": "Mi Cocina",
+   "addr": "4410 Westheimer Road, Houston, TX",
+   "lastFiling": "2025-03-31",
+   "permit": "MI COCINA RIVER OAKS"
+  },
+  {
+   "name": "Dak & Bop",
+   "addr": "1801 Binz Street, Houston, TX",
+   "lastFiling": "2025-09-30",
+   "permit": "DAK & BOP"
+  },
+  {
+   "name": "Pearl Bar",
+   "addr": "4216 Washington Avenue, Houston, TX",
+   "lastFiling": "2026-05-31",
+   "permit": "PEARL LOUNGE"
+  },
+  {
+   "name": "Killen's",
+   "addr": "101 Heights Boulevard, Houston, TX",
+   "lastFiling": "2026-07-31",
+   "permit": "KILLEN'S"
+  },
+  {
+   "name": "Xin Chao",
+   "addr": "2310 Decatur Street, Houston, TX",
+   "lastFiling": "2025-04-30",
+   "permit": "XIN CHAO"
+  },
+  {
+   "name": "B.B. Lemon",
+   "addr": "1809 Washington Avenue, Houston, TX",
+   "lastFiling": "2025-05-31",
+   "permit": "B B LEMON"
+  },
+  {
+   "name": "Clutch Bar",
+   "addr": "5334 Washington Avenue, Houston, TX",
+   "lastFiling": "2025-12-31",
+   "permit": "CLUTCH BAR & RESTAURANT"
+  },
+  {
+   "name": "Bottled Blonde",
+   "addr": "4901 Washington Avenue, Houston, TX",
+   "lastFiling": "2024-10-31",
+   "permit": "BOTTLED BLOND BACK YARD"
+  },
+  {
+   "name": "The Kid",
+   "addr": "1815 North Durham Drive, Houston, TX",
+   "lastFiling": "2026-01-31",
+   "permit": "THE KID"
+  },
+  {
+   "name": "Mapojeong",
+   "addr": "602 Studewood Street, Houston, TX",
+   "lastFiling": "2025-12-31",
+   "permit": "MAPOJEONG GALBIJIB"
+  },
+  {
+   "name": "Riel",
+   "addr": "1927 Fairview Street, Houston, TX",
+   "lastFiling": "2025-08-31",
+   "permit": "RIEL"
+  },
+  {
+   "name": "Front Porch Pub",
+   "addr": "217 Gray St",
+   "lastFiling": "2025-03-31",
+   "permit": "FRONT PORCH PUB"
+  }
+ ],
+ "confirmedOpen": 827,
+ "unknown": 564,
+ "activeFields": [
+  "taxpayer_number",
+  "taxpayer_name",
+  "taxpayer_address",
+  "taxpayer_city",
+  "taxpayer_state",
+  "taxpayer_zip_code",
+  "taxpayer_county_code",
+  "taxpayer_organization_type",
+  "outlet_number",
+  "outlet_name",
+  "outlet_address",
+  "outlet_city",
+  "outlet_state",
+  "outlet_zip_code",
+  "outlet_county_code",
+  "outlet_naics_code",
+  "outlet_inside_outside_city_limits_indicator",
+  "outlet_permit_issue_date",
+  "outlet_first_sales_date"
+ ],
+ "act_77002": 0,
+ "act_77003": 0,
+ "act_77004": 0,
+ "act_77005": 0,
+ "act_77006": 0,
+ "act_77007": 0,
+ "act_77008": 0,
+ "act_77009": 0,
+ "act_77010": 0,
+ "act_77011": 0,
+ "act_77012": 0,
+ "act_77019": 0,
+ "act_77020": 0,
+ "act_77021": 0,
+ "act_77023": 0,
+ "act_77025": 0,
+ "act_77026": 0,
+ "act_77027": 0,
+ "act_77030": 0,
+ "act_77046": 0,
+ "act_77054": 0,
+ "act_77056": 0,
+ "act_77057": 0,
+ "act_77081": 0,
+ "act_77087": 0,
+ "act_77096": 0,
+ "act_77098": 0,
+ "act_77401": 0,
+ "newCandidates": []
+}
