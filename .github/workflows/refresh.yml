@@ -18,6 +18,7 @@ jobs:
       - run: node scripts/metro-static.mjs
       - run: node scripts/osm-buildings.mjs
       - run: node scripts/osm-streets.mjs
+      - run: node scripts/pack-geo.mjs
       - run: node scripts/osm-homes.mjs || true
       - run: node scripts/osm-pois.mjs || true
       - run: node scripts/wanted-spots.mjs || true
