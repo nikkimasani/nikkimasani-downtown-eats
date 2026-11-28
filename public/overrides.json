@@ -2843,9 +2843,10 @@
       "street": "2715 Bissonnet St",
       "lat": 29.725372,
       "lng": -95.420879,
-      "source": "US Census geocoder",
-      "checked": "2026-11-26",
-      "notInDirectory": true
+      "source": "Norigami listing (Frankie) + CultureMap",
+      "checked": "2026-11-28",
+      "notInDirectory": true,
+      "hours": "Mon–Thu 5pm–10pm, Fri 5pm–11pm, Sat 3pm–11pm, Sun 5pm–10pm"
     },
     "Silk Road Asian Tapas Bar": {
       "street": "2929 Westpark Dr",
